@@ -1,0 +1,273 @@
+:root {
+  --backgroundColor: rgb(32, 33, 36);
+  --textColor: white;
+  --borderColor: silver 0.8px solid;
+  --containerTitleSize: 25px;
+}
+
+#home-page {
+  width: 100%;
+  height: 800px;
+}
+
+.welcome-container {
+  height: 15%;
+  background: var(--backgroundColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--textColor);
+  font-size: 28px;
+}
+
+.homepage-picture-container img {
+  width: 100%;
+}
+
+.homepage-picture-container {
+  height: 400px;
+}
+
+/* DisplayQuotes component */
+
+.quote-container {
+  margin-top: 20px;
+  z-index: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 25px;
+  height: 95px;
+  width: 500px;
+  display: grid;
+  align-items: center;
+}
+
+.author,
+.quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* end of DisplayQuotes component */
+
+.welcome-message-container {
+  height: 800px;
+  background: var(--backgroundColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-container {
+  margin-top: 10px;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: solid 2px black; */
+  margin-bottom: 0% 0px 1% 0px;
+}
+
+.title-container h1 {
+  color: var(--textColor);
+  font-size: var(--containerTitleSize);
+}
+
+.welcome-message {
+  font-size: 17.99px;
+  color: var(--textColor);
+  width: 80px;
+  width: 43%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: solid 2px pink; */
+}
+
+.welcome-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 710px;
+}
+
+.message-container {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid 2px magenta; */
+}
+
+.main-links-container {
+  /* border: solid 2px pink; */
+  width: 100%;
+  height: 520px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.info-box {
+  border: var(--borderColor);
+  width: 275px;
+  height: 325px;
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  border-radius: 1vh;
+}
+
+.info-box h3 {
+  margin-top: 10px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.info-box p {
+  padding: 10px;
+  text-align: center;
+  height: 290px;
+}
+
+.homePage-button {
+  border-style: none;
+  background: var(--backgroundColor);
+  color: var(--textColor);
+  border: var(--borderColor);
+  width: 70%;
+  text-align: center;
+  border-radius: 1vh;
+  height: 30px;
+}
+
+.homePage-button-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+/* the philosophers section */
+.the-philosophers {
+  height: 2100px;
+  background: var(--backgroundColor);
+  border-top: var(--borderColor);
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--textColor);
+}
+
+.the-philosophers h1 {
+  font-size: var(--containerTitleSize);
+  margin: 25px 0px 40px 0px;
+}
+
+.the-philosopher-container {
+  /* border: var(--borderColor); */
+  width: 89%;
+  height: 300px;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  justify-content: initial;
+  /* border: solid pink 2px; */
+  padding-top: 20px;
+}
+
+.the-philosopher-container h1 {
+  margin-left: 25px;
+}
+
+.the-philosopher-border {
+  width: 90%;
+  height: 0.0001px;
+  margin: 0px 0px 25px 15px;
+  border: var(--borderColor);
+  background-color: var(--backgroundColor);
+}
+
+.philosopher-pic-container {
+  height: 70%;
+  width: 20%;
+}
+
+.philosopher-pic-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 3vh;
+}
+
+.the-philosophers-description h1 {
+  margin: 0px 0px 2% 0px;
+}
+
+.the-philosophers-description {
+  width: 50%;
+  margin-left: 2%;
+}
+
+.the-philoshopers-button-container {
+  /* border: solid 2px pink; */
+  width: 40%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.the-philoshopers-button-container button {
+  background: var(--backgroundColor);
+  border: var(--borderColor);
+  width: 60%;
+  height: 20%;
+  color: var(--textColor);
+  border-radius: 2vh;
+}
+
+.the-philosophers-checkout-our-philosophers-button {
+  color: white;
+  border: var(--borderColor);
+  background: var(--backgroundColor);
+  height: 100px;
+  width: 500px;
+  border-radius: 2vh;
+  font-size: 20px;
+  transform: translateY(60%);
+}
+
+.checkout-our-blog-container {
+  background: var(--backgroundColor);
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--textColor);
+  font-size: 30px;
+  border-top: none;
+}
+
+.checkout-our-blog-container h5 {
+  margin-top: 35px;
+}
+
+.checkout-our-blog-container button {
+  color: white;
+  border: var(--borderColor);
+  background: var(--backgroundColor);
+  height: 100px;
+  width: 500px;
+  border-radius: 2vh;
+  font-size: 20px;
+  margin-top: 40px;
+}
