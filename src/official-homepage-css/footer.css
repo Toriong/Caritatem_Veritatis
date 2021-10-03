@@ -1,0 +1,33 @@
+:root {
+  --backgroundColorFooter: #171717;
+  --textColor: #ffffff;
+  --borderColor: silver 0.8px solid;
+  --containerTitleSize: 25px;
+}
+
+.footer {
+  height: 150px;
+  background-color: var(--backgroundColorFooter);
+  border-top: var(--borderColor);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-container-footer {
+  /* border: solid 2px pink; */
+  width: 40%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container-footer > * {
+  margin: 0px 3% 0px 3%;
+}
+
+.logo-container-footer span,
+h1,
+img {
+  color: var(--textColor);
+}
