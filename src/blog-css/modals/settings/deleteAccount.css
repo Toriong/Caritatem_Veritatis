@@ -1,0 +1,86 @@
+.modal.deleteAccount {
+  background-color: var(--backgroundColorModal);
+  height: 50vh;
+  width: 40vw;
+  background-color: var(--backgroundColorModal);
+  box-shadow: var(--boxShadow);
+  z-index: 600000000;
+  border-radius: 0.5em;
+}
+
+.modal.deleteAccount section:first-child h1 {
+  font-weight: 300;
+  text-align: center;
+}
+
+
+.modal.deleteAccount > div{
+  height: 100%;
+  min-width: 280px;
+  max-height: 723px;
+  min-height: 250px;
+}
+
+.modal.deleteAccount section {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  height: 50%;
+}
+
+.modal.deleteAccount section:last-child button:first-child {
+  background-color: var(--backgroundColor);
+  margin-right: 0.3em;
+  /* min-width: 5vw; */
+  /* max-width: 80.6953px; */
+  /* max-width: 100px; */
+}
+
+.modal.deleteAccount section:last-child button {
+  padding: 15px;
+  font-size: 1em;
+  border-radius: 0.5em;
+  font-weight: 250;
+  color: white;
+  min-width: 79.6172px;
+}
+
+.modal.deleteAccount section:last-child button:nth-child(2) {
+  background-color: #ff0000;
+  margin-left: 0.3em;
+}
+
+.modal.deleteAccount button {
+  border-style: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+
+@media(min-width: 768px){
+.modal.deleteAccount{
+  max-width: 700px;
+  max-height: 394.5px;
+}
+}
+
+@media(max-width: 767px){
+  .modal.deleteAccount{
+      border-radius: 0%;
+        position: fixed;
+        width: 100% !important;
+        height: 100%;
+        min-height: 100vh;
+        overflow-y: scroll;
+        z-index: 10000000000000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+  }
+
+    .modal.deleteAccount section:first-child h1{
+      /* font-size: clamp(21px, 4vw, ); */
+      /* font-size: 27px; */
+      font-size: clamp(19px, 4vw, 27px);
+    }
+}

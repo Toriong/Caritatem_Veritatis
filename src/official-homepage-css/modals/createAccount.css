@@ -9,25 +9,32 @@
 .createAccountModal {
   box-shadow: 2px 2px 5px #2d2e30;
   background: #2d2e30;
-  border-radius: 3vh;
-  width: 50%;
-  height: 80%;
+  border-radius: 22.5px;
+  width: 75%;
+  /* height: 80%; */
+  height: 95%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1000000;
+  overflow-y: auto;
+  border: var(--borderColor);
+  max-height: 1187.5px;
+  max-width: 1080px;
+}
+
+.createAccountModal > div{
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1000000;
-  overflow-x: hidden;
+  min-width: 280px;
 }
 
 .createAccountModalHeader {
   width: 95%;
   height: 10%;
   margin: 1% 0% 0% 0%;
-  /* border: solid 2px pink; */
   color: var(--textColor);
   position: relative;
 }
@@ -46,10 +53,13 @@
   margin: 3% 0px 0px 5%;
 }
 
-label {
+.createAccountModal label {
   color: var(--textColor);
   /* margin-bottom: 200px; */
+  white-space: nowrap;
 }
+
+
 .createAccountModal-form {
   display: flex;
   flex-direction: column;
@@ -70,11 +80,13 @@ label {
   bottom: 0;
   left: 0;
   position: absolute;
+  min-width: 138.898px;
   /* border: solid 3px green; */
 }
 
 .sectionContainer {
-  margin: 5% 0px 5% 0px;
+  /* margin: 5% 0px 5% 0px; */
+  margin: 23.0391px 0px 23.0391px 0px;
   display: flex;
   border: 0.0001px solid var(--backgroundColorModal);
   position: relative;
@@ -83,8 +95,9 @@ label {
 .inputContainer {
   display: flex;
   flex-direction: column;
-  height: 250%;
-  /* border: solid 2px pink; */
+  /* height: 250%; */
+  height: 50px;
+  /* border: solid pink; */
   position: relative;
   width: 30%;
 }
@@ -116,20 +129,22 @@ label {
 #reasonsForJoiningContainer textarea {
   margin: 1% 0px 0px 0px;
   width: 60%;
+  padding: 0.5em;
+  outline: none;
+  resize: none;
+  /* width: 34vw; */
+  width: 85%;
+  height: 25vh;
+  max-height: 250px;
+  font-size: 1.1em;
+
+  /* border-bottom: solid lightgrey .2px; */
+  border-bottom: var(--borderColor)
 }
 
 .agreeToTerms {
   width: 100%;
   margin: 5% 0px 2% 0px;
-}
-
-.createAccountModal button {
-  border-style: none;
-  background: rgb(34, 172, 34);
-  color: var(--buttonTextColor);
-  width: 40%;
-  height: 80%;
-  border-radius: 1.5vh;
 }
 
 .submitButtonContainer {
@@ -144,6 +159,66 @@ label {
   color: var(--linkColor);
 }
 
-span {
-  /* color: black; */
+.createAccountModalHeader > h1 span:nth-child(2){
+  display: none;
 }
+
+.createAccountModalHeader>h1 span:nth-child(2){
+  font-size: 20px;
+}
+
+@media (max-width: 767px){
+    .createAccountModal {
+      border-radius: 0%;
+      position: fixed;
+      width: 101vw;
+      height: 101vh;
+      min-height: 100vh;
+      overflow-y: scroll;
+      z-index: 10000000;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .sectionContainer{
+      margin: 20px 0px 20px 0px;
+    }
+}
+
+@media (max-width: 575px){
+  .createAccountModalHeader>h1 span:nth-child(2) {
+    display: flex;
+  }
+
+  .createAccountModalHeader>h1 span:nth-child(1){
+    display: none;
+
+  }
+
+
+  .sectionContainer.emailAndPhoneContainer,
+  .sectionContainer.passwordContainer,
+  .sectionContainer.firstAndLastName{
+    flex-direction: column;
+  }
+
+.sectionContainer.emailAndPhoneContainer >div:nth-child(2),
+  .sectionContainer.passwordContainer > div:nth-child(2),
+  .sectionContainer.firstAndLastName > div:nth-child(2){
+    margin-left: 0px;
+    margin-top: 36px;
+  }
+
+  .inputContainer{
+    width: 80%;
+  }
+
+  .createAccountModalHeader svg{
+    font-size: 1.4em;
+  }
+
+}
+
+
+

@@ -1,0 +1,121 @@
+.topicsSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  overflow-y: auto;
+  /* padding: 5% 5% 0px 5%; */
+  padding: 0px 5% 0px 5%;
+  position: relative;
+  min-width: 280px;
+}
+
+.topicsSection > section {
+  width: 100%;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  margin: auto;
+  padding: 1px 0px 16px 0px;
+  max-height: 70vh;
+  margin-top: 5px;
+  /* transform: translateY(10%); */
+}
+
+.topicsSection > h1 {
+  border: none;
+  padding-top: 8px;
+  display: grid;
+  place-items: center;
+  white-space: nowrap;
+}
+
+.topics-title-wrapper {
+  border: none;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  padding-top: 20000em;
+}
+
+.topicsSection h1 {
+  top: 0;
+}
+
+.topicsSection section > div:first-child {
+  margin-top: 1em;
+}
+
+.readingTopicUnhighlighted {
+  color: var(--textColor);
+  border: var(--borderColor);
+  border-radius: 1em;
+  margin-right: 2%;
+  padding: 1.5em;
+  min-width: 12vw;
+  height: 5vh;
+  margin: 0em 0px 1em 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.readingTopicHighlighted {
+  color: #808080;
+  background-color: #ffffff;
+  border: var(--borderColor);
+  /* border-radius: 2vh;
+  margin-right: 2%;
+  padding: 3%;
+  width: 175px;
+  height: 70%;
+  margin: 0px 0px 2% 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; */
+  border-radius: 1em;
+  margin-right: 2%;
+  padding: 1.5em;
+  min-width: 12vw;
+  height: 5vh;
+  margin: 0em 0px 1em 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.readingTopic.highlighted {
+  color: #808080;
+  background-color: #ffffff;
+}
+
+.readingTopic {
+  color: var(--textColor);
+  border: var(--borderColor);
+  border-radius: 16px;
+  margin-right: 2%;
+  padding: 1.5em;
+  max-width: 206.984px;
+  height: 49.5938px;
+  margin: 0em 0px 1em 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+@media (max-width: 375px){
+.topicsSection > h1{
+font-size: 19px;
+}
+}
+

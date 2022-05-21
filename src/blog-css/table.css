@@ -1,0 +1,134 @@
+:root {
+  --backgroundColor: rgb(32, 33, 36);
+  --backgroundColorModal: #2d2e30;
+  --textColor: #ffffff;
+  --borderColor: 0.8px solid #c0c0c0;
+  --linkColor: #0000ff;
+  --boxShadow: 2px 2px 5px #2d2e30;
+}
+
+.userTable input {
+  color: var(--textColor);
+  outline: none !important;
+  border-style: none;
+  background: none;
+  width: 70%;
+  height: 50%;
+}
+
+.userTable {
+  margin: 3% 0px 0px 0px;
+  width: fit-content;
+  height: fit-content;
+  /* border: solid 2px pink; */
+  border-collapse: collapse;
+}
+
+#buttonCell {
+  display: grid;
+  place-items: center;
+}
+
+#buttonCell button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  /* margin: 1% 6.5% 0px 0px; */
+  border-radius: 1vh;
+  width: 75%;
+  height: 75%;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+#buttonCell section {
+  margin-top: 0px;
+  width: 100%;
+  border: solid 2px pink;
+}
+
+.userTable th,
+.userTable td {
+  line-height: 0px;
+  width: 15vh;
+  height: 8vh;
+  border: var(--borderColor);
+}
+
+.userTable td {
+  border-bottom: none;
+}
+
+.userTable tr {
+  /* border: none; */
+}
+
+.tableHeader tr {
+  width: fit-content;
+  height: fit-content;
+}
+
+.tableHeader th:nth-child(1) {
+  border-left: none;
+}
+
+.tableHeader th:last-child {
+  border-right: none;
+}
+
+.tableHeader th {
+  border-top: none;
+}
+
+.tableHeader section {
+  /* border: solid 0.8px pink; */
+  width: 100%;
+  position: relative;
+  bottom: 22%;
+  right: 2%;
+}
+
+.deleteColumnBtn {
+  position: absolute;
+  background: none;
+  color: #ff0000;
+  /* box-shadow: var(--boxShadow); */
+  border-radius: 1vh;
+  display: flex;
+  flex-direction: column;
+  /* transform: translateX(70%); */
+  right: 0;
+}
+
+.tableBody tr td:nth-child(1) {
+  border-left: none;
+}
+.tableBody tr td:last-child {
+  border-right: none;
+}
+
+.tableBody td {
+  color: white;
+}
+
+.rowHeader input {
+  /* border: solid 0.8px pink; */
+}
+.rowHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.rowHeader svg {
+  position: absolute;
+  color: #ff0000;
+  bottom: 75%;
+  right: 85%;
+}

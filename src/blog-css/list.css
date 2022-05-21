@@ -1,0 +1,33 @@
+.liContainer.unordered span {
+  font-size: 5vh;
+  /* transform: translateY(-2%); */
+}
+
+.liContainer.unordered li,
+.liContainer.ordered li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid 2px pink; */
+  padding-top: 0.3%;
+  font-size: 30px;
+  width: 100%;
+}
+
+.liContainer.unordered li {
+  padding: 0;
+  /* border: solid 2px pink; */
+}
+
+.list section {
+  /* border: solid 2px magenta; */
+  width: 100%;
+  margin: 0px 0px 0px 2.5%;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+.liContainer.ordered span {
+  font-size: 4vh;
+}

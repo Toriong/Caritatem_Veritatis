@@ -1,0 +1,77 @@
+QUESTION: HOW DO I MAKE ACCESS MULTIPLE COLLECTIONS USING ONE QUERY?
+
+
+GOAL: check if the current user already has a chat with the target user
+
+
+GOAL: when the user clicks on a user in the search results modal and if the user is viewing another user, then implement the same logic that got the current user but do it for the user that was selected to be viewed by the current user 
+
+testing message:
+{"body":
+ {"conversationId": "f0f14730-d922-488b-8bb3-e7f84eed9647", "newMessage": {"user": {"_id":"617e10f9d1a5f94d428d3508", "username": "gtorion", "iconPath": "617e10f9d1a5f94d428d3508.JPG"},"text": "yo there meng", "timeOfSend": {"dateAndTime": "Sat, Feb 5, 2022 8:24 PM"}}}   
+}
+
+{"body":
+ {"conversationId": "62e26a4c-579a-416a-a4b6-8784c7e399f9", "newMessage": {"user": {"_id":"617ee4458e476911e031f28d", "username": "ILoveProgramming", "iconPath": "617ee4458e476911e031f28d.JPG"},"text": "yo there meng", "timeOfSend": {"dateAndTime": "Sat, Feb 5, 2022 8:24 PM"}, "isRead": false}}   
+}
+
+group chat invitation (example):
+{
+    "invitation": 
+    {
+        "inviter":
+        {
+            "_id": "617e10f9d1a5f94d428d3508",
+            "username":"gtorion",
+            "iconPath": "617e10f9d1a5f94d428d3508.JPG"
+        },
+        "groupToJoin":
+        {
+            "_id": "02dabca0-8341-41f8-8368-e23d1d33bf4f",
+            "groupName": "theBoizzzz"
+        },
+        "timeOfSend": 
+        {
+            "dateAndTime": "Sat, Feb 5, 2022 8:24 PM"
+        },
+        "isRead": false,
+        "invitationId": "fda16a3b-4ae3-4e43-aba2-fe3fa9cc81c0"
+    }
+}
+
+kicked user example message:
+{
+    "body": {
+        "userKicked": {
+            "conversationId": "757b5a1e-6303-449f-a980-86c00e10f5f7",
+            "userId": "617ed5618e476911e031ef7d"
+        }
+    },
+    "senderId": "GOU3mlKDrfrEioLWACF0"
+}
+
+
+
+
+WHEN USER PRESSES ON CONVERSATION IN THE MESSAGE MODAL, HAVE THE FOLLOWING TO OCCUR:
+-HAVE THE selected conversation appear in the message modal along with the user icon and their username on top of the modal
+-have the messages appear in the modal
+-have the input field appear onto the dom 
+
+
+// GOAL #1: when the user presses the minimize button, have the div below be hidden from the ui so that messages can keep on coming to the modal 
+
+    // GOAL #2: when the user presses the minimize button for a group, only show the following:
+    // the user icons in the group
+    // the usernames of users in group
+    // the number of users in group
+    // the number of unread messages in group that were received the message modal was minimized
+    // the maximize button
+    // the close button
+
+    // GOAL #3: when the user presses the minimize button for a one on one chat, only show the following:
+    // the user icon
+    // the username,
+    // the number of unread messages in group that were received the message modal was minimized
+    // the maximize button
+    // the close button

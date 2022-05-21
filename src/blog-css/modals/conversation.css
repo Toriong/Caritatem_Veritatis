@@ -1,0 +1,992 @@
+/* fileName: conversation */
+
+
+
+
+.conversationMessageModalNavbar > section:nth-child(2) > section:first-child {
+  display: block;
+  /* min-width: 250px; */
+  /* min-width: 50px; */
+  font-size: 1em;
+  font-weight: 330;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.conversationMessageModalNavbar.notOnMessenger > section:nth-child(2)>section:first-child{
+ width: 200px; 
+}
+
+.conversationMessageModalNavbar.notOnMessenger > section:nth-child(2) > section:first-child{
+  width: 200px;
+}
+
+
+
+/* same flex */
+.conversationMessageModalNavbar > section:nth-child(2) > section:last-child,
+.conversationMessageModalNavbar,
+.conversationMessageModalNavbar > section,
+.conversationMessageModalNavbar > section:nth-child(2) {
+  display: flex;
+}
+
+/* end of same flex */
+
+.conversationMessageModalSec {
+  /* padding: 1% 2% 1% 2%; */
+  padding: 3.71875px 7.44531px 3.71875px 7.44531px;
+}
+
+.conversationMessageModalNavbar:hover {
+  background-color: rgb(0, 0, 0, 0.24);
+  cursor: pointer;
+}
+
+.conversationMessageModalNavbar {
+  border-radius: 0.5em;
+  position: relative;
+  padding: 0 0.5em 0 0.5em;
+  min-height: 80px;
+  max-width: 331px;
+}
+
+.chatInfo{
+
+}
+
+.conversationMessageModalNavbar.onMessenger{
+  max-width: 471.562px;
+}
+
+.conversationMessageModalNavbar > button > svg {
+  font-size: 1.4em;
+}
+
+.conversationMessageModalNavbar > button {
+  width: 3vw;
+  height: 5vh;
+  border-radius: 50%;
+  z-index: 50000000;
+  background-color: gray;
+  position: absolute;
+  right: 1em;
+  top: 1.4em;
+}
+
+.conversationMessageModalNavbar > section:nth-child(1) {
+  /* justify-content: r; */
+  justify-content: center;
+  align-items: center;
+  /* padding-left: 0.5em; */
+  width: 7vw;
+  /* max-width: 9.5vw; */
+}
+
+
+.conversationMessageModalNavbar.twoUsers > section:nth-child(1),
+.conversationMessageModalNavbar.threeUsers > section:nth-child(1){
+  max-width: 100.797px;
+}
+
+.conversationMessageModalNavbar > section:nth-child(1) > img:nth-child(2) {
+  /* z-index: -1; */
+  transform: translateX(-10%);
+}
+
+.conversationMessageModalNavbar > section:nth-child(1) > img:nth-child(3) {
+  /* z-index: -2; */
+  transform: translateX(-30%);
+}
+
+
+.conversationMessageModalNavbar.threeUsers {
+  /* border: solid pink; */
+  padding-left: 1em;
+}
+
+
+.conversationMessageModalNavbar.twoUsers>section>img,
+.conversationMessageModalNavbar.threeUsers > section > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.conversationMessageModalNavbar.twoUsers > section > img {
+  /* width: 85%;
+  height: 50%; */
+}
+
+.conversationMessageModalNavbar.oneUser > section > img {
+  border-radius: 50%;
+  min-width: 35px;
+  min-height: 35px;
+  width: 80%;
+  height: 80%;
+  max-width: 62px;
+  max-height: 62px;
+}
+
+.conversationMessageModalNavbar > section > img {
+  border-radius: 50%;
+}
+
+
+
+.conversationMessageModalNavbar > section:nth-child(2) {
+  flex-direction: column;
+  /* padding: 1.5em 0 0.5em 0; */
+  /* padding: 24px 0px 24px 32px; */
+  padding: 20px 0px 8px 0px;
+  transform: translateX(0.5%);
+  width: 100%;
+}
+
+.conversationMessageModalNavbar.onMessenger
+  > section:nth-child(2)
+  > section:last-child {
+  /* width: 200px; */
+}
+
+
+.conversationMessageModalNavbar.onMessenger
+  > section:nth-child(2)
+  > section:last-child
+  > span:first-child {
+  /* width: 25vw; */
+  /* max-width: 371.195px; */
+}
+
+.conversationMessageModalNavbar.onMessenger.threeUser>section:nth-child(2)>section:last-child>span:first-child{
+/* border: solid pink; */
+}
+
+
+.conversationMessageModalNavbar.onMessenger
+  > section:nth-child(2)
+  > section:first-child {
+  /* width: 200px; */
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers
+  > section:first-child
+  img:first-child {
+  /* padding-left: 0.03em; */
+  transform: translateX(25%);
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers
+  > section:nth-of-type(1) {
+  width: 5vw;
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers
+  > section:nth-of-type(2) {
+  transform: translateX(0.5em);
+}
+
+.conversationMessageModalNavbar.notOnMessenger > section:first-child {
+  /* padding-left: 0.8em; */
+}
+
+.conversationMessageModalNavbar
+  > section:nth-child(2)
+  > section:last-child
+  > div
+  > div {
+  display: grid;
+  place-items: center;
+}
+
+
+
+.conversationMessageModalNavbar
+  > section:nth-child(2)
+  > section:last-child
+  > span:first-child {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.conversationMessageModalNavbar.notOnMessenger > section:nth-child(2)>section:last-child>span:first-child{
+width: 170px;
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers
+  > section:nth-of-type(2)
+  > section:last-child
+  > span:first-child {
+  max-width: 180px;
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers
+  > section:nth-of-type(2)
+  > section:last-child
+  > span:first-child {
+  width: 150px;
+}
+
+
+.conversationMessageModalNavbar.twoUsers > section > img,
+.conversationMessageModalNavbar.threeUsers > section > img {
+  width: 35px;
+  height: 35px;
+}
+
+.conversationMessageModalNavbar
+  > section:nth-child(2)
+  > section:last-child
+  svg {
+  font-size: 0.8em;
+}
+
+.conversationMessageModalNavbar > section:nth-child(2) > section:last-child {
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  font-weight: 250;
+  color: rgb(255, 255, 255, 0.4);
+}
+
+.conversationMessageModalNavbar
+  > section:nth-child(2)
+  > section:last-child
+  > div
+  > div {
+  /* border: solid 0.5px; */
+  transform: translateY(-7%);
+}
+
+.conversationMessageModalNavbar
+  > section:nth-child(2)
+  > section:last-child
+  > div {
+  display: flex;
+  position: absolute;
+  right: 5px;
+}
+
+.conversationMessageModalNavbar.notOnMessenger > section:nth-child(2) > section:last-child {
+  position: relative;
+  /* width: 222px; */
+  /* width: fit-content; */
+  /* min-width: 170px; */
+}
+
+.conversationMessageModalNavbar.notOnMessenger.oneUser >section:nth-child(2)>section:last-child>div{
+  right: 15px;
+
+}
+
+.conversationMessageModalNavbar.onNavbar > section:nth-child(1) {
+  max-width: 70px;
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers.onNavbar
+  > section:nth-of-type(1) {
+  width: fit-content;
+  max-width: 70px;
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers.onNavbar
+  > section:nth-of-type(2)
+  > section:last-child {
+  min-width: 190px;
+  max-width: 190px;
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers.onNavbar
+  > section:nth-of-type(2)
+  > section:last-child
+  > span:first-child {
+  max-width: 190px;
+}
+
+.messagingOptsContainer {
+  position: absolute;
+  right: 1em;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.messagingOptsContainer > div {
+  position: relative;
+}
+
+.messagingOptsContainer > button svg {
+  font-size: 1.3em;
+}
+
+.messagingOptsContainer > button {
+  border: none;
+  border-style: none;
+  width: 3vw;
+  height: 5vh;
+  min-width: 30px;
+  min-height: 30px;
+  max-height: 40px;
+  max-width: 40px;
+  border-radius: 50%;
+  z-index: 50000000;
+  background-color: gray;
+}
+
+.messagingOptsContainer.blogNavBar > button {
+  margin-top: 0.35em;
+}
+
+.messagingOptsContainer > div {
+  position: relative;
+}
+
+.messagingOpts {
+  background-color: white;
+  border-radius: 0.3em;
+  position: absolute;
+  /* width: 17vw; */
+  width: 210px;
+  /* height: 80px; */
+  height: fit-content;
+  /* height: 15vh; */
+  transform: translate(-192px, -38px);
+  display: flex;
+  flex-direction: column;
+  padding: 0.2em;
+}
+
+.messagingOpts button svg {
+  font-size: 1.3em;
+  transform: translateY(0.2em);
+  margin-right: 1em;
+}
+
+.messagingOpts button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.messagingOpts button:first-of-type {
+  padding-bottom: 0.3em;
+}
+
+.messagingOpts button {
+  width: 100%;
+  height: 50%;
+  max-height: 45px;
+  min-height: 45px;
+  border-style: none;
+  background-color: white;
+  text-align: left;
+  padding: 4%;
+  font-size: 0.8em;
+  border-top-right-radius: 0.3em;
+  border-top-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+.conversationMessageModalNavbar {
+  /* border: solid pink; */
+}
+
+.modal.messages > section:nth-child(3) {
+  overflow-y: scroll;
+  max-height: 330px;
+  min-height: 150px;
+  padding: 0 0.5em 0.5em 0.5em;
+  position: relative;
+}
+
+.conversationMessageModalNavbar > div:last-of-type svg {
+  font-size: 1.2em;
+}
+
+.conversationMessageModalNavbar > div:last-of-type {
+  color: rgb(24, 118, 242);
+  position: absolute;
+  right: -0.2em;
+  /* height: 85%; */
+  display: grid;
+  height: 100%;
+  /* padding-top: 0.2em; */
+  /* justify-content: center; */
+  place-items: center;
+}
+
+.conversationMessageModalNavbar.threeUsers.onSideBar
+  > section:nth-child(2)
+  > section:first-child {
+  max-width: 175px;
+  min-width: 175px;
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers
+  > section:nth-of-type(1) {
+  width: 5vw;
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers
+  > section:nth-of-type(2) {
+  /* max-width: 190px; */
+  width: 20vw;
+  max-width: 240px;
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers.onSideBar
+  > section:nth-of-type(2)
+  > section:last-child
+  > span {
+  width: 8vw;
+  min-width: 153px;
+  max-width: 163px;
+}
+
+.conversationMessageModalNavbar.notOnMessenger.threeUsers.onSideBar
+  > section:nth-of-type(2)
+  > section:last-child {
+  min-width: 180px;
+  max-width: 220px;
+}
+
+
+.conversationMessageModalNavbar.onMessenger.twoUsers > section > img,
+.conversationMessageModalNavbar.onMessenger.threeUsers > section > img{
+min-width: 18.6953px;
+}
+
+.conversationMessageModalNavbar.onMessenger>section:nth-child(2){
+  /* margin-left: 5px; */
+}
+
+
+.conversationMessageModalNavbar.onMessenger.oneUser img{
+  min-width: 40px;
+}
+
+.conversationMessageModalNavbar.onMessenger>section:nth-child(2)>section:last-child{
+  position: relative;
+}
+
+
+
+
+.conversationMessageModalNavbar.onMessenger.threeUsers>section:nth-child(2)>section:first-child{
+  /* width: 70%; */
+}
+
+
+.conversationMessageModalNavbar.onMessenger{
+  /* width: fit-content; */
+}
+
+.viewChatBtn{
+  
+}
+
+
+
+
+@media (min-width: 1200px){
+.conversationMessageModalNavbar.onMessenger.twoUsers>section:nth-child(2)>section:first-child,
+.conversationMessageModalNavbar.onMessenger.threeUsers>section:nth-child(2)>section:first-child {
+  /* width: 9.8vw;; */
+  width: 75%;
+}
+
+
+  .conversationMessageModalNavbar.onMessenger.twoUsers > section:nth-child(2),
+  .conversationMessageModalNavbar.onMessenger.threeUsers >section:nth-child(2){
+    width: 80%;
+  }
+
+  .conversationMessageModalNavbar.onMessenger.twoUsers>section:nth-child(2)>section:last-child,
+  .conversationMessageModalNavbar.onMessenger.threeUsers>section:nth-child(2)>section:last-child{
+    width: 75%;
+  }
+
+  .conversationMessageModalNavbar.onMessenger.oneUser>section:nth-child(2)>section:last-child {
+    width: 14vw;
+    max-width: 358.398px;
+  }
+
+  .conversationMessageModalNavbar.onMessenger.oneUser>section:nth-child(2){
+
+  }
+}
+
+
+
+
+/* for tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .conversationMessageModalNavbar {
+    min-height: 78px;
+  }
+
+  .conversationMessageModalNavbar.oneUser > section > img {
+    width: 61%;
+    height: 61%;
+    min-height: 25px;
+  }
+
+  .searchUserMessageModal img {
+    max-height: 60px;
+    max-width: 60px;
+  }
+}
+
+/* large devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .conversationMessageModalNavbar.oneUser > section > img {
+    width: 61%;
+    height: 61%;
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  .conversationMessageModalNavbar.oneUser > section > img {
+    width: 70%;
+    height: 70%;
+    min-width: 25px;
+    min-height: 25px;
+  }
+}
+
+/* extra large desktops, devices  */
+@media (min-width: 1200px) and (max-width: 1630px) {
+  .modal.messages > section:nth-child(3) {
+    padding: 0 0.5em 1.5em 0.5em;
+  }
+
+  .conversationMessageModalNavbar.oneUser > section > img {
+    width: 61%;
+    height: 61%;
+    min-width: 30px;
+    min-height: 30px;
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger > section:nth-child(2) > section:last-child {
+    min-width: 210px;
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger
+    > section:nth-child(2)
+    > section:last-child
+    > span:first-child {
+    min-width: 70px;
+  }
+
+  .conversationMessageModalNavbar.notONMessenger > section:nth-child(2) > section:first-child {
+    width: 60px;
+    min-width: 190px;
+  }
+
+  .usersInGroup.onNavbar {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+
+
+/* for nest hub */
+@media (min-width: 768px) and (max-height: 600px) {
+  .conversationMessageModalNavbar.oneUser > section > img {
+    min-width: 25px;
+    min-height: 25px;
+    width: 61%;
+    height: 61%;
+  }
+}
+
+/* GOAL: have all of the font sizes be in there own separate media query*/
+
+/* for chats that appear on the side bar conversations */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:last-child {
+    min-width: 100px;
+    max-width: 143px;
+  }
+
+  .conversationMessageModalNavbar.onSideBar.threeUsers > section > img {
+    min-width: 25px;
+    min-height: 25px;
+  }
+
+  .conversationMessageModalNavbar.onSideBar.threeUsers > section:first-child {
+    transform: translateX(-12px);
+  }
+
+  .conversationMessageModalNavbar.onSideBar.notOnMessenger.threeUsers
+    > section:nth-of-type(2) {
+    transform: translate(-10px);
+    /* min-width: 135px; */
+    /* max-width: 135px; */
+    /* width: fit-content; */
+  }
+
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:first-child {
+    max-width: 150px;
+  }
+
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:first-child
+    span {
+    font-size: 14px;
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers
+    > section:nth-of-type(2)
+    > section:last-child
+    > span:first-child {
+    max-width: 110px;
+  }
+
+  .messagingOptsContainer > button {
+    min-width: 40px;
+    min-height: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .conversationMessageModalNavbar.threeUsers.onSideBar > section > img {
+    width: 35px;
+    height: 35px;
+  }
+
+
+
+  .conversationMessageModalNavbar.threeUsers.onSideBar
+    > section:nth-child(2)
+    > section:first-child {
+    max-width: 140px;
+  }
+}
+
+.conversationMessageModalNavbar.threeUsers.onSideBar>section:first-child {
+  padding-right: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .conversationMessageModalNavbar.onSideBar.notOnMessenger.threeUsers
+    > section:nth-of-type(2) {
+    min-width: 135px;
+    max-width: 135px;
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers
+    > section:nth-of-type(2)
+    > section:first-child {
+    min-width: 130px;
+    max-width: 130px;
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers
+    > section:nth-of-type(2)
+    > section:last-child {
+    width: 15vw;
+    max-width: 132px;
+  }
+
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:last-child
+    span:first-child,
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:last-child
+    span:last-child {
+    font-size: 10px;
+  }
+
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:last-child
+    span:first-child {
+    width: 110px;
+  }
+
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:last-child
+    span:first-child {
+    max-width: 130px;
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers
+    > section:nth-of-type(1) {
+    width: 7vw;
+    max-width: 54px;
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers
+    > section:nth-of-type(2) {
+    transform: translateX(0.5em);
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers.onSideBar
+    > section:nth-of-type(2)
+    > section:last-child {
+    min-width: 165px;
+    max-width: 170px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:last-child
+    span:first-child,
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:last-child
+    span:last-child {
+    font-size: 12px;
+  }
+
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:last-child {
+    min-width: 190px;
+    max-width: 223px;
+  }
+
+  .conversationMessageModalNavbar.onSideBar
+    > section:nth-child(2)
+    > section:last-child
+    span:first-child {
+    width: 145px;
+  }
+
+    .conversationMessageModalNavbar.notOnMessenger.twoUsers.onSideBar>section:nth-of-type(1),
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers.onSideBar
+    > section:nth-of-type(1) {
+    width: 7vw;
+    max-width: 73px;
+  }
+
+
+  .conversationMessageModalNavbar.notOnMessenger.twoUsers > section:nth-of-type(2)>section:last-child,
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers
+    > section:nth-of-type(2)
+    > section:last-child {
+    max-width: 200px;
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger.twoUsers.onSideBar>section:nth-of-type(2),
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers.onSideBar
+    > section:nth-of-type(2) {
+    width: 195px;
+    min-width: 195px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .messagingOpts.onSideBar button {
+    max-height: 20px;
+    min-height: 20px;
+    font-size: 0.5rem;
+  }
+
+  .messagingOpts.onSideBar {
+    width: 130px;
+    transform: translate(-130px, -50px);
+  }
+
+  .conversationMessageModalNavbar.onMessenger{
+    /* min-width: 270.242px; */
+  }
+
+  .conversationMessageModalNavbar > section:nth-child(2){
+padding-left: 8px;
+  }
+
+  .conversationMessageModalNavbar.onMessenger>section:nth-child(2)>section:first-child{
+    width: 20vw;
+    min-width: 50px;
+  }
+
+
+
+.conversationMessageModalNavbar.onMessenger.twoUsers>section:nth-child(2)>section:first-child,
+  .conversationMessageModalNavbar.onMessenger.threeUsers>section:nth-child(2)>section:first-child{
+    width: 18vw;
+    max-width: 239.797px
+    /* min-width: 50px; */
+    /* max-width: 239.797px; */
+  }
+
+  .conversationMessageModalNavbar.onMessenger>section:nth-child(2)>section:last-child{
+    width: 20vw;
+    min-width: 50px;
+  }
+
+  
+
+  .conversationMessageModalNavbar.onMessenger.twoUsers>section:nth-child(2)>section:last-child,
+  .conversationMessageModalNavbar.onMessenger.threeUsers>section:nth-child(2)>section:last-child{
+    width: 18vw;
+    max-width: 220px;;
+  }
+
+.conversationMessageModalNavbar.onMessenger.oneUser>section:nth-child(2)>section:last-child>span:first-child{
+  /* width: 30vw; */
+  /* max-width: 289.797px; */
+  /* max-width: 160px; */
+}
+
+.conversationMessageModalNavbar.onMessenger.threeUsers>section:nth-child(2)>section:last-child>span:first-child{
+width: 20vw;
+}
+
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+}
+
+@media (min-width: 2560px) {
+  .conversationMessageModalNavbar.notOnMessenger {
+    max-height: 90px;
+    max-width: 494px;
+  }
+
+  .modal.messages > section:nth-child(2) > input {
+    max-height: 50px;
+  }
+}
+
+
+/* when the user is on the messenger page on has the app opened on a mobile device */
+@media (max-width: 767px){
+  .conversationMessageModalNavbar.onMessenger.twoUsers > section:nth-child(2),
+.conversationMessageModalNavbar.onMessenger.threeUsers > section:nth-child(2){
+  margin-left: 8px;
+}
+
+
+.conversationMessageModalNavbar.onMessenger>section:nth-child(2)>section:last-child{
+  width: 90% 
+}
+
+
+  .conversationMessageModalNavbar.onMessenger{
+    width: 100%;
+    padding-left: 10px;
+    max-width: 464.172px;
+    /* min-width: 464.172px; */
+  }
+
+  .conversationMessageModalNavbar.onMessenger > section:nth-child(2) > section:first-child{
+    width: 90%;
+  }
+
+.conversationMessageModalNavbar.onMessenger>section:nth-child(2)>section:last-child{
+  /* width: 95%; */
+  /* max-width: 325px; */
+  /* min-width: 50px; */
+}
+
+.conversationMessageModalNavbar.onMessenger > section:nth-child(2) > section:last-child>span:first-child{
+  width: 90% !important;
+}
+
+.conversationMessageModalNavbar.onMessenger > section:nth-child(2){
+width: 90%;
+/* min-width: 392.859px; */
+}
+
+.conversationMessageModalNavbar.onMessenger > section:nth-child(1){
+  min-width: 40.3125px;
+}
+
+.conversationMessageModalNavbar.threeUsers>section:nth-child(2){
+  /* width: 95%; */
+  /* margin-left: 10%; */
+}
+
+.conversationMessageModalNavbar.onMessenger.threeUsers>section:nth-child(2)>section:first-child{
+  width: 95%;
+  min-width: 10px;
+  max-width: 400px;
+}
+
+.conversationMessageModalNavbar.onMessenger.threeUsers > section > img{
+  width: 5vw;
+}
+
+.conversationMessageModalNavbar.onMessenger.threeUsers > section:nth-child(1){
+  width: 10%;
+  padding-left: 15px;
+}
+
+.conversationMessageModalNavbar.onMessenger.threeUsers > section:nth-child(2) > section:last-child{
+width: 95%;
+min-width: 95%;
+max-width: 95%;
+}
+
+.conversationMessageModalNavbar.oneUser.onMessenger>section:nth-child(2){
+  padding-left: 2em;
+}
+
+.conversationMessageModalNavbar.threeUsers>section:nth-child(2){
+  padding-left: 2em;
+}
+
+.conversationMessageModalNavbar.oneUser{
+  padding-left: 15px;
+}
+
+.conversationMessageModalNavbar.oneUser > section > img{
+width: 50px;
+min-width: 50px;
+}
+
+.conversationMessageModalNavbar.onMessenger > section:nth-child(2){
+  padding-bottom: 1.5em;
+}
+
+.conversationMessageModalNavbar.onMessenger {
+  min-width: 230.961px;
+}
+
+
+}
+
+@media (max-width: 325px){
+.conversationMessageModalNavbar.onMessenger>section:nth-child(2)>section:first-child span{
+  font-size: small;
+}
+
+  .chatInfo * {
+font-size: smaller;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 576px){
+
+}
+
+@media(max-width: 374px){
+.conversationMessageModalNavbar.oneUser > section > img{
+width: 40px;
+min-width: 40px;
+height: 50px;
+}
+
+
+
+.conversationMessageModalNavbar.onMessenger.threeUsers > section > img{
+
+}
+}
+
+

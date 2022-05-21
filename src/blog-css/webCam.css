@@ -1,0 +1,163 @@
+:root {
+  --backgroundColorModal: #2d2e30;
+  --textColor: #000000;
+  --borderColor: 0.8px solid #c0c0c0;
+  --linkColor: #add8e6;
+  --textColor: #ffffff;
+}
+
+.webCam {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  /* border: solid 2px pink; */
+}
+
+.cameraContainer {
+  padding: 0;
+  height: 720px;
+  /* max-height: 720px; */
+  width: 1280px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100000000;
+  border-radius: 8px;
+  background: var(--backgroundColorModal);
+  border: var(--borderColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-cameraContainer {
+  display: grid;
+  /* place-items: center; */
+  overflow: hidden;
+  width: 100%;
+  height: 90%;
+}
+
+.webCam-btn-container {
+  /* border: solid 2px pink; */
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  /* min-width: 305.406px; */
+  min-width: 278.406px;
+  /* padding: 16px 0px 16px 0px; */
+}
+
+.cameraContainer button {
+  border-style: none;
+  border-radius: 8px;
+  width: 20%;
+  /* height: 50%; */
+  background: #008000;
+  /* border: #c0c0c0 0.8px solid; */
+  color: var(--textColor);
+  cursor: pointer;
+  margin: 0px 8px 0px 0px;
+  height: 36.0703px;
+  min-width: 90.875px;
+  max-width: 258.875px;
+}
+
+.cameraContainer > div:last-of-type {
+  /* border: solid 2px pink; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -420%);
+  position: absolute;
+  font-size: 4em;
+}
+
+#cancelPhoto {
+  background: #ed3030;
+  color: var(--textColor);
+}
+
+  .cameraContainer {
+    width: 90vw;
+    height: 80vh;
+    /* max-height: 643.195px; */
+  }
+  
+  .webCam-btn-container {
+    height: 90.4141px;
+  }
+  
+  .webCam {
+    width: 100%;
+    height: 100%;
+    min-width: 278.406px;
+  }
+  
+  .sub-cameraContainer {
+    height: 100vh;
+    min-width: 278.406px;
+  }
+
+
+@media (min-width: 1200px){
+
+}
+
+@media (max-width: 1199px){
+  .webCam-btn-container{
+padding-top: 16px;
+padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 767px){
+  .sub-cameraContainer {
+    width: 100%;
+    height: 70%;
+  }
+
+  .webCam{
+    width: 100%;
+  }
+
+  .cameraContainer{
+    border-radius: 0%;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    overflow-y: scroll;
+    z-index: 10000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .cameraContainer{
+    width: 90vw;
+
+    height: 80vh;
+    max-height: 643.195px;
+  }
+
+  .webCam-btn-container{
+height: 90.4141px;
+  }
+
+  .webCam{
+    width: 100%;
+    height: 100%;
+  }
+
+  .sub-cameraContainer{
+    height: 100vh;
+  }
+}

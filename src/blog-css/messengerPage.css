@@ -1,0 +1,336 @@
+/* fileName: messengerPage */
+
+.messengerPage {
+  position: fixed;
+  height: 100vh;;
+  width: 100vw;
+  background-color: var(--backgroundColorModal);
+}
+
+.messengerPage > div{
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  max-width: 2560px;
+  /* border: solid pink 10px; */
+}
+
+/* chat display and text input section */
+.userSearchResultsMessageModal.onMessengerPage {
+  /* min-height: 62vh; */
+  /* max-height: 62vh; */
+  /* height: 1000px; */
+  display: flex;
+  overflow-y: auto;
+  flex-flow: column nowrap;
+  display: flex;
+  overflow-y: auto;
+  flex-flow: column nowrap;
+  position: relative;
+  padding: 1em 0 0.5em 0;
+}
+
+.userSearchResultsMessageModal.onMessengerPage > :first-child {
+  margin-top: auto !important;
+}
+
+.messageInputFieldContainer.onMessengerPage {
+  position: relative;
+  /* min-height: 150px; */
+  /* overflow-y: auto;    */
+}
+
+
+
+
+
+.messageInputFieldContainer.onMessengerPage textarea {
+  min-height: 60px;
+  max-height: 90px;
+}
+
+.conversationOptions {
+  overflow-y: auto;
+  width: 30%;
+  /* height: 100%; */
+  border-left: 0.05px solid rgba(192, 192, 192, 0.3);
+  background-color: var(--backgroundColorModal);
+  padding-bottom: 200px;
+}
+
+.usersToMessage > div {
+  position: relative;
+}
+
+.usersToMessage.onMessengerPage > div:first-child {
+  height: 102.562px;
+}
+
+.usersToMessage.onMessengerPage {
+  flex-direction: column;
+  border-bottom: none;
+  height: 169.766px;
+}
+
+
+.usersToMessage.onMessengerPage > div {
+  width: 100%;
+  border-radius: 0em;
+}
+
+.usersToMessage.onMessengerPage > div:first-child img {
+  width: 70px;
+  height: 70px;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+
+.usersToMessage.onMessengerPage > div {
+  pointer-events: none;
+}
+
+.usersToMessage.oneUser.onMessengerPage > div:first-child {
+  padding-left: 0;
+  padding: 2em 0em 0.5em 0em;
+  display: grid;
+  place-items: center;
+}
+
+.usersToMessage.onMessengerPage > div:first-child {
+  /* padding-left: 7.5em;
+  padding-top: 2em;
+  padding-bottom: 0.5em; */
+}
+
+.usersToMessage.onMessengerPage > div:nth-child(2) {
+  min-width: none;
+  max-width: none;
+  place-items: center;
+  justify-content: center;
+  font-weight: 200;
+  font-size: larger;
+  /* width: 300px; */
+  /* max-width: 200px; */
+  /* width: 340px; */
+  padding-left: 1em;
+  /* border: solid pink; */
+  text-align: center;
+}
+
+.messagingModalOptions > button > svg:nth-of-type(2) {
+  /* color: white; */
+}
+
+.messagingModalOptions.onMessengerPage > div input,
+.messagingModalOptions.onMessengerPage > section span,
+.messagingModalOptions.onMessengerPage button {
+  color: white;
+}
+
+
+
+.messagingModalOptions.onMessengerPage {
+  position: static;
+  transform: translate(0, 0);
+  top: 0;
+  left: 0;
+  border-radius: 0%;
+  background-color: inherit;
+  /* height: 70vh; */
+  height: 212px;
+  padding-bottom: 150px;
+  
+}
+
+
+
+.usersToMessage.onMessengerPage>div:first-child > div{
+  /* width: fit-content; */
+}
+
+
+.usersToMessage.onMessengerPage > div:first-child{
+display: flex;
+justify-content: center;
+place-items: center;
+}
+
+.messagingModalOptions.onMessengerPage > button:not(:first-child){
+  margin-top: 8px;
+}
+
+.usersToMessage.onMessengerPage.threeUsers{
+}
+
+.messagingModalOptions.onMessengerPage > section{
+  /* min-height: 30vh; */
+/* min-height: clamp(100px, 35vh, 337.75px); */
+min-height: 35vh;
+max-height: 50vh;
+  padding: 0em 0.5em 0 0.5em;
+}
+
+.backBtnContainer{
+display: none;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1199px){
+
+  .messagingModalOptions.onMessengerPage{
+    padding-bottom: 400px;
+  }
+
+  .messageInputFieldContainer.onMessengerPage{
+    padding-bottom: 200px;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 767px){
+.userSearchResultsMessageModal.onMessengerPage{
+  /* min-height: 148.797px; */
+  max-height: 620px;
+}
+
+  .messengerPage > div{
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .conversationOptions {
+    width: 33%;
+  }
+
+  .usersToMessage.onMessengerPage.oneUser > div:first-child img {
+    width: 50px;
+    height: 50px;
+  }
+
+
+
+  .usersToMessage.onMessengerPage.threeUsers >div:first-child img{
+    width: 35px;
+    height: 35px;
+  }
+
+  .messageInputFieldContainer.onMessengerPage textarea {
+    min-height: 45px;
+    max-height: 105px;
+    height: 10vh !important;
+    transform: translateY(10%);
+  }
+
+.usersToMessage.onMessengerPage > div:first-child{
+height: 80px;
+}
+
+.usersToMessage.onMessengerPage{
+  height: 135px;
+}
+
+
+.messagingModalOptions.onMessengerPage > button{
+  height: 62px;
+}
+
+.messagingModalOptions.onMessengerPage>section {
+  min-height: 30vh;
+  max-height: 30vh;
+}
+
+}
+
+
+@media (max-width: 576px){
+    .usersToMessage.oneUser.onMessengerPage>div:first-child img {
+      width: 55px;
+      height: 55px;
+    }
+
+.usersToMessage.oneUser.onMessengerPage{
+  height: 130px;
+}
+
+.usersToMessage.oneUser.onMessengerPage img{
+  width: 50px;
+  height: 50px;
+}
+
+    .usersToMessage.onMessengerPage > div:nth-child(2) > span{
+    }
+
+    .messageInputFieldContainer.onMessengerPage{
+      width:100%;
+    }
+
+
+    .messageInputFieldContainer button{
+      transform: translateX(2px)
+    }
+
+
+.messagingModalOptions.onMessengerPage > div input,
+.messagingModalOptions.onMessengerPage > section span,
+.messagingModalOptions.onMessengerPage button{
+  /* font-size: x-small; */
+  font-size: 8px;;
+}
+
+.messengerPage > div{
+  min-width: 280px;
+}
+
+.messengerPage{
+  overflow-x: auto;
+}
+
+
+
+
+.messageOnMessagingModal img{
+min-width: 20px;  
+min-height: 20px;
+}
+
+.messageOnMessagingModal.diffUser > div{
+margin-left: 1.5em;
+}
+
+.usersToMessage.onMessengerPage.threeUsers>div:first-child img {
+  width: 28px;
+  height: 28px;
+}
+
+
+}
+
+@media (max-width: 375px){
+  .usersToMessage.onMessengerPage > div:first-child img {
+    width: 28px;
+    height: 28px;
+  }
+
+}
+
+@media (max-width: 319px){
+  .usersToMessage.threeUsers.onMessengerPage>div:first-child>div img {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+
+
+
+
+
+
+
+

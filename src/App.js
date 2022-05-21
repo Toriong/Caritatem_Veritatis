@@ -1,23 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { BlogInfoProvider } from './provider/BlogInfoProvider'
 import Pages from './components-for-official-homepage/Pages'
 import './official-homepage-css/index.css'
 
 
 
-
 const App = () => {
-  const [data, setData] = useState(null);
 
-  useEffect(() => {
-    fetch('/api')
-      .then(res => res.json())
-      .then(data => setData(data.message))
-  }, []);
-
-
-  useEffect(() => {
-    console.log(data);
-  })
   return (
     <Pages />
   );

@@ -1,0 +1,378 @@
+.modal.previousVersions {
+  background-color: var(--backgroundColorModal);
+  border: 0.79px solid rgba(192, 192, 192, 0.4);
+  border-radius: 0.5em;
+  /* width: 95%; */
+  width: 95vw;
+  max-width: 1368px;
+  /* min-height: 80%; */
+  /* min-height: 500px;  */
+  max-height: 700px;
+  /* max-height: 90%; */
+  height: 80vh;;
+  overflow-y: scroll;
+  /* max-width: 95vw; */
+  /* min-width: 95vw; */
+}
+
+.modal.previousVersions > header {
+  padding: 0em 0em 0em 10em;
+  height: 10vh;
+  max-height: 60px;
+  display: flex;
+  min-height: 35px;
+  /* justify-content: space-around; */
+  border-bottom: rgba(192, 192, 192, 0.4) 0.5px solid;
+}
+
+.modal.previousVersions > header > div:not(:first-child) {
+  display: grid;
+  place-items: center;
+  width: 90%;
+}
+
+.modal.previousVersions > header > div:nth-child(3) {
+  width: 35vw;
+}
+
+.modal.previousVersions > header > div:nth-child(2) {
+  margin-left: 10em;
+  width: 35vw;
+}
+
+.modal.previousVersions > header > div:nth-child(2) {
+  /* height: 100%; */
+  /* width: 25vw; */
+  /* border-left: rgba(192, 192, 192, 0.4) 0.5px solid; */
+  /* border-right: rgba(192, 192, 192, 0.4) 0.5px solid; */
+}
+
+.modal.previousVersions > header > div:last-child {
+  /* border: solid pink; */
+  /* width: 50%; */
+}
+
+.previousVersionOfPost:not(:last-child){
+  border-bottom: rgba(192, 192, 192, 0.4) 0.5px solid;
+}
+
+.previousVersionOfPost{
+  
+  /* max-height: 145.5px; */
+  /* min-height: 10vh; */
+  /* height: fit-content; */
+  height: 165px;
+  display: flex;
+  position: relative;
+}
+
+.previousVersionOfPost > div:first-child {
+}
+
+.previousVersionOfPost > div:not(:last-child) {
+  border-right: rgba(192, 192, 192, 0.4) 0.5px solid;
+  /* max-height:  */
+  /* max-height: 145px; */
+}
+
+.previousVersionOfPost > div:first-child {
+  width: 23.5%;
+  display: grid;
+  place-items: center;
+}
+
+.previousVersionOfPost > div:nth-child(2) {
+  width: 36.8%;
+  display: flex;
+  height: 100%;
+}
+
+.previousVersionOfPost > div:nth-child(2) > section:nth-child(2) {
+  display: grid;
+  place-items: center;
+  padding-right: 8px;
+}
+
+.previousVersionOfPost > div:nth-child(2) > section:nth-child(2) img {
+  /* width: 8vw; */
+  /* height: 8vh; */
+  width: 116px;
+  height: 90px;
+}
+
+.previousVersionOfPost > div:nth-child(2) > section:nth-child(1) > * {
+  margin-top: 0.4em;
+}
+
+.previousVersionOfPost > div:nth-child(2) > section:nth-child(1) {
+  /* border: solid pink; */
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  padding-left: 2%;
+  width: 75%;
+}
+
+.previousVersionOfPost
+  > div:nth-child(2)
+  > section:nth-child(1)
+  > span:nth-of-type(2) {
+  margin-top: 0.5em;
+}
+
+.previousVersionOfPost > div:nth-child(3) {
+  /* border: solid 2px pink; */
+  width: 39%;
+  padding: 1%;
+  border-right: none;
+}
+
+.previousVersionOfPost > div:nth-child(3) > ul > li {
+  /* display: inline-block; */
+  list-style-type: square;
+  /* display: flex; */
+}
+
+.previousVersionOfPost > div:nth-child(3) > ul > li:not(:first-child) {
+  margin-top: 1%;
+}
+
+.previousVersionOfPost > div:nth-child(3) > ul {
+  padding-left: 5%;
+  color: white;
+  list-style-type: square;
+  column-count: 2;
+}
+
+.previousVersionOfPost > div:nth-child(4) {
+  position: absolute;
+  right: 0;
+  /* border: solid pink; */
+  height: 100%;
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0.2em;
+}
+
+.previousVersionOfPost > div:nth-child(4) > div {
+  position: relative;
+  /* border: solid 2px pink; */
+  width: 100%;
+}
+
+.prevVersionOptsModal {
+  background-color: white;
+  border-radius: 0.3em;
+  position: absolute;
+  /* width: 12vw; */
+  width: 170px;
+  height: 10vh;
+  height: 80px;
+  transform: translate(-128px, -8px);
+  display: flex;
+  flex-direction: column;
+  padding: 0.2em;
+  z-index: 5000000000000000000;
+}
+
+.prevVersionOptsModal > button {
+  height: 100%;
+  border-style: none;
+  border: none;
+  background: none;
+  border-radius: 0.3em;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.prevVersionOptsModal > button:hover {
+  background: rgb(32, 33, 36, 0.3);
+}
+
+.previousVersionOfPost > div:nth-child(4) > button {
+  border: none;
+  border-style: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #808080;
+}
+
+.previousVersionOfPost
+  > div:nth-child(2)
+  > section:first-child
+  > span:nth-of-type(1) {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.previousVersionOfPost
+  > div:nth-child(2)
+  > section:first-child
+  > span:nth-of-type(1):hover {
+  text-decoration: underline;
+}
+
+/* modal EditVersion */
+.blocker.black {
+  z-index: 5000000;
+}
+
+.blocker.black.editCommentBlocker {
+  z-index: 90000000000000;
+}
+
+.modal.editVersionModal.commentEdit {
+  width: 40vw;
+  height: 50vh;
+  max-width: 576px;
+  height: 557px;
+}
+
+.modal.editVersionModal {
+  background: var(--backgroundColorModal);
+  border: 0.1px solid rgb(192, 192, 192, 0.3);
+  width: 60vw;
+  height: 70vh;
+  border-radius: 0.4em;
+  z-index: 50000000000;
+}
+
+.modal.editVersionModal > header {
+  height: 50%;
+  display: grid;
+  place-items: center;
+  padding: 5% 10% 0 15%;
+}
+
+.modal.editVersionModal > header > h3 {
+  font-size: 100;
+}
+
+.modal.editVersionModal > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8%;
+  height: 50%;
+}
+
+.modal.editVersionModal > div > button:first-of-type {
+  background: red;
+  margin-right: 0.5em;
+}
+
+.modal.editVersionModal > div > button:last-of-type {
+  background: green;
+  margin-left: 0.5em;
+}
+
+.modal.editVersionModal > div > button {
+  padding: 1.5%;
+  border-radius: 0.5em;
+  color: white;
+  text-align: center;
+  width: 20%;
+  font-size: 1em;
+  border-style: none;
+}
+
+
+@media (max-width: 1199px){
+/* .modal.previousVersions {
+  border-radius: 0%;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 10000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.modal.previousVersions{
+  /* min-width: 0; */
+  /* max-width: 0; */
+  /* min-width: 100vw; */
+  /* max-width: 1330px;; */
+  /* width: 1330px; */
+  /* width: 95vw; */
+  /* overflow-x: scroll;; */
+  /* height: fit-content; */
+}
+
+/* .modal.previousVersions>header, */
+.previousVersionOfPost{
+  width: 100%;
+  width: 1330px;
+}
+
+.modal.previousVersions > header{
+  padding-left: 0;
+  width: 1330px;
+  max-height: 70px;
+}
+
+.modal.previousVersions > header > *{
+margin-left: 0 !important;
+width: 33% !important;
+}
+
+.modal.previousVersions > header h1{
+  transform: translateX(-100px);
+  font-size: 14px;;
+}
+
+
+
+.modal.previousVersions>header>div:nth-child(2){
+  white-space: nowrap;
+}
+
+.modal.previousVersions {
+  width: 95vw;
+  height: 90vh !important;
+  min-height: 230px;
+  max-height: 698px;
+  overflow-x: scroll;
+}
+
+.previousVersionOfPost>div:nth-child(2)>section:nth-child(2) img{
+  min-width: 104px;
+  height: 58px;
+}
+
+.previousVersionOfPost > div:nth-child(4) > button{
+width: 40px;
+height: 40px;
+}
+
+.prevVersionOptsModal{
+  transform: translate(-115px, -5px);
+  width: 150px;
+  height: 70px;
+  font-size: 1rem
+}
+
+.modal.editVersionModal.commentEdit{
+  min-width: 168px;
+  max-width: 70vw;
+width: 70vw !important;
+min-height: 181px !important;
+height: 60vh !important;
+max-height: 300px;
+font-size: calc(.5rem + .3vmin)
+}
+
+.modal.editVersionModal > div > button{
+font-size: calc(.5rem + .3vmin);
+max-height: 30px;
+min-height: 22px;
+min-width: 68px;
+max-width: 117px;
+}
+
+}
+

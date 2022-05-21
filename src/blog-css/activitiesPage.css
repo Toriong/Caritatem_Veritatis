@@ -1,0 +1,446 @@
+.activitiesPage {
+  padding: 0.5em 0 2em 0;
+  min-height: 100vh;
+  height: fit-content;
+  max-width: 2560px;
+  /* min-width: 240px; */
+  overflow-x: scroll;
+  overflow-y: scroll;
+  /* min-width: 100vw; */
+  width: 100vw;
+
+  /* border: solid pink; */
+  /* overflow-x: hidden; */
+}
+
+.activitiesPage > header > div{
+  width: 100%;
+  height: 100%;
+  padding-left: 108px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+max-width: 1380px;
+}
+
+.activitiesPage > header {
+  /* border: solid pink; */
+  /* min-width: 280px; */
+  /* min-width: 576px; */
+  /* min-width: 576px;; */
+  min-width: 240px;
+  width: 100vw;
+  max-width: 2560px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 16px 0em 0em 10em; */
+  /* padding: 16px 0em 0em 88px; */
+}
+
+.activityNamesContainer {
+  padding-top: 0.8em;
+  margin-top: 0.8em;
+  width: 100%;
+}
+
+.activitySection > section:first-child,
+.activitySection > section:first-child > div,
+.activityNamesContainer {
+  display: grid;
+  place-items: center;
+}
+
+
+
+.activityNamesContainer > div:first-of-type {
+  border-radius: 0.5em;
+  width: 70%;
+  /* height: 75vh; */
+  /* height: fit-content; */
+  background-color: #2d2e30;
+  padding: 0.8em;
+  max-width: 840px;
+  position: relative;
+}
+
+.activityNamesContainer.selectedActivity > div:first-of-type {
+  background-color: var(--backgroundColor);
+  height: fit-content;
+  min-width: 458px;
+  /* min-width: 576px; */
+}
+
+
+.activitySection{
+  height: 77.1px;
+}
+
+.selectedActivityContainer,
+.activitySection {
+  display: flex;
+  /* height: 20%; */
+  /* height: 10vh; */
+  padding: 0.5em;
+  /* border: solid pink; */
+  border-radius: 0.5em;
+  max-width: 815px;
+}
+
+.activitySection:hover {
+  background: rgba(32, 33, 36, 0.6);
+  cursor: pointer;
+}
+
+.activitySection span {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.activitiesBorder {
+  border: var(--readingListModalBorder);
+  margin-top: 0.25em;
+}
+
+.activitySection > section:first-child > div {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: #808080;
+}
+
+.activitySection > section:first-child > div svg {
+  color: black;
+  font-size: 1.1em;
+}
+
+.activitySection > section:first-child {
+  width: 4.5vw;
+  min-width: 48px;
+  max-width: 52px;
+  height: 62px;
+}
+
+.activitySection > section:nth-child(2) {
+  width: 95%;
+  max-width: 728px;
+  height: 62px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.activitySection > section:nth-child(3) svg {
+  font-size: 1.2em;
+}
+
+.activitySection > section:nth-child(3) {
+  display: grid;
+  place-items: center;
+  height: 62px;
+}
+
+.activitySection:not(:first-of-type) {
+  margin-top: 0.5em;
+}
+
+/* selected activity */
+.selectedActivityContainer:not(:first-child) {
+  margin-top: 0.5em;
+}
+
+.selectedActivityContainer > section:last-child {
+  padding: 1%;
+}
+
+.selectedActivityContainer {
+  flex-direction: column;
+  height: fit-content;
+  background-color: var(--backgroundColorModal);
+  /* min-width: 420px; */
+  min-width: 280px;
+}
+
+.userActivity:hover {
+  cursor: pointer;
+}
+
+.userActivity {
+  height: fit-content;
+  /* border: solid pink; */
+  /* height: 225px; */
+  /* height:160px;  */
+  /* padding: 2%; */
+  padding: 8.10156px;
+  /* padding-bottom: 2%; */
+  display: flex;
+  border-radius: 0.5em;
+  position: relative;
+}
+
+.userActivity:hover {
+  background-color: rgb(32, 33, 36, 0.5);
+}
+
+.userActivity.noColorChange:hover {
+  background-color: initial;
+  cursor: default;
+}
+
+.userActivity > section:first-child {
+  /* display: grid; */
+  /* place-items: center; */
+}
+
+.userActivity:not(:first-child) {
+  margin-top: 0.8em;
+}
+
+.userActivity > section:first-child > img {
+  /* width: 6vw; */
+  /* height: 6vh; */
+  height: 45px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.userActivity > section:nth-child(2) {
+  display: flex;
+  /* padding-top: 0.5em; */
+  flex-direction: column;
+  margin-left: 0.8em;
+  position: relative;
+  min-height: 130px;
+}
+
+.userActivity > section:nth-child(2) > div:first-child {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  /* padding: 1% 0 5% 0; */
+}
+
+.userActivity > section:nth-child(2) > div:last-child {
+  margin-top: 0.8em;
+  height: 22px;
+  /* border: solid pink; */
+  position: absolute;
+  bottom: 3px;
+  
+}
+
+.userActivity > section:nth-child(2) > div:last-child span:nth-child(2) {
+  margin-left: 1.5em;
+}
+
+.userActivity > section:nth-child(2) > div:last-child span {
+  font-size: 0.8em;
+  /* font-size: .8rem; */
+  font-weight: 100;
+  color: #808080;
+}
+
+
+.userActivity > section:nth-child(2) > div:first-child > span:first-child {
+  /* margin-bottom: 0.5em; */
+}
+
+.userActivity > section:nth-child(2) > div:first-child > span:last-child {
+  margin-top: 0.5em;
+}
+
+.userActivity > section:nth-child(2) > div:nth-child(2) {
+  /* border: solid 2px pink; */
+}
+
+.userActivity > section:nth-child(3) {
+  position: absolute;
+  right: 0.8em;
+  /* width: 2vw; */
+  /* height: 72%; */
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: pink solid; */
+}
+
+.userActivity > section:nth-child(3) > div {
+  position: relative;
+  width: 100%;
+}
+
+.activitiesOptions {
+  background-color: white;
+  border-radius: 0.3em;
+  position: absolute;
+  /* width: 17vw; */
+  /* height: 15vh; */
+  transform: translate(-192px, -8px);
+  display: flex;
+  flex-direction: column;
+  padding: 0.2em;
+  z-index: 50000000;
+  height: 90px;
+  width: 205px;
+}
+
+.activitiesOptions.twoOpts {
+  height: 20vh;
+}
+
+.activitiesOptions > * {
+  height: 50%;
+  border-style: none;
+  border: none;
+  background: none;
+  border-radius: 0.3em;
+  font-size: 0.95em;
+}
+
+.activitiesOptions > button:hover {
+  background: rgb(32, 33, 36, 0.3);
+}
+
+.activitiesOptions > button:last-child {
+  color: red;
+}
+
+.userActivity > section:nth-child(3) > button {
+  /* width: 4vw; */
+  border: none;
+  border-style: none;
+  /* width: 3vw; */
+  /* height: 5vh; */
+  width: 40px;
+  height: 40.2px;
+  border-radius: 50%;
+  background-color: #808080;
+  z-index: 100;
+}
+
+
+.userActivity > section:nth-child(2) > div:last-child{
+  /* width: 450px; */
+  /* border: solid pink; */
+}
+
+.userActivity>section:nth-child(2){
+  /* border: solid pink .1px; */
+  width: 100%;
+}
+
+
+.activityNamesContainer > div:first-of-type{
+  min-width: 280px;
+}
+
+
+@media (max-width: 1199px){
+.activityNamesContainer > div:first-of-type > p {
+  text-align: center;
+}
+
+.activityNamesContainer.selectedActivity>div:first-of-type{
+}
+
+.activitiesPage,
+.activityNamesContainer{
+  /* min-width: 576px; */
+}
+
+
+.activityNamesContainer > div:first-of-type {
+  height: 583.75px;
+}
+.activitySection {
+  height: 69px;
+}
+
+.userActivity>section:first-child>img {
+  width: 54px;
+  height: 44px;
+}
+
+
+#threeDotBtn{
+  width: 35px;
+  height: 37px
+}
+
+.activitiesOptions {
+  width: 185px;
+  height:99px !important; 
+  transform: translate(-169px, -8px);
+}
+
+.userActivity>section:nth-child(2)>div:last-child{
+  bottom: 6px;
+}
+
+.userActivity>section:nth-child(2)>div:last-child span{
+  font-size: .6rem;
+}
+}
+
+@media (max-width: 767px){
+  .activitySection > section:nth-child(2) {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .activitiesPage > header > div {
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .activityNamesContainer>div:first-of-type {
+    min-width: 224px;
+  }
+
+  .userActivity {
+    height: 235px;
+  }
+
+}
+
+
+@media(max-width: 280px){
+.activitySection>section:nth-child(2){
+  font-size: 10px;;
+}
+
+.activitySection>section:first-child>div svg{
+  font-size: 14px;
+}
+
+.activitiesPage{
+  min-width: 100vw;
+  overflow-x: scroll;;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+}
+
+@media (min-width: 2561px){
+
+}
+
+
+/* when code is less than 240, make the page x-scrollable */
+@media (min-width: 768px) and (max-width: 1199px){
+  .userActivity {
+    min-height: 210px;
+  } 
+}
+
+@media (max-width: 576px){
+  .activitiesPage > header> div{
+/* justify-content: left;; */
+padding-left: 10px;
+  }
+}
+
+

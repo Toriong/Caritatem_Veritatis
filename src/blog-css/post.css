@@ -1,0 +1,1064 @@
+/* fileName: post */
+
+.postContainer {
+  margin-top: 1rem;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 1em;
+  border-bottom: var(--borderColor);
+  padding-top: 0.5em;
+}
+
+.postContainer.onSearchPage,
+.postContainer.mainFeed {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.postContainer.onSearchPage img,
+.postContainer.mainFeed img {
+  height: 30vh;
+}
+
+.postContainer > div:first-child > h1 {
+  font-size: 1.2em;
+  width: fit-content;
+}
+
+.postContainer h1,
+h4,
+ul,
+ol,
+h3,
+h2,
+a {
+  color: #ffffff;
+}
+
+/* author info section */
+.userInfo.onProfilePage > div:last-child > div:last-child {
+  font-size: 0.5em;
+}
+
+.userInfo.onProfilePage > div:last-child {
+  padding-top: 0.19em;
+}
+
+.userInfo.onProfilePage > div:last-child > div:first-child > div:last-child {
+  font-size: 1em;
+}
+
+.userInfo {
+  height: 8vh;
+  display: flex;
+  margin-top: 0.5em;
+}
+
+
+.userInfo.onSearchPage > div:last-child > div:last-child,
+.userInfo.onSearchPage > div:last-child > div:first-child > div:first-child {
+  /* margin-left: 0.3em; */
+}
+
+.userInfo.onSearchPage > div:last-child > div:first-child > div:last-child {
+  margin-left: 0.5em;
+}
+
+.userInfo.onSearchPage > div:last-child > div:first-child > div:last-child {
+  font-size: 1em;
+  width: 0;
+  margin-left: 24px;
+}
+
+.userInfo.onSearchPage > div:last-child > div:last-child {
+}
+
+.userInfo.onSearchPage {
+  /* font-size: 1.1em; */
+}
+
+.userInfo div:first-child {
+  /* padding-top: 0.1em; */
+}
+.userInfo div:first-child img {
+  width: 4vw;
+  height: 7vh;
+  border-radius: 1rem;
+}
+
+.userInfo > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.8vh;
+  margin-bottom: 0.3em;
+  width: 15vw;
+}
+
+.userInfo > div:nth-child(2) > * {
+  /* margin-bottom: 0.5em; */
+}
+
+.userInfo > div:nth-child(2) > div:first-child {
+  height: 50%;
+}
+
+.userInfo div:nth-child(2) span {
+  font-size: 14.202px;
+}
+
+.userInfo.writePost{
+  overflow-x: auto;
+}
+
+.userInfo > div:last-child > div:first-child {
+  display: flex;
+  transform: translateY(-2px);
+}
+
+.userInfo.writePost>div:last-child{
+  /* overflow-x: scroll; */
+}
+
+.userInfo > div:last-child > div:first-child > div:first-child {
+  /* display: grid; */
+  /* place-items: center; */
+  padding-top: 0.4em;
+  /* width: 30%; */
+  /* border: solid 2px pink; */
+  /* text-align: left; */
+}
+
+.userInfo > div:last-child > div:first-child > div:last-child {
+  width: 47%;
+  /* margin-left: 1.2em; */
+  display: grid;
+  place-items: center;
+}
+
+.userInfo.onProfilePage > div:last-child > div:first-child > div:first-child {
+  padding-top: 0em;
+}
+
+.userInfo.onProfilePage > div:last-child > div:first-child > div:last-child {
+  margin-left: 0px;
+  font-size: 0.5em;
+  width: 0;
+}
+
+.userInfo > div:last-child > div:first-child > div:last-child {
+}
+
+.userInfo > div:last-child > div:first-child > div:last-child button {
+  /* min-width: 6.111111111111111vw; */
+  height: fit-content;
+  border-radius: 0.5em;
+  border-style: none;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  padding: 2px;
+  padding-right: 8px;
+  padding-left: 8px;
+  /* margin-left: 0.3em; */
+  /* margin-left: 40px; */
+  transform: translate(10px,3px);
+  color: #ffffff;
+  /* font-size: 0.8em; */
+  display: flex;
+  font-size: x-small;
+  max-width: 117.328px;
+}
+
+.userInfo
+  > div:last-child
+  > div:first-child
+  > div:last-child
+  button
+  > div:first-child {
+  padding-bottom: 0.1em;
+  padding-top: 0.1em;
+  width: 100%;
+  height: 100%;
+}
+
+.userInfo
+  > div:last-child
+  > div:first-child
+  > div:last-child
+  button
+  > div:last-child {
+  padding-top: 0.2em;
+  padding-left: 0.2em;
+}
+
+.userInfo.onFeed > div:last-child > div:last-child {
+  margin-top: 4px;
+}
+
+.postContainer.mainFeed .postContainer div:first-child {
+  cursor: pointer;
+}
+
+.postContainer.onSearchPage{
+  max-width: 1017.59px;
+}
+
+
+.postContainer.onSearchPage > div:first-child,
+.postContainer.mainFeed > div:first-child {
+  margin-bottom: 0.15em;
+  font-size: 2em;
+}
+
+.subtitleContainer.onSearchPage > span {
+  font-size: 1.2em;
+  /* border: solid 2px pink; */
+}
+
+.subtitleContainer.mainFeed > span {
+  font-size: 1.5em;
+}
+
+.userInfo > div:last-child {
+  padding-top: 0.25em;
+}
+
+.userInfo div:last-child span:first-child {
+  margin-top: 0.6em;
+}
+
+/* intro pic */
+.introPicContainer.mainFeed {
+  /* border: solid 2px pink; */
+  margin-top: 0.8em;
+}
+
+.introPicContainer.mainFeed img {
+  width: 100%;
+  height: 100%;
+}
+
+/* subtitle */
+.subtitleContainer {
+  margin-top: 0.3em;
+}
+
+.subtitleContainer.onSearchPage,
+.subtitleContainer.mainFeed {
+  margin-top: 0em;
+  /* border: solid 2px pink; */
+}
+
+.su
+
+/* body */
+.postBody {
+  color: #ffffff;
+  overflow-y: hidden;
+  height: fit-content;
+}
+
+.postBody img {
+  margin-top: 0.3em;
+}
+
+.postBody.mainFeed {
+  /* height: 50vh; */
+  /* border: solid 2px green; */
+  height: fit-content;
+  /* min-height: 30vh; */
+  margin-top: 0.5em;
+}
+
+.postBody.mainFeed {
+  font-size: 1.5em;
+}
+
+/* intro pic */
+.introPicContainer.onUserProfilePage {
+  margin-bottom: 0.5em;
+}
+.introPicContainer.onUserProfilePage img,
+.postBody img {
+  width: 100%;
+  height: 70%;
+}
+
+.postBody.onSearchPage {
+  font-size: 1.5em;
+  /* border: solid pink; */
+}
+
+/* read more btn container */
+.readMoreBtnContainer {
+  height: 5vh;
+  /* margin: 3em 0px 3% 0px; */
+  margin-top: 1em;
+  display: grid;
+}
+
+.readMoreBtnContainer span {
+  border-style: none;
+  width: 25%;
+  height: 100%;
+  font-size: 0.55em;
+  cursor: pointer;
+  color: rgba(56, 123, 255, 1);
+}
+
+.readMoreBtnContainer.mainFeed {
+  margin-top: 2.5em;
+}
+
+.readMoreBtnContainer.mainFeed span {
+  font-size: 1em;
+}
+
+.readMoreBtnContainer.onSearchPage span {
+  font-size: 1.2em;
+}
+
+/* likes and comments header section */
+.likesAndComments {
+  margin: 3em 0px 0em 0px;
+  display: flex;
+  /* height: 10vh; */
+  height: 103.297px;
+  /* border: solid pink; */
+  position: relative;
+  /* width: fit-content; */
+}
+
+.likesAndComments.userProfile{
+max-height: 103.297px;
+min-width: 252px;
+}
+
+.likesAndComments span:first-child {
+  /* min-width: 4vw; */
+}
+
+.likesAndComments > span:first-child > div:last-child {
+  /* border: solid 2px pink; */
+  font-size: 1.5em;
+  width: fit-content;
+  display: grid;
+  place-items: center;
+  padding-bottom: 0.05em;
+}
+
+.likesAndComments span:nth-child(2) {
+  position: relative;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+  /* margin-right: 0.25em; */
+  /* margin-left: 0.2em; */
+}
+
+.likesAndComments span:nth-child(2) svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.likesAndComments span:last-child {
+  /* border: solid 2px pink; */
+  position: absolute;
+}
+
+.likesAndComments > span:first-child > div:last-child:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tagsContainerPost.onUserProfilePage {
+  /* width: 80vw; */
+  padding: 0.7em 0.8em 0.8em 0em;
+  background: none;
+  /* border: solid 2px pink; */
+}
+
+.tagsContainerPost {
+  padding-top: 1.5em;
+}
+
+.desktopPostTags {
+  width: 33vw;
+  display: flex;
+  /* max-width: 50px; */
+  flex-direction: row;
+}
+
+.desktopPostTags > li:not(:first-child) {
+  margin-left: 1em;
+}
+
+.likesAndComments > span:nth-child(5) {
+  display: flex;
+  /* border: solid 2px pink; */
+}
+
+.likesAndComments > span:nth-child(5):hover {
+  cursor: pointer;
+}
+
+.likesAndComments.likedByUser > span:nth-child(1) > div:first-child svg {
+  color: #87cefa;
+}
+
+.likesAndComments span:nth-child(1) div:first-child {
+  margin-bottom: 0.2em;
+}
+
+.likesAndComments span:nth-child(1) div:nth-child(2) {
+  margin-left: 0.4em;
+  font-size: 1em;
+}
+
+.likesAndComments span:nth-child(3) > div,
+.likesAndComments span:first-child > div:first-child > svg {
+  /* z-index: 1; */
+}
+
+
+.likesAndComments.userProfile >span:nth-child(3)>div:first-child svg{
+  font-size: 32px;;
+}
+.likesAndComments.userProfile > span:first-child>div:first-child>svg{
+  font-size: 28px;
+}
+
+.likesAndComments span > div {
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  font-size: 1.5em;
+  margin-left: 0.3em;
+}
+
+.likesAndComments span:nth-child(3) div:last-child {
+  font-size: 1.5em;
+}
+
+.likesAndComments > span:nth-child(3) > div:first-child {
+  padding-top: 0.1em;
+}
+
+.likesAndComments span:nth-child(3) div:last-child {
+  font-size: 1.5em;
+  padding-bottom: 0.05em;
+}
+
+.likesAndComments span:nth-child(2) div:nth-child(2) {
+  margin-left: 0.4em;
+}
+.likesAndComments span:nth-child(3) {
+  /* margin-left: 0.6em; */
+  font-size: 0.8em;
+  /* display: grid; */
+  place-items: center;
+}
+
+.likesAndComments > * {
+  font-size: 0.8em;
+}
+
+.likesAndComments span {
+  display: flex;
+}
+
+.likesAndComments > span:last-child {
+  /* width: fit-content; */
+  /* padding-top: 0.8em; */
+  /* padding-bottom: 5em; */
+  /* width: 100%; */
+}
+
+
+
+.tagsDisplayContainer.mainFeed {
+  padding-top: 0em;
+  width: 100%;
+}
+
+/* likes and comments styles */
+.likesAndComments span:nth-child(2),
+.likesAndComments span:nth-child(4) {
+  display: grid;
+  place-items: center;
+  font-size: 1.5em;
+  /* width: 0.5em; */
+}
+
+.likesAndComments.onSearchPage > span:nth-child(4) {
+  margin-right: 0.5em;
+  /* border: solid pink; */
+  /* width: 1vw; */
+  /* padding-right: 10000em; */
+}
+
+.likesAndComments.onSearchPage > span:nth-child(2) {
+  /* width: 5vw; */
+  margin-left: 0.3em;
+  margin-right: 0;
+  /* margin-left: 0.3em; */
+}
+
+.likesAndComments.onSearchPage > span:nth-child(3) > div:first-child,
+.likesAndComments.onSearchPage > span:nth-child(3) > div:nth-child(2),
+.likesAndComments.onSearchPage > span:nth-child(even),
+.likesAndComments.onSearchPage > span:first-child > div:last-child,
+.likesAndComments.onSearchPage > span:first-child > div:first-child {
+  font-size: 2em;
+}
+
+.likesAndComments > span:first-child > div:first-child {
+  font-size: 1.4em;
+}
+
+.likesAndComments > span:nth-child(5) {
+  padding-top: 1.3em;
+  /* border: solid 2px pink; */
+}
+
+.likesAndComments.userProfile > span:nth-child(2) {
+  width: 0.5em;
+  margin-right: 0em;
+}
+
+.likesAndComments.onSearchPage > span:nth-child(3),
+.likesAndComments.userProfile > span:nth-child(3) {
+  /* margin-left: 0.35em; */
+}
+
+.likesAndComments.onSearchPage > span:nth-child(3) > div:first-child,
+.likesAndComments.userProfile > span:nth-child(3) > div:first-child {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+
+.likesAndComments.onSearchPage > span:nth-child(3) > div:nth-child(2) {
+  padding-bottom: 0.08em;
+}
+
+.likesAndComments.userProfile > span:nth-child(3) > div:nth-child(2) {
+  font-size: 1em;
+  padding-bottom: 0.08em;
+}
+
+/* .likesAndComments.onSearchPage > span:nth-child(2),
+.likesAndComments.onSearchPage > span:nth-child(4) {
+  font-size: 2.5em;
+} */
+
+.likesAndComments.userProfile > span:nth-child(2),
+.likesAndComments.userProfile > span:nth-child(4) {
+  font-size: 0.8em;
+}
+
+.likesAndComments.onSearchPage > span:nth-child(5),
+.likesAndComments.userProfile > span:nth-child(5) {
+  padding-top: 0.7em;
+}
+
+/* .likesAndComments.onSearchPage > span:nth-child(5) li,
+.likesAndComments.userProfile span:nth-child(5) li {
+  font-size: 0.8em;
+} */
+
+.likesAndComments.onSearchPage > span:nth-child(6),
+.likesAndComments span:nth-child(6) {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* padding-top: 1.65em; */
+  /* border: solid 2px pink; */
+}
+
+.likesAndComments >span:nth-child(6){
+position: absolute !important;
+right: 13px;
+height: 100%;
+display: grid;
+place-items: center;
+width: fit-content;
+}
+
+.likesAndComments.userProfile > span:nth-child(6){
+  /* border: solid pink; */
+  /* font-size: 1.2em; */
+  transform: translateY(7px);
+}
+
+.likesAndComments.onSearchPage>span:nth-child(6){
+  width: fit-content;
+  /* border: solid pink; */
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: grid;;
+  place-items: center;
+  font-size: 24px;;
+  padding-bottom: 5.5px;
+}
+
+.likesAndComments.nonPostViewer span:nth-child(6){
+  font-size: 1.2em;
+}
+
+.likesAndComments.onSearchPage > span:nth-child(6),
+.likesAndComments span:nth-child(6) svg:hover {
+  cursor: pointer;
+}
+
+.postTagOnMobile {
+  display: none;
+}
+
+.postTagOnMobile > li {
+  display: none;
+}
+
+
+.tagsContainerPost {
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  max-width: 600px;
+}
+
+
+@media (max-width: 1200px){
+  .likesAndComments.userProfile>span:nth-child(6) {
+    /* border: solid pink; */
+    font-size: 1em;
+    transform: none;
+  }
+}
+
+
+@media (min-width: 1200px){
+  .tag.post {
+    min-height: 40px;
+  }
+
+  .likesAndComments.nonPostViewer > span:nth-child(6) svg,
+  .likesAndComments.userProfile > span:last-child svg {
+    /* border: solid pink; */
+    transform: translateY(-50%);
+  }
+}
+
+
+@media (max-width: 1199px){
+  .desktopPostTags > li {
+    display: none;
+  }
+}
+
+@media (max-width: 767px){
+  .desktopPostTags {
+    display: none;
+  }
+
+  .postTagOnMobile {
+    display: flex;
+    min-width: 100px;
+  }
+}
+
+/* move all code in this query to their non-media query rule */
+  .postContainer > div:first-child > h1 {
+    /* font-size: 0.8em; */
+    /* min-width: 200px; */
+  }
+  /* .userInfo > div:last-child > div:first-child > div:last-child button {
+    display: none;
+  } */
+
+  .followBtnContainerPost {
+    display: none;
+  }
+
+  .userInfo {
+    height: 55px;
+  }
+
+  .userInfo div:first-child img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .userInfo div:last-child > div:last-child,
+  .userInfo div:last-child > div:first-child {
+    /* font-size: 1.6rem; */
+    min-height: 25px;
+  }
+
+  .userInfo div:nth-child(2) {
+    padding: 0;
+  }
+
+  .userInfo > div:last-child > div:last-child {
+    /* margin-top: 4px; */
+    min-height: 20px;
+  }
+
+  .userInfo > div:last-child > div:first-child > div:first-child {
+    min-height: 20px;
+  }
+
+  .postBody.mainFeed p {
+    font-size: 0.7em;
+    /* min-width: 250px; */
+  }
+
+
+  .readMoreBtnContainer.mainFeed span {
+    font-size: 0.68em;
+  }
+
+  .readMoreBtnContainer span {
+    width: 100%;
+  }
+
+
+
+  .postTagOnMobile > li {
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .likesAndComments.nonPostViewer span:nth-child(1) div:nth-child(1) {
+    font-size: 1em;
+  }
+
+  .likesAndComments.nonPostViewer span:nth-child(1) div:nth-child(2) {
+    font-size: 1.2em;
+  }
+
+  .likesAndComments.nonPostViewer span:nth-child(3) div:nth-child(1) {
+    font-size: 1.2em;
+  }
+
+  .likesAndComments.nonPostViewer span:nth-child(3) div:nth-child(2) {
+    font-size: 1.2em;
+  }
+
+  .likesAndComments.nonPostViewer span:nth-child(6) {
+    position: relative;
+    padding-top: 0;
+  }
+
+  .likesAndComments.nonPostViewer span:nth-child(6) svg {
+    position: absolute;
+    top: 45%;
+    bottom: 80%;
+    font-size: 0.7em;
+  }
+
+  .likesAndComments.nonPostViewer span:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+  }
+
+  .likesAndComments.nonPostViewer span:nth-child(2),
+  .likesAndComments.nonPostViewer span:nth-child(4) {
+    place-items: center;
+    display: flex;
+  }
+
+  .likesAndComments.nonPostViewer span > div {
+    display: flex;
+  }
+
+  .likesAndComments.nonPostViewer > span:first-child > div:last-child {
+    display: flex;
+  }
+
+  .likesAndComments.nonPostViewer {
+    width: 100%;
+    margin: 32px 0px 0em 0px;
+    height: 70px;
+  }
+
+
+    .postContainer.mainFeed {
+      padding-bottom: 20px;
+    }
+    
+    .postContainer.mainFeed>div:first-child {
+      min-height: 50px;
+      min-width: 260px;
+    }
+    
+    .readMoreBtnContainer span {
+      min-width: 100px;
+      min-height: 20px;
+    }
+
+  .readMoreBtnContainer {
+    height: 35px;
+  }
+
+  .postBody.mainFeed {
+    height: fit-content;
+  }
+
+  .introPicContainer.mainFeed {
+    height: fit-content;
+  }
+
+  .userInfo > div:nth-child(2) {
+    width: 150px;
+    margin-left: 5.5px;
+    margin-bottom: 4.8px;
+  }
+
+  .introPicContainer.mainFeed {
+    margin-top: 12.8px;
+  }
+
+  .postContainer.mainFeed {
+    min-width: 255px;
+    width: 80vw;
+    padding-bottom: 10px;
+    padding-top: 8px;
+    margin: 16px 0 16px 0;
+  }
+
+  .yourTopics span:nth-child(1) {
+    margin: 20px 0 0 0;
+    transform: translateY(10px);
+    width: 90px;
+  }
+
+
+/* for small phones */
+@media (max-width: 280px) {
+  .postContainer.mainFeed {
+    width: 80vw;
+    min-width: 253px;
+    height: fit-content;
+    padding-bottom: 10px;
+  }
+
+  .introPicContainer.mainFeed {
+    min-height: 163px;
+  }
+
+  .postContainer {
+    /* min-width: 255px; */
+    /* max-width: 255px; */
+    /* min-width: 100vw; */
+    /* overflow-x: scroll; */
+    padding-top: 8px;
+    margin: 16px 0 16px 0;
+    min-width: 252px;
+  }
+
+.postBody.onProfilePage{
+max-width: 250px;
+}
+
+
+  .postContainer > div:first-child > h1 {
+    font-size: 0.7em;
+  }
+
+  .subtitleContainer.mainFeed {
+    min-width: 50px;
+  }
+
+  .subtitleContainer.mainFeed > span {
+    font-size: 1.3em;
+  }
+
+  .postContainer.mainFeed > div:first-child {
+    min-height: 25px;
+  }
+}
+
+/* for tablets and above */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .desktopPostTags {
+    display: flex;
+  }
+
+  .followBtnContainerPost {
+    display: flex;
+    transform: translateX(5px);
+  }
+
+  .userInfo > div:last-child > div:first-child > div:last-child button {
+    display: flex;
+    min-width: 100px;
+  }
+
+  .desktopPostTags > li {
+    display: inline-block;
+  }
+
+  .postTagOnMobile {
+    display: none;
+  }
+
+  .desktopPostTags {
+    max-width: 570px;
+  }
+
+  .postContainer.onSearchPage{
+    width: 65vw;
+  }
+
+  .userInfo.onSearchPage>div:last-child>div:first-child>div:last-child button{
+    font-size: 10px;
+  }
+}
+
+/* @media (max-width: 240px){
+  .postContainer{
+    min-width: 225px;
+  }
+} */
+
+/* for tablets and desktops */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .postContainer.mainFeed {
+    width: 63vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+.likesAndComments.onSearchPage > span:nth-child(6) {
+  padding-right: 10px;
+}
+}
+
+/* for desktops and above */
+@media (min-width: 1200px) and (max-width: 2560px) {
+  .postContainer.mainFeed {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .postContainer.mainFeed {
+    max-width: 960px;
+    max-height: 1053px;
+  }
+}
+
+@media (max-width: 767px) {
+.likesAndComments span:nth-child(1) div:nth-child(2){
+font-size: 1.4em;
+}
+
+.likesAndComments.userProfile>span:nth-child(3)>div:nth-child(2){
+  font-size: 1.4em;
+}
+
+  .postContainer.onProfile {
+    width: 90vw;
+    max-width: 650px;
+  }
+
+  .postTagOnMobile > li {
+    height: 48px;
+  }
+
+  .postContainer.onProfile > div:first-child > h1 {
+    font-size: 20px;
+  }
+
+  .userInfo.onProfilePage > div:last-child > div:last-child,
+  .userInfo.onProfilePage > div:last-child > div:first-child > div:last-child {
+    font-size: 11px;
+  }
+
+
+  .postContainer.onSearchPage{
+    /* min-width: 296.5px; */
+    min-width: 230px;
+
+  }
+}
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 991px){
+  .introPicContainer.onUserProfilePage img,
+  .postBody img{
+    /* max-width: 610px; */
+    width: 65vw;
+  }
+
+
+.postContainer{
+  width: 65vw;
+  min-width: 521.297px;
+}
+
+  .likesAndComments{
+    min-width: 527.148px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .postContainer.onProfile,
+.postBody p{
+  width: 65vw;
+}
+
+  .postContainer.onProfile {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-top: 12px;
+  }
+}
+
+.tagContainerSmallerMobile{
+  display: none;
+  height: 50px;
+  margin-top: 75px;;
+}
+
+.tagContainerSmallerMobile > li{
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 576px){
+  .userInfo.onSearchPage>div:last-child > div:first-child > div:last-child{
+    margin-left: 0px;
+  }
+
+.tagContainerSmallerMobile{
+  display: flex;
+}
+
+  .likesAndComments{
+    margin: 0px;
+  }
+
+  .likesAndComments.onSearchPage>span:nth-child(4),
+  .postTagOnMobile.onSearchPage{
+    display: none;
+  }
+}
+
+
+@media (max-width: 280px){
+  .postContainer.onProfile{
+    /* width: 70vw; */
+    /* border: solid pink; */
+  }
+}

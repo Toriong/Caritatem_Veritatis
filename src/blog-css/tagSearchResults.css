@@ -1,0 +1,115 @@
+/* tagSearchResults starts here */
+
+
+.tagSearchResultsPage:not(:first-child) {
+  margin-top: 2em;
+}
+
+.tagSearchResultsPage {
+  width: 100%;
+  min-width: 364.633px;
+}
+
+.tagSearchResultsPage > div:first-child > div {
+  width: 5vw;
+  max-width: 72px;
+  min-width: 38.3438px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  height: 46px;
+}
+
+.tagSearchResultsPage > div:last-child > div,
+.tagSearchResultsPage > div:nth-child(2),
+.tagSearchResultsPage > div:last-child > section {
+  padding: 1em 0em 0.5em 2em;
+}
+
+
+.tagSearchResultsPage > div:last-child > div,
+.tagSearchResultsPage > div:nth-child(2) {
+  border-bottom: solid #808080 0.03px;
+  width: 105%;
+  position: relative;
+}
+
+.tagSearchResultsPage > div:last-child > div,
+.tagSearchResultsPage > div:nth-child(2) > div {
+  /* width: 100%; */
+}
+
+.tagSearchResultsPage > div:last-child > div button {
+  bottom: 0.4em;
+}
+
+.tagSearchResultsPage > div:last-child > div button,
+.tagSearchResultsPage > div:nth-child(2) > div button {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 1em;
+}
+
+.tagSearchResultsPage > div:nth-child(2) p {
+  margin-top: 0.3em;
+  /* max-width: 950px; */
+}
+
+.tagSearchResultsPage > div:first-child > h3 {
+  margin-left: 0.5em;
+}
+
+
+@media (min-width: 1920px){
+  .tagSearchResultsPage>div:nth-child(2) p{
+  max-width: 990px;
+  }
+}
+
+@media (max-width: 767px){
+  .tagSearchResultsPage > div:first-child > h3{
+    font-size: 24px;
+  }
+
+  .tagSearchResultsPage > div:first-child svg{
+font-size: 1.5em;
+  }
+}
+
+@media (max-width: 576px){
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .tagSearchResultsPage{
+    width: 647.141px;
+  }
+
+  
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+.tagSearchResultsPage {
+  width: 811.344px;
+}
+
+.searchPageResultsSec > div > div{
+width: 899.25px;
+}
+}
+
+
+@media (max-width: 576px){
+  .tagSearchResultsPage>div:last-child > div, 
+  .tagSearchResultsPage > div:nth-child(2){
+    /* width: 75%; */
+    width: 70vw;;
+    min-width: 260px;
+  }
+
+    .tagSearchResultsPage>div:first-child>h3{
+      font-size: clamp(16px, 5vw, 24px);
+    }
+}

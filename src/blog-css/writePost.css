@@ -1,0 +1,293 @@
+
+.writingSec {
+  background: rgb(255, 255, 255);
+  width: 100%;
+  min-height: 400vh;
+  height: fit-content;
+  padding-top: 3%;
+  box-sizing: border-box;
+  padding-top: 55.23px;
+  padding-bottom: 15em;
+}
+
+.writingSec > div{
+  /* border: solid pink 5px; */
+  max-width: 2560px;
+}
+
+
+.attractMoreReaderTextContainer{
+  margin-left: 25%;
+}
+
+
+.attractMoreReaderTextContainer p {
+  /* width: 100%; */
+  /* width: 47.7vw; */
+  width: 58vw;
+  /* height: 18.5px; */
+  max-width: 685px;
+  text-align: center;
+}
+
+
+.ck-content p {
+  /* margin-top: 43px; */
+}
+
+.writingSec > p{
+  margin-top: 10px;
+  margin-left: 25%;
+  width: 47.7vw;
+  text-align: center;
+}
+
+.ck-content iframe{
+  /* float: left; */
+  position: static !important;
+}
+
+
+.writingSec div .userInfo.writePost {
+  padding-left: 25%;
+}
+
+.ck.ck-editor__editable_inline{
+  overflow: visible;
+}
+
+.userInfo.writePost {
+  padding-left: 25%;
+}
+
+.userInfo.writePost > div:last-child {
+  margin-left: 0.7em;
+}
+
+.userInfo.writePost > div:last-child {
+  padding-top: 0em;
+}
+
+.userInfo.writePost > div:last-child > span:last-child {
+  margin-top: 0.2em;
+}
+
+.writingSec.review {
+  background: var(--backgroundColor);
+  color: #ffffff;
+}
+
+#inputTagInfo {
+  color: black;
+}
+
+.writingSec a {
+  color: black;
+  text-decoration: underline;
+}
+
+.writingSec.review a,
+.writingSec.review p,
+.writingSec.review h2,
+.writingSec.review h3,
+.writingSec.review h4,
+.writingSec.review ul,
+.writingSec.review ol {
+  color: #ffffff;
+}
+
+.writingSec p,
+h2,
+h3,
+h4,
+ul,
+ol {
+  color: #000000;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.ck-content {
+  margin-top: 0.6em;
+  /* padding-left: 5vh; */
+  box-sizing: border-box;
+  width: 60%;
+  max-width: 711px;
+  font-size: 1.5em;
+  margin-left: 24.2%;
+}
+
+.ck-content ol{
+  padding-left: 16px;;
+}
+.ck-content ul{
+  padding-left: 8px;
+}
+
+.ck .ck-widget.ck-widget_selected>.ck-widget__type-around>.ck-widget__type-around__button,
+.ck .ck-widget:hover>.ck-widget__type-around>.ck-widget__type-around__button{
+  opacity: 0;
+}
+
+.ck-editor__editable:not(.ck-read-only) .ck-media__wrapper>:not(.ck-media__placeholder){
+  position: static !important;
+  width: 47.3vw;
+  height: 425.125px !important;
+}
+
+.ck .ck-widget:not(.ck-widget_selected)>.ck-widget__type-around>.ck-widget__type-around__button{
+  background: none;
+}
+
+.ck-content iframe{
+  position: static !important;
+  width: 58vw !important;
+  max-width: 680.203px;
+  height: 425.125px !important;
+}
+
+.ck-media__wrapper > div:first-child{
+  position: static;
+  width: 47.3vw;
+  /* height: 425.125px !important; */
+}
+
+.ck .ck-widget{
+  transition: none;
+  height: fit-content;
+  outline-style: none;
+  /* border: solid pink; */
+  height: 425px;
+}
+
+
+
+
+.ck .ck-widget,
+.ck .ck-widget.ck-widget_with-selection-handle
+{
+  position: static;
+}
+
+.ck .ck-widget.ck-widget_selected,
+.ck .ck-widget.ck-widget_selected:hover{
+  outline: none;
+}
+
+
+.ck.ck-editor__editable .image,
+.ck.ck-editor__editable .image-inline{
+  position: static;
+}
+
+
+.ck-content.review p {
+  color: #ffffff;
+}
+
+.ck-content h2 {
+  font-size: 2em;
+}
+
+.ck-content h3 {
+  font-size: 1.5em;
+  color: black;
+  margin: 8px 0px 8px 0px;
+}
+
+.ck-content h4 {
+  font-size: 1.3em;
+}
+
+.writingSec div {
+  /* padding-left: 5vh; */
+}
+
+.dropAreaBlogPost {
+  border: dashed 1.5px #c0c0c0;
+  margin-left: 25%;
+  width: 59%;
+  height: 40vh;
+}
+
+#title,
+#subTitle {
+  padding-left: 25%;
+}
+
+
+
+#title textarea{
+min-height: 90px;
+}
+
+
+
+#title textarea,
+#subTitle textarea {
+  /* overflow: hidden; */
+  /* height: fit-content; */
+  /* min-height: 200px; */
+  /* height: auto; */
+  color: var(--textColor);
+  color: black;
+  resize: none;
+  outline: none !important;
+  border-style: none;
+  background: none;
+  width: 80%;
+  max-width: 813px;;
+  /* min-height: 100px; */
+  /* padding-left: 25%; */
+}
+
+#title textarea {
+  font-size: 3em;
+  /* border: solid 2px pink; */
+}
+
+#subTitle {
+  /* margin-top: 0.5em; */
+  margin: 8px 0px 8px 0px;
+  /* border: solid 2px pink; */
+}
+
+#subTitle textarea {
+  margin-top: 0.2em;
+  font-size: 21.142509135200974px;
+  font-style: italic;
+  color: whitesmoke;
+  font-weight: 200;
+  /* min-height: 70px; */
+}
+
+.html5-video-player{
+  border: solid pink
+}
+
+
+.writingSec div .userInfo.writePost {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+
+}
+
+
+@media (min-width: 281px) and (max-width: 767px){
+
+}
+
+
+@media (max-width: 280px) {
+  .writingSec div .userInfo.writePost {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+

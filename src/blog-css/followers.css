@@ -1,0 +1,263 @@
+/* fileName: followers */
+
+.userFollowersPage {
+  padding-top: 1em;
+  overflow-x: auto;
+  /* padding-bottom: 10em; */
+}
+
+.userFollowersPage > div{
+  display: flex;
+  /* justify-content: center; */
+  place-items: center;
+  flex-direction: column;
+  min-width: 280px;
+  padding-bottom: 16px;;
+  overflow-y: auto;
+  min-height: 100vh;
+  max-width: 2560px;
+}
+
+.userFollowersPage header {
+  height: 60px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.userFollowersPage header h1 {
+  font-weight: 420;
+  text-align: center;
+}
+
+.userFollowersPage ul{
+  /* padding-bottom: 7em; */
+  /* padding-bottom: 20em;; */
+  padding-bottom: 10em;
+  max-width: 910px;
+}
+
+.userFollowersPage ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  /* height: 14.5vh; */
+  height: 125.953px;
+  max-width: 910px;
+  /* height: 114.398px; */
+  margin: 0;
+  position: relative;
+  /* border-top: var(--readingListModalBorder); */
+  border-top: solid grey .8px;
+  min-width: 261.797px;
+}
+
+.userFollowersPage ul li > span {
+  color: #ffffff;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.userFollowersPage ul li:last-child {
+  border-bottom: var(--readingListModalBorder);
+}
+
+.userFollowersPage img {
+  width: 4vw;
+  height: 8vh;
+  border-radius: 50%;
+  min-width: 57.8359px;
+  min-height: 57.8359px;
+  max-height: 64px;
+  max-width: 57.8281px;
+}
+
+.userFollowersPage ul li > div {
+  height: 100%;
+  display: flex;
+}
+
+.userFollowersPage ul li > div:first-child div:last-child {
+  margin-left: 1em;
+  font-weight: 100;
+}
+
+.userFollowersPage ul li > div:first-child div {
+  display: grid;
+  place-items: center;
+}
+
+.userFollowersPage ul {
+  /* overflow-y: auto; */
+  margin-top: 32px;
+  width: 65%;
+  /* padding: 4em 22em 7em 22em; */
+  /* height: fit-content; */
+}
+
+.userFollowersPage ul li > div:last-child {
+  display: grid;
+  place-items: center;
+  /* position: absolute; */
+  /* right: 0; */
+}
+
+.userFollowersPage ul li > div:last-child > div:last-child {
+  display: flex;
+}
+
+.userFollowersPage ul li > div:last-child > div > button:first-child {
+  background-color: rgb(229, 142, 15);
+  font-weight: 100;
+  width: 5vw;
+  min-width: 68.3984px;
+  max-width: 92px;
+}
+
+.userFollowersPage ul li > div:last-child > div > div {
+  position: relative;
+}
+
+.userFollowersPage ul li > div:last-child > div > div > button {
+  width: 3vw;
+  background-color: var(--backgroundColorModal);
+  margin-left: 0.5em;
+  max-width: 55.1953px;
+}
+
+.userFollowersPage ul li > div:last-child > div:last-child > button,
+.userFollowersPage ul li > div:last-child > div:last-child > div > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  height: 5vh;
+}
+
+
+.userFollowersPage ul li>div:last-child>div:last-child>div>button,
+.userFollowersPage ul li>div:last-child>div:last-child>button{
+  height: 36.1484px;
+}
+
+.userFollowersPage ul li>div:last-child>div>div>button{
+  min-width: 54.7188px;
+}
+
+.followingFollowersUsername > span{
+  font-weight: 200;
+}
+
+
+.followingFollowersUsername.onSmallMobile{
+  display: none !important;
+}
+
+@media(min-width: 1200px){
+  .userFollowersPage ul{
+    /* max-width: 650px; */
+    
+  }
+}
+
+@media (max-width: 1199px){
+.userFollowersPage ul li>div:last-child>div:last-child>div>button{
+  max-width: 79.2734px;
+}
+
+.deleteRemoveOptions.following{
+  max-width: 102.5px;
+}
+
+
+  .userFollowersPage ul{
+  max-width: 729.594px;
+
+}
+
+  .userFollowersPage ul li{
+  width: 93.5vw;;
+  max-width: 718.078px;
+  /* max-width: 718.078px; */
+}
+
+.userFollowersPage header h1{
+  max-width: 630px;
+}
+
+.userFollowersPage ul li>div:last-child>div>button:first-child{
+  width: 10vw;
+  max-width: 99.0938px;
+}
+
+.userFollowersPage ul li>div:last-child>div>div>button{
+  width: 8vw;
+}
+
+  .userFollowersPage ul{
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+
+}
+
+@media (max-width: 576px){
+.followingFollowersUsername>span{
+  /* font-size: 13px;; */
+  font-size: clamp(13px, 3vw, 16px);
+}
+
+.followingFollowersUsername.onSmallMobile {
+  display: block !important;
+  padding-top: 10px;
+}
+
+.followingFollowersUsername.notOnSmallMobile{
+display: none !important;
+}
+
+.userFollowersPage ul li{
+  justify-content: flex-start;
+}
+
+
+.followBtnAndOptions{
+  width: 80%;
+}
+
+.followingFollowersUsername.onSmallMobile > span{
+  /* font-size: 12px;; */
+  font-size: clamp(12px, 3vw, 16px);
+
+}
+
+.userFollowersPage ul li>div:last-child>div:last-child {
+  width: 70%;
+  display: flex !important;
+  justify-content: center;
+  place-items: center;
+}
+
+  .userFollowersPage ul li > div:first-child{
+    /* width: 100%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* place-items: center; */
+    /* padding: 14px 0px 14px 0px; */
+  }
+  
+
+  .userFollowersPage header h1{
+    /* font-size: 14px;     */
+    padding-right: 10px;
+    font-size: clamp(14px, 6vw, 32px);
+  }
+}

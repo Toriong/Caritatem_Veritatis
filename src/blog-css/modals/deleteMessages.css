@@ -1,0 +1,88 @@
+.modal.delChatOrInvite,
+.modal.generic.deleteMessages {
+  /* height: 343px;
+  width: 497px; */
+}
+
+.modal.generic.deleteMessages{
+  height: 80vh;
+  max-height: 320px;
+}
+
+.modal.generic.deleteMessages > section{
+  min-height: 160px;
+  height: fit-content;
+}
+
+
+.modal.generic.deleteMessages > section:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000000;
+}
+
+.modal.generic.deleteMessages > section:first-child span:last-child {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.3em;
+}
+
+.modal.generic.deleteMessages > section:first-child {
+display: grid;
+place-items: center;
+}
+
+.modal.generic.deleteMessages>section{
+  min-width:270px
+}
+
+.modal.generic.deleteMessages > section:last-child button:first-child {
+  margin-right: 0.5em;
+}
+
+.modal.generic.deleteMessages > section:last-child button:last-child {
+  margin-left: 0.5em;
+}
+
+.modal.generic.deleteMessages > section:last-child button:last-child {
+  background-color: red;
+}
+
+.modal.delChatOrInvite > section:last-child button,
+.modal.generic.deleteMessages > section:last-child button {
+  background-color: var(--backgroundColor);
+  height: 54px;
+  width: 20vw;;
+  min-width: 60px;
+  color: white;
+  font-weight: 250;
+  border-radius: 0.5em;
+  cursor: pointer;
+  max-width: 220px;
+  
+}
+
+.modal.generic.deleteMessages > section:last-child {
+  height: 60%;
+}
+
+.modal.generic.deleteMessages > section:first-child > span:last-child {
+  margin-top: 20px;
+}
+
+.modal.generic.deleteMessages > section:first-child > span:first-child {
+  text-align: center;
+  min-width: 132.016px;
+}
+
+
+
+.modal.generic.deleteMessages > section:first-child {
+  height: 40%;
+  display: grid;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+}

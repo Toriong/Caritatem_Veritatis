@@ -1,0 +1,173 @@
+/* fileName: deleteRemoveUser */
+
+.deleteRemoveOptions {
+  position: absolute;
+  /* height: 15vh; */
+  height: 162px;
+  width: 10vw;
+  min-width: 74.5938px;
+  background: var(--backgroundColorModal);
+  border: solid 0.5px rgba(211, 211, 211, 0.45);
+  border-radius: 3%;
+  z-index: 10000001;
+  transform: translateX(-28%);
+  max-width: 144px;
+}
+
+.deleteRemoveOptions.following {
+  /* height: 10vh; */
+  height: 71.2969px;
+  z-index: 600;
+}
+
+.deleteRemoveOptions > button:nth-child(2),
+.deleteRemoveOptions > button:first-child {
+  height: 50%;
+  width: 100%;
+  background: none;
+  color: #ff0000;
+  border: none;
+  outline: inherit;
+}
+
+.deleteRemoveOptions.following > button:first-child {
+  height: 100%;
+  border: none;
+}
+
+.deleteRemoveOptions > button:first-child {
+  border-bottom: solid 0.5px rgba(211, 211, 211, 0.45);
+}
+
+.modal.deleteRemove p {
+  font-weight: 200;
+}
+
+.modal.deleteRemove h3 {
+  font-weight: 300;
+}
+
+.modal.deleteRemove > section:nth-child(2) p {
+  text-align: center;
+  padding: 0px 12px 0px 12px;
+}
+
+.modal.deleteRemove {
+  background: var(--backgroundColorModal);
+  width: 65vw !important;
+  height: 50vh;
+  border-radius: 0.5em;
+  z-index: 10000000000;
+  max-height: 400px;
+  max-width: 500px;
+
+}
+
+.modal.deleteRemove > section:first-child h3 {
+  font-size: 1em;
+  text-align: center;
+}
+
+.modal.deleteRemove > section:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  min-height: 144.594px;
+}
+
+.modal.deleteRemove > section{
+  min-width: 182px;
+}
+
+.modal.deleteRemove > section:nth-child(2),
+.modal.deleteRemove > section:first-child {
+  display: grid;
+  place-items: center;
+}
+
+.modal.deleteRemove > section:first-child {
+  height: 20%;
+  min-height: 72.2969px;
+}
+
+.modal.deleteRemove > section:nth-child(3) div {
+  display: flex;
+}
+
+.modal.deleteRemove > section:nth-child(3) div > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  height: 30px;
+  width: 116px;
+  min-width: 41.6328px;
+  padding: 2%;
+}
+
+.modal.deleteRemove > section:nth-child(3) div > button:first-child {
+  margin-right: 0.3em;
+  background-color: red;
+}
+
+.modal.deleteRemove > section:nth-child(3) div > button:last-child {
+  margin-left: 0.3em;
+  background-color: green;
+}
+
+.modal.deleteRemove > section:nth-child(2) {
+  margin-top: 0.4em;
+  height: 40%;
+  min-height: 145px;
+  /* border: solid pink; */
+}
+
+.modal.deleteRemove > section:nth-child(3) {
+  width: 100%;
+  height: 40%;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .modal.deleteRemove {
+    width: 500px;
+  }
+
+  .modal.deleteRemove > section:nth-child(2) {
+    margin-top: 14px;
+  }
+
+  .modal.deleteRemove > section:nth-child(3) div > button {
+    font-size: 0.7em;
+  }
+  .modal.deleteRemove p {
+    font-size: 0.8em;
+  }
+
+  .modal.deleteRemove > section:nth-child(3) div > button {
+    width: 76px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 576px){
+  .modal.deleteRemove > section:nth-child(2) p{
+    font-size: clamp(8.4px, 3vw, 12px);
+    min-width: 172px;
+    padding: 0px 2px 0px 2px;
+  }
+
+  .modal.deleteRemove > section:first-child h3{
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .modal.deleteRemove>section:nth-child(3) div > button{
+    width: 12vw;
+    font-size: clamp(8px,2.5vw, 12px)
+  }
+
+}
+

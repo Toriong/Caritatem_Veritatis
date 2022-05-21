@@ -1,0 +1,304 @@
+/* fileName: resignAsAdmin */
+
+.modal.generic.resignAsAdmin {
+height: 80vh;
+max-height: 450px;
+}
+
+.modal.resignAsAdmin > section:not(:last-child) {
+  /* display: grid; */
+  /* place-items: center; */
+}
+
+.modal.resignAsAdmin > section:first-child{
+  min-height: 50px;
+}
+
+
+
+.modal.resignAsAdmin>section:nth-child(2){
+  min-height: 50px;;
+}
+
+.modal.resignAsAdmin>section{
+  min-width: 252px;
+  padding: 0px 8px 0px 8px;
+}
+
+
+.modal.generic.resignAsAdmin > span {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.modal.resignAsAdmin > section:first-child {
+  display: grid;
+  place-items: center;
+  padding: 2%;
+}
+
+.modal.resignAsAdmin > section:first-child h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.modal.resignAsAdmin > section:nth-child(2) span {
+  font-weight: 300;
+}
+
+.modal.resignAsAdmin > section:nth-child(2) {
+  /* padding: 3% 1% 1% 5%; */
+  display: grid;
+  place-items: center;
+}
+
+.modal.resignAsAdmin>section:nth-child(2) span{
+  text-align: center;
+}
+
+.resignationSecUsers {
+  /* height: 273px; */
+  /* height: 35vh; */
+  height: 253.047px;
+  /* border: solid pink; */
+  overflow-y: auto;
+  padding: 0% 3% 0% 3%;
+}
+
+.resignationSecUsers > button:first-child {
+  margin-right: 0.5em;
+}
+.resignationSecUsers > button:nth-child(2) {
+  margin-left: 0.5em;
+}
+
+.resignationSecUsers > button:first-child {
+  background-color: var(--backgroundColor);
+}
+
+.resignationSecUsers > button:last-child {
+  background-color: red;
+}
+
+.resignationSecUsers > button {
+  color: white;
+  /* width: 5vw; */
+  /* height: 5vh; */
+  height: 43px;
+  width: 72px;
+  border-radius: 0.5em;
+}
+
+.resignationSecUsers {
+  padding: 3% 5% 1% 5%;
+}
+
+.userInGroup:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.userInGroup span {
+  font-weight: 170;
+}
+
+.userInGroup > section:last-child {
+  display: grid;
+  place-items: center;
+}
+
+.userInGroup {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 4% 5% 5% 5%; */
+  padding: 0% 6% 0% 6%;
+  border-radius: 0.5em;
+  height: 60px;
+}
+
+.userInGroup:first-child {
+  margin-bottom: 0.5em;
+}
+.userInGroup:not(:first-child) {
+  margin: 0.5em 0 0.5em 0;
+}
+
+.userInGroup img {
+  width: 5vw;
+  height: 5vh;
+  border-radius: 50%;
+}
+
+.userInGroup > section {
+  display: grid;
+  place-items: center;
+}
+
+.userInGroup > section:last-child {
+  margin-left: 0.5em;
+  font-weight: 250;
+}
+
+.resignationSecButtonsContainer {
+  height: 250px;
+}
+
+.resignAsAdminNavBtnsContainer,
+.resignationSecButtonsContainer {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.resignationSecButtonsContainer.sec3 button:last-child {
+  background-color: rgb(255, 0, 0);
+}
+
+.resignationSecButtonsContainer button:nth-child(2) {
+  margin-left: 0.5em;
+}
+
+.resignationSecButtonsContainer button:first-child {
+  margin-right: 0.5em;
+}
+
+.resignationSecButtonsContainer button {
+  background-color: var(--backgroundColor);
+  width: 232px;
+  height: 74px;
+  color: white;
+  font-weight: 250;
+  border-radius: 0.5em;
+}
+
+.resignAsAdminNavBtnsContainer {
+  width: 100%;
+  height: 90px;
+}
+
+.resignAsAdminNavBtnsContainer > button:last-child {
+  margin-left: 0.5em;
+}
+
+.resignAsAdminNavBtnsContainer > button:first-child {
+  margin-right: 0.5em;
+}
+
+.resignAsAdminNavBtnsContainer > button > svg {
+  color: white;
+  font-size: 1.3em;
+}
+
+.resignAsAdminNavBtnsContainer > button {
+  background-color: #202124;
+  border: 0.1px solid #bfbfbf;
+  /* width: 5vw; */
+  /* height: 5vh; */
+  height: 54px;
+  width: 72px;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5em;
+}
+
+.modal.generic.resignAsAdmin.mainAdmin {
+  /* height: 65%;  */
+  max-height: 470px;
+}
+
+.modal.generic.resignAsAdmin.final {
+  width: 60vw;
+  height: 40vh;;
+  overflow: auto;
+  display: grid;
+  place-items: center;
+}
+
+.modal.generic.resignAsAdmin.final > span {
+  font-weight: 200;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.modal.generic>section:last-child{
+  max-height: 100px;
+}
+
+.resignationSecUsers{
+  max-height: 240px;
+}
+
+.modal.generic.resignAsAdmin.nonMain{
+  max-height: 250px;
+}
+
+.modal.generic.resignAsAdmin.nonMain >section:last-child{
+  /* min-height: 150px; */
+  height: 10vh;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+.modal.generic>section:last-child {
+  min-height: 100px;
+  height: 15vh;
+}
+
+.resignationSecUsers{
+  height: 40vh;
+}
+
+  .modal.generic.resignAsAdmin.mainAdmin {
+  }
+
+  .modal.generic.resignAsAdmin {
+    width: 550px;
+    /* height: 320px; */
+  }
+
+  .modal.generic.resignAsAdmin > section:last-child {
+    /* height: 200px; */
+    /* border: solid pink; */
+  }
+
+  .modal.generic.resignAsAdmin.mainAdmin > section:last-child {
+    /* height: 275px; */
+  }
+
+  .resignationSecUsers > button {
+    width: 100px;
+    height: 35px;
+  }
+
+  .resignAsAdminNavBtnsContainer > button {
+    width: 60px;
+    height: 40px;
+  }
+
+  .resignationSecButtonsContainer button {
+    width: 155px;
+    height: 55px;
+  }
+
+  .resignationSecButtonsContainer {
+    height: 220px;
+  }
+}
+
+/* @media (max-height: 600px) and (min-width: 768px) and (max-width: 1199px) {
+  .resignationSecUsers {
+    height: 187px;
+  }
+
+  .resignAsAdminNavBtnsContainer {
+    bottom: 1em;
+  }
+} */
+
+@media (max-width: 767px){
+  .modal.generic.resignAsAdmin.nonMain{
+    height: 50vh;
+  }
+}

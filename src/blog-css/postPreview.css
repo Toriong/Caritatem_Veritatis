@@ -1,0 +1,225 @@
+/* fileName: postPreview */
+
+
+.postPreview{
+    /* padding: 16px 8px 16px 8px; */
+}
+
+.postPreview.onPostViewerPage {
+    width: 25vw;
+    background-color: var(--backgroundColorModal);
+    border-radius: 5%;
+    list-style: none;
+    /* display: flex;; */
+    /* justify-content: center; */
+    /* height: fit-content; */
+    /* place-items: center; */
+    padding: 16px 8px 16px 8px;
+    /* padding: 8px; */
+    min-width: 250.25px;
+    /* height: 331.172px; */
+    max-width: 360px;
+}
+
+.postPreview.notOnPostViewerPage > div > *:not(:first-child){
+    margin-top: 4px;
+}
+
+.postPreview.onPostViewerPage > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.postPreview.onPostViewerPage > div > *:not(:first-child){
+    margin-top: 5px;
+}
+
+.postPreview.onPostViewerPage h5,
+.postPreview.onPostViewerPage h2{
+        color: white;
+        width: -moz-fit-content;
+        width: fit-content;
+}
+
+.postPreview.onPostViewerPage > div:first-child > div{
+    /* min-height: 70px; */
+}
+
+.moreFromAuthorSection>div:last-child>section>div>div:last-child,
+.moreFromAuthorSection>div:last-child>section>div>div:last-child>div {
+    /* display: flex; */
+    height: fit-content;
+}
+
+.postPreview.onPostViewerPage>div>div:nth-child(6)>div,
+.postPreview.onPostViewerPage > div > div{
+    display: flex;
+}
+
+.postPreview.onPostViewerPage>div>div{
+    width: 100%;
+    position: relative;
+}
+
+.moreFromAuthorSection>div:last-child>section>div>div:last-child {
+    /* width: 20vw;
+    margin-top: 0.3em;
+    position: relative;
+    padding-left: 0.2em; */
+}
+
+.subtitleContainerPostPreview h5{
+    font-style: italic;
+    font-weight: 250; 
+}
+
+.authorContainerPostPreview h6{
+    font-weight: 350;
+}
+
+.publicationContainerPostPreview span{
+    font-weight: 150;
+}
+
+.postInteractionContainer {
+    display: flex;
+    position: relative;
+}
+
+.postInteractionContainer > div{
+    display: flex;
+}
+
+.moreFromAuthorSection>div:last-child img {
+    height: 20vh;
+    /* width: 20vw; */
+}
+
+.postPreview.onPostViewerPage img{
+    width: 100%;
+    height: 144.594px !important;
+    border-radius: 3.2px;
+}
+
+
+.postInteractionContainer>div:nth-child(1) svg{
+    transform: translateY(1px);
+}
+
+.postInteractionContainer > div:nth-child(2) svg{
+    transform: translateY(2px);
+}
+
+.postInteractionContainer > div:not(:last-child) > div:last-child{
+    margin-left: 3px;
+
+}
+
+.postInteractionContainer > div:last-child{
+    position: absolute;
+    right: 6px;
+}
+
+.postInteractionContainer > div:nth-child(2){
+    margin-left: 16px;
+}
+
+.noIntroPicContainer span,
+.postInteractionContainer span{
+    font-weight: 125;
+}
+
+.noIntroPicContainer{
+    display: grid;
+    place-items: center;
+    height: 144.594px !important;
+    border: var(--borderColor);
+    border-radius: .5em;
+}
+
+.postPreview.notOnPostViewerPage>div>*:last-child{
+font-weight: 150;
+font-size: small;
+}
+
+.authorContainerPostPreview {
+    margin: 4.8px 0px 4.8px 0px;
+}
+
+.replyInfoAndInteractionContainer *,
+.commentInfoContainer *{
+    font-size: 11px;;
+}
+
+@media (min-width: 1024px) {
+    .postPreview.onPostViewerPage h5,
+    .postPreview.onPostViewerPage h2 {
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+
+    .postPreview.onPostViewerPage>div>div:nth-child(6)>div:not(:last-child) > div:last-child{
+        margin-left: 6px;
+    }
+}
+
+@media (min-width: 768px){
+    .postPreview.notOnPostViewerPage{
+        padding-bottom: 8px;;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+    .commentsSecInput.editing div:nth-child(2)>div:last-child>button{
+        min-width: 70px;
+
+    }
+}
+
+
+
+
+
+@media(min-width: 1025px) and (max-width: 1199px){
+
+}
+
+@media (max-width: 1024px){
+    .postPreview.notOnPostViewerPage>div>*:last-child{
+        font-size: 9px;
+    }
+
+    .postPreview.onPostViewerPage{
+        width: 35vw;
+        padding: 16px 8px 16px 8px;
+        max-width: 325px;
+    }
+
+    .postPreview.onPostViewerPage h2{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .postPreview.onPostViewerPage:not(:first-child){
+        margin-top: 15px;;
+    }
+
+    
+
+    .postPreview.onPostViewerPage  img{
+        margin-bottom: 4.8px;
+    }
+
+    .publicationContainerPostPreview.onPostViewerPage{
+        margin: 4.8px 0px 9.6px 0px;
+    }
+
+    .postInteractionContainer.onPostViewerPage{
+
+    }
+}
+
+/* GOAL: make the text ellipsis for the title of the postPreview */

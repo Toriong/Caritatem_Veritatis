@@ -1,7 +1,228 @@
+/* fileName: index */
+
 * {
   font-family: angie-sans, sans-serif;
-  font-style: normal;
-  font-weight: 400;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  /* height: 100%; */
+  -webkit-overflow-scrolling: touch;
+  background-color: var(--backgroundColor);
+}
+
+h3 {
+  cursor: pointer;
+}
+
+input {
+  all: unset;
+  outline: none;
+}
+
+textarea {
+  all: unset;
+  /* all: grey; */
+  /* background-color: gray; */
+  resize: none;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  border-style: none;
+  background-color: none;
+  background: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+:root {
+  --backgroundColor: rgb(32, 33, 36);
+  --backgroundColorModal: #2d2e30;
+  --textColor: #ffffff;
+  --borderColor: 0.8px solid #bfbfbf;
+  --borderColorSearchResults: 0.05px solid rgba(192, 192, 192, 0.3);
+  --linkColor: #0000ff;
+  --editIconColor: #1876f2;
+  --linkColor: #add8e6;
+  --boxShadow: 2px 2px 5px #2d2e30;
+  --boxShadowComment: 2px 2px 3px #2d2e30;
+  --iconHoveredColor: #2d2e30;
+  --userNavModalSecBorder: 0.1px solid #c0c0c0;
+  --readingListModalBorder: solid 0.5px rgba(211, 211, 211, 0.18);
+}
+
+.blocker {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  /* z-index: 500; */
+  z-index: 10000000;
+  overflow: auto;
+}
+
+.blocker.black {
+  background-color: rgb(0, 0, 0, 0.35);
+}
+
+.blocker.white {
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow-y: hidden;
+}
+
+
+
+.submitBtn {
+  border-style: none;
+  background: rgb(34, 172, 34);
+  color: var(--buttonTextColor);
+  width: 40%;
+  height: 46.2656px;
+  border-radius: 12px;
+  min-width: 209.594px;
+}
+
+.userIcon {
+  width: 48px;
+  height: 48px;
+  /* transform: translate(-15%, 5%); */
+  border-radius: 8px;
+}
+
+.userIcon.mobile{
+  width: 40px;
+    height: 40px;
+}
+
+.userIcon.userNavModal {
+  transform: none;
+}
+
+.addBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 12px;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+.dummy-div {
+  height: 100%;
+  width: 350px;
+}
+
+.dummy-div.footer {
+  height: 22vh;
+  background: white;
+  border: none;
+  width: 100%;
+}
+
+/* the edit and delete modal */
+.modal {
+  background-color: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 50vw !important; */
+  /* height: 70vh !important; */
+  width: 90vw !important;
+  /* height: 60vh !important; */
+  overflow: auto;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 10px;
+  z-index: 200000000000000;
+}
+
+.modal.generic {
+  background-color: var(--backgroundColorModal);
+  height: 45vh;
+  width: 40vw;
+  background-color: var(--backgroundColorModal);
+  box-shadow: var(--boxShadow);
+  z-index: 600000000;
+  border-radius: 0.5em;
+}
+
+/* pages that share the same color, height, and width */
+
+/* .searchPage, */
+.notificationsPage,
+.userFollowersPage,
+.settingsPage {
+  min-height: 100vh;
+}
+
+
+.clientSideNotifyPage,
+.errorPage,
+.searchPage,
+.notificationsPage,
+.selectedReadingList,
+.userFollowersPage,
+.settingsPage,
+.readingListsPage,
+.activitiesPage {
+  width: 100vw;
+  background-color: var(--backgroundColor);
+}
+
+.modal.previousComments,
+.modal.readingListNames {
+  /* width: 60vw;
+  height: 75vh;
+  border-radius: 0.5em;
+  background-color: var(--backgroundColorModal);
+  z-index: 900000000;
+  overflow-y: scroll; */
+}
+
+.modal.generic {
+  z-index: 9999900000000;
+  max-width: 500px;
+  max-height: 362px;
+}
+
+.modal.generic > section{
+  min-height: 113.398px;
+}
+
+@media (max-width: 280px) {
+  .modal {
+    /* min-width: 250px; */
+    /* max-width: 250px; */
+    /* width: 250px !important; */
+    /* min-height: 370px; */
+    /* height: 370px !important; */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .modal.generic > section:last-child button {
+    height: 48px !important;
+    width: 100px !important;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 768px) and (max-width: 1199px) {
+
 }

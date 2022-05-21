@@ -1,0 +1,484 @@
+/* fileName: aboutUser */
+
+
+.aboutUserSection {
+  background: var(--backgroundColor);
+  /* min-height: 85vh; */
+  display: grid;
+  place-items: center;
+  padding: 32px 0 32px 0;
+  max-width: 2560px;
+  /* height: fit-content; */
+  /* max-height: 850px; */
+}
+
+#bioContainer svg{
+  color: lightskyblue;
+}
+
+.aboutUserSection > div > div {
+  width: 100%;
+}
+
+
+.aboutUserSection>div{
+  min-width: 280px;
+}
+
+.aboutUserSection>div>section:first-child>div:last-child{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.aboutUserSection>div>section:first-child{
+min-width: 280px;
+max-width: 776px;
+}
+
+.userInfoContainer{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+
+}
+
+#bioContainer {
+  /* height: 23vh; */
+  /* height: 138px; */
+  overflow-y: hidden;
+  position: relative;
+}
+
+
+#bioContainer,
+.aboutUserSection>div>section:last-child
+{
+  min-width: 280px;
+}
+
+
+.modal.bio {
+  background-color: var(--backgroundColorModal);
+  overflow-y: scroll;
+  height: 60vh;
+  border-radius: 0.5em;
+  padding-bottom: 16px;
+  max-height: 600px;
+  max-width: 800px; 
+}
+
+.modal.bio > h1 {
+  border-bottom: solid 0.5px rgba(211, 211, 211, 0.18);
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 0.5em 0em 0.5em 0em;
+  min-width: 252px;
+}
+
+.modal.bio > p {
+  padding: 5%;
+  padding-left: 8%;
+}
+
+.aboutUserSection > div {
+  /* height: 55vh; */
+  min-height: 100vh;
+  width: 55vw;
+  max-width: 792px;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutUserSection>div>section:last-child{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  place-items: center;
+}
+
+.aboutUserSection>div>section:last-child>div:last-child,
+.aboutUserSection>div>section:last-child div:nth-child(2) ul {
+  min-width: 280px;
+  width: 40vw;
+}
+
+
+.aboutUserSection > div > section:last-child > div:nth-child(2) h4 svg,
+.aboutUserSection > div > section:last-child > div:last-child > h4 svg,
+.aboutUserSection > div > section:first-child > div:first-child > h1 svg {
+  cursor: pointer;
+  z-index: 50;
+  color: lightskyblue;
+}
+
+.aboutUserSection > div > section:last-child > div:last-child > ul svg {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.aboutUserSection > div > section:last-child > div:last-child > ul li {
+  list-style-type: none;
+  min-width: 200px;
+  display: flex;
+}
+
+.aboutUserSection
+  > div
+  > section:last-child
+  > div:last-child
+  > ul
+  a:last-child:hover {
+  text-decoration: underline;
+}
+
+.aboutUserSection
+  > div
+  > section:last-child
+  > div:last-child
+  > ul
+  a:last-child {
+  font-weight: 100;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  margin-left: 0.4em;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.aboutUserSection > div > section:last-child > div:last-child > ul li {
+  color: #ffffff;
+  font-size: 0.9em;
+}
+
+.aboutUserSection > div > section:last-child {
+  padding-top: 0.7em;
+  max-width: 776px;
+}
+
+.aboutUserSection > div > section:last-child span {
+  font-weight: 100;
+}
+
+.aboutUserSection h4 {
+  font-weight: 250;
+  color: #ffffff;
+}
+
+.aboutUserSection > div > section:last-child > div:last-child {
+  margin-top: 0.7em;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutUserSection > div > section:last-child > div:first-child {
+  display: flex;
+width: 100%;
+}
+
+.aboutUserSection > div > section:last-child > div:first-child > span:hover {
+  text-decoration: underline;
+}
+
+.aboutUserSection > div > section:last-child > div:first-child > span {
+  cursor: pointer;
+}
+
+.aboutUserSection > div > section:last-child {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+}
+
+.aboutUserSection > div > section:last-child > div:nth-child(2) {
+  height: fit-content;
+  margin-top: 0.7em;
+  /* min-height: 5vh; */
+}
+
+.aboutUserSection > div > section:last-child div:nth-child(2) ul {
+  height: fit-content;
+  /* width: 20vw; */
+  padding-top: 0.5em;
+}
+
+.aboutUserSection>div>section:last-child div:nth-child(2) ul,
+.aboutUserSection>div>section:last-child>div:last-child{
+  min-width: 250px;
+  max-width: 576px;
+}
+
+.aboutUserSection
+  > div
+  > section:last-child
+  > div:first-child
+  > span:last-child {
+  /* margin-left: 0.8em; */
+}
+
+.aboutUserSection > div > section:first-child {
+  height: 45%;
+  /* display: flex; */
+  min-height: 156.547px;
+  border-bottom: var(--borderColor);
+}
+
+.userInfoContainer {
+  display: flex;
+  font-size: 22px;
+  width: 100%;;
+  /* min-width: 346.906px; */
+}
+
+.userInfoContainer > div:last-child{
+  margin-left: 24px;
+}
+
+.aboutUserSection h1 {
+  font-weight:400;
+  /* white-space: nowrap; */
+}
+
+.aboutUserSection > div > section:first-child > div:first-child > h1 {
+  position: relative;
+  margin-bottom: 1em;
+  width: fit-content;
+}
+
+.aboutUserSection > div > section:first-child > div:first-child p {
+  font-weight: 100;
+  min-width: 252px;
+}
+
+.aboutUserSection > div > section:first-child > div:first-child > h1 svg {
+  position: absolute;
+  color: #87cefa;
+  margin: 0.03em 0em 0em 0.3em;
+  font-size: 20px;
+}
+
+.aboutUserSection > div > section:first-child > div:last-child img {
+  width: 10vw;
+  /* height: 20vh; */
+  /* border-radius: 5%; */
+  border-radius: 8px;;
+  min-width: 100.695px;
+  height: 150.75px;
+  max-width: 144px;
+}
+
+
+.border.onAboutUser{
+  display: none;
+}
+
+.aboutUserSection>div>section:last-child>div:last-child>ul li:not(:first-child){
+margin-top: 8px;
+}
+
+.LinesEllipsis{
+  padding-bottom: 8px;
+}
+
+.socialMediaList{
+  padding-top:2px;
+}
+
+.aboutUserSection>div>section:last-child>div:last-child>ul a span {
+  max-width: 60vw;
+  width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 8px;
+}
+
+
+@media (min-width: 768px){
+  .aboutUserSection>div>section:first-child{
+max-height: 156.547px;
+  }
+
+  .aboutUserSection>div>section:first-child>div:last-child{
+    height: 155.75px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .aboutUserSection > div > section:first-child{
+    min-width: 537.844px;
+  }
+
+    .LinesEllipsis {
+      font-size: 18px;
+      padding-bottom: 8px;
+    }
+    
+    .aboutUserSection h1 {
+      font-size: 19.74px;
+      margin-bottom: 8px;
+    }
+}
+
+
+@media (max-width: 767px){
+
+
+
+
+  .LinesEllipsis{
+    margin-top: 8px;
+    max-height: 184.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* width: 60vw; */
+    width: 100%;
+  }
+
+    .aboutUserSection>div>section:last-child {
+      display: flex;
+      justify-content: center;
+      place-items: center;
+      flex-direction: column;
+      padding-left: 0px;
+      padding-top: 8px;
+    }
+
+    .aboutUserSection>div>section:first-child{
+      /* height: 350px; */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px){
+.aboutUserSection>div>section:first-child>div:last-child img {
+    width: 10vw;
+    /* height: 15vh; */
+    max-width: 95.5469px;
+    /* border-radius: 50%; */
+  }
+
+  .aboutUserSection>div>section:last-child>div:last-child,
+.aboutUserSection>div>section:last-child div:nth-child(2) ul{
+  min-width: 280px; 
+  width: 30vw;
+}
+
+  #bioContainer {
+    min-width: 271.008px;
+  }
+
+  .LinesEllipsis{
+    font-size: clamp(14px, 2.2vw, 14px);
+  }
+
+.aboutUserSection h1 {
+  font-size: clamp(16.2px, 2.5vw, 19px);
+}
+
+
+
+
+.aboutUserSection>div>section:last-child,
+.aboutUserSection > div > section:first-child{
+min-width: 401.195px;
+}
+
+
+.aboutUserSection>div>section:first-child{
+  padding: 0px 8px 0px 8px;
+}
+}
+
+
+
+@media (max-width: 576px){
+.aboutUserSection>div>section:first-child > div:last-child img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;;
+}
+
+.aboutUserSection>div>section:last-child>div:first-child{
+  padding-left: 10px;
+}
+
+.border.onAboutUser{
+  display: flex;
+}
+
+.aboutUserSection > div{
+  width: 100%;
+  padding-left: 0;
+}
+
+.aboutUserSection h1,
+.LinesEllipsis{
+  padding: 0px 12px 0px 12px;
+  text-align: center;
+}
+
+.aboutUserSection h1{
+font-size: clamp(15.6px,6vw, 24.92px);
+}
+
+
+.aboutUserSection>div>section:last-child>div:last-child,
+.aboutUserSection>div>section:last-child div:nth-child(2) ul{
+  width: 45vw;
+}
+
+
+.LinesEllipsis{
+  font-size: clamp(11px, 2.3vw, 13.248px);
+  margin-top: 6px;
+}
+
+
+.aboutUserSection>div>section:first-child{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  /* height: 400.797px; */
+  padding-bottom: 6px;
+  width: 100vw;
+}
+
+.aboutUserSection > div > section:last-child{
+width: 100vw;
+}
+
+.border.onAboutUser{
+  min-width: 300.797px;
+}
+
+  .userInfoContainer{
+    flex-direction: column-reverse;
+  }
+
+  .userInfoContainer > div:last-child{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-left: 0px;
+  }
+
+
+  #bioContainer{
+    margin-top: 8px;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 280px){
+.aboutUserSection{
+  overflow-x: auto;
+}
+}
+

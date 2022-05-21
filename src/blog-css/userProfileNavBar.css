@@ -1,0 +1,280 @@
+/* fileName: userProfiledNavBar */
+
+.userProfileNavMenu {
+  display: flex;
+  /* width: 50%; */
+  width: 45%;
+  /* min-width: 600px; */
+  max-width: 740px;
+  height: 100px;
+  /* height: 100px; */
+}
+
+.navbar.userAccount > div{
+  max-width: 2560px;
+  width: 100%;
+  position: relative;
+}
+
+.navbar.userAccount {
+  position: fixed;
+  /* z-index: 1000; */
+}
+
+.userProfileNavMenu div {
+  width: 25vh;
+  display: grid;
+  place-items: center;
+}
+
+
+.userProfileNavMenu > div:first-child {
+  font-weight: bolder;
+  font-size: 1.2em;
+  color: whitesmoke;
+  padding: 0em 1em 0em 0.5em;
+  width: 190.5px;
+  height: 100px;
+}
+
+.userProfileNavMenu div:not(:first-child) {
+  /* margin-top: 3vh; */
+  margin-top: 23.67px;
+  width: 8.21875vw;
+  height: 90px;
+}
+
+.userProfileNavMenu span {
+  font-size: 0.8em;
+}
+
+.userProfileNavMenu div:first-child,
+.userProfileNavMenu div:not(:first-child) span:hover {
+  cursor: pointer;
+}
+
+.userProfileNavMenu div:not(:first-child) span:hover {
+  text-decoration: underline;
+}
+
+.navbar.userAccount.onHomeProfile{
+  /* min-width: 824px; */
+}
+
+.CVNavMenuAndUserIcon {
+  /* border: solid pink; */
+  height: 95px;
+  /* width: 628px; */
+  display: flex;
+  /* margin: 0px 0px 0px 48vh; */
+  position: absolute;
+  right: 0;
+  top: 0.3em;
+  /* min-width: 390px; */
+  /* border: solid pink; */
+  /* border: solid pink; */
+  /* transform: translateX(20px); */
+}
+
+.CVNavMenuAndUserIcon > div > * {
+  cursor: pointer;
+}
+
+.CVNavMenuAndUserIcon > div:first-child svg {
+  margin-right: 0.5em;
+  transform: translateY(25%);
+  font-size: 1.3em;
+}
+
+.CVNavMenuAndUserIcon > div:first-child > input {
+  border-bottom: 0.8px solid #bfbfbf;
+}
+
+.CVNavMenuAndUserIcon > div:first-child {
+  margin-top: 2em;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em 0.5em 2em 0.5em;
+  min-width: 150px;
+  /* display: ; */
+  /* place-items: center; */
+  /* border: solid 2px pink; */
+  height: 6vh;
+  /* width: 15vw; */
+}
+
+.CVNavMenuAndUserIconContainer {
+  /* margin-top: 3vh; */
+  margin-top: 21px;
+  /* width: 15vh; */
+  /* width: 7.083333333333333vw; */
+  width: 102px;
+  display: grid;
+  place-items: center;
+  height: 60.2px;
+}
+
+#userIconProfileNavbar {
+  width: 55.23px;
+  height: 55.23px;
+  border-radius: 31.56px;
+}
+
+#userNavModalContainerProfile {
+  /* padding-left: 4vh; */
+  /* position: relative; */
+  /* border: solid 2px pink; */
+}
+
+#userProfileButtonContainer {
+  margin-right: 15.78px;
+  padding-left: 3.945px;
+}
+
+#userProfileButtonContainer button {
+  border-style: none;
+  width: 90px;
+  height: 25px;
+  border-radius: 39.45px;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
+}
+
+#CVIconUserProfile {
+  font-size: 34.3px;
+  padding-right: 69px;
+}
+
+.userProfileNavMenuOnMobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .CVNavMenuAndUserIcon.notOnMobile,
+  .userProfileNavMenu.notOnMobile {
+    display: none;
+  }
+
+  /* .unfixed-wrapper.onUserProfile, */
+  .navbar.userAccount.nonCurrentUser {
+    max-height: 150px;
+    min-height: 150px;
+    height: 150px;
+  }
+
+  .navbar.userAccount.onHomeProfile {
+    max-height: 105px;
+    min-height: 105px;
+    height: 105px;
+  }
+
+  /* GOAL: have a taller navbar when viewing another user's account or when user is on their own profile */
+  .userProfileNavMenuOnMobile {
+    display: block;
+    width: 100%;
+    min-width: 190px;
+  }
+
+  .userProfileNavMenuOnMobile.onHomeProfile {
+    /* height: 130px; */
+  }
+
+  .userProfileNavMenuOnMobile * {
+    color: white;
+  }
+
+  /* GOAL: have a big user icon on the mobile phone */
+  .userProfileNavMenuOnMobile section:first-of-type {
+    height: 40%;
+  }
+
+  .userProfileNavMenuOnMobile.onHomeProfile section:first-of-type {
+    height: 60%;
+  }
+
+  .userProfileNavMenuOnMobile section:last-of-type div {
+    /* height: 100%; */
+    /* height: 50%; */
+    width: 50%;
+    display: grid;
+    place-items: center;
+  }
+  
+  .userProfileNavMenuOnMobile.onHomeProfile section:last-of-type div {
+    width: 40%;
+    height: 38px;
+  }
+
+  .userProfileNavMenuOnMobile section:last-of-type div button {
+    font-size: 10px;
+  }
+
+  .userProfileNavMenuOnMobile > section:last-of-type {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .userProfileNavMenuOnMobile.onHomeProfile > section:last-of-type{
+      height: 64px;
+    }
+
+
+    .userProfileNavMenuOnMobile>section:last-of-type{
+      /* height: fit-content; */
+    }
+
+  .userProfileNavMenuOnMobile section:last-of-type div{
+    
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #CVIconUserProfile {
+    padding-right: 0px;
+  }
+
+  .CVNavMenuAndUserIconContainer {
+    min-width: 55px;
+    max-width: 70.2px;
+    /* width: 70.2px; */
+    height: 60.2px;
+  }
+
+  .userProfileNavMenu {
+    width: 40%;
+    height: 100px;
+  }
+
+  .userNavModalProfileSubContainer section:first-child div:first-child img{
+    width: 70px;
+    height: 70px;
+  }
+
+  .userProfileNavMenu div:not(:first-child){
+    padding: 5px;
+  }
+
+    .CVNavMenuAndUserIcon{
+      padding-left: 8px;
+    }
+}
+
+@media (min-width: 1920px){
+  .CVNavMenuAndUserIcon > div{
+    margin-right: 14px;
+  }
+}
+
+@media (min-width: 281px) and (max-width: 375px){
+  .userProfileNavMenuOnMobile>section:last-of-type{
+    width: 100vw;;
+  }
+}
+
+@media (max-width: 280px){
+.userProfileNavMenuOnMobile>section:last-of-type{
+  /* height: 50px; */
+  height: fit-content;
+}
+}

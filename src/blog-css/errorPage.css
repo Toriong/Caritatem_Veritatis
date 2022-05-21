@@ -1,0 +1,9 @@
+.errorPage {
+  position: fixed;
+  height: 100%;
+  padding: 5em 0 0 20em;
+}
+
+.errorPage p {
+  margin-top: 0.5em;
+}

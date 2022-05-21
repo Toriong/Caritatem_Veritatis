@@ -1,0 +1,253 @@
+#newStoryNavBar {
+  background: var(--backgroundColor);
+  height: 100%;
+  width: 100vw;
+  /* z-index: 10000; */
+}
+
+
+#newStoryNavbar > div {
+  display: flex;
+  width: 100vw;
+  max-width: 2560px;
+}
+
+.newStoryUserIconSection > section:first-of-type {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  /* width: 15vw; */
+}
+
+.newStoryUserIconSection {
+  width: 100%;
+  display: flex;
+  /* max-width: 550px; */
+  align-items: center;
+}
+
+.newStoryUserIconSection > * {
+  margin-left: 38px;
+}
+
+#alarmIcon {
+  width: 25%;
+  height: 25%;
+  transform: translateX(20%);
+}
+
+.userIconBlogContainer.newStoryNavbar_ {
+  width: 120%;
+  /* width: 200px; */
+  padding-left: 15px;
+  /* padding: 0px 4px 0px 4px; */
+  /* border: solid 2px pink; */
+}
+
+.newStoryUserIconSection > button {
+  border-style: none;
+  /* width: 45%; */
+  height: 38%;
+  width: 100px;
+  /* max-width: 159.352px; */
+  /* margin: 1% 6.5% 0px 0%; */
+  /* margin: 3px 15px 0px 0px;  */
+  font-size: 12px;
+  /* border-radius: 1vh; */
+  border-radius: 8px;
+  background: rgb(26, 137, 23);
+  border: rgb(26, 137, 23) 0.8px solid;
+  color: #ffffff;
+  transform: translateX(20%);
+  cursor: pointer;
+  /* max-width: 154px; */
+}
+
+#newStoryNavbar .dummie-div {
+  width: 80%;
+  /* border: solid 2px pink; */
+}
+
+#newStoryNavbar{
+  
+}
+
+#newStoryNavbar .website-name-container {
+  margin-left: 16px;
+  width: 25%;
+}
+
+#newStoryNavbar .logo-container-navbar {
+  width: 30%;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+}
+
+
+.website-name-container > span:nth-child(1){
+white-space: nowrap;
+}
+
+.website-name-container > span:nth-child(2){
+  display: none;
+}
+
+
+.reviewBtnContainerMobile{
+  display: none;
+  padding-bottom: 4px;
+}
+
+.reviewBtnContainerMobile > button{
+color: #ffffff;
+border-radius: 8px;
+width: 100px;
+height: 25px;
+background: rgb(26, 137, 23);
+border: rgb(26, 137, 23) 0.8px solid;
+}
+
+
+
+
+
+
+/* show the CV when below 576px */
+
+/* show hide the full website name below 576px */
+@media(min-width: 1024px){
+  .userIconBlogContainer.newStoryNavbar_{
+    /* transform: translateX(-14px); */
+    margin-right: 11px;
+  }
+
+    #newStoryNavbar>div{
+      padding-right: 8px;
+    }
+
+        .newStoryUserIconSection{
+          max-width: 600px;
+        }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+.newStoryUserIconSection {
+    width: 567.07px;
+  }
+}
+
+
+
+@media (max-width: 1199px){
+
+
+  .newStoryUserIconSection > button{
+width: 100px !important;
+  }
+
+  .newStoryUserIconSection{
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+.newStoryUserIconSection > *{
+  /* margin-left: 10px; */
+  margin-left: 0px;
+}
+}
+
+
+@media (max-width: 767px) {
+#newStoryNavbar > div{
+overflow-x: auto;
+}
+
+  .newStoryUserIconSection{
+    display: none;
+  }
+
+  .website-name-container>span:nth-child(2) {
+    display: none;
+  }
+  
+  .website-name-container>span:nth-child(1) {
+    display: initial;
+  }
+
+  .userIconBlogContainer.newStoryNavbar_ > span{
+display: none;
+  }
+
+  #newStoryNavbar > div > section:first-child > img {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+
+
+  #newStoryNavbar .logo-container-navbar{
+    /* min-width: 70px; */
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px){
+  .navigationMenuContainerMobile > div{
+    min-width: 48.7188px;
+  
+  }
+}
+
+
+@media (max-width: 576px) {
+#newStoryNavbar .website-name-container {
+  min-width: 50px;
+  /* border: solid pink; */
+}
+
+.dummie-div{
+  display: none;
+}
+
+  .website-name-container>span:nth-child(2) {
+    display: flex;
+  }
+
+  .website-name-container > span:nth-child(1) {
+    display: none;
+    
+  }
+
+.reviewBtnContainerMobile>button {
+  width: 20vw;
+  min-width: 56px;
+}
+
+  .logo-container-navbar{
+/* display: none !important; */
+  }
+
+.website-name-container{
+display: none !important;
+}
+}
+
+
+
+@media (max-width: 767px){
+  .reviewBtnContainerMobile{
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #reviewBtn {
+    font-size: 10px;;
+  }
+}
+
+@media (max-width: 280px){
+  .website-name-container{
+    display: none !important;
+  }
+}

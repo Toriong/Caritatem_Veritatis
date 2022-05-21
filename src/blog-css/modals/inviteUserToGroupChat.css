@@ -1,0 +1,79 @@
+/* fileName: inviterUserToGroupChat */
+
+
+.modal.inviteUserToGroupChat {
+  background-color: var(--backgroundColorModal);
+  width: 30vw;
+  height: 40vh;
+  border-radius: 0.3em;
+  z-index: 5000000000;
+  max-width: 400px;
+  max-height: 500px;
+}
+
+.modal.inviteUserToGroupChat h1 {
+  font-weight: 350;
+  white-space: nowrap;
+}
+
+.modal.inviteUserToGroupChat > section {
+  height: 50%;
+  min-height: 77.5938px;
+min-width: 252px;
+}
+
+.modal.inviteUserToGroupChat > section:first-of-type{
+padding: 0px 8px 0px 8px;
+}
+
+
+
+.modal.inviteUserToGroupChat > section:first-child {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.modal.inviteUserToGroupChat > section:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.modal.inviteUserToGroupChat > section:nth-child(2) button:nth-child(1) {
+  background-color: red;
+  color: black;
+  margin-right: 0.3em;
+}
+
+.modal.inviteUserToGroupChat > section:nth-child(2) button:nth-child(2) {
+  background-color: green;
+  color: white;
+  margin-left: 0.3em;
+}
+
+.modal.inviteUserToGroupChat > section:nth-child(2) button {
+  border-radius: 0.5em;
+  width: 75px;
+  height: 33px;
+  /* padding: 4px; */
+  font-weight: 250;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .modal.inviteUserToGroupChat {
+    width: 320px;
+    max-height: 240px;
+  }
+
+  .modal.inviteUserToGroupChat > section:nth-child(2) button {
+    width: 60px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 380px){
+  .modal.inviteUserToGroupChat h1{
+    font-size: clamp(12px, 5vw, 14px);
+  }
+}

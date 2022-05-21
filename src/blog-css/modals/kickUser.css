@@ -1,0 +1,212 @@
+/* fileName: kickUser */
+
+.modal.kickUser {
+  background-color: var(--backgroundColorModal);
+  height: 50vh;
+  width: 40vw;
+  background-color: var(--backgroundColorModal);
+  box-shadow: var(--boxShadow);
+  z-index: 6000000000000000000000000;
+  border-radius: 0.5em;
+  max-width: 500px;
+  max-height: 360px;
+}
+
+.modal.kickUser > div > div:first-child{
+min-width: 252px;
+}
+
+.modal.kickUser > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.confirmKickModal > section {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.confirmKickModal > section:first-child > span {
+  text-align: center;
+}
+
+.confirmKickModal > section:first-child,
+.modal.kickUser > div > div:first-child {
+  height: 20%;
+}
+
+.confirmKickModal > section:last-child,
+.modal.kickUser > div > div:nth-child(2) {
+  height: 80%;
+  padding: 5px 1% 1% 1%;
+}
+
+.confirmKickModal>section:last-child{
+  min-height: 120.469px;
+  min-width: 200.594px;
+}
+
+.confirmKickModal>section:first-child{
+  min-height: 57.6328px;
+}
+
+.confirmKickModal > section:first-child{
+  min-width: 181px;
+  padding: 8px 8px 0px 8px;
+}
+
+.modal.kickUser > div > div:nth-child(2) {
+  overflow-y: scroll;
+  min-height: 289.195px;
+  padding: 8px 8px 0px 8px;
+  min-width: 271.797px;
+}
+.modal.kickUser > div > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid grey 0.01px;
+  min-height: 72.2969px;
+}
+
+.confirmKickModal {
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 8000000000;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  background-color: var(--backgroundColorModal);
+  border: 0.05px solid rgba(192, 192, 192, 0.3);
+}
+
+.confirmKickModal > section:last-child button:first-child {
+  background-color: var(--backgroundColor);
+  color: white;
+  margin-right: 0.3em;
+}
+
+.confirmKickModal > section:last-child button {
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  font-weight: 250;
+}
+
+.confirmKickModal > section:last-child button:last-child {
+  background-color: red;
+  margin-left: 0.3em;
+}
+
+.userToKick button {
+  background-color: #ff0000;
+  color: black;
+  border-style: none;
+  border-radius: 0.5em;
+  color: #ffffff;
+  cursor: pointer;
+  width: 73px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+}
+
+.userToKick > div:first-child,
+.userToKick {
+  display: flex;
+}
+
+.userToKick {
+  padding: 1em 2em 0 2em;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.userToKick > div:first-child > div:last-child span {
+  font-size: 0.9em;
+  width: 120px;
+  margin-left: 1em;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.userToKick {
+  padding: 3%;
+  border-radius: 0.5em;
+  height: 68px;
+}
+
+.userToKick:hover {
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.userToKick div {
+  display: grid;
+  place-items: center;
+}
+
+.searchedPost > div > *:not(:first-child) {
+  margin-top: 0.05em;
+}
+
+.userToKick img {
+  /* width: 4vw; */
+  /* height: 6vh; */
+  /* max-width: 34px; */
+  /* max-height: 43px; */
+  width: 34px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.blocker.kickUser {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .modal.kickUser {
+    /* height: 340px; */
+    /* width: 460.8px; */
+  }
+
+  .userToKick button {
+    width: 77px;
+    height: 28px;
+  }
+
+  .userToKick img {
+    width: 32px;
+    height: 41px;
+  }
+
+  .confirmKickModal > section:first-child span {
+    font-size: small;
+  }
+
+  .confirmKickModal > section:nth-child(2) button {
+    font-size: small;
+  }
+
+  .confirmKickModal > section:last-child button:first-child {
+    margin-right: 3.9px;
+  }
+
+  .confirmKickModal > section:last-child button:last-child {
+    margin-left: 3.9px;
+  }
+}
+
+@media (max-width: 767px){
+.modal.kickUser{
+  max-width: 519.297px;
+}
+}

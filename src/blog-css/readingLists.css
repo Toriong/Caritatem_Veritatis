@@ -1,0 +1,291 @@
+/* fileName: readingLists */
+
+.readingListsPage {
+  min-height: 100vh;
+  height: fit-content;
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 5em;
+max-width: 2560px;
+}
+
+.readingListsSection {
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin: 0% 0px 0px 8%;
+  overflow-x: scroll;
+  width: 75%;
+  background-color: var(--backgroundColor);
+  color: white;
+  padding: 2em 2em 0em 2em;
+  height: fit-content;
+}
+
+.readingListsSection > h1 {
+  margin-bottom: 0.5em;
+  white-space: nowrap;
+}
+
+.readingListsSection > ul > li {
+}
+
+.readingListsSection > ul {
+  min-height: 80vh;
+  position: relative;
+  /* min-width: 300px; */
+}
+
+#emptyListDisplay {
+  position: absolute;
+  transform: translate(-50%, 0%);
+  top: 20%;
+  left: 40%;
+  list-style: none;
+  color: white;
+}
+
+.readingListInfo > section:last-child {
+  width: 55%;
+}
+
+.readingListInfo > section:first-child {
+  width: 50%;
+}
+
+.readingListInfo > section:first-child > div {
+  padding-left: 1em;
+}
+
+.readingListInfo > section:first-child > div:last-child button {
+  width: 5vw;
+  height: 5vh;
+}
+
+.readingListInfo > section:first-child > div:last-child button {
+  display: grid;
+  place-items: center;
+  border-style: none;
+  border-radius: 0.8em;
+  background: var(--backgroundColor);
+  color: #ffffff;
+  border: #c0c0c0 0.8px solid;
+  cursor: pointer;
+  min-width: 52px;
+  max-width: 72px;
+  height: 37px;
+}
+
+.readingListInfo > section:first-child > div:first-child button {
+  width: 3vw;
+  height: 2vh;
+}
+
+.readingListInfo > section:first-child > div:first-child {
+  display: flex;
+}
+
+.readingListInfo > section:first-child > div:first-child,
+.readingListInfo > section:first-child > div:last-child {
+  height: 50%;
+}
+
+.readingListInfo > section:first-child > div:last-child > div:nth-child(2) {
+  margin-left: 0.5em;
+}
+
+.readingListInfo > section:first-child > div:last-child div,
+.readingListInfo > section:first-child > div:first-child > div {
+  display: grid;
+  place-items: center;
+}
+
+.readingListInfo > section:first-child > div:first-child > div:last-child {
+  margin-left: 0.5em;
+  padding-bottom: 0.4em;
+}
+
+.readingListInfo > section:first-child > div:last-child {
+  display: flex;
+}
+
+.readingListInfo > section:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.readingListInfo > section:nth-child(2) > div:not(:first-child),
+.readingListInfo > section:nth-child(2) img:not(:first-child) {
+  margin-left: 0.3em;
+}
+
+.readingListInfo > section:nth-child(2) img {
+  height: 100%;
+}
+
+.readingListInfo > section:nth-child(2) > img:first-child {
+  width: 40%;
+}
+
+.readingListInfo > section:nth-child(2) > img:nth-child(2) {
+  width: 30%;
+}
+
+.readingListInfo > section:nth-child(2) > img:nth-child(3) {
+  width: 30%;
+}
+
+.readingListInfo h3 {
+  color: white;
+  width: 145px;
+  text-overflow: ellipsis;
+  height: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.readingListInfo {
+  max-width: 576px;
+  cursor: pointer;
+  display: flex;
+  width: 40vw;
+  background-color: var(--backgroundColorModal);
+  height: 17vh;
+  border-radius: 0.2em;
+  border: var(--readingListModalBorder);
+  height: 128px;
+}
+
+.readingListInfo:not(:first-child) {
+  margin-top: 2em;
+}
+
+.readingListInfo > section > div:nth-child(2) > div:nth-child(2) > span{
+  white-space: nowrap;
+  font-size: 14px;;
+}
+
+.smallDesktopAndBelowIcon{
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 27px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .readingListInfo{
+    min-width: 375px;
+  }
+}
+
+@media (max-width: 1199px){
+.readingListInfo>section:first-child > div:first-child > div{
+position: relative;
+}
+
+.readingListInfo>section:first-child>div:first-child>div:last-child{
+  display: none;
+}
+
+.smallDesktopAndBelowIcon{
+  display: block;
+}
+
+  .userHomePageSideBar.onReadingListPage{
+    width: 30%;
+  }
+
+  .readingListInfo{
+    /* min-width: 375px; */
+    /* height: 128.008px; */
+  }
+
+.readingListInfo>section:first-child>div:last-child button{
+  height: 38px;
+}
+
+  .readingListInfo>section:first-child>div:last-child button,
+  .readingListInfo>section>div:nth-child(2)>div:nth-child(2)>span{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px){
+.smallDesktopAndBelowIcon {
+    bottom: 30px;
+  }
+
+  .userHomePageSideBarWrapper,
+.userHomePageSideBar{
+  display:none;
+}
+
+.readingListInfo>section:first-child>div:last-child{
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+}
+
+
+.readingListsSection > h1{
+font-size: 20px;
+}
+
+
+.readingListsSection{
+  margin: 0;
+  width: 100vw;
+  /* border: solid pink; */
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  overflow-x: scroll;
+}
+
+.readingListInfo > section:first-child > div:last-child button{
+font-size: 11px;
+width: 9vw;
+max-width: 60px;
+height: 37px;
+}
+
+.readingListInfo>section>div:nth-child(2)>div:nth-child(2)>span{
+  font-size: 11px;
+}
+
+.readingListInfo{
+  /* width: 50vw; */
+  /* min-width: 330px; */
+  min-width: 270px;
+  /* width: 384px; */
+  height: 123px;
+}
+
+.readingListInfo > section:nth-child(2) > img:nth-last-child(3){
+width: 32px;
+}
+
+.readingListInfo h3{
+  width: 100px;
+  font-size: 12px;
+}
+}
+
+@media (max-width: 576px){
+}
+
+@media(max-width: 350px){
+  .readingListsSection{
+    /* padding-left: 95px;; */
+  }
+}
+
+@media (max-height: 750px){
+  .userHomePageSideBar.onReadingListPage{
+    overflow-y: scroll;
+  }
+
+  .userHomePageSideBar section:nth-child(5){
+    height: 400px;
+  }
+}

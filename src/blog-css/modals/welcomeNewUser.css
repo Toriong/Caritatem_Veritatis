@@ -1,0 +1,472 @@
+.welcomeNewUser {
+  box-shadow: 2px 2px 5px #2d2e30;
+  background: #2d2e30;
+  border-radius: 30px;;
+  width: 70%;
+  height: 90%;
+  position: fixed;
+  z-index: 100000000;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  overflow: auto;
+  max-height: 630px;
+  max-width: 1024.09px;
+}
+
+.bioInputSec,
+.welcomeNewUserSec {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.bioInputSec{
+  min-width: 280px;
+}
+
+.welcomeNewUserSec > p:first-of-type,
+.welcomeNewUserSec p:nth-of-type(2){
+  min-width: 246.672px;
+}
+
+
+
+
+
+#bioInput{
+  border: solid grey 1px;
+}
+
+
+
+
+.welcomeNewUserSec{
+  /* padding: 2% 5% 2% 5%; */
+  min-width: 280px;
+padding: 15.6641px 39.1641px 15.6641px 39.1641px;
+}
+
+
+.welcomeNewUser.smaller {
+  width: 40vw;
+  height: 60vh !important;
+}
+
+.welcomeNewUser.smaller div {
+  /* width: 100%; */
+  /* height: 100%; */
+  /* border: solid 2px pink; */
+}
+
+.emoji {
+  font-size: 100px;
+  /* vertical-align: middle; */
+  line-height: 2;
+}
+
+.welcomeNewUser.smaller span {
+  margin: 5% 0px 0px 0px;
+}
+
+.welcomeNewUser.bioInputSection {
+  padding: 0;
+}
+
+.imagePreview h5 {
+  margin-top: 20%;
+}
+
+.welcomeNewUser h5,
+p,
+h1,
+div {
+  color: var(--textColor);
+}
+
+.welcomeNewUser h5 {
+  margin-top: 41.3203px;
+}
+
+.welcomeNewUser h5 {
+  font-weight: bold;
+  font-style: italic;
+  min-width: 246.672px;
+}
+
+.welcomeNewUser p {
+  /* margin: 3.5% 0% 0% 0%; */
+  /* margin-top: 24.6719px; */
+  /* font-size: 88%; */
+  max-width: 900.391px;
+  overflow-x: auto;
+}
+
+.welcomeNewUserSec p {
+margin-top: 24.6719px;
+}
+
+
+.dragAndDropWrapper {
+  height: 40%;
+  width: 70%;
+  /* margin-top: 4%; */
+  display: grid;
+  place-items: center;
+  /* border: var(--borderColor); */
+}
+
+#CV {
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.imageUpload {
+  /* border: var(--borderColor); */
+  height: 150%;
+  width: 100%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  position: absolute;
+  /* margin: 0px 0px 110000% 0px; */
+  transform: translateY(-96%);
+  cursor: pointer;
+}
+
+.imageUpload::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 100%;
+  height: 180%;
+}
+
+.dropArea {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  border: 0.8px dotted #c0c0c0;
+  height: 170px;
+  width: 70%;
+  box-sizing: border-box;
+  margin-top: 35.2422px;
+  position: relative; 
+  min-width: 235.664px;
+}
+
+
+.dropArea input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+
+
+
+
+::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+#userName {
+  font-style: italic;
+}
+
+.dropArea.highlight {
+  border: skyblue 0.8px solid;
+}
+
+.dropArea p:hover {
+  font-style: italic;
+  cursor: pointer;
+}
+
+.iconPreviewer {
+  margin-top: 2%;
+  /* border: solid 2px pink; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropArea h6 {
+  font-size: 12.6px;
+  margin-top: 8px;
+  width: 100%;
+  text-align: center;
+  /* padding-bottom: 5%; */
+}
+
+.dummieDiv_ {
+  margin-top: 2%;
+  width: 48px;
+  height: 48px;
+}
+
+.otherOptions {
+  /* width: 91%; */
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.otherOptions svg {
+  margin-left: 3%;
+}
+
+.otherOptions button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 8px;
+  width: 35%;
+  height: 50px;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
+  cursor: pointer;
+  min-width: 174.18px;
+}
+
+.iconContainer {
+  position: relative;
+  /* width: 5vh; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  padding-top: 5px;
+  height: 65.7734px
+  /* height: 5vh; */
+  /* margin: 0px 5% 0px 0px; */
+}
+
+.overlay {
+  width: 48px;
+  height: 48px;
+  /* border: rgba(0, 0, 0, 0.6) solid 2px; */
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -55%);
+  /* background: pink; */
+  opacity: 0;
+}
+
+.overlay > * {
+  float: right;
+  cursor: pointer;
+  color: red;
+}
+
+.overlay:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.iconContainer img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.navButtonSec {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  /* margin: 0px 0px 4% 0px; */
+  margin-bottom: 30.6797px;
+  min-width: 280px;
+  /* bottom: 0; */
+}
+
+
+
+.navButtonSec button {
+  border-style: none;
+  border-radius: 8px;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
+  cursor: pointer;
+  width: 15%;
+  height: 50%;
+  min-width: 60.5938px;
+}
+
+.navButtonSec button:first-child{
+  margin-right: 8px
+}
+
+.navButtonSec button:last-child{
+  margin-left: 8px;
+}
+
+
+.navButtonSec-wrapper {
+  height: 108.445px;
+  width: 100%;
+  position: relative;
+  min-width: 280px;
+}
+
+.navButtonSec-wrapper{
+  /* border: solid pink; */
+}
+
+
+#goToReviewSectBtn {
+  border-style: none;
+  width: 20%;
+  height: 36.1484px;
+  /* margin: 1% 6.5% 0px 0px; */
+  border-radius: 7.23px;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
+  position: absolute;
+  bottom: 30px;
+  right: 3px;
+  /* margin: 0px 5% 4.5% 0px; */
+}
+
+
+#goToReviewSectBtn > span:last-child{
+  display: none;
+}
+
+
+.welcomeNewUser.smaller h1{
+  width: 100%;
+  text-align: center;
+  padding-top: 16px;
+}
+
+.welcomeNewUser.smaller>div{
+  height: 100%;
+}
+
+.welcomeNewUser.smaller{
+  max-height: 400px;
+  max-width: 576px;
+}
+
+.welcomeNewUser.smaller > div > div{
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.welcomeNewUser.smaller > div > span:first-of-type{
+  height: 20%;
+  display: grid;
+  place-items: center;
+}
+
+.welcomeNewUser.smaller > div{
+max-height: 1000px
+}
+
+
+
+
+@media (max-width: 767px){
+.welcomeNewUser.smaller{
+  width: 100vw;
+}
+
+#goToReviewSectBtn>span:last-child {
+  display: inline-block;
+}
+#goToReviewSectBtn>span:first-child {
+  display: none;
+}
+
+.reviewAndSubmitBioSection p{
+  max-width: 706px;
+  padding-right: 6px;
+  width: 95vw;
+  overflow-x: auto;
+}
+
+
+.welcomeNewUser p{
+  font-size: 14px;;
+}
+
+
+  .welcomeNewUser{
+      border-radius: 0%;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      overflow-y: scroll;
+      z-index: 10000000;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  .welcomeNewUser h5,
+  .welcomeNewUserSec p {
+    text-align: center;
+  }
+
+  .otherOptions button{
+    font-size: 10px;
+  }
+
+  .navButtonSec button{
+    max-width: 94.7969px;
+  }
+}
+
+@media (max-width: 575px){
+  .welcomeNewUserSec h1{
+    font-size: clamp(14px, 5vw, 19px);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 375px){
+  .welcomeNewUserSec > p:first-of-type,
+  .welcomeNewUserSec p:nth-of-type(2){
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px){
+  #goToReviewSectBtn{
+    font-size: 10px;;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .welcomeNewUser{
+    width: 90%;
+    max-width: 815.398px;
+  }
+
+  .aboutYouTitleContainer{
+    padding-left: 50px;
+    /* padding-left: 0; */
+    /* justify-content: center; */
+  }
+
+  .bioSection textarea{
+    width: 95%;
+  }
+}
+

@@ -1,0 +1,2015 @@
+/* fileName: postViewerPage */
+
+
+.postViewerPage {
+  background-color: var(--backgroundColor);
+  /* height: fit-content; */
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5em;
+  padding-bottom: 9em;
+  /* height: 100vh; */
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+
+
+.postSection{
+  display: flex;
+  min-width: 280px;
+  max-width: 2560px;
+}
+
+.authorContainer {
+  position: relative;
+  width:30%;
+  min-width: 270px;
+  padding-right: 8px;
+}
+
+.introPicContainerPostViewerPage{
+  max-width: 864px;
+
+}
+
+.articleAndCommentSection{
+  width: 60%;
+  padding-top: 14px;
+}
+
+.blogBody  *{
+  color: white;
+}
+
+.articleAndCommentSection h2{
+  margin-top: 8px;
+}
+
+
+.articleAndCommentSection ol{
+  padding-left: 24px;
+}
+.articleAndCommentSection ul{
+  padding-left: 16px;
+}
+
+
+.authorContainer.currentUser{
+  width: 23%;
+  min-width: 0px;
+}
+
+
+.postSection:not(.loading) > div:first-child {
+  margin-top: 0.3em;
+}
+
+.postViewerPage h1 {
+  color: white;
+  font-size: 40px;;
+  word-wrap: break-word;
+}
+
+.postSectionDiffUser {
+  margin-top: 1em;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+
+
+.authorInfo {
+  margin-top: 0.5em;
+  padding: 1em;
+  position: absolute;
+  border-radius: 0.5em;
+  width: 21vw;
+  top: 0;
+  left: 2.8em;
+  font-weight: 200;
+  min-width: 198px;;
+  max-width: 403.195px;
+  /* padding-right: 16px; */
+  background: var(--backgroundColorModal);
+}
+
+.authorInfo > div:first-child {
+  display: grid;
+  place-items: center;
+}
+
+.authorInfo > div:first-child img {
+  /* height: 15vh; */
+  height: 150px;
+  width: 10vw;
+  min-width: 98.7969px;
+  border-radius: 1em;
+  max-width: 256px;
+}
+
+.authorInfo > div:nth-child(2) {
+  margin-top: 0.5em;
+  /* display: grid; */
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  /* place-items: center; */
+  width: 100%;
+}
+
+.authorInfo > div:nth-child(2) span{
+  text-align: center;
+}
+
+.authorInfo > div:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.authorInfo p{
+  text-align: center;
+}
+
+.authorInfo > div:nth-child(3) span{
+  text-align: center;
+}
+
+/* message and follow btns starts here */
+.authorInfo > div:nth-child(4) {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5em 0em 0.8em 0em;
+  padding: 0em 2.5em 0em 2.5em;
+}
+
+.authorInfo > div:nth-child(4) button {
+  min-width: fit-content;
+  height: fit-content;
+  border-radius: 0.5em;
+  border-style: none;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  padding: 0.5em;
+  /* padding-left: 1em; */
+  /* padding-right: 8px; */
+  /* padding-left: 8px; */
+  /* padding-bottom: 1px; */
+  /* padding-top: 0.5px; */
+  color: #ffffff;
+  font-size: 0.8em;
+  display: flex;
+}
+
+.authorInfo > div:nth-child(4) button > div:last-child {
+  padding-top: 0.05em;
+  margin-left: 0.2em;
+}
+/* message adn follow btns ends here */
+
+.authorInfo > div:nth-child(5) {
+  margin-top: 0.5em;
+  display: grid;
+  place-items: center;
+  /* padding: 0.5%; */
+}
+
+.authorInfo > div:nth-child(6) {
+  margin-top: 0.9em;
+  display: grid;
+  place-items: center;
+  /* border: solid 2px pink; */
+}
+
+.postSection.loading > div:first-child {
+  position: fixed;
+  width: 100%;
+  display: grid;
+  padding-top: 20em;
+  place-items: center;
+  height: 200%;
+}
+
+.postSection > div:first-child h1 {
+  font-size: 3rem;
+}
+
+.postSection > div:not(.borderContainer),
+.postSectionDiffUser > div {
+  width: 50%;
+}
+
+/* author info section */
+.userInfo.postViewer {
+  margin-top: 1.3em;
+  padding-left: 0;
+  max-width: 864px;
+}
+
+.userInfo.postViewer div:last-child {
+  padding-top: 0;
+}
+.userInfo.postViewer div:nth-child(2) {
+  margin-left: 0;
+  /* margin-top: 0.5em; */
+  /* margin-bottom: 0.13em; */
+  /* padding-top: 0.3em; */
+}
+
+.userInfo.postViewer div:nth-child(2) span:last-child {
+  margin-top: 4px;
+}
+
+.userInfo.postViewer div:nth-child(1) {
+  /* width: 9.5%; */
+  width: 62.0703px;
+  margin-top: 0;
+}
+
+/* author info section ending */
+.subtitleStyles {
+  margin-top: 0.7em;
+}
+
+.postViewerPage h1,
+.subtitleStyles h4,
+.userInfo.postViewer{
+  min-width: 266px
+}
+
+
+.subtitleStyles h4 {
+  color: var(--textColor);
+  font-size: 30px;;
+  word-wrap: break-word;
+  
+}
+
+/* introPic styling */
+.introPic {
+  /* height: 50vh; */
+  height: 420.5px;
+  width: 52vw;
+  max-width: 726px;
+  /* max-width: 720px; */
+  margin-top: 1em;
+  max-height: 500px;
+}
+/* end of intro pic styling */
+
+/* tags section*/
+
+.borderContainer {
+  /* display: grid; */
+  /* place-items: center; */
+  /* border: solid 2px pink; */
+  width: 100%;
+  /* width: 93%; */
+  margin-top: 2em;
+  max-width: 864px;
+}
+
+.borderContainer div:first-child {
+  border-top: var(--borderColor);
+  width: 90%;
+}
+
+.borderContainer div:nth-child(2) {
+  margin-top: 0.5em;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.borderContainer div:nth-child(2) svg {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.tagsDisplayContainer {
+  margin-top: 3em;
+  margin-right: 2.8em;
+  /* padding-top: 0.8em; */
+  margin-bottom: 2em;
+  max-width: 819.203px;
+  /* width: 45vw; */
+  /* border: solid 2px pink; */
+}
+
+.tagsDisplayContainer h2 {
+  margin-left: 0.7em;
+  color: #ffffff;
+}
+
+.tagsDisplayContainer div:nth-last-child(3) {
+  padding-top: 0.8em;
+}
+/* end of tags section */
+
+/* border */
+/* .postViewerBorder,
+.postSection > div:nth-last-child(4) {
+  margin-top: 2.5em;
+  width: 45em;
+  transform: translateX(-4.5%);
+} */
+/* end of border code */
+
+/* body section */
+.blogBody {
+  margin-top: 1em;
+  font-size: 1.5em;
+  max-width: 720px;
+  /* padding-left: 20px; */
+}
+
+.blogBody p {
+  line-height: 1.3em;
+}
+
+.blogBody img {
+  width: 98%;
+  min-height: 361.5px;
+  height: 50vh;
+  max-height: 500px;
+  margin: 1em 0em 0.5em 0em;
+}
+
+/* end of body section */
+
+/* like icon and comment icon for blog post */
+.likesAndComments.postViewer span:nth-child(1) div:nth-child(1) {
+  font-size: 1em;
+}
+
+.likesAndComments.postViewer span:nth-child(1) div:nth-child(2) {
+  font-size: 35.328px;
+}
+
+.likesAndComments.postViewer span:nth-child(3) div:nth-child(1) {
+  font-size: 1.2em;
+}
+
+.likesAndComments.postViewer span:nth-child(3) div:nth-child(2) {
+  font-size: 1.2em;
+}
+
+.likesAndComments.postViewer span:nth-child(6) {
+  position: relative;
+  padding-top: 0;
+}
+
+.likesAndComments.postViewer span:nth-child(6) svg {
+  position: absolute;
+  top: 45%;
+  bottom: 80%;
+  font-size: 0.7em;
+}
+
+.likesAndComments.postViewer span:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.likesAndComments.postViewer span:nth-child(2),
+.likesAndComments.postViewer span:nth-child(4) {
+  place-items: center;
+  display: flex;
+}
+
+.likesAndComments.postViewer span>div {
+  display: flex;
+}
+
+.likesAndComments.postViewer>span:first-child>div:last-child {
+  display: flex;
+}
+
+.likesAndComments span:nth-child(2) svg{
+}
+
+.likesAndComments.postViewer > span:first-child > div:first-child svg,
+.likesAndComments span:nth-child(2) svg{
+  font-size: 26px;;
+}
+
+
+
+.likesAndComments.postViewer {
+  height: 32.5312px;
+  margin-right: 0.8em;
+  margin-top: 2em;
+  margin-bottom: 0px;
+  font-size: 2.3em;
+  border-bottom: var(--borderColor);
+  position: relative;
+  min-width: 252px;
+  width: 90%;
+  margin: 32px 0px 0em 0px;
+  /* max-width: 777.594px; */
+  max-width: 648px;
+  /* border: solid 2px pink; */
+}
+
+.likesAndComments.postViewer > span:first-child {
+  /* min-width: 1vw; */
+  /* width: 1vw; */
+  /* max-width: */
+  margin-right: 0.1em;
+}
+
+.likesAndComments.postViewer span:nth-child(2) {
+  font-size: 0.8em;
+  width: fit-content;
+  /* margin-left: 0.2em; */
+  margin-left: 0em;
+}
+
+.likesAndComments.postViewer.likedPost > span:first-child > div:first-child svg,
+.commentLiked div:first-child svg {
+  color: #87cefa;
+}
+
+.likesAndComments.postViewer.likedPost
+  > span:first-child
+  > div:last-child:hover {
+  text-decoration: underline;
+}
+
+.likesAndComments.postViewer span:nth-child(1) {
+  cursor: pointer;
+}
+
+.likesAndComments.postViewer span:nth-child(2) {
+  cursor: pointer;
+}
+
+.likesAndComments.postViewer > span:last-child {
+  /* font-size: 1em; */
+  position: absolute;
+  right: 0;
+  /* border: solid 2px pink; */
+  padding-top: 0px;
+}
+
+.likesAndComments.postViewer span:last-child svg {
+  cursor: pointer;
+}
+/* ¸ .likesAndComments.postViewer > span:nth-child(2) > div:nth-child(2) {
+  margin-left: 2em;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+} */
+
+.likesAndComments.postViewer>span:nth-child(2)>div:nth-child(2){
+}
+
+.likesAndComments.postViewer
+  > span:nth-child(2)
+  > div:nth-child(2)
+  > span:first-child {
+  /* padding-left: 0.6em; */
+  transform: translate(3.8px,-0.04em);
+  font-size: 35.328px;
+}
+
+.likesAndComments.postViewer > span:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  /* min-width: 4vw; */
+  /* min-width: 48px; */
+  margin-left: 0.5em;
+}
+
+.likesAndComments.postViewer > span:nth-child(2) div:first-child {
+  margin-right: 0.1em;
+}
+
+.likesAndComments.postViewer > span:nth-child(2) div:last-child {
+  margin-left: 0.1em;
+}
+
+.likesAndComments span:nth-child(2) svg {
+  position: static;
+  top: 0;
+  left: 0;
+  transform: none;
+}
+
+.likesAndComments.postViewer > span:last-child {
+}
+
+.likesAndComments.postViewer > span:last-child > div {
+  font-size: 1em;
+  /* border: solid 2px pink; */
+}
+
+/* end of like icon and comment icon for blog post */
+
+/* comment input section */
+.commentsSecInput {
+  padding: 0em 0.5em 0em 0.5em;
+  background: var(--backgroundColorModal);
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  display: flex;
+  border-top: none;
+  border: var(--borderColor);
+  /* min-height: 9vh; */
+  min-height: 100px;
+  height: fit-content;
+  margin-right: 1.9em;
+  width: 90%;
+  /* margin-left: 12px; */
+}
+
+.commentsSecInput.placeHolder {
+  opacity: 0;
+}
+
+.commentsSecInput > div:nth-last-child(2) {
+  width: 10%;
+  display: grid;
+  place-items: center;
+  padding-bottom: 0.6em;
+  position: relative;
+}
+
+.commentsSecInput > div:first-child img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0.6em;
+}
+
+.commentsSecInput > div:nth-child(2) {
+  width: 100%;
+  padding: 0.5em;
+  height: fit-content;
+}
+
+.commentsSecInput div:nth-child(2) > div:first-child textarea {
+  background-color: transparent;
+  outline: none;
+  border: var(--borderColor);
+  overflow-x: hidden;
+  width: 100%;
+  border-radius: 0.5em;
+  font-weight: 200;
+  padding-top: 0.3em;
+  padding-left: 0.5em;
+  resize: none;
+  padding-bottom: 0.3em;
+  height: 7vh;
+  color: white;
+  font-size: 1em;
+  max-height: 140.062px;
+  overflow-wrap: break-word;
+}
+
+.commentsSecInput div:nth-child(2) > div:last-child {
+  width: 98%;
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.commentsSecInput
+  div:nth-child(2)
+  > div:last-child
+  > button:nth-last-child(3):hover {
+  text-decoration: underline;
+}
+
+.commentsSecInput div:nth-child(2) > div:last-child > button:nth-last-child(3) {
+  position: absolute;
+  background: none;
+  width: fit-content;
+  bottom: 2px;
+  left: 0;
+  height: fit-content;
+  /* width: 80%; */
+  color: rgba(128, 128, 128, 0.8);
+}
+
+.commentsSecInput div:nth-child(2) > div:last-child button {
+  border-radius: 0.5em;
+  border: none;
+  width: 5vw;
+  height: 30.1953px;
+  font-weight: 200;
+  color: #ffffff;
+  background-color: #008000;
+  margin-top: 0.3em;
+}
+
+.commentsSecInput.editing div:nth-child(2) > div:last-child button:last-child {
+  background-color: #008000;
+}
+
+.commentsSecInput.editing div:nth-child(2) > div:last-child button {
+  cursor: pointer;
+}
+
+.commentsSecInput.editing
+  div:nth-child(2)
+  > div:last-child
+  > button:nth-child(2) {
+  margin-right: 0.5em;
+  background-color: red;
+}
+
+.commentsSecInput.editing div:nth-child(2)>div:last-child>button:not(:first-of-type){
+  max-width: 72px;
+}
+
+
+/* end of comment input section */
+
+/* display of submitted comments onto comment thread */
+.commentsByUsers {
+  min-height: 9vh;
+  border: var(--borderColor);
+  /* border-bottom: none; */
+  margin-right: 1.9em;
+  padding-top: 0.5em;
+  padding-bottom: 2.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 90%;
+  min-width: 252px;
+  /* height: fit-content; */
+}
+
+.commentsByUsers,
+.commentsSecInput{
+  /* max-width: 777.594px; */
+  max-width: 648px;;
+}
+
+.replyBtn,
+.enterBtnReply{
+  max-width: 72px;
+}
+
+.subtitleStyles h4,
+.articleAndCommentSection > div:first-child h1,
+.blogBody{
+  max-width: 720px;
+}
+
+.blogBody figure{
+  height: fit-content;
+  min-height: 350px;
+  /* max-height: 500px; */
+  
+}
+
+.blogBody figure iframe{
+  width: 100%;
+  height: 50vh !important;
+  min-height: 361.5px;
+  max-height: 500px;
+}
+
+.repliesTitleContainer {
+  padding: 0.5em 0em 0em 3.5em;
+}
+
+
+.displayedComment {
+  display: flex;
+  width: 100%;
+  /* min-height: 7vh; */
+  border-radius: 0.2em;
+  margin-top: 0.8em;
+  position: relative;
+  max-width: 688.914px;
+}
+
+/* overlay for edit and delete option */
+.optionPressedOverlay {
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  color: #d3d3d3;
+  cursor: pointer;
+}
+
+.optionPressedOverlay > div:first-child {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding-top: 0.05em;
+}
+
+.optionPressedOverlay > div:last-child {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.4em;
+}
+
+.optionPressedOverlay > div:last-child button:last-child {
+  margin-left: 0.4em;
+}
+
+.optionPressedOverlay > div:last-child button:first-child {
+  margin-right: 0.4em;
+}
+
+.optionPressedOverlay > div:last-child button{
+  border-style: none;
+  height: 21.6875px;
+  padding: 0px 8px 0px 8px;
+  border-radius: 0.6em;
+  cursor: pointer;
+}
+
+.optionPressedOverlay > div:last-child button:first-child,
+.optionPressedOverlay > div:last-child button:last-child {
+  background: #808080;
+  color: var(--buttonTextColor);
+}
+
+.optionPressedOverlay > div:last-child button:last-child {
+  background: #ff0000;
+  color: var(--buttonTextColor);
+}
+/* ending for overlay for edit and delete option */
+
+/* user comment display */
+.displayedComment > div:nth-last-child(2) {
+  padding-top: 0.13em;
+  margin: 0em 0em 1em 0.3em;
+  /* border: solid 2px pink; */
+}
+
+.displayedComment > div:nth-last-child(2) > img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  left: 0.5em;
+  top: 0.1em;
+}
+
+/* container that has the comment itself, likes, edit, delete, and reply options, and the time post and edit */
+.displayedComment > div:last-child {
+  background-color: var(--backgroundColorModal);
+  width: 100%;
+  margin-left: 0.3em;
+  border-radius: 0.2em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  padding-right: 0.8em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.displayedComment > div:last-child span:nth-child(1) {
+  margin-bottom: 0.4em;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 4px;
+  word-wrap: break-word;
+  /* overflow-wrap: break-word; */
+  word-break: break-all;
+}
+
+
+/* commentInteractionContainer */
+.commentInfoContainer {
+  /* padding-left: 0.8em; */
+  width: fit-content;
+  padding-right: 6px;
+}
+
+.displayedComment > div:last-child > span:nth-child(2) {
+  margin-bottom: 1.5em;
+  white-space: pre-line;
+  padding-left: 0.8em;
+  font-weight: 200;
+  overflow-wrap: break-word;;
+}
+
+.displayedComment.replies > div:last-child div:nth-child(3) {
+  /* display: flex; */
+  /* justify-content: space-around; */
+}
+
+.replyInfoAndInteractionContainer{
+  display: flex;
+}
+
+.replyInteractionContainer{
+  display: flex;
+  justify-content: space-evenly;
+  width: 15%;
+  min-width: 48.3594px;
+}
+
+.commentUserInteractionContainer {
+  width: 30%;
+  padding-left: 8px;
+  min-width: 95.141px;
+}
+
+.replyInteractionContainer *,
+.commentUserInteractionContainer *{
+  font-weight: 100;
+}
+
+.commentUserInteractionContainer > *:not(:first-child){
+  margin-left: 3px;
+}
+
+
+
+.replyInteractionContainer > div:first-child,
+.commentUserInteractionContainer > div:first-child{
+  display: flex;;
+}
+
+
+.replyInteractionContainer > div:first-child > div:last-child,
+.commentUserInteractionContainer > div:first-child > div:last-child{
+  margin-left: 4.5px;
+}
+
+.displayedComment.replies > div:last-child span:last-child > div:first-child {
+  width: 8vw;
+}
+
+
+
+.replyThumbsUpContainer svg {
+  color: #87cefa;
+}
+
+/*sub-container that has date posted, reply, edits, and likes */
+
+/* commentInteractionContainer */
+.commentInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  bottom: 0.5em;
+  right: .2em;
+  width: 100%;
+  /* font-size: 0.7em; */
+}
+
+.displayedComment > div:last-child span:last-child div {
+  display: flex;
+}
+
+
+.commentInfoModal,
+.replyInfoModal {
+position: absolute;
+display: none;
+flex-direction: column;
+max-height: 100px;
+min-height: 50px;
+background-color: var(--backgroundColor);
+border: solid rgb(128, 128, 128, .7) .05px;
+box-shadow: 2px 2px 2px 1px rgb(32, 33, 36, .2);
+right: 3px;
+top: 10px;
+border-radius: .5em;
+padding: 2px 8px 2px 8px;
+width: fit-content;
+width: 90%;
+/* height: 80%; */
+height: fit-content;
+/* max-height: 65px; */
+max-width: 170px;
+}
+
+
+.commentInfoModal > div{
+  font-size: clamp(8px, 2vw, 10px);
+}
+
+
+.replyInfoModal > div{
+  font-size: clamp(7px, 2vw, 10px);
+}
+
+
+.commentInfoModal > div,
+.replyInfoModal > div{
+  text-align: center;
+  font-style: italic;
+}
+
+
+
+.replyInfoModal>*:not(:first-child){
+  margin-top: 5px;
+}
+.commentInfoModal > *:not(:first-child){
+  margin-top: 3px;
+}
+
+
+.replyInfoModal > button,
+.commentInfoModal > button{
+  font-size: x-small;
+}
+
+.replyInfoModal>button:last-of-type,
+.commentInfoModal>button:last-of-type{
+  color: red
+}
+
+
+
+
+/* .displayedComment
+  > div:last-child
+  > span:last-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:last-child {
+  display: grid;
+  place-items: center;
+  transform: translate(0.1em, -0.07em);
+  margin-left: 0.3em;
+} */
+
+.displayedComment > div:last-child span:last-child > div:first-child {
+  width: 13.3vw;
+  display: flex;
+
+  /* justify-content: space-evenly; */
+}
+
+.displayedComment.diffUser div:last-child span:last-child > div:first-child {
+  margin-left: 1.3em;
+}
+
+.displayedComment > div:last-child span:last-child > div:first-child div {
+  cursor: pointer;
+}
+
+.displayedComment
+  > div:last-child
+  span:last-child
+  > div:first-child
+  > div:nth-child(2):hover,
+.displayedComment
+  > div:last-child
+  span:last-child
+  > div:first-child
+  > div:nth-child(3):hover,
+.displayedComment
+  > div:last-child
+  span:last-child
+  > div:first-child
+  > div:nth-child(4):hover {
+  text-decoration: underline;
+}
+
+.displayedComment
+  > div:last-child
+  span:last-child
+  > div:first-child
+  > div:first-child
+  > div:nth-child(2) {
+  margin-left: 0.45em;
+  width: fit-content;
+}
+
+.displayedComment
+  > div:last-child
+  span:last-child
+  > div:first-child
+  > div:first-child
+  > div:first-child {
+  padding-top: 0.09em;
+}
+
+.updatedAtContainer {
+  /* border: solid 2px pink; */
+  /* margin-left: 9.5em; */
+}
+
+.commentAndReplyLikes:hover {
+  text-decoration: underline;
+}
+
+/* .commentLiked div:last-child:hover {
+  text-decoration: underline;
+} */
+
+/*end of container of date posted, reply and likes */
+
+/* reply comments */
+.repliesContainer {
+  padding: 0.5em 0 1em 0em;
+  position: relative;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  margin: 1em 0em 1.5em 0em;
+  border-bottom: var(--borderColor);
+}
+
+.displayedComment.replies{
+  width: 90%;
+  min-width: 194.852px;
+}
+
+
+
+.blogBody li,
+.blogBody p
+{
+  font-weight: 150;
+}
+
+
+.likesAndComments.postViewer>span:first-child>div:last-child,
+.likesAndComments.postViewer>span:nth-child(2)>div:nth-child(2)>span:first-child{
+  font-weight: 200;
+}
+
+
+
+.commentsSecInput.replyThread {
+  width: 80%;
+  margin-right: 0.1em;
+  /* float: right; */
+}
+
+.commentsSecInput.replyThread > div:first-child > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;;
+  /* border: solid 2px pink; */
+}
+
+.commentsSecInput.replyThread
+  div:nth-child(2)
+  > div:last-child
+  button:nth-last-child(2) {
+  background: #ff0000;
+  margin-right: 0.4em;
+}
+
+.commentsSecInput.replyThread div:nth-child(2) > div:last-child {
+  position: relative;
+}
+
+.commentsSecInput.replyThread
+  div:nth-child(2)
+  > div:last-child
+  > button:nth-last-child(3):hover {
+  text-decoration: underline;
+}
+
+.commentsSecInput.replyThread
+  div:nth-child(2)
+  > div:last-child
+  > button:nth-last-child(3) {
+  position: absolute;
+  background: none;
+  width: fit-content;
+  bottom: 3px;
+  left: 0;
+  height: fit-content;
+  color: rgba(128, 128, 128, 0.8);
+}
+
+.commentsSecInput.replyThread div:nth-child(2) > div:last-child button {
+  cursor: pointer;
+}
+
+/* post likes modal */
+
+.blocker.likesModal {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal.likedTags,
+.modal.postLikes {
+  height: 48vh;
+  /* width: 40vw; */
+  background-color: var(--backgroundColorModal);
+  box-shadow: var(--boxShadow);
+  z-index: 6000000000000000000000000000000;
+  border-radius: 0.5em;
+  /* overflow-y: auto; */
+  padding-bottom: 1em;
+  width: 80vw;
+  max-width: 528px;
+  /* height: 330px; */
+  /* min-width: 256px; */
+}
+
+.modal.postLikes{
+  max-height: 400px;
+overflow-y: auto;
+}
+
+
+.modal.postLikes > section:nth-of-type(2) {
+  overflow-y: auto;
+  max-height: 245px;
+}
+
+.modal.likedTags ul {
+  overflow-y: scroll;
+  height: 37vh;
+  max-height: 304.133px;
+  min-width: 280px;
+}
+
+.modal.likedTags > section:first-child,
+.modal.postLikes > section:first-child {
+  display: grid;
+  place-items: center;
+  padding-top: 1em;
+  padding-bottom: 0.8em;
+  border-bottom: var(--borderColor);
+}
+
+.modal.likedTags > section:first-child {
+  margin-bottom: 0.3em;
+  min-width: 280px;
+}
+
+.modal.postLikes > section:first-child {
+  margin-bottom: 14px;
+}
+
+.modal.likedTags > section:first-child h1,
+.modal.postLikes > section:first-child h1 {
+  font-size: 1.2em;
+}
+
+.usersOfLikesContainer:not(:first-child) {
+  margin-top: 0.5em;
+}
+
+.usersOfLikesContainer {
+  display: flex;
+  padding: 0.7em 1em 0em 1.5em;
+  justify-content: space-between;
+}
+
+.usersOfLikesContainer > div:last-child,
+.usersOfLikesContainer > div:first-child {
+  display: flex;
+}
+
+.usersOfLikesContainer > div:first-child > div:last-child {
+  margin-left: 1em;
+  padding-top: 0.25em;
+  font-size: 1.3em;
+}
+
+.usersOfLikesContainer > div:first-child img {
+  /* width: 3vw;
+  height: 5vh; */
+  width: 30px;
+  height: 34px;
+  transform: scale(1.3);
+  border-radius: 50%;
+}
+
+.usersOfLikesContainer button {
+  border: #c0c0c0 0.8px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 1.5vh;
+  cursor: pointer;
+  width: 5vw;
+  height: 4vh;
+}
+
+.blockedBtn {
+  margin-right: 0.5em;
+  border-style: none;
+  color: black;
+  background-color: #ff0000;
+}
+
+.followBtn {
+  background: var(--backgroundColor);
+  color: #ffffff;
+}
+
+/* more from author section starts here */
+
+.moreFromAuthorSection {
+  margin-top: 4em;
+  height: fit-content;
+  max-width: 2560px;
+}
+
+.moreFromAuthorSection > div:nth-child(2),
+.moreFromAuthorSection > div:nth-child(1) {
+  display: grid;
+  place-items: center;
+}
+
+.moreFromAuthorSection > div:nth-child(2) div {
+  border: 0.1px solid #bfbfbf;
+}
+
+.moreFromAuthorSection > div:nth-child(2) div,
+.moreFromAuthorSection > div:nth-child(1) div {
+  width: 90%;
+}
+
+.moreFromAuthorSection > div:nth-child(2){
+min-width: 280px;
+}
+
+.moreFromAuthorSection > div:nth-child(1) {
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  min-width: 280px;
+}
+
+.moreFromAuthorSection > div:nth-child(1) h4 {
+  color: white;
+  font-weight: 200;
+}
+
+.moreFromAuthorSection > div:last-child section {
+  margin-top: 1em;
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 280px;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(3)
+  span {
+  font-style: italic;
+}
+
+.moreFromAuthorSection > div:last-child > section > div > div:nth-last-child(2),
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(2)
+  > div {
+  display: flex;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(2) {
+  margin-top: 0.5em;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(2)
+  > div:not(:first-child) {
+  margin-left: 0.7em;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(2)
+  > div:first-child
+  > div:nth-child(2)
+  > span:hover {
+  text-decoration: underline;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(2)
+  > div:first-child
+  > div:nth-child(2)
+  > span {
+  cursor: pointer;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(2)
+  > div
+  > div:nth-child(even) {
+  margin-left: 0.2em;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(4) {
+  width: 20vw;
+  height: 20vh;
+  display: grid;
+  align-items: center;
+  margin: 0.5em 0em 0.5em 0em;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:last-child
+  > div:not(:last-child)
+  > div:last-child:hover {
+  text-decoration: underline;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:last-child
+  > div:not(:last-child)
+  > div:last-child,
+.moreFromAuthorSection > div:last-child > div > div:nth-last-child(3) div,
+.moreFromAuthorSection > div:last-child img {
+  cursor: pointer;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(4)
+  h6 {
+  font-weight: 300;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(4) {
+  margin-top: 0.3em;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:nth-last-child(3)
+  div {
+  display: grid;
+  place-items: center;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:last-child
+  > div:last-child
+  svg {
+  right: 0;
+  position: absolute;
+}
+
+.moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:last-child
+  > div:nth-child(2)
+  > div:first-child {
+  padding-top: 0.1em;
+  margin-left: 1em;
+}
+
+.moreFromAuthorSection svg {
+  cursor: pointer;
+}
+
+.replyInfoModal > *,
+.commentInfoModal > *{
+  color: white;
+}
+
+/* .moreFromAuthorSection
+  > div:last-child
+  > section
+  > div
+  > div:last-child
+  > div
+  > div:last-child {
+  margin-left: 0.5em;
+} */
+
+.usersOfLikesContainer button {
+  min-width: 53.04px;
+  border-radius: 5px;
+  max-width: 60px;
+  height: 27.5px;
+  font-size: 0.7rem;
+}
+
+.commentOrReplyInfoBtn{
+  position: absolute;
+  display: none;
+  border-radius: 10%;;
+  height: 10px;
+  top: 3px;
+  right: 6px;;
+  z-index: 10;
+}
+
+.viewCommentOrReplyBtn{
+  max-width: 208.445px;
+
+}
+
+
+.viewCommentOrReplyBtn > span{
+  color: inherit;
+}
+
+.viewCommentOrReplyBtn > span:last-child{
+  display: none;
+}
+
+
+.commentOrReplyInfoBtn svg{
+  color: grey !important;
+}
+
+.commentsSecInput div:nth-child(2)>div:last-child button{
+  min-width: 35px;
+}
+
+
+.replyInfoAndInteractionContainer{
+  /* padding-left: 11.2px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.replyInteractionContainer > *:not(:first-child){
+  /* margin-left: 8px; */
+}
+
+@media (max-width: 1199px) {
+  .borderContainer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px){
+.borderContainer{
+  min-width: 770px;
+}
+
+  .commentsSecInput.replyThread div:nth-child(2)>div:last-child button:not(:first-child){
+    max-width: 72px;
+  }
+.commentsSecInput{
+  margin-left: 12px;
+}
+
+  .enterBtnComment{
+max-width: 72px;
+  }
+
+  .replyInteractionContainer{
+    min-width: 23%;
+  }
+
+.blogBody{
+  width: 85%;
+}
+
+.subtitleStyles h4,
+.articleAndCommentSection>div:first-child h1,
+.blogBody{
+  width: 52vw;
+}
+
+
+}
+
+@media (max-width: 767px){
+  .authorInfo{
+    display: none;;
+  }
+}
+
+
+
+@media (min-width: 281px) and (max-width: 1199px) {
+  .modal.postLikes {
+    width: 80vw;
+    max-width: 528px;
+    /* height: 330px; */
+    min-width: 256px;
+  }
+
+  .modal.postLikes > section:nth-of-type(2) {
+    overflow-y: auto;
+    max-height: 250px;
+  }
+
+  .usersOfLikesContainer > div:first-child img {
+    width: 30px;
+    height: 34px;
+  }
+
+  .usersOfLikesContainer button {
+    min-width: 53.04px;
+    border-radius: 5px;
+    max-width: 60px;
+    height: 27.5px;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .usersOfLikesContainer > div:first-child img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .usersOfLikesContainer {
+    padding: 10px 16px 0px 16px;
+  }
+
+  .usersOfLikesContainer button {
+    min-width: 53.04px;
+    border-radius: 5px;
+    max-width: 60px;
+    height: 27.5px;
+    font-size: 0.5rem;
+  }
+
+  .modal.postLikes{
+    min-width: 80vw !important;
+    /* min-height: 80vh !important; */
+    overflow-y: scroll;;
+    overflow-x: scroll;
+    width: 90vw !important;
+    height: 80vh !important;
+  }
+
+  .usersOfLikesContainer>div:last-child{
+    margin-left: 8px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .usersOfLikesContainer button {
+    max-width: 80px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) and (max-height: 600px) {
+  .modal.postLikes {
+    overflow-y: auto;
+  }
+
+  .modal.postLikes > section:nth-of-type(2) {
+    min-height: 100px;
+    max-height: 500px;
+  }
+}
+
+
+@media (max-width: 991px){
+  .viewCommentOrReplyBtn>span:first-of-type {
+    display: none;
+  }
+  
+  .viewCommentOrReplyBtn>span:last-child {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+.commentsSecInput div:nth-child(2)>div:last-child button{
+  min-width: 60px;
+}
+
+.authorInfo > div:nth-child(3) span{
+  font-size: clamp(9px, 1.1vw, 14.5px)
+}
+
+  .authorInfo>div:nth-child(2) span {
+    font-size: clamp(12px, 1.4vw, 16.5px);
+  }
+
+  .authorInfo p{
+    font-size: clamp(10px, 3vw, 17px);
+  }
+
+  .followersAndFollowingContainerOnPostViewer span{
+    font-size: clamp(10px, 1.4vw, 12.5px);
+  }
+
+  .introPic{
+    width: 100%;
+  }
+
+  .borderContainer div:first-child{
+    width: 100%
+  }
+
+  .borderContainer div:nth-child(2){
+    width: 100%;
+  }
+
+  .likesAndComments.postViewer{
+    width: 100%;
+  }
+
+  .commentsByUsers{
+    width: 100%;
+  }
+
+  .commentsSecInput{
+    width: 100%;
+  }
+
+
+
+}
+
+
+@media(min-width: 1200px){
+  .commentsByUsers{
+    margin-left: 12px;
+  }
+
+  .likesAndComments.postViewer{
+    margin-left: 10px;
+  }
+}
+
+
+@media (min-width: 1025px){
+  .likesAndComments.postViewer>span:nth-child(2)>div:nth-child(2)>span:first-child {
+    margin-left: 8px;
+  }
+}
+
+/* for the comment section */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .replyInfoAndInteractionContainer *,
+  .commentInfoContainer * {
+    font-size: clamp(10px, 1vw, 12.5px);
+  }
+
+  .replyInteractionContainer{
+    width: 23%;
+  }
+}
+
+@media(max-width: 1024px){
+.replyInfoAndInteractionContainer{
+  padding-left: 0px;
+}
+
+
+  .moreFromAuthorSection>div:last-child section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .commentOrReplyInfoBtn {
+    display: grid;
+    place-items: center;
+  }
+
+  .postedAtContainer,
+  .updatedAtContainer,
+  .editCommentOrReply,
+  .deleteCommentOrReply {
+    display: none;
+  }
+
+  .replyInfoModal,
+  .commentInfoModal {
+    display: flex;
+  }
+
+  .commentInfoContainer  *,
+  .replyInteractionContainer  *{
+    /* border: solid pink; */
+    /* font-size:  */
+    font-size: 11px;
+  }
+
+  .replyInteractionContainer{
+    width: 5%;
+  }
+  .commentUserInteractionContainer{
+    padding-left: 0px;
+    width: 118.141px;
+  }
+}
+
+@media (max-width: 767px){
+  .commentsSecInput div:nth-child(2)>div:last-child button{
+    font-size: clamp(8px, 2vw, 13.3333px);;
+  }
+
+  .commentUserInteractionContainer > * {
+    font-size: 9px;
+  }
+
+  .authorContainer{
+    display: none;
+  }
+
+
+  .blogBody{
+    padding: 0px 8px 0px 8px;
+  }
+
+  .borderContainer{
+    display: grid;
+    place-items: center;
+  }
+
+
+
+  .articleAndCommentSection > div:first-child h1,
+  .subtitleStyles h4,
+  .userInfo.postViewer{
+    width: 95vw;
+  }
+
+
+  .userInfo.postViewer,
+    .subtitleStyles h4,
+  .articleAndCommentSection>div:first-child h1{
+    padding-left: 8px;
+  }
+
+  .introPicContainerPostViewerPage{
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+
+  .blogBody,
+  .introPicContainerPostViewerPage img{
+    width: 95%;
+  }
+
+  .articleAndCommentSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .likesAndComments.postViewer{
+    margin-right: 0px;
+  }
+
+  .commentsSecInput,
+  .commentsByUsers{
+    margin-right: 0px;
+  }
+
+  .displayedComment.replies>div:last-child span:last-child>div:first-child,
+.displayedComment>div:last-child span:last-child>div:first-child{
+  width: 30%;
+}
+
+.replyInteractionContainer,
+.commentInfoContainer{
+  font-size: .6em;
+}
+
+.commentInfoContainer{
+  /* padding-left: 1em; */
+  /* padding-left: 16px; */
+  /* width: 80px; */
+  /* min-width: 80px; */
+}
+
+.displayedComment.replies>div:last-child span:nth-child(3) > *:not(:first-child),
+.displayedComment>div:last-child>span:last-child > *:not(:first-child){
+  margin-left: 7px;
+}
+
+.displayedComment>div:last-child span:last-child>div:first-child > *:not(:first-child){
+  margin-left: 5px;
+}
+
+
+.displayedComment.isComment > div:last-child span:last-child > div:first-child{
+padding-left: 5px;
+}
+
+.commentsSecInput.replyThread div:nth-child(2)>div:last-child button{
+  width: 9vw;
+}
+
+.commentsSecInput div:nth-child(2)>div:last-child button{
+  width: 9vw;
+}
+
+.likesAndComments.postViewer>span:nth-child(2){
+  margin-left: 8px;
+}
+
+.likesAndComments span:nth-child(1) div:nth-child(2){
+  margin-left: 0px;
+}
+
+.likesAndComments span > div{
+  margin-left:5px;
+}
+
+.likesAndComments.postViewer span:nth-child(1) div:nth-child(2){
+  margin-left: 5px;
+}
+
+.borderContainer div:nth-child(2),
+.borderContainer div:first-child{
+  width: 97%;
+}
+
+.likesAndComments span:nth-child(2) svg{
+  font-size: 31px;
+}
+
+.likesAndComments.postViewer>span:nth-child(2)>div:nth-child(2)>span:first-child{
+  margin-left: 5px;
+}
+
+
+.likesAndComments.postViewer span:nth-child(1) div:nth-child(2),
+.likesAndComments.postViewer span:last-child svg,
+.likesAndComments.postViewer>span:nth-child(2)>div:nth-child(2)>span:first-child{
+  font-size: 25px;
+}
+
+.likesAndComments.postViewer span:nth-child(1) div:first-child{
+  margin-bottom: 3px ;
+}
+
+.likesAndComments.postViewer>span:first-child>div:first-child svg,
+.likesAndComments span:nth-child(2) svg{
+  font-size: 21px;
+}
+
+.displayedComment>div:last-child>span:nth-child(2){
+  /* padding-left: 8px;; */
+}
+
+.repliesContainer{
+  margin: 0px;
+}
+
+.replyInteractionContainer{
+  width: 10%;
+}
+
+
+.commentUserInteractionContainer {
+  padding-left: 0px;
+  width: 23%;
+  min-width: 137.328px;
+}
+
+.commentUserInteractionContainer  *{
+  font-size: clamp(8px, 3vw, 12px);
+
+}
+
+.displayedComment > div:last-child > span:nth-child(2){
+
+}
+
+.displayedComment>div:last-child{
+  padding-bottom: 8px;
+}
+
+.optionPressedOverlay.delete>div:first-child>span {
+  font-size: clamp(20px, 3vw, 32px);
+}
+
+.optionPressedOverlay>div:last-child button {
+  font-size: clamp(8px, 3vw, 13.3333px);
+}
+
+}
+
+@media (max-width: 767px) and (min-width: 577px) {
+  
+  
+}
+
+
+
+@media(max-width: 576px){
+.replyInteractionContainer{
+  width: 25%;
+}
+
+.commentUserInteractionContainer{
+  width: 20%;
+}
+
+.commentsSecInput>div:first-child img{
+  width: clamp(25px, 8vw, 40px) !important;
+  height: clamp(25px, 8vw, 40px) !important;
+}
+
+
+
+.replyInteractionContainer{
+  display: flex;
+  justify-content: left;
+  padding-left: 8px;
+}
+
+
+
+.displayedComment.replies >div:last-child span:nth-child(1) {
+  font-size: clamp(7px, 2vw, 16px);;
+}
+
+.displayedComment>div:last-child span:nth-child(1){
+  font-size: clamp(9px, 2.5vw, 16px);;
+}
+
+.displayedComment > div:last-child > span:nth-child(2){
+  font-size: clamp(8px, 4.5vw, 14px);
+}
+
+.repliesBtn{
+  margin-left: 7px !important;
+}
+
+}
+
+@media (max-width: 280px){
+  .postViewerPage{
+    overflow-x: auto;
+  }
+}
+
+
+
+/* GOAL: for the display of the comment and the reply have a three dot button be placed at the top right corner of the comment and if pressed have it show the following:  */
+/* the delete button if the comment or reply is by the current user */
+/* the edit button as well */
+/* the time that the comment was posted */
+/* the time that  the comment was edited */
+

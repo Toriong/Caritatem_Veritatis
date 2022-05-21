@@ -1,0 +1,527 @@
+/* fileName: selectedReadingList */
+
+.selectedReadingList {
+  min-height: 100vh;
+  overflow-y: scroll;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  /* overflow-x: hidden; */
+  /* padding-bottom: 50em; */
+  /* border: solid pink; */
+  padding-top: 2em;
+  max-width: 2560px;
+  /* min-width: 100vw; */
+}
+
+
+.selectedReadingList > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  height: fit-content;
+  /* border: solid pink; */
+  /* padding-left: 34%; */
+  /* padding-right: 28%; */
+}
+
+
+.listInfo > section:first-child > h1 {
+  font-weight: 350;
+  font-size: 2.25em;
+  /* border: solid pink; */
+  max-width: 800px;
+  overflow-x: auto;
+  text-align: center;
+  /* height: 50px; */
+}
+
+.selectedReadingList > section:first-child > section:nth-child(2) {
+  margin-top: 1em;
+  display: flex;
+  max-width: 491px;
+}
+
+.selectedReadingList
+  > section:first-child
+  > section:nth-child(2)
+  > div:first-child
+  img {
+    width: 51px;
+    height: 51px;
+  border-radius: 50%;
+}
+
+.selectedReadingList
+  > section:first-child
+  > section:nth-child(2)
+  > div:nth-child(2) {
+  margin-left: 0.5em;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.2em;
+  width: 30vw;
+  position: relative;
+}
+
+.listInfo > section:nth-child(2) > div:nth-child(2) button {
+  position: absolute;
+  right: 0;
+  bottom: 14px;;
+  /* width: 3vw; */
+  /* height: 3vh; */
+  width: 44px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-style: none;
+  border-radius: 0.8em;
+  background: rgb(32, 33, 36);
+  color: #ffffff;
+  border: #c0c0c0 0.8px solid;
+  cursor: pointer;
+}
+
+.selectedReadingList
+  > section:first-child
+  > section:nth-child(2)
+  > div:nth-child(2)
+  > div:last-of-type {
+  margin-top: 0.2em;
+  display: flex;
+}
+
+.selectedReadingList
+  > section:first-child
+  > section:nth-child(2)
+  > div:nth-child(2)
+  > div:last-of-type
+  span {
+  font-size: 0.8em;
+  font-weight: 250;
+}
+
+.selectedReadingList
+  > section:first-child
+  > section:nth-child(2)
+  > div:nth-child(2)
+  > div:last-of-type
+  svg:last-of-type {
+  margin-left: 0.5em;
+  transform: translateY(-0.1em);
+}
+
+.listInfo > section:nth-child(3) {
+  border-bottom: .3px solid #c0c0c0;
+  padding: 12px 0px 20px 0px;
+}
+
+.listInfo > section:nth-child(2) > div:nth-child(3) {
+  position: relative;
+}
+
+
+
+.listInfo > section:last-of-type {
+  margin-top: 0.7em;
+  width: 40vw;
+  display: grid;
+  place-items: center;
+  /* min-height: 3vh; */
+  /* border: solid pink; */
+  height: fit-content;
+  max-width: 576px;
+}
+
+.listInfo > section:last-of-type textarea {
+  width: 33.5vw;
+  padding: 0.3em;
+  font-size: 1em;
+  border-bottom: var(--userNavModalSecBorder);
+  font-weight: 200;
+}
+
+/* saved posts section */
+.savedPosts h2 {
+  color: white;
+  white-space: nowrap;
+}
+
+/* delete all uls from the savedPosts sections */
+
+.savedPostsContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  min-width: 282px;
+  /* border: solid pink; */
+  /* padding-left: 5000em; */
+  /* border: solid 2px pink; */
+}
+
+.dayOfSavedPostContainer:not(:first-child) {
+  margin-top: 32px;;
+}
+
+.dayOfSavedPostContainer > div:first-child > h4 {
+  color: white;
+}
+
+.dayOfSavedPostContainer > div:first-child {
+  border-bottom: solid 1px rgba(128, 128, 128);
+  padding-bottom: 0.7em;
+  /* width: 200px; */
+  width: 110%;
+}
+
+.savedPosts {
+  margin: 0.5em 0em 0em 1.4em;
+  margin-top: 0.5em;
+  /* padding-top: 1em; */
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 1.3em; */
+}
+
+.savedPosts img {
+  /* height: 20vh; */
+  /* width: 25vw; */
+  height: 206.6px;
+  width: 360px;
+}
+
+.savedPosts > div:not(:first-child) {
+  margin-top: 2em;
+}
+
+.savedPosts > div {
+  /* padding: 1.3em; */
+  /* padding-left: 2.2em; */
+  /* background-color: var(--backgroundColorModal); */
+  /* border-radius: 5%; */
+  color: white;
+  list-style: none;
+  border-bottom: solid 0.5px rgba(211, 211, 211, 0.45);
+}
+
+.savedPosts > div > div:nth-last-child(4) h6 {
+  font-weight: 300;
+}
+
+
+.savedPosts > div > div:nth-last-child(4) span {
+  font-style: italic;
+}
+
+.savedPosts > div > div:nth-last-child(4) {
+  margin-top: 0.3em;
+  width: 20vw;
+  /* height: 145px; */
+  height: fit-content;
+  display: grid;
+  align-items: center;
+  margin: 0.5em 0em 0.5em 0em;
+}
+
+.savedPosts>div>div:nth-last-child(2),
+.savedPosts > div,
+.savedPosts>div>div:nth-last-child(4)>div{
+  max-width: 360px;
+}
+
+
+
+
+.savedPosts > div > div:nth-last-child(4) > div {
+  border: var(--borderColor);
+  /* height: 20vh; */
+  height: 206.6px;
+  display: grid;
+  place-items: center;
+}
+
+.savedPosts
+  > div
+  > div:last-child
+  > div:not(:last-child)
+  > div:last-child:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.savedPosts>div,
+.savedPosts>div>div:nth-last-child(4)>div, 
+.savedPosts>div>div:nth-last-child(4)>div,
+.savedPosts>div>div:nth-last-child(2){
+  width: 30vw;
+}
+.savedPosts > div > div:nth-last-child(2) {
+  position: relative;
+  margin-top: 0.5em;
+}
+
+.savedPosts > div > div:nth-last-child(2) > div div:last-child {
+  margin-left: 0.3em;
+}
+
+.savedPosts > div > div:nth-last-child(2) > div:nth-child(2) div:first-child {
+  padding-top: 0.05em;
+}
+
+.savedPosts > div > div:nth-last-child(2) > div:nth-child(2) {
+  margin-left: 0.7em;
+}
+
+.savedPosts > div > div:nth-last-child(2) > div,
+.savedPosts > div > div:nth-last-child(2) {
+  display: flex;
+}
+
+.savedPosts > div > div:nth-last-child(2) > div:last-child {
+}
+
+.savedPosts img,
+.savedPosts h2,
+.savedPosts h6,
+.savedPosts h5 .savedPosts > div > div:nth-last-child(4) > div,
+.savedPosts > div > div:nth-last-child(2),
+.savedPosts > div > div:nth-last-child(2) svg {
+  cursor: pointer;
+}
+
+.savedPosts > div > div:nth-last-child(2) > div:last-child {
+  right: 0;
+  position: absolute;
+}
+
+.savedPosts > div > div:last-child {
+  padding-top: 8px;
+}
+
+.savedPosts > div > div:last-child > span {
+  font-weight: 150;
+  /* color: rgba(128, 128, 128, 0.5); */
+  color: rgba(128, 128, 128, 0.8);
+}
+
+/* GOAL: do the following: */
+/* for the bio, make it into a text ellipsis */
+/* fix the css for the post previews  */
+
+
+
+
+.savedPosts > div > div:nth-last-child(2){
+}
+
+.selectedReadingList > section:first-child > section:nth-child(2) > div:nth-child(2){
+/* border: solid pink; */
+}
+
+.listInfo > section:first-child{
+  /* border: solid pink; */
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+
+.savedPostsContainer {
+  padding-right: 24px;
+  position: relative;
+  min-height: 100px;
+}
+
+.savedPostsContainer > span{
+   position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* padding-top: 100px; */
+  /* border: solid pink; */
+  /* width: 100%; */
+  max-width: 400px;
+  text-align: center;;
+}
+
+.savedPosts h5{
+  font-style: italic;
+}
+
+
+@media (max-width: 767px){
+
+}
+
+/* GOAL: work on the display of the reading list modal below 767 screen width */
+
+/* GOAL: have the selected reading list be viewable when below 350px */
+
+@media (min-width: 1200px){
+  .selectedReadingList>section:first-child>section:nth-child(2)>div:nth-child(2)>div:nth-child(2),
+  .selectedReadingList>section:first-child>section:nth-child(2)>div:nth-child(2)>div:first-child {
+    transform: translateY(5px);
+  }
+}
+
+
+@media (max-width: 1199px){
+.savedPostsContainer>span {
+  font-size: .8rem;
+  max-width: 266px;
+}
+
+
+.selectedReadingList > section:first-child > section:nth-child(2) > div:first-child img{
+  width: 36px;
+  height: 36px;
+}
+
+.listInfo > section:nth-child(2) > div:nth-child(2) button{
+width: 31px;
+height: 22px;
+}
+
+
+  .savedPosts img,
+  .savedPosts > div > div:nth-last-child(4) > div{
+    height: 151px; 
+  }
+
+  .savedPosts img{
+    width: 30vw;
+  }
+
+  .savedPosts h2{
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 767px){
+
+
+.dayOfSavedPostContainer{
+  width: 252px;
+}
+
+
+.savedPosts > div:not(:first-child){
+  margin-top: 36px;;
+  /* border: solid pink; */
+}
+
+.savedPosts > div{
+  height: 295px;
+  width: 230px;
+}
+
+.savedPosts > div > div:nth-last-child(2),
+.savedPosts  img,
+.savedPosts >div >div:nth-last-child(4) > div{
+  width: 225px;
+}
+
+.savedPosts img,
+.savedPosts > div > div:nth-last-child(4) > div{
+  height: 145px;
+}
+
+.listInfo > section:last-of-type{
+  width: 337.477px;
+}
+
+.savedPosts >div > div:last-child{
+  width: 230px;
+}
+
+.savedPosts h5{
+  font-size: 11px;;
+}
+
+.savedPosts h2{
+  font-size: 15px;
+}
+
+.selectedReadingList > section:first-child > section:nth-child(2){
+width: 269px;
+height: 40px;
+}
+
+.selectedReadingList > section:first-child > section:nth-child(2) > div:first-child img{
+width: 30px;
+height: 36px;
+}
+
+.listInfo > section:nth-child(3){
+padding: 8px 0 16px 0px;
+}
+
+.listInfo > section:nth-child(2) > div:nth-child(2) button{
+width: 24px;
+height: 21px;
+}
+
+.selectedReadingList > section:first-child > section:nth-child(2) > div:nth-child(2) > div:last-of-type{
+/* border: solid pink; */
+width: 230px;
+}
+
+.selectedReadingList > section:first-child > section:nth-child(2) > div:nth-child(2){
+width: 230px;
+}
+}
+
+
+
+@media (max-width: 375px){
+  .listInfo > section:nth-child(3) p{
+    font-size: 10px;
+  }
+
+  .savedPostsContainer{
+    width: 100vw;
+    padding-left: 25px;
+  }
+
+  .listInfo>section:nth-child(3) {
+    padding-left: 35px;
+  }
+}
+
+@media (max-width: 280px){
+  .listInfo>section:nth-child(3) {
+    padding-left: 21px;
+  }
+
+
+.listInfo{
+  min-width: 280px;
+}
+
+  .savedPostsContainer {
+    /* padding-left: 1px; */
+    overflow-x: scroll;;
+  }
+
+
+  .dayOfSavedPostContainer>div:first-child{
+    max-width: 260px;
+  }
+
+  .listInfo > section:nth-child(3){
+max-width: 280px;
+  }
+
+  .selectedReadingList{
+    /* padding-left: 16px; */
+  }
+}
+
+
+
+
+
+

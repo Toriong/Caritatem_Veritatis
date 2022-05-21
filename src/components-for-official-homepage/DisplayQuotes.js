@@ -1,27 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import { getPhilosophyQuotes } from '../philosophyQuotesAPI/getPhilosophyQuotes'
-
+import '../official-homepage-css/home.css'
+import { useLayoutEffect } from 'react';
 
 export const DisplayQuotes = () => {
+    const [index, setIndex] = useState(0);
+    const [quotes, setQuotes] = useState([]);
+    const [isLoadingDone, setIsLoadingDone] = useState(false);
+    const [isError, setIsError] = useState(false);
 
-    const [index, setIndex] = useState(0)
-    const [quotes, setQuotes] = useState([])
 
-
-    useEffect(() => {
-        getPhilosophyQuotes().then(data => {
-            if (data) {
-                setQuotes(data);
+    useLayoutEffect(() => {
+        getPhilosophyQuotes().then(quotes => {
+            if (quotes) {
+                // setQuotes([quotes[11]]);
+                setQuotes(quotes)
+                setIsLoadingDone(true);
+            }
+        }).catch(error => {
+            if (error) {
+                setIsError(true);
+                setIsLoadingDone(true);
             }
         });
     }, []);
 
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         let currentIndex = setInterval(() => {
             if (index >= 14) {
                 setIndex(0);
-                console.log('RESET')
             } else {
                 setIndex(index + 1);
             }
@@ -37,16 +45,19 @@ export const DisplayQuotes = () => {
 
     return (
         <>
-            {
-                quotes.length
-                    ?
-                    <div className="quote-container">
+            <div className="quote-container">
+                {!isLoadingDone ?
+                    <h3>Loading quotes...</h3>
+                    :
+                    <>
                         <span className="quote">"{quotes[index].quote}"</span>
                         <p className="author">-{quotes[index].source}</p>
-                    </div>
-                    :
-                    null
-            }
+                    </>
+                }
+                {(!isLoadingDone && isError) &&
+                    <h3>Failed to load quotes. Please refresh the page to view quotes.</h3>
+                }
+            </div>
         </>
     );
 

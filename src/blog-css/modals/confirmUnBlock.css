@@ -1,0 +1,104 @@
+.modal.confirmUnBlock {
+  height: 50vh;
+  width: 55vw;
+  background: var(--backgroundColorModal);
+  box-shadow: var(--boxShadow);
+  border-radius: 2%;
+  z-index: 10000000;
+  max-height: 300px;
+  max-width: 500px;
+}
+
+.modal.confirmUnBlock header {
+  min-width: 252px;
+  min-height: 50px;
+}
+
+.modal.confirmUnBlock h1{
+  font-size: 16px;;
+}
+
+
+.modal.confirmUnBlock > section:last-of-type,
+.modal.confirmUnBlock header {
+  display: grid;
+  place-items: center;
+}
+
+.modal.confirmUnBlock>section:last-of-type{
+  min-height: 35px;
+}
+
+.modal.confirmUnBlock > section:first-of-type div {
+  display: flex;
+}
+
+.modal.confirmUnBlock > section:first-of-type div button:last-of-type {
+  background-color: green;
+  margin-left: 0.5em;
+}
+
+.modal.confirmUnBlock > section:first-of-type div button:first-of-type {
+  background-color: red;
+  margin-right: 0.5em;
+}
+
+.modal.confirmUnBlock > section:first-of-type div button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  height: 5vh;
+  width: 8vw;
+  padding: 2%;
+  max-width: 115.195px;
+}
+
+.modal.confirmUnBlock > section:first-of-type {
+  height: 70%;
+  display: grid;
+  place-items: center;
+  min-height: 184.797px;
+}
+
+
+
+.modal.confirmUnBlock > section:first-of-type div button{
+  height: 36.1484px;
+}
+
+.modal.confirmUnBlock p{
+  white-space: nowrap;
+}
+
+
+
+
+@media (max-width: 767px){
+  .modal.confirmUnBlock>section:first-of-type div button {
+    max-width: 70.9141px
+  }
+
+
+  .modal.confirmUnBlock{
+    max-width: 518.398px;
+  }
+
+
+  .modal.confirmUnBlock>section:first-of-type div button{
+    width: 12vw;
+    min-width: 70.9141px;
+  }
+
+  .modal.confirmUnBlock h1{
+    font-size: clamp(12px,4vw, 16px);
+  }
+
+  .modal.confirmUnBlock p{
+    font-size: clamp(11.46px, 3vw, 16px);
+    
+  }
+}

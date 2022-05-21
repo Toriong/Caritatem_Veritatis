@@ -1,0 +1,34 @@
+.clientSideNotifyPage{
+overflow-x: auto;
+/* min-height: 100vh;; */
+}
+
+.clientSideNotifyPage > section{
+    min-height: 240px;
+    width: 100%;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    flex-direction: column;
+    max-width: 2560px;
+}
+
+.clientSideNotifyPage button{
+    color: #ffffff;
+    margin-top: 16px;;
+    background-color: var(--backgroundColorModal);
+    height: 25px;
+    width: 10vw;
+    border-radius: 8px;;
+    max-width: 144px;
+    min-width: 99.0938px;
+}
+
+.clientSideNotifyPage>section p{
+    font-weight: 250;
+    text-align: center;
+    width: 100%;
+    
+}
+

@@ -1,0 +1,200 @@
+/* fileName: userAccount */
+
+.accountSettings {
+  padding: 1.5em 1em 1em 4em;
+  max-width: 1008px;
+  /* border: solid pink; */
+}
+
+.accountSettings header {
+  padding-bottom: 0.2em;
+  /* width: 65vw; */
+  border-bottom: var(--readingListModalBorder);
+  /* border-bottom:solid 0.5px rgba(211, 211, 211, .5); */
+  /* border-bottom: solid 1px; */
+  margin-bottom: 1.5em;
+}
+
+.accountSettings header h1{
+  font-size: clamp(27px, 5vw, 33px);
+}
+
+.accountSettings > section {
+  display: flex;
+  flex-direction: column;
+}
+
+.accountSettings > section h4 {
+  font-size: 1.3em;
+  /* color: rgb(201, 209, 217); */
+  color: white;
+}
+
+.accountSettings > section > span {
+  margin: 0.5em 0 0.5em 0;
+}
+
+.accountSettings > section:last-child h4,
+.accountSettings > section:last-child button {
+  color: red;
+}
+
+
+
+#newPasswordForm > button,
+.accountSettings > section > button {
+  margin-top: 1em;
+  color: white;
+  background-color: var(--backgroundColorModal);
+  width: 15%;
+  padding: 6px;
+  border: var(--readingListModalBorder);
+  border-radius: 0.5em;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.accountSettings > section > button{
+  min-width: 110px;
+}
+
+.required::before {
+  content: " *";
+  color: white;
+}
+
+#newPasswordForm label{
+  font-weight: 320;
+  width: 120px;
+  display: inline-block;
+}
+
+#newPasswordForm input{
+  border-bottom: solid grey .7px;;
+  margin-left: 8px;
+  width: 100%;
+  /* width: 0%; */
+}
+
+.accountSettings > section:not(:first-of-type){
+  margin-top: 32px;
+}
+
+#newPasswordForm{
+  padding-top: 8px;
+}
+
+#newPasswordForm > button{
+  margin-top: 25px;
+  min-width: 139.195px;
+}
+
+#newPasswordForm>div{
+  display: flex;
+}
+
+#newPasswordForm>div:not(:first-of-type){
+margin-top: 30px;
+}
+
+#newPasswordForm>div input:first-child {
+  max-width: 371.195px;
+}
+
+.inputContainerChangePassword > div{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: solid pink;
+  /* height: 40px; */
+  /* width: 58%; */
+  height: 100px;
+}
+
+
+
+.inputContainerChangePassword>div>div{
+max-width: 400px;
+width: 65%;
+position: relative;
+display: flex;
+  flex-direction: column;
+  /* height: 40.5234px */
+  border: solid pink;
+};
+
+
+.inputContainerChangePassword > div > div >button{
+  position: absolute;
+}
+
+.checkBoxBtn{
+  /* position: absolute; */
+  width: fit-content;
+  color: white;
+  margin-top: 4px;
+  font-size: 12.5px;;
+  margin-left: 7px;
+  /* right: 0px; */
+  /* bottom: 0px; */
+  /* top: 1px; */
+  text-align: center;
+}
+
+.inputContainerChangePassword button > svg{
+  transform: translateY(2px);
+}
+
+
+#newPasswordForm > button{
+  margin-top: 30px;
+}
+
+.errorMessageIncorrectPassword{
+  font-size: 10px;;
+  width: fit-content;
+  margin-top: 8px;
+  margin: 8px 0px 0px 8px;
+  color: red;
+}
+
+@media (min-width: 768px){
+  .accountSettings{
+    width: 70vw;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 576px){
+  #newPasswordForm>div>input:first-child {
+    /* font-size: 11px;; */
+    font-size: clamp(11px, 2vw, 16px);
+    width: 55%;
+      /* width: 60%; */
+      /* font-size: ; */
+      /* min-width: 230.094px; */
+    }
+}
+
+@media (max-width: 575px){
+  #newPasswordForm>div{
+    display: flex;
+    flex-direction: column;
+  }
+
+    #newPasswordForm > div > input:first-child{
+      margin-top: 8px;
+      width: 80%;
+      margin-left: 0px;
+      font-size: clamp(12px, 4vw, 16px);;
+      padding-left: 4px;
+      min-width: 170px;
+      /* min-width: 186.398px; */
+    } 
+}
+
+/* FIX FONT SIZE OF THE DIRECTION WORDS ON THE ACCOUNT SETTINGS */
+@media(max-width: 767px){
+
+}
+

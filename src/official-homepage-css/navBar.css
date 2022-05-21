@@ -1,36 +1,48 @@
-:root {
-  --backgroundColor: rgb(32, 33, 36);
-  --textColor: white;
-  --borderColor: 0.8px solid silver;
-}
-
 .navbar {
   border-bottom: silver solid 0.8px;
   height: 100px;
   width: 100%;
   border-right: none;
   border-left: left;
-  z-index: 50000;
-  background-color: whitesmoke;
   display: flex;
+  flex-direction: column;
   background-color: var(--backgroundColor);
   color: var(--textColor);
   position: fixed;
+  z-index: 100002;
+  /* overflow: auto; */
+  /* overflow-x: auto; */
+}
+
+.navbar > div{
+  display: flex;;
+  width: 100%;
+  max-width: 2560px;
+  min-width: 280px;
+}
+
+.dummy-div{
+  width: 30%;
+}
+
+.navbar > div:first-child{
+  height: 100%;
+  width: 100%;
 }
 
 .unfixed-wrapper {
   height: 100px;
   width: 100%;
-  /* margin-bottom: 5px; */
+  background-color: var(--backgroundColor);
 }
 
 .logo-container-navbar {
   height: 100%;
   width: 15%;
+  padding-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: solid 2px pink; */
 }
 
 .website-name-container {
@@ -38,21 +50,14 @@
   width: 10%;
   display: grid;
   place-items: center;
-}
-
-.dummie-div {
-  height: 100%;
-  width: 350px;
-}
-
-.navbar > * {
-  /* border: var(--dummieBorder); */
+  transform: translateX(15px);
 }
 
 .navigation-container {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  /* width: 700px; */
+  width: 60%;
 }
 
 .navbar a {
@@ -60,52 +65,252 @@
   text-decoration: none;
 }
 
+.userIconNavBar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.userIconNavBar > div:first-child {
+  /* transform: translateY(37%); */
+  transform: translate(-10%, 40%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--textColor);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  width: fit-content;
+  height: 55px;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+.userIconNavBar > div:first-child:hover {
+  background-color: #2d2e30;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.userIconNavBar > span {
+  font-style: italic;
+}
+
+.userIconNavBar > div:first-child > img {
+  border-radius: 33.12px;
+}
+
+.userIconNavBar > div:first-child > span{
+  margin-left: 8px;
+}
+
 .main-navigation {
   display: flex;
   justify-content: space-evenly;
-  height: 80%;
+  height: 95%;
   align-items: center;
-  /* border: solid 2px pink; */
 }
 
 .main-navigation a {
   margin-top: 23px;
+  font-weight: 250;
 }
 
 .sign-in-container {
   width: 100%;
-  height: 30px;
+  /* height: 3vh; */
+  height: 38.3984px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: flex-end;
-  /* border: pink 2px solid; */
+  /* padding-top: 2%; */
+  padding-top: 2.4em;
+  /* padding-top: 3em; */
 }
 
 .signModalContainer {
-  /* border: solid 2px pink; */
-  width: 60%;
+  width: 40%;
+  max-width: 299.664px;
 }
 
-.sign-in-container button {
+.sign-in-container > div:nth-last-of-type(3),
+.sign-in-container > div:nth-child(3) {
+  width: 5vw;
+  height: 5vh;
+  transform: translateY(38%);
+  margin-right: 1.25em;
+  font-size: 1.3em;
+  position: relative;
+}
+
+.sign-in-container > div:nth-last-of-type(3) > svg,
+.sign-in-container > div:nth-child(3) > svg {
+  cursor: pointer;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.sign-in-container > button {
   border-style: none;
-  width: 90px;
+  /* width: 250px; */
+  white-space: nowrap;
+  width: 110px;
   height: 25px;
   margin: 1% 6.5% 0px 0px;
-  border-radius: 1vh;
+  border-radius: 8px;
   background: var(--backgroundColor);
-  border: silver 0.8px solid;
-  color: white;
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
   position: relative;
   float: right;
 }
 
-.signIn-Modal {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  border: 2px solid pink;
+.menuBtnContainerOnMobile{
+  display: none;
+  justify-content:right;
+  padding-right: 20px;
+  margin-top: 10px;
 }
 
-.signIn-Modal h1 {
-  border: solid 2px pink;
+
+
+.navModalMenuContainer{
+  display: none;
+  position: relative;
 }
+
+.navModalMenuMobile{
+  width: 100%;
+  /* height: fit-content; */
+  height: 60vh;
+  /* min-height: 140px; */
+  max-height: 220px;
+  position: fixed;
+  display: none;
+  border-top: solid white .5px;;
+  border-bottom: solid white .5px;
+  background-color: var(--backgroundColor);
+  overflow-x: auto;
+}
+
+.navModalMenuMobile > div{
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+}
+
+.navModalMenuMobile  a{
+  padding: 8px;
+  font-weight: 250;
+  white-space: nowrap;
+}
+
+
+
+.menuBtnContainerOnMobile > button{
+  color: white;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.menuBtnContainerOnMobile > button > span{
+  margin-right: 8px;
+}
+
+
+.notificationsSubModal.onPage {
+  /* transform: translate(790px, 15%); */
+  transform: none;
+  ;
+  right: 5px;
+  top: 21px;
+}
+
+@media (max-width: 1024px){
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .main-navigation a{
+    font-size: clamp(13px, 1.5vw, 16px);
+  }
+}
+
+@media (min-width: 768px){
+  .signModalContainer{
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 767px){
+  .unfixed-wrapper{
+    height: 150px;
+  }
+
+  .unfixed-wrapper.onUserProfile,
+  .unfixed-wrapper.onNotificationPage{
+    height: 100px
+  }
+
+    .unfixed-wrapper.onUserProfile.notCurrentUser{
+      height: 150px;
+    }
+
+  .unfixed-wrapper.onMessengerPage{
+    display: none !important;
+  }
+
+  .userIconNavBar>div:first-child{
+    transform: translate(-14px,37%);
+  }
+
+.logo-container-navbar{
+  width: 100%;
+}
+
+.website-name-container{
+  width: 100%;
+}
+
+
+  .main-navigation{
+    display: none;
+  }
+
+  .navigation-container{
+    justify-content: space-around;
+  }
+
+  .menuBtnContainerOnMobile{
+    display: flex;    
+  }
+
+  .navModalMenuContainer{
+    display: flex;
+  }
+
+  .navModalMenuMobile{
+    display: flex;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+  .userIconNavBar>div:first-child>span{
+    font-size: clamp(11px, 2vw, 16px);
+  }
+}
+
+@media (max-width: 575px){
+.userIconNavBar > div > span{
+  display: none;
+}
+}
+

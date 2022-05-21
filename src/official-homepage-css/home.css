@@ -1,3 +1,5 @@
+/* fileName: home.css */
+
 :root {
   --backgroundColor: rgb(32, 33, 36);
   --textColor: white;
@@ -7,11 +9,18 @@
 
 #home-page {
   width: 100%;
-  height: 800px;
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+#home-page > div{
+  min-width: 280px;
+  min-height: 100vh;
+  max-width: 2560px;
 }
 
 .welcome-container {
-  height: 15%;
+  height: 80px;
   background: var(--backgroundColor);
   display: flex;
   align-items: center;
@@ -22,17 +31,21 @@
 
 .homepage-picture-container img {
   width: 100%;
+  height: 100%;
+  /* position: relative */
 }
 
+
+
 .homepage-picture-container {
+  position: relative;
   height: 400px;
 }
 
 /* DisplayQuotes component */
 
 .quote-container {
-  margin-top: 20px;
-  z-index: 500;
+  /* margin-top: 20px; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,9 +53,12 @@
   color: black;
   font-size: 25px;
   height: 95px;
+  /* height: 100%; */
   width: 500px;
   display: grid;
-  align-items: center;
+  place-items: center;
+  height: fit-content;
+  padding: 0px 4px 0px 4px;
 }
 
 .author,
@@ -51,6 +67,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: black;
 }
 
 /* end of DisplayQuotes component */
@@ -82,12 +99,10 @@
 .welcome-message {
   font-size: 17.99px;
   color: var(--textColor);
-  width: 80px;
-  width: 43%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* border: solid 2px pink; */
+  width: 60%;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
 
 .welcome-message-container {
@@ -108,6 +123,7 @@
 
 .main-links-container {
   /* border: solid 2px pink; */
+  max-width: 1440px;
   width: 100%;
   height: 520px;
   display: flex;
@@ -117,19 +133,21 @@
 
 .info-box {
   border: var(--borderColor);
-  width: 275px;
+  width: 90vw;
+  max-width: 320px;
   height: 325px;
   color: var(--textColor);
   display: flex;
   flex-direction: column;
   justify-content: initial;
-  border-radius: 1vh;
+  border-radius: 7.23px;
 }
 
 .info-box h3 {
   margin-top: 10px;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 1.5em;
+  color: #ffffff;
 }
 
 .info-box p {
@@ -145,7 +163,7 @@
   border: var(--borderColor);
   width: 70%;
   text-align: center;
-  border-radius: 1vh;
+  border-radius:8px;
   height: 30px;
 }
 
@@ -158,7 +176,7 @@
 
 /* the philosophers section */
 .the-philosophers {
-  height: 2100px;
+  /* height: 2100px; */
   background: var(--backgroundColor);
   border-top: var(--borderColor);
   border-bottom: none;
@@ -176,6 +194,7 @@
 .the-philosopher-container {
   /* border: var(--borderColor); */
   width: 89%;
+  max-width: 1281.59px;
   height: 300px;
   display: flex;
   /* align-items: center; */
@@ -191,10 +210,8 @@
 
 .the-philosopher-border {
   width: 90%;
-  height: 0.0001px;
-  margin: 0px 0px 25px 15px;
   border: var(--borderColor);
-  background-color: var(--backgroundColor);
+  max-width: 1296px;
 }
 
 .philosopher-pic-container {
@@ -205,7 +222,8 @@
 .philosopher-pic-container img {
   height: 100%;
   width: 100%;
-  border-radius: 3vh;
+  max-width: 228.352px;
+  border-radius: 21.69px;
 }
 
 .the-philosophers-description h1 {
@@ -218,9 +236,7 @@
 }
 
 .the-philoshopers-button-container {
-  /* border: solid 2px pink; */
   width: 40%;
-  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -232,7 +248,9 @@
   width: 60%;
   height: 20%;
   color: var(--textColor);
-  border-radius: 2vh;
+  /* border-radius: 2vh; */
+  border-radius: 14.46px;
+  min-width: 93.3359px;
 }
 
 .the-philosophers-checkout-our-philosophers-button {
@@ -240,10 +258,17 @@
   border: var(--borderColor);
   background: var(--backgroundColor);
   height: 100px;
-  width: 500px;
-  border-radius: 2vh;
+  /* width: 500px; */
+  width: 90vw;
+  border-radius: 16px;
   font-size: 20px;
-  transform: translateY(60%);
+  /* transform: translateY(90%); */
+}
+
+.checkout-our-blog-container button,
+.the-philosophers-checkout-our-philosophers-button{
+  min-width: 252px;
+  max-width: 610px;
 }
 
 .checkout-our-blog-container {
@@ -266,8 +291,151 @@
   border: var(--borderColor);
   background: var(--backgroundColor);
   height: 100px;
-  width: 500px;
-  border-radius: 2vh;
+  /* width: 500px; */
+  width: 90vw;
+  border-radius: 16px;
   font-size: 20px;
   margin-top: 40px;
 }
+
+@media (max-width: 1199px) {
+  .quote-container{
+    width: 100%;
+  }
+
+  .main-links-container {
+    height: fit-content;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .welcome-message-container {
+    height: fit-content;
+    padding-bottom: 16px;
+  }
+
+  .welcome-message{
+    width: 70%;
+  }
+
+
+
+  .the-philosopher-container {
+    height: fit-content;
+    padding-bottom: 16px;
+  }
+
+  .the-philoshopers-button-container button {
+    height: 44.0859px;
+  }
+
+
+  .checkout-our-blog-container button,
+  .the-philosophers-checkout-our-philosophers-button{
+    font-size: clamp(12px, 4vw, 17.5px);
+    max-width: 518.398px;
+  }
+
+
+  .author,
+  .quote{
+    font-size: clamp(18px, 7vw, 23px);
+  }
+
+  .info-box{
+    width: 28vw;
+  }
+
+  .info-box p{
+    /* font-size: 12px;; */
+    /* font-size: 16px; */
+    font-size: clamp(12px, 1.5vw, 16px);
+  }
+}
+
+@media (max-width: 767px){
+  .main-links-container {
+    flex-direction: column;
+  }
+
+    .info-box:not(:first-child) {
+      margin-top: 16px;
+    }
+    
+    .info-box:last-child {
+      margin-bottom: 16px;
+    }
+
+    .info-box{
+      min-width: 250px;;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .philosopher-pic-container img {
+    width: 121.633px;
+    height: 121.633px;
+  }
+
+  .philosopher-pic-container {
+    min-width: 121.633px;
+  }
+
+  .welcome-message {
+    min-width: 421.195px;
+  }
+}
+
+@media (max-width: 575px){
+.philosopher-pic-container{
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.the-philosophers-description{
+  margin-left: 0%;
+}
+
+  .philosopher-pic-container img{
+    width: 150px;
+    height: 150px;
+  }
+
+
+.message-container{
+  padding-top: 6px;
+}
+
+.the-philosopher-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.the-philosophers-description{
+  width: 100%;
+  margin-top: 12px;
+}
+
+.the-philosophers-description *{
+  text-align: center;
+}
+
+.the-philoshopers-button-container{
+  margin-top: 16px;
+}
+
+
+.message-container>span:last-child,
+  .welcome-message{
+    font-size: 11.5px;;
+  }
+
+  .message-container{
+    margin-bottom: 20px;
+  }
+}
+
+
+

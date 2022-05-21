@@ -1,0 +1,433 @@
+/* fileName: searchResults */
+
+.modal.searchResultsModal {
+  background-color: var(--backgroundColorModal);
+  top: 370px;
+  /* left: 490px; */
+  left: 500px;
+  /* top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  margin-left: 460px; */
+  /* margin-right: 6000px; */
+  /* margin-top: 65px; */
+  border-radius: 1em;
+  width: 30vw !important;
+  min-width: 375px;
+  height: 78vh;
+  /* min-height: 729px; */
+  /* height: 90%; */
+  max-height: 700px;
+  z-index: 6000;
+  border: var(--borderColor);
+}
+
+.searchResultsContainer {
+  /* max-height: 260px; */
+  max-height: 290px;
+  padding: 0.8%;
+  /* overflow: visible; */
+}
+
+.modal.searchResultsModal.onDiffProfile {
+  /* transform: translate(30%, -46%); */
+  transform: translate(-90px, 0px);
+}
+
+.modal.searchResultsModal.onOwnProfile {
+  transform: translate(-96px, 0px);
+}
+
+/* colors and font */
+.modal.searchResultsModal h2,
+.modal.searchResultsModal h1,
+.modal.searchResultsModal p,
+.modal.searchResultsModal span,
+.searchedUser span,
+.modal.searchResultsModal button,
+.modal.searchResultsModal h1 {
+  font-weight: 150;
+}
+
+.searchUser span,
+.modal.searchResultsModal h2 {
+  font-size: 1em;
+}
+
+.modal.searchResultsModal h1 {
+  font-size: 1.05em;
+}
+
+.modal.searchResultsModal h4 {
+  font-size: 1em;
+}
+
+#gettingResultsText,
+#noResultsText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal.searchResultsModal p,
+.searchPost span {
+  font-size: 0.8em;
+}
+
+.modal.searchResultsModal button,
+.modal.searchResultsModal h1 {
+  color: #757575;
+}
+
+.modal.searchResultsModal h2,
+.modal.searchResultsModal span,
+.modal.searchResultsModal p {
+  color: white;
+}
+/* end of colors and fon*/
+
+/* buttons hovering */
+.modal.searchResultsModal button:hover {
+  cursor: pointer;
+}
+
+.modal.searchResultsModal > section:last-child button:hover {
+  text-decoration: underline;
+}
+/* end of buttons hovering */
+
+/* display css starts here */
+.modal.searchResultsModal > section:last-child,
+.searchResultsContainer > section:nth-child(1) > section:nth-child(2) {
+  display: grid;
+  place-items: center;
+}
+
+.searchedTag,
+.searchedPost,
+.searchPost > div,
+.searchedUser,
+.searchResultsContainer > section:first-child,
+.searchResultsContainer > section:first-child > section:first-child,
+.searchResultsContainer > section:nth-child(2) {
+  display: flex;
+}
+
+.searchPost > div,
+.searchResultsContainer > section:nth-child(2),
+.searchResultsContainer > section:first-child {
+  flex-direction: column;
+}
+/* display css ends here */
+
+.modal.searchResultsModal > section:last-child {
+  /* padding-top: 0.5em; */
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 100%;
+  min-height: 10px;
+  position: absolute;
+  bottom: 6px;
+}
+
+.modal.searchResultsModal > section:last-child {
+  border-top: var(--borderColorSearchResults);
+  padding-top: 0.5em;
+  /* height: 5vh; */
+}
+
+.modal.searchResultsModal > section:not(:last-child) {
+  /* border: solid pink; */
+}
+
+.modal.searchResultsModal > section:last-child button {
+  color: #808080;
+  border-style: none;
+  background-color: none;
+  background: none;
+}
+
+/* search results for users starts here */
+.searchResultsContainer {
+  /* height: fit-content; */
+  /* border: solid pink; */
+}
+
+.searchResultsContainer > section:first-child > section:first-child h1 {
+  /* font-size: 1.05em; */
+  /* font-weight: 150; */
+}
+
+.searchResultsContainer > section:first-child > section:first-child button {
+  border-style: none;
+  background-color: none;
+  background: none;
+  margin-top: 0.3em;
+  cursor: pointer;
+}
+
+.searchResultsContainer > section:first-child > section:first-child {
+  padding: 1em 2em 0 2em;
+  justify-content: space-between;
+}
+
+.searchResultsContainer > section:nth-child(2) {
+  padding-top: 0.3em;
+}
+
+.searchResultsContainer > section:nth-child(1) > section:nth-child(2) {
+  padding-top: 0.5em;
+}
+
+.searchResultsContainer > section:nth-child(1) > section:nth-child(2) > div {
+  border-top: var(--borderColorSearchResults);
+  width: 90%;
+}
+
+.searchedTag {
+  padding: 0.2em 2.5em 0.2em 2.5em;
+}
+
+.searchedPost img {
+  /* min-width: 50px;
+  min-height: 50px;
+  max-height: 64px;
+  max-width: 58px; */
+}
+
+.searchedPost:hover {
+  background-color: rgb(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.searchedPost > div {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.searchedPost {
+  /* padding: 8px 24px 8px 24px; */
+  padding: 0px 27px 0px 27px;
+  border-radius: 0.5em;
+}
+
+.searchedTag,
+.searchedPost,
+.searchedUser {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.searchedUser.invitingUser span {
+  color: black;
+  font-size: 0.9em;
+  width: 120px;
+  /* border: solid pink; */
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+
+.searchedUser {
+  /* padding: 3% 8% 3% 8%; */
+  /* padding: 8px 20px 15px 20px; */
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: space-between;
+  padding: 0px 8px 0px 8px;
+  place-items: center;;
+  border-radius: 0.5em;
+  height: 70px;
+  position: relative;
+}
+
+.searchedUser:hover {
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.searchedUser div {
+  display: grid;
+  place-items: center;
+}
+
+.searchedPost > div > *:not(:first-child) {
+  margin-top: 0.05em;
+}
+
+.searchedUser img,
+.searchedPost img {
+  border-radius: 50%;
+}
+
+.searchedPost img {
+  /* width: 4vw;
+  height: 6vh; */
+  border-radius: 50%;
+}
+
+/* .searchedPost img,
+.searchedUser img {
+  max-width: 45px;
+  max-height: 45px;
+} */
+
+.searchedUser.onSearchResults img,
+.searchedPost img {
+  width: 45px;
+  height: 45px;
+}
+
+.searchedUser.onSearchResults{
+  justify-content: space-around;
+}
+
+.searchedUser.invitingUser img {
+  width: 37px;
+  height: 45px;
+}
+
+.searchedUser.onSideBar img {
+  width: 47px;
+  height: 47px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .modal.searchResultsModal {
+    transform: translate(-203px, 0px);
+    top: initial;
+    left: initial;
+    min-height: 605px;
+    height: 40vh;
+  }
+
+  .searchedUser,
+  .searchedPost {
+    height: 60px;
+  }
+
+  .searchResultsContainer {
+    max-height: 220px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal.searchResultsModal {
+    transform: translate(-203px, 0px);
+    top: initial;
+    left: initial;
+    min-height: 615px;
+  }
+
+  .searchedPost,
+  .searchedUser {
+    height: 60px;
+  }
+
+  .searchResultsContainer {
+    max-height: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal.searchResultsModal {
+    transform: translate(-203px, 0px);
+    top: initial;
+    left: initial;
+    height: 70vh;
+    max-height: 615px;
+    max-width: 432px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .modal.searchResultsModal {
+    transform: translate(-203px, 0px);
+    top: initial;
+    left: initial;
+  }
+}
+
+@media (max-height: 600px) {
+  .modal.searchResultsModal {
+    min-height: 330px;
+    max-height: 330px;
+  }
+
+  .searchResultsContainer:not(:first-child) {
+    border-top: rgb(128, 128, 128, 0.9) solid 1px;
+  }
+
+  .searchResultsContainer {
+    max-height: 100px;
+    overflow-y: scroll;
+  }
+}
+
+
+@media (max-width: 576px){
+  .searchedUser.invitingUser.onMessengerPage img{
+width: 35px;
+height: 35px;
+}
+
+.searchedUser.invitingUser.onMessengerPage{
+  /* min-width: 80.625px; */
+  position: relative;
+  height: 50px;
+}
+
+
+.searchedUser.invitingUser.onMessengerPage > div:first-child{
+  position: absolute;
+  left: 5px;
+}
+
+.searchedUser.invitingUser.onMessengerPage > div:nth-child(2){
+  position: absolute;
+  right: 5px;
+}
+
+.searchedUser.invitingUser.onMessengerPage{
+  position: relative;
+  
+  }
+}
+
+
+@media (max-width: 375px){
+  .searchedUser.invitingUser.onMessengerPage span{
+font-size: 9px;
+/* min-width: 39.4297px; */
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+/* width: fit-content; */
+  }
+
+  .messagingModalOptions > div:first-of-type{
+    place-items: center;
+  }
+
+  .messagingModalOptions.onMessengerPage > div input{
+width: 80%;
+padding-left: 3px;
+  }
+
+  .searchedUser.invitingUser.onMessengerPage>div:first-child {
+    position: absolute;
+    left: 1px;
+  }
+  
+  .searchedUser.invitingUser.onMessengerPage>div:nth-child(2) {
+    position: absolute;
+    right: 1.5px;
+  }
+
+}
+

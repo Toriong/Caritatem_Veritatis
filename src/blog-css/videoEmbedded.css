@@ -1,0 +1,22 @@
+.video-responsive {
+  border: solid 2px pink;
+}
+
+.video-responsive iframe {
+  width: 853px;
+  height: 480px;
+}
+
+.videoInputContainer {
+  width: 100%;
+  padding: 0.5% 0px 0px 3%;
+  /* border: solid 2px pink; */
+}
+
+.videoInputContainer.video div {
+  padding: 0;
+}
+
+.videoInputContainer input {
+  font-size: 3vh;
+}

@@ -1,0 +1,122 @@
+.modal.readingListNames {
+  width: 60vw;
+  height: 75vh !important;
+  border-radius: 0.5em;
+  background-color: var(--backgroundColorModal);
+  z-index: 900000000;
+  overflow-y: scroll;
+  /* min-width: 250px; */
+  /* min-height: 75vh; */
+  max-height: 575px;
+  max-width: 865px;
+}
+
+.modal.readingListNames > header {
+  padding: 3% 2% 2% 2%;
+  display: grid;
+  place-items: center;
+  border-bottom: 0.5px solid rgba(191, 191, 191, 0.4);
+}
+
+.modal.readingListNames > section {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.previousName:not(:last-child) {
+  border-bottom: 0.5px solid rgba(191, 191, 191, 0.4);
+}
+
+.previousNameDay{
+  padding-top: 10px;;
+}
+
+.modal.readingListNames > section > div{
+  /* padding: 2% 2% 2% 8%; */
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  min-width: 674px;
+  overflow-x: scroll;
+}
+
+
+.previousNameDay{
+  overflow-x: scroll;
+  /* border: solid pink; */
+}
+
+.previousNameDay:not(:first-child){
+  border-top: 1px solid rgba(191,
+    191,
+    191);
+}
+
+
+.previousName {
+  padding: 16px 32px 16px 32px;
+  /* padding-right: 100px; */
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  overflow-x: scroll;
+}
+
+.previousName > span {
+  color: white;
+  font-weight: 00;
+}
+
+.previousName > span:first-child{
+  display: inline-block;;
+  max-width: 600px;
+  overflow-x: scroll;
+  padding-right: 40px;
+  /* width: fit-content; */
+
+}
+
+.previousName > span:last-child {
+  margin-top: 1em;
+}
+
+.modal.readingListNames > header{
+overflow-x: scroll;
+min-width: 190px;
+}
+
+.modal.readingListNames > header > h1{
+  min-width: 198px;
+}
+
+
+@media (max-width: 767px){
+  .modal.readingListNames{
+    width: 90vw !important;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+
+  .modal.readingListNames > section > div{
+    /* width: 100vw; */
+    overflow-x: scroll;
+  }
+}
+
+
+@media (max-width: 576px){
+  .modal.readingListNames h1{
+    font-size: 15px;;
+  }
+
+  .modal.readingListNames > section{
+  }
+}
+
+@media (max-width: 280px) {
+  .modal.readingListNames{
+    min-width: 90vw;
+  }
+}

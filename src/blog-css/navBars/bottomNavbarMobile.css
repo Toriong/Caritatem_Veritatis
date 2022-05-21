@@ -1,0 +1,100 @@
+.bottomNavBar {
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+  position: fixed;
+  display: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: #c0c0c0 solid 0.8px;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  z-index: 2000000;
+}
+
+.bottomUnFixedWrapper {
+  /* height: 100px; */
+  height: 50px;
+  width: 100%;
+  display: none;
+  background-color: var(--backgroundColor);
+}
+
+.bellNotificationContainer > a{
+  /* border: solid pink; */
+  transform: translateY(2px);
+}
+
+.bellNotificationContainer> div{
+  /* border: solid pink; */
+
+}
+
+@media (max-width: 767px) {
+.bottomNavBar.onNotificationsPage > div{
+width: 40vw;
+}
+
+  .bottomUnFixedWrapper {
+    display: block;
+  }
+
+  .bottomNavBar {
+    display: flex;
+    width: 100vw;
+    border-top: #c0c0c0 solid 0.8px;
+  }
+
+  .bottomNavBar>div {
+    /* width: 20%; */
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    /* min-width: 56px; */
+    min-width: 40px;
+  }
+
+  .bottomNavBar.onMessengerPage > div{
+    width: 30vw;
+  }
+
+  .bottomNavBar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .bottomNavBar>div:nth-child(3),
+  .bottomNavBar>div:nth-child(4) {
+    position: relative;
+  }
+
+.bottomNavBar>div:nth-child(3) div{
+  transform: translate(10px, -10px);
+}
+
+  .bottomNavBar>div:nth-child(3) div,
+  .bottomNavBar>div:nth-child(4) div {
+    position: absolute;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 0.7rem;
+    z-index: 10000;
+  }
+
+    .bottomNavBar>div:nth-child(4) div{
+  transform: translate(8px, -10px);
+    }
+}
+
+@media (max-width: 280px) {
+  .bottomNavBar {
+    max-width: 100vw;
+    overflow-x: scroll;
+  }
+}

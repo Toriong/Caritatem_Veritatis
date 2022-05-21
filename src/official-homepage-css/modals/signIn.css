@@ -3,6 +3,7 @@
   --textColor: #ffffff;
   --borderColor: 0.8px solid #c0c0c0;
   --linkColor: #0000ff;
+  --boxShadow: 2px 2px 5px #2d2e30;
 }
 
 /* rgb(0 0 0 / 20%); */
@@ -10,44 +11,91 @@
 .signInModal {
   box-shadow: 2px 2px 5px #2d2e30;
   background: var(--backgroundColorModal);
-  border-radius: 3vh;
-  width: 25%;
-  height: 350%;
+  border-radius: 16px;
+  overflow-y: auto;
+  /* width: 25%; */
+  width: 25vw;
+  /* height: 350%; */
+  height: 50vh;
   position: absolute;
+  align-items: center;
+  z-index: 100000;
+  border: solid .5px grey;
+  transform: translateX(-10px);
+}
+
+.signInModal > div{
+display: flex;
+flex-direction: column;
+height: 100%;
+position: relative;
+min-width: 280px;
+}
+
+.signInModal form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.signInModal form div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /* padding-top: 2%; */
+  padding-top: 11.5156px;
+}
+.signInModal form div svg {
+  transform: translateX(-25%);
 }
 
 .signInModal h1 {
   text-align: center;
-  margin: 5% 0px 10% 0px;
   font-size: 1.4em;
 }
 
 .signInModal input {
-  margin: 0px 0px 10% 0px;
+  /* margin: 0px 0px 9% 0px; */
+  margin-bottom: 32.3047px;
   background: none;
   border: none;
   border-bottom: var(--borderColor);
-  width: 80%;
+  width: 50%;
   font-size: 1.1em;
-  color: var(--textColor);
+  background-color: var(--backgroundColorModal) !important;
+  /* padding-left: 2%; */
+  padding-left: 4px;
+  background: none;
+  min-width: 187.5px;
+  /* border-radius: 4px; */
 }
 
 #buttonSignIn {
   width: 50%;
-  height: 30%;
-  margin: 0px 0px 6% 0.3%;
+  /* height: 4vh; */
+  height: 28.9141px;
+  /* margin: 0px 0px 6% 0.3%; */
+  margin: 0px 0px 21.5391px 1.07031px;
+  color: white;
+  background-color: var(--backgroundColor);
+  border-radius: 8px;;
+  font-weight: 200;
 }
 
 .notAMember {
   border-top: var(--borderColor);
   width: 100%;
-  height: 90%;
+  height: 60%;
   font-size: 0.8em;
-  padding-top: 2%;
-  margin-top: 5%;
+  /* padding-top: 2%; */
+  padding-top: 7.17969px;
+  /* margin-top: 5%; */
+  margin-top: 17.9453px;
+  min-height: 100px;
+  position: relative;
 }
 
 .notAMembberText {
@@ -59,8 +107,8 @@
   justify-content: center;
   width: 100%;
   position: absolute;
-  bottom: 0;
-  padding-bottom: 3%;
+  bottom: 10px;
+  /* padding-bottom: 3%; */
 }
 
 .termsAndPolicy > * {
@@ -68,22 +116,21 @@
 }
 
 .headerSignInModal {
-  /* border: solid 2px pink; */
-  width: 95%;
-  height: 175px;
-  margin: 1% 0% 3% 0%;
-  position: relative;
+  width: 100%;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  /* margin: 1% 0% 3% 0%; */
+  /* margin: 8px 0px 16px 0px; */
 }
 
-.headerSignInModal h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -115%);
-}
-.headerSignInModal svg {
-  margin: 1% 2% 0% 0%;
-  float: right;
+#closeSignInModalIcon {
+  /* margin: 1% 2% 0% 0%; */
+  /* float: right; */
+  position: absolute;;
+  right: 8px;
+  top: 2px;
+  /* right: -3px; */
 }
 
 #signInModalCancel {
@@ -97,4 +144,57 @@
   text-decoration: underline;
   color: var(--linkColor);
   margin-left: 1%;
+  cursor: pointer;
 }
+
+@media (min-width: 1200px){
+  .signInModal{
+    max-width: 360px;
+  }
+
+  .signInModal > div{
+    min-height: 354.047px;
+  }
+}
+
+@media (min-width: 768px){
+  .signInModal{
+    max-height: 355.047px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .signInModal{
+    width: fit-content;
+  }
+}
+
+
+@media(max-width: 767px){
+  .signInModal{
+    border-radius: 0%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow-y: scroll;
+    z-index: 10000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #buttonSignIn{
+    max-width: 156px;
+  }
+
+  .signInModal input{
+    max-width: 288px;
+    margin-bottom: 51.8359px;
+  }
+
+  .headerSignInModal{
+    min-height: 100px;
+  }
+}
+

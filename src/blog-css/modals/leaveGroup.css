@@ -1,0 +1,64 @@
+.modal.generic.leaveGroup {
+}
+
+.modal.generic.leaveGroup > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 252px;
+}
+
+.modal.generic.leaveGroup > section:last-child button:first-child {
+  margin-right: 0.5em;
+}
+
+.modal.generic.leaveGroup > section:last-child button:last-child {
+  margin-left: 0.5em;
+}
+
+.modal.generic.leaveGroup > section:last-child button:last-child {
+  background-color: red;
+}
+
+.modal.generic.leaveGroup > section:last-child button {
+  background-color: var(--backgroundColor);
+  height: 54px;
+  width: 162px;
+  color: white;
+  font-weight: 250;
+  border-radius: 0.5em;
+  min-width: 60.8984px;
+}
+
+.modal.generic.leaveGroup > section {
+  height: 50%;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .modal.generic.leaveGroup {
+    width: 500px;
+    height: 309px;
+  }
+
+  .modal.generic.leaveGroup > section:last-child button {
+    height: 48px;
+    width: 100px;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 768px) and (max-width: 1199px) {
+  .modal.generic.leaveGroup {
+    height: 209px;
+    /* border: solid pink; */
+  }
+}
+
+@media (max-width: 425px){
+  .modal.generic.leaveGroup > section:first-child h1{
+    font-size: small;
+  }
+
+  .modal.generic.leaveGroup>section:last-child button{
+    width: 30vw;
+  }
+}

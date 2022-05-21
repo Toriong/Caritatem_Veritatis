@@ -1,0 +1,47 @@
+/* file name: confirmChatOrInviteDel */
+
+.modal.delChatOrInvite {
+  height: 40vh;
+  width: 40vw;
+  background-color: var(--backgroundColorModal);
+  box-shadow: var(--boxShadow);
+  z-index: 6000000000000000000000000000000;
+  border-radius: 0.5em;
+  max-width: 500px;
+  max-height: 320px;
+}
+
+.modal.delChatOrInvite h5 {
+  font-size: 1.3em;
+}
+
+.modal.delChatOrInvite > section {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75px;
+  min-width: 252px;
+}
+
+.modal.delChatOrInvite > section:last-child button:first-child {
+  background-color: var(--backgroundColor);
+  color: white;
+  margin-right: 0.3em;
+}
+
+.modal.delChatOrInvite > section:last-child button {
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  font-weight: 250;
+  max-width: 100px;
+  min-width: 79.7969px !important;
+}
+
+.modal.delChatOrInvite > section:last-child button:last-child {
+  background-color: red;
+  margin-left: 0.3em;
+}
+
+

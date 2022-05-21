@@ -1,0 +1,580 @@
+/* fileName: notificationsModal */
+
+.notificationsContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5em;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.notificationsContainer > svg {
+  font-size: 20.2px;
+}
+
+.notificationsContainer.diffUser {
+  margin-left: 1em;
+  height: 6vh;
+  width: 5vw;
+  padding-top: 0.8em;
+  justify-content: center;
+  display: grid;
+  place-items: center;
+  margin: 2em 2em 0em 2em;
+}
+
+.notificationsContainer.onUserHomePage {
+  margin-left: 1em;
+  height: 6vh;
+  width: 5vw;
+  padding-top: 0.8em;
+  margin-top: 2em;
+  /* margin-right: 0em; */
+  justify-content: center;
+  display: grid;
+  place-items: center;
+}
+
+.notificationsContainer.isOnWritePage > svg {
+  /* margin-top: 0.2em; */
+  margin-top: 3.2px;
+  font-size: 1.3em;
+}
+
+.notificationsContainer.isOnWritePage {
+  display: grid;
+  place-items: center;
+  /* transform: translateY(10.5px); */
+  /* transform: translateY() */
+  /* transform: translateY(1px); */
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+
+
+.notificationsContainer.onSearchPage{
+  /* border: solid pink; */
+  transform: translate(-3px, -2.5px) !important;
+}
+
+
+.notificationsNumContainer.isOnWritePage > div{
+  transform: translate(-3px, -35.5px);
+  width: 20px;
+  height: 20px;
+
+}
+
+.notificationsContainer:hover {
+  background: #2d2e30;
+}
+
+.notificationsContainer > div {
+  position: relative;
+}
+
+/* notifications number */
+.notificationsNumContainer > div {
+  position: absolute;
+  font-size: 0.7em;
+  /* transform: translate(0%, -100%); */
+  /* width: 2vw; */
+  /* height: 3.3vh; */
+  /* min-width: 20px; */
+  /* min-height: 20px; */
+  width: 20px;
+  height: 20px;
+  transform: translate(10px, -150px);
+
+  display: grid;
+  border-radius: 50%;
+  background: red;
+  place-items: center;
+}
+
+
+.notificationsContainer.onUserHomePage > svg:first-of-type {
+  font-size: 1.2em;
+  /* margin-bottom: 15em; */
+}
+
+
+
+
+.notificationsNumContainer.blogNavBar > div{
+  transform: translate(-3px, -30.2px);
+}
+
+.notificationsNumContainer.onSearchPage > div{
+  /* transform: translate(-3px, -30.2px); */
+  transform: translate(-3px, -35px);
+}
+
+
+.notificationsNumContainer.isOnUserHomePage > div,
+.notificationsNumContainer.isOnWritePage>div {
+  /* transform: translate(5%, -140%); */
+  transform: translate(-3px, -36.5px);
+}
+
+.notificationsNumContainer.isOnUserHomePage > div,
+.notificationsNumContainer.isOnWritePage > div,
+.notificationsNumContainer.blogNavBar > div {
+}
+
+.modal.notifications {
+  background-color: var(--backgroundColorModal);
+  width: 38vw;
+  min-height: 650px;
+  max-width: 336px;;
+  max-height: 900px;
+  height: 85vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translate(-50%, 2.6%);
+  border-radius: 0.4em;
+  padding: 0.7em;
+  border: solid grey 1px;
+}
+
+.notificationsHeader {
+  /* padding: 0.7em 0em 0em 0.7em; */
+  position: relative;
+}
+
+.notificationsHeader > section:first-child h1 {
+  font-size: 1.2em;
+}
+
+.notificationsHeader > section:first-child > button {
+  background: none;
+  border: none;
+  /* height: 2vh; */
+  height: 20px;
+  font-size: 1em;
+  color: #ffffff;
+  position: absolute;
+  right: 0.5em;
+  top: 0.2em;
+}
+
+.notificationsHeader > section:first-child {
+  display: flex;
+  position: relative;
+}
+
+.notificationsSubModal.isOnWritePostPage {
+  transform: translate(168px, 15px);
+}
+
+.notificationsSubModal{
+  transform: translate(290px, 15px);
+  /* border: solid pink; */
+}
+
+.notificationsSubModal.isOnWritePostPage button,
+.notificationsSubModal.isOnUserHomePage button,
+.notificationsSubModal.blogNavbar button {
+  font-size: 1em;
+}
+
+.notificationsSubModal {
+  background-color: white;
+  border-radius: 0.3em;
+  position: absolute;
+  width: 200px;
+  height: 158px;
+  z-index: 50000;
+  display: flex;
+  flex-direction: column;
+  padding: 0.2em;
+}
+
+.notificationsSubModal button svg {
+  font-size: 1.3em;
+  transform: translateY(0.2em);
+  margin-right: 0.3em;
+}
+
+.notificationsSubModal button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.notificationsSubModal button:first-of-type {
+  padding-bottom: 0.3em;
+}
+
+.notificationsSubModal button {
+  width: 100%;
+  height: 50%;
+  border-style: none;
+  text-align: left;
+  color: black;
+  background: white;
+  font-size: 0.8em;
+  border-radius: 0.3em;
+  padding-bottom: 0.4em;
+  padding-left: 0.4em;
+}
+
+.notificationsHeader > section:last-child {
+  margin-top: 0.3em;
+}
+
+.notificationsHeader > section:last-child button {
+  border-style: none;
+  width: 90px;
+  height: 25px;
+  /* margin: 1% 6.5% 0px 0px; */
+  margin: 6.77344px 25px 0px 0px;
+  border-radius: 8%;
+  background: var(--backgroundColor);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.modal.notifications > section {
+  display: flex;
+}
+
+.modal.notifications > section:not(:nth-child(2)) {
+  flex-direction: column;
+}
+
+.modal.notifications h4 {
+  color: white;
+  font-weight: 550;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+/* change the font-size when */
+.modal.notifications > section:nth-child(4) button,
+.modal.notifications > section:nth-child(2) button {
+  border: none;
+  border-style: none;
+  background: none;
+  color: rgb(24, 118, 242);
+  font-size: 0.7em;
+  padding: 1.3%;
+}
+
+.modal.notifications > section:nth-child(4) {
+  display: grid;
+  place-items: center;
+}
+
+.modal.notifications > section:nth-child(4) button {
+  width: 80%;
+}
+
+.modal.notifications > section:nth-child(4) button:hover,
+.modal.notifications > section:nth-child(2) button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.4em;
+}
+
+.modal.notifications > section:nth-child(2) {
+  margin: 0.5em 0 0.5em 0;
+  justify-content: space-between;
+}
+
+.notificationsSec {
+  margin-top: 0.5em;
+  min-height: 510px;
+  margin-bottom: 0.2em;
+  padding-bottom: 1em;
+}
+
+.notificationsSec.notOnPage{
+height: 62vh;
+  max-height: 680px;
+  overflow-y: auto;
+  /* padding-bottom: 120px; */
+  padding: 10px 0px 120px 0px;
+  /* border: solid pink; */
+}
+
+
+.notificationsContainer.diffUser,
+.notificationsContainer.onUserHomePage {
+  height: 42px;
+  width: 46px;
+}
+
+.notificationsContainer.onUserHomePage {
+  margin-top: 31.5px;
+  /* transform: translateX(-15px); */
+  /* margin-right: 15px; */
+}
+
+@media(min-width: 1200px){
+  .modal.notifications{
+    /* border: solid pink; */
+    min-width: 525px;
+  }
+
+  .notification.blogNavbar>section:nth-child(2)>p{
+    /* border: solid pink; */
+  }
+
+    .newStoryUserIconSection>button{
+      width: 70px;
+    }
+}
+
+/* for tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .notification {
+    max-height: 140px;
+  }
+
+  .modal.notifications h4 {
+    font-size: 1.3em;
+  }
+
+  .modal.notifications > section:first-child h1 {
+    font-size: 1.5em;
+  }
+
+  .modal.notifications {
+    width: 300px;
+    transform: translate(-50%, 0%);
+    height: 75vh;
+    min-height: 550px;
+    max-height: 600px;
+  }
+
+  .notificationsHeader > section:last-child button {
+    font-size: 0.9rem;
+  }
+
+  .notificationsSec.notOnPage {
+    height: 40vh;
+    min-height: 400px;
+    max-height: 420px;
+  }
+
+  .notification.blogNavbar > section:nth-child(2) > p {
+    /* font-size: 1.1em; */
+    font-size: 0.9rem;
+  }
+}
+
+/* for devices between tablets and large devices */
+@media (min-width: 768px)  and (max-width: 1199px){
+  .notificationsNumContainer.isOnUserHomePage > div,
+  .notificationsNumContainer.blogNavBar > div {
+    width: 20px;
+    height: 20px;
+    transform: translate(-3px, -35.5px);
+  }
+
+.notificationsSubModal{
+ transform: translate(98px, 15px); 
+}
+
+  .notificationsContainer.isOnWritePage{
+/* transform: translateY(13.8px) */
+/* transform: translate() */
+  }
+
+  .notificationsNumContainer.isOnWritePage > div{
+    transform: translate(-3px, -36px);
+  }
+
+  .notificationsContainer {
+    max-height: 50px;
+    max-width: 50px;
+    /* border: solid pink; */
+  }
+}
+
+@media (min-width: 1920px) {
+  .notificationsContainer {
+  }
+
+  .notificationsNumContainer.isOnUserHomePage > div,
+  .notificationsNumContainer.isOnWritePage > div,
+  .notificationsNumContainer.blogNavBar > div {
+    width: 30px;
+    height: 30px;
+    transform: translate(-5px, -43px);
+  }
+
+  .notificationsNumContainer > div {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) and (min-height: 801px) {
+  .modal.notifications > section:first-child h1 {
+    font-size: 1.5em;
+  }
+
+  .notificationsSubModal {
+  }
+
+  .modal.notifications {
+    min-width: 500px;
+    transform: translate(-50%, 0%);
+    min-height: 550px;
+    max-height: 600px;
+  }
+
+  .notificationsSec.notOnPage {
+    height: 40vh;
+    min-height: 200px;
+    max-height: 445px;
+  }
+
+  .notificationsHeader > section:last-child button {
+    font-size: 1.1em;
+  }
+
+  .modal.notifications h4 {
+    font-size: 1.3em;
+  }
+
+  .notificationsSubModal.isOnWritePostPage,
+  .notificationsSubModal.isOnUserHomePage,
+  .notificationsSubModal.blogNavbar {
+    transform: translate(270px, 14px);
+  }
+}
+
+/* for the nest hub */
+@media (min-width: 992px) and (max-width: 1199px) and (max-height: 800px) {
+  .modal.notifications {
+    /* min-width: 350px; */
+    transform: translate(-50%, 0%);
+    min-height: 525px;
+  }
+
+  .notificationsSec.notOnPage {
+    min-height: 300px;
+  }
+}
+
+/* when the user shrinks the screen vertically */
+@media (min-width: 1700px) and (max-width: 1919px) and (max-height: 800px) {
+  .notificationsSubModal.isOnWritePostPage,
+  .notificationsSubModal.isOnUserHomePage,
+  .notificationsSubModal.blogNavbar {
+    /* transform: translate(300px, 14px); */
+  }
+}
+
+/* for extra large devices with a large height  */
+@media (min-width: 1200px) and (max-width: 1919px) and (min-height: 801px) {
+  .modal.notifications > section:first-child h1 {
+    font-size: 1.5em;
+  }
+
+  .notificationsSubModal.isOnWritePostPage,
+  .notificationsSubModal.isOnUserHomePage,
+  .notificationsSubModal.blogNavbar {
+    /* transform: translate(330px, 20px); */
+  }
+
+  .modal.notifications {
+    /* min-width: 570px; */
+    transform: translate(-50%, 0%);
+    height: 78vh;
+  }
+
+  .notificationsHeader > section:last-child button {
+    font-size: 1.1em;
+  }
+
+  .modal.notifications h4 {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 1920px) and (max-height: 800px) {
+  .notificationsSubModal.isOnWritePostPage,
+  .notificationsSubModal.isOnUserHomePage {
+    /* transform: translate(340px, 14px); */
+  }
+
+  .modal.notifications {
+    max-width: 570px;
+    transform: translate(-50%, 0%);
+    min-height: 900px;
+    height: 70vh;
+  }
+
+  .notificationsHeader > section:last-child button {
+    font-size: 1.1em;
+  }
+}
+
+/* for large devices with a small height */
+@media (min-width: 1920px) and (min-height: 801px) {
+  .modal.notifications > section:first-child h1 {
+    font-size: 1.5em;
+  }
+
+  .notificationsSubModal.isOnWritePostPage,
+  .notificationsSubModal.isOnUserHomePage,
+  .notificationsSubModal.blogNavbar {
+    /* transform: translate(340px, 14px); */
+  }
+
+  .modal.notifications {
+    max-width: 490px;
+    transform: translate(-50%, 0%);
+    min-height: 900px;
+    height: 70vh;
+  }
+
+  .notificationsSec.notOnPage {
+    min-height: 650px;
+    max-height: 770px;
+  }
+
+  .notification {
+    max-height: 140px;
+  }
+
+  .notification > section:first-child img {
+    min-width: 60px;
+    min-height: 60px;
+    max-height: 83px;
+    max-width: 65px;
+  }
+
+  .notificationsHeader > section:last-child button {
+    font-size: 1.1em;
+  }
+
+  .modal.notifications h4 {
+    font-size: 1.3em;
+  }
+}
+
+
+
+/* for the surface pro 7 */
+@media (orientation: portrait) {
+  /* .modal.notifications {
+    min-width: 350px;
+    min-height: 550px;
+    height: 55vh;
+    transform: translate(-50%, 0%);
+  }
+
+  .notificationsSec {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .notification.blogNavbar > section:nth-child(2) > p {
+    font-size: 1.1em;
+  } */
+}
+

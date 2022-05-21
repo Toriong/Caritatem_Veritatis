@@ -1,0 +1,221 @@
+/* fileName: messagingModalOptions */
+
+.messagingModalOptions {
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-5%, -100%);
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  border-radius: 0.5em;
+  max-height: 212px;
+  z-index: 10;
+}
+
+.messagingModalOptions > button:not(:last-of-type) {
+  margin-bottom: 0.2em;
+}
+
+.messagingModalOptions > button svg {
+  transform: translate(-28%, 10%);
+  /* position: absolute; */
+}
+
+.messagingModalOptions > div {
+  display: flex;
+  justify-content: center;
+}
+
+.messagingModalOptions>div{
+
+}
+
+.messagingModalOptions > button {
+  height: 58px;
+  font-size: 0.9em;
+  font-weight: 200;
+  border-radius: 0.5em;
+  position: relative;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.messagingModalOptions.notOnMessenger > button:hover {
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+
+
+.messagingModalOptions input {
+  border-bottom: solid 0.05px rgb(128, 128, 128, 0.5);
+  margin-bottom: 0.3em;
+  color: black;
+}
+
+.messagingModalOptions > section {
+  height: 20vh;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.messagingModalOptions > section > span {
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: solid pink; */
+  width: 100%;
+  text-align: center;
+}
+
+.border.darker {
+  margin-bottom: 0.2em;
+}
+
+.border.darker > div {
+  border: 0.05px solid rgba(192, 192, 192);
+}
+
+.searchedUser.invitingUser span {
+  color: black;
+  font-size: 0.9em;
+  width: 120px;
+  /* border: solid pink; */
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.messagingModalOptions > div{
+  margin-top: 8px;
+}
+
+.backBtnContainer {
+  display: none !important;
+}
+
+.backBtnContainer > button{
+  font-weight: 200;
+  font-size: 11px;
+  border: solid .05px grey;
+  width: 15vw;
+  padding: 4px;
+  min-width: 81.2969px;
+  border-radius: 8px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .messagingModalOptions.notOnMessengerPage {
+    max-height: 190px;
+    width: 142px;
+  }
+
+  .messagingModalOptions.notOnMessengerPage button {
+    font-size: small;
+  }
+
+  .messageModalSearchContainer.notOnMessengerPage {
+    width: 136px;
+    height: 32px;
+  }
+
+  .messageModalSearchContainer.notOnMessengerPage input {
+    width: 100%;
+    font-size: 0.9em;
+  }
+  .searchedUser.invitingUser {
+    width: 133px;
+  }
+
+  .searchedUser.invitingUser.onMessengerPage{
+    width: 100%;
+  }
+
+  .searchedUser.invitingUser span {
+    width: fit-content;
+    max-width: 75px;
+  }
+
+  .searchedUser.invitingUser.onMessengerPage span{
+    /* width: 75px; */
+    width: 35vw;
+    max-width: 100px;
+    text-align: left;;
+  }
+
+  .messageModalSearchResults.notOnMessengerPage {
+    height: 138px;
+  }
+
+  .searchedUser.invitingUser span {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 768px) and (max-width: 1199px) {
+  .messagingModalOptions.notOnMessengerPage {
+    transform: translate(-15%, 5%);
+  }
+}
+
+@media (max-width: 767px){
+  .backBtnContainer {
+    display: flex !important;
+  }
+
+  .backBtnContainer.newMessageModalOn{
+    min-height: 100px;;
+    justify-content: center;
+    place-items: center;
+  }
+
+  .selectedUsersContainer.onMessenger > div{
+    overflow-y: auto;
+    max-height: 122.25px;
+  }
+
+  .backBtnContainer.newMessageModalOn button{
+    color: white;
+    min-width: 60px;
+    font-size: clamp(8px,2vw, 10px);
+  }
+}
+
+@media (max-width: 576px){
+  .messagingModalOptions>div:first-of-type{
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 375px){
+  .backBtnContainer > button{
+    width: 10vw;
+    min-width: 65px;
+  }
+}
+
+@media (max-width: 400px) {
+  .searchedUser.invitingUser span {
+    width: 13vw;
+    text-align: right;
+  }
+}
+
+
+@media (max-width: 320px){
+  .searchedUser.invitingUser.onMessengerPage img{
+    width: 4.5vw;
+    height: 25px;
+  }
+}
+
+
+@media (max-height: 600px){
+  .messagingModalOptions{
+    transform: translate(-5%, 3%)
+  }
+}

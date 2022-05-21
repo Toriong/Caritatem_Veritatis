@@ -1,0 +1,695 @@
+/* fileName: messageIcon */
+
+.messageIconContainer {
+  padding-bottom: 0.3em;
+  border-radius: 0.5em;
+  padding-top: 0.22em;
+  flex-direction: column;
+  position: relative;
+  transform: translateX(20%);
+}
+
+.messageIconContainer.newStory {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+
+}
+
+.newMessagesCountContainer.notOnFeed {
+  transform: translate(130%, -180%);
+}
+
+.newMessagesCountContainer.onWritePage {
+  /* transform: translate(130%, -130%); */
+  /* transform: translate(13px, -9px); */
+  /* transform: translate(9.5px, -9.5px); */
+  transform: translate(12.5px, -9.5px);
+}
+
+
+.messageIconContainer > div{
+
+}
+
+.newMessagesCountContainer{
+  position: absolute;
+  font-size: 0.7em;
+  transform: translate(10px, -18px);
+  width: 2vw;
+  height: 3.3vh;
+  min-width: 20px;
+  min-height: 20px;
+  display: grid;
+  border-radius: 50%;
+  background: #ff0000;
+  place-items: center;
+}
+
+/* same display, flex-direction. and place items*/
+.searchUserMessageModal,
+.modal.messages > section:nth-child(2),
+.modal.messages > section:first-child > div,
+.modal.messages > section:first-child {
+  display: flex;
+}
+
+.searchUserMessageModal > section,
+.modal.messages > div:first-of-type,
+.modal.messages > section:nth-child(2) > label,
+.messageIconContainer.onSearchPage {
+  display: grid;
+}
+
+.modal.messages > section:nth-child(2) > label,
+.modal.messages > div:first-of-type,
+.searchUserMessageModal > section {
+  place-items: center;
+}
+
+/* end of same display and flex-direction*/
+
+/* same font size and font weight */
+.modal.messages > section:first-child button:last-child:hover::after {
+  font-size: 0.7em;
+}
+
+.modal.messages h5 {
+  font-size: 1em;
+  font-weight: 350;
+}
+.modal.messages > section:first-child > h3 {
+  font-size: 1.5em;
+  font-weight: 450;
+}
+
+.modal.messages > section:first-child > div {
+  position: relative;
+}
+
+.modal.messages > section:nth-child(2) > label > svg {
+  font-size: 1.2em;
+}
+
+.modal.messages > section:first-child svg {
+  font-size: 1.6em;
+}
+
+.modal.messages > section:nth-child(3) > span,
+.modal.messages > div:first-of-type > button {
+  font-weight: 250;
+}
+
+
+
+.searchUserMessageModal > section:last-child > span,
+.modal.messages > section:nth-child(2) > input {
+  font-weight: 200;
+}
+
+/* end of same font size and font weight */
+
+/* same color */
+.modal.messages > div:first-of-type > button,
+.modal.messages > section:nth-child(2) svg,
+.modal.messages > section:first-child svg {
+  color: #898f9c;
+}
+
+/* end of same color */
+
+.messageIconContainer > div {
+  /* margin-top: 2.3em; */
+  position: relative;
+  /* transform: translate(13px, -22px); */
+  /* transform: translate(-3px, -35.5px); */
+  /* transform: translate(-3px, ) */
+  /* border: solid pink; */
+}
+
+
+/* same centering css */
+
+.modal.messages > section:nth-child(3) > span,
+.messageIconContainer > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* end of same centering css */
+
+.modal.messages > section:first-child button:last-child:hover::after {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, 30%);
+  width: 15vw;
+  content: "Write a message";
+}
+
+.messageIconContainer:hover {
+  background-color: var(--iconHoveredColor);
+}
+
+.messageIconContainer > svg {
+  font-size: 1.5em;
+}
+
+.messageIconContainer.onSearchPage{
+  /* padding: 8x; */
+  padding-top: 16px;
+  padding-bottom: 0px;;
+  /* transform: translateY(px); */
+  transform: translate(20%, -.4px);
+
+  width: 50px;
+  height: 50px;
+  /* transform: translate(-15px, 3px); */
+}
+
+.messageIconContainer.onUserProfile {
+  width: 5vw;
+  margin-top: 2.05em;
+  height: 3vw;
+}
+
+.modal.messages {
+  background-color: var(--backgroundColorModal);
+  width: 28vw;
+  min-height: 500px;
+  max-width: 350px;
+  max-height: 530px;
+  top: 8%;
+  left: 45%;
+  /* left: 0; */
+  position: fixed;
+  /* transform: translate(50%, 0.6%); */
+  border-radius: 0.4em;
+  border: solid #808080 1px;
+  z-index: 100000
+}
+
+.modal.messages > section:first-child {
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.modal.messages > section:first-child > h3 {
+}
+
+.modal.messages > section:first-child > div > button {
+  padding: 3%;
+  /* width: 3vw; */
+  border-radius: 0.5em;
+  /* max-width: 36px; */
+  width: 36px;
+  height: 31px;
+}
+
+.modal.messages > section:first-child > div > button:hover {
+  background-color: rgb(32, 33, 36);
+}
+
+.modal.messages > section:first-child > div > button:first-child {
+  /* margin-right: 0.2em; */
+}
+
+.modal.messages > section:nth-child(2) > input {
+  /* border: solid 0.5px rgb(128, 128, 128, 0.4); */
+  border: solid rgb(128, 128, 128, 0.5) 0.2px;
+  width: 80%;
+  /* background-color: var(--backgroundColor); */
+  border-radius: 0.2em;
+  /* height: 3.5vh; */
+  /* height: 5vh; */
+  /* height: 50px; */
+  padding-left: 0.5em;
+  font-size: 1.2em;
+  height: 50px;
+}
+
+.modal.messages > section:nth-child(2) > label {
+  transform: translateX(-60%);
+}
+
+.modal.messages > section:nth-child(2) > label svg {
+  font-size: 1.2em;
+}
+
+.modal.messages > section:nth-child(2) {
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.modal.messages > div:first-of-type > button:hover {
+  text-decoration: underline;
+}
+
+.modal.messages > div:first-of-type {
+  border-top: solid rgb(128, 128, 128, 0.2) 1.5px;
+  /* border-right: solid 0.00001px; */
+  /* border-left: solid 0.00001px; */
+  /* border-bottom: solid 0.00001px; */
+  /* height: 10%; */
+  position: absolute;
+  bottom: 0;
+  z-index: 1000000000000000000000;
+  width: 100%;
+  padding: 0.5em 0 0.5em 0;
+  background-color: var(--backgroundColorModal);
+}
+
+.searchUserMessageModal:hover {
+  background-color: var(--backgroundColor);
+  cursor: pointer;
+}
+
+.searchUserMessageModal {
+  width: 100%;
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  height: 65px;
+}
+
+.searchUserMessageModal > section:last-child {
+  margin-left: 1em;
+}
+
+.searchUserMessageModal img {
+  width: 3.8vw;
+  height: 3.8vh;
+  border-radius: 50%;
+  min-height: 50px;
+  min-width: 50px;
+}
+
+.searchResultsContainerMessages {
+  padding: 1em;
+  height: fit-content;
+}
+
+.searchResultsContainerMessages > h5 {
+  margin-bottom: 0.8em;
+}
+
+.modal.messages h5 {
+  color: #bec2c9;
+}
+
+.newMessagesCountContainer {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.newMessagesCountContainer{
+  transform: translate(10px, -21.4px);
+  /* transform: translate(9px, -10px); */
+}
+
+
+.newMessagesCountContainer.onFeedPage{
+  transform: translate(10px, -19.4px);
+}
+
+
+.newMessagesCountContainer.onSearchPage{
+  transform: translate(10px, -22.4px)
+  /* transform: translate(10px, -17.5px); */
+  /* transform: translate((10px, -10000px)) */
+}
+
+@media (max-width: 1199px){
+  .newMessagesCountContainer.onFeedPage{
+    transform: translate(10px, -19.4px)
+  }
+}
+
+/* for mobile devices */
+@media (max-width: 767px) {
+  .messageIconContainer {
+    transform: translateX(0);
+  }
+}
+
+.messageIconContainer.onUserProfile {
+  transform: translate(15%, 8px);
+}
+
+.messageIconContainer.onUserProfile > div {
+  transform: translate(20px, -12px);
+}
+
+.messageIconContainer.onUserProfile {
+  height: 28px;
+  width: 45px;
+}
+
+
+
+@media (min-width: 768px){
+  .modal.messages>section:nth-child(3){
+    padding-bottom: 150px !important;
+
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px){
+  .newMessagesCountContainer.onWritePage {
+      transform: translate(27.5px, -9.5px);
+    }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px){
+  .newMessagesCountContainer.onWritePage {
+      transform: translate(29.5px, -9.5px);
+    }
+}
+
+
+/* for tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+.modal.messages.react-draggable{
+  /* transform: translate(-60%, 15px) !important; */
+}
+
+.newMessagesCountContainer.onSearchPage{
+  transform: translate(10px, -22.5px);
+}
+
+.messageIconContainer.newStory{
+  width: 60px;
+  height: 35px;
+  padding: 3.52px 0px 4.8px 0px;
+}
+
+
+
+  .modal.messages > section:nth-child(3) {
+    max-height: 305px;
+  }
+
+  .messageIconContainer:hover {
+    background-color: var(--backgroundColor);
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger > section:nth-child(2) {
+    transform: translateX(7%);
+  }
+.conversationMessageModalNavbar.notOnMessenger{
+}
+
+  .conversationMessageModalNavbar.threeUsers.notOnMessenger > section:first-child {
+    transform: translateX(-4.5px);
+  }
+
+  .modal.messages {
+    min-width: 345px;
+    min-height: 490px;
+    transform: translate(-50%, 7%);
+  }
+
+  .modal.messages > section:first-child > div {
+    min-width: 120px;
+  }
+
+  .modal.messages > section:first-child > div > button {
+    min-width: 40px;
+  }
+
+  .modal.messages > section:nth-child(2) > input {
+    min-height: 28px;
+  }
+
+  .messageIconContainer > svg {
+    font-size: 24px;
+  }
+
+  .messageIconContainer > div {
+    /* transform: translate(8px, -22px); */
+    transform: translate(10px, -20px)
+  }
+
+  .navigationMenuBlog {
+    width: 75%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .messageIconContainer.onSearchPage {
+    transform: translate(20%, 2.6px);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .messageIconContainer.onSearchPage {
+    /* transform: translate(20%, 1px); */
+    transform: translate(-15%, 0px);
+  }
+}
+
+/* for devices between tablets and large devices */
+
+
+@media (min-width: 1920px) {
+  .newMessagesCountContainer {
+    width: 30px;
+    height: 30px;
+  }
+
+  .messageIconContainer.onUserProfile > div {
+    transform: translate(20px, -19px);
+  }
+
+  .newMessagesCountContainer {
+    font-size: 0.9em;
+  }
+
+  .messageIconContainer > div {
+    transform: translate(14px, -22px);
+  }
+
+
+  .newMessagesCountContainer.onWritePage{
+        transform: translate(10px, -17px);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .modal.messages {
+    min-width: 350px;
+  }
+
+  .modal.messages > section:nth-child(3) {
+    padding: 0 0.5em 0.5em 0.5em;
+    /* border: solid pink; */
+    max-height: 300px;
+  }
+
+  .conversationMessageModalNavbar > section:nth-child(2) {
+    padding: 1.3em 0 0.5em 0;
+  }
+
+  .conversationMessageModalNavbar
+    > section:nth-child(2)
+    > section:last-child
+    > div {
+    /* top: 0.08em; */
+    top: .2em;
+  }
+
+  .searchUserMessageModal img {
+    max-width: 98px;
+    max-height: 60px;
+  }
+
+  .conversationMessageModalNavbar {
+    /* border: solid; */
+  }
+}
+
+/* large devices */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .searchUserMessageModal img {
+    max-width: 98px;
+    max-height: 60px;
+  }
+}
+
+
+
+
+
+
+@media (orientation: landscape) {
+  .conversationMessageModalNavbar > section:nth-child(2) > section:first-child {
+    min-height: 12px;
+  }
+}
+
+@media (min-width: 1920px) {
+.newMessagesCountContainer.onSearchPage {
+  transform: translate(15px, -20px);
+  /* transform: translate(-5px, -43px) */
+
+}
+
+  .modal.messages > section:nth-child(2) > input {
+    /* border: solid pink; */
+    max-width: 424px;
+  }
+
+  .conversationMessageModalNavbar > section:nth-child(2) > section:first-child {
+    font-size: 1.3em;
+  }
+
+  .searchUserMessageModal img {
+    /* max-width: 98px; */
+    /* max-height: 60px; */
+    width: 50px;
+    height: 50px;
+  }
+
+  .conversationMessageModalNavbar
+    > section:nth-child(2)
+    > section:last-child
+    > span:first-child {
+    font-size: 1.3em;
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers.onNavbar
+    > section:nth-of-type(2)
+    > section:last-child
+    > span:first-child {
+    max-width: none;
+    width: 240px;
+  }
+  .conversationMessageModalNavbar.onNavbar
+    > section:nth-child(2)
+    > section:last-child
+    > span:first-child {
+    width: 250px;
+  }
+
+  .modal.messages > section:nth-child(2) {
+    min-height: 90px;
+    max-height: 96px;
+    max-width: 530px;
+  }
+
+  .modal.messages {
+    top: initial;
+    left: initial;
+    max-height: 720px;
+    height: 43vh;
+    min-height: 650px;
+    max-height: 780px;
+    max-width: 450px;
+    z-index: 10000000000;
+  }
+
+  .conversationMessageModalNavbar.onNavbar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .conversationMessageModalNavbar.onNavbar.twoUser > section:nth-child(2),
+  .conversationMessageModalNavbar.onNavbar.oneUser > section:nth-child(2) {
+    width: 305px;
+  }
+
+  .conversationMessageModalNavbar.onNavbar.threeUsers > section:nth-child(2) {
+    max-width: none;
+    width: 310px;
+  }
+
+  .conversationMessageModalNavbar.notOnMessenger.threeUsers.onNavbar
+    > section:nth-of-type(2)
+    > section:last-child {
+    max-width: none;
+    min-width: none;
+    width: 291px;
+  }
+
+  .conversationMessageModalNavbar.onNavbar.threeUsers
+    > section:nth-child(2)
+    > section:first-child {
+    width: 300px;
+  }
+
+  .modal.messages > section:nth-child(3) {
+    max-height: 463px;
+  }
+
+  .usersInGroup.onSideBar {
+    max-height: 60px;
+    max-width: 49px;
+    width: 7vw;
+    height: 7vh;
+  }
+
+  .recipientInviterOrCurrentUser {
+    max-height: 80px;
+    max-width: 80px;
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .messagingOptsContainer {
+    max-height: 111px;
+    max-width: 77px;
+  }
+
+  .messagingOptsContainer > button {
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .conversationMessageModalNavbar
+    > section:nth-child(2)
+    > section:last-child
+    > div {
+    top: 0.13em;
+  }
+
+  .conversationMessageModalNavbar.onNavbar
+    > section:nth-child(2)
+    > section:last-child
+    > div {
+    top: 3.9px;
+  }
+}
+
+/* extra extra large screens with a small height */
+@media (min-width: 2560px) and (max-height: 1023px) {
+  /* .conversationMessageModalNavbar > section:nth-child(2) > section:first-child {
+    font-size: 1.3em;
+  }
+
+  .conversationMessageModalNavbar {
+    height: 115px;
+  }
+
+  .conversationMessageModalNavbar
+    > section:nth-child(2)
+    > section:last-child
+    > span {
+    font-size: 1.3em;
+  }
+
+  .recipientInviterOrCurrentUser {
+    max-width: 100px;
+    max-height: 100px;
+  } */
+}
+
+

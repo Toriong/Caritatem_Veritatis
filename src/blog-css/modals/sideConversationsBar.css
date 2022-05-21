@@ -1,0 +1,266 @@
+
+/* fileName: sideConversationBar */
+
+.sideConversationsBar {
+  background-color: var(--backgroundColorModal);
+  position: fixed;
+  /* top: 18%; */
+  right: 0;
+  bottom: 0;
+  /* width: 27vw; */
+  height: 85vh;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 10px;
+  border-top-left-radius: 1em;
+  overflow-y: auto;
+  width: 360px;
+  /* max-height: 605px; */
+  z-index: 10;
+  /* padding-bottom: 4em; */
+}
+
+.newMessageContainerSideBarChats button {
+  color: black;
+  background-color: grey;
+  cursor: pointer;
+  /* width: 3vw; */
+  /* height: 4vh; */
+  height: 31.5547px;
+  width: 31.5547px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  min-width: 23.0078px;
+  max-width: 43.1953px;
+  min-height: 28.9141px;
+}
+
+.newMessageContainerSideBarChats {
+  padding: 0.5em 1.2em 1em 0em;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 660px;
+}
+
+.sideConversationsBar.onMessenger {
+  /* left: 0; */
+  /* top: 0; */
+  /* height: 93%; */
+  /* height: 90vh; */
+  height: 100vh;
+  width: 27vw;
+  border-top-left-radius: 0;
+  overflow-y: scroll;
+  /* padding-top: 7em; */
+  position: static;
+  border-right: 0.05px solid rgba(192, 192, 192, 0.3);
+  /* max-width: 691.195px; */
+}
+
+.sideConversationsBar > span {
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.sideConversationsBar > header > div {
+  display: flex;
+  padding-left: 1em;
+  width: 90%;
+}
+
+.sideConversationsBar > header > div > input {
+  border-bottom: 0.05px solid rgba(192, 192, 192);
+  width: 100%;
+  margin-left: 0.5em;
+  font-size: 1.1em;
+  padding-bottom: 0.3em;
+}
+
+.sideConversationsBar > header {
+  padding: 1em 1.5em 1em 0.3em;
+  display: flex;
+  justify-content: space-between;
+  /* border: solid pink; */
+}
+
+.sideConversationsBar > header > button {
+  margin-top: 0.4em;
+}
+
+.sideConversationsBar > header svg {
+  font-size: 1.4em;
+  color: lightgrey;
+}
+
+.sideConversationsBar > section {
+  padding: 1em 0.5em 1em 0.5em;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.border > div {
+  border: 0.05px solid rgba(192, 192, 192, 0.3);
+  width: 90%;
+}
+
+.border {
+  display: grid;
+  place-items: center;
+}
+
+.sideConversationsBar > section > section {
+  min-height: 150px;
+  max-height: 265px;
+  overflow-y: auto;
+  padding: 0.5em 0 1em 0;
+}
+
+.sideConversationsBar>section:not(:last-of-type) > section{
+  max-height: 223px;
+
+}
+
+.sideConversationsBar > section:nth-of-type(3) {
+  margin-top: 3px;
+}
+
+.sideConversationsBar.notOnMessenger{
+  max-height: 605px;
+}
+
+.sideConversationsBar.onMessenger > section:nth-of-type(3) > section{
+  min-height: 800px !important;
+  max-height: 800px !important;
+  height: 800px !important;
+padding-bottom: 205px;
+}
+
+.sideConversationsBar.onMessenger > section:nth-of-type(3){
+padding-bottom: 50px;
+height: 800px;
+max-height: 800px;
+}
+
+
+.searchResultsContainerMessages > div{
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.searchedUserResultsContainer.onMessenger{
+  padding-bottom: 50px;
+  max-height: 750.094px;
+  padding-bottom: 300px;
+  overflow-y: auto;;
+}
+
+.searchResultsContainerMessages{
+  
+}
+
+@media(min-width: 768px){
+.sideConversationsBar.onMessenger{
+max-width: 502.945px;
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .searchedUserResultsContainer.onMessenger{
+    padding-bottom: 100px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sideConversationsBar.notOnMessenger {
+    width: 270px;
+    max-height: 605px;
+  }
+
+  .sideConversationsBar.onProfile {
+    transform: translateY(5%);
+  }
+
+  .searchResultsContainerMessages.notOnMessenger {
+    overflow-y: auto;
+    max-height: 160px;
+  }
+
+  .searchResultsContainerMessages.notOnMessenger:not(:first-child) {
+    border-top: 1px solid gray;
+  }
+
+  .searchResultsContainerMessages:nth-child(4) {
+    padding-bottom: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sideConversationsBar.notOnMessenger {
+    min-width: 270px;
+    max-width: 350px;
+    width: 32vw;
+    max-height: 480px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .sideConversationsBar.notOnMessenger {
+    max-height: 1005px;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 768px) and (max-width: 991px) {
+  .sideConversationsBar.notOnMessenger {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 767px){
+.newMessageContainerSideBarChats{
+  /* max-width: none; */
+  max-width: 755px;
+}
+
+.sideConversationsBar.notOnMessenger{
+  display: none;
+}
+
+  .sideConversationsBar.onMessenger{
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  .searchResultsContainerMessages {
+    overflow-y: auto;
+    max-height: 290px;
+  }
+
+.searchedUserResultsContainer.onMessenger {
+  overflow-y: auto;
+}
+
+.searchResultsContainerMessages > div{
+max-height: 230px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .sideConversationsBar.onMessenger{
+    width: 33vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+.sideConversationsBar.onProfile{
+  /* width: 250px; */
+  border: solid pink;
+}
+}
+
+
+.sideConversationsBar{
+  /* display: none; */
+}

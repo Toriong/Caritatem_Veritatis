@@ -1,0 +1,139 @@
+/* fileName: selectedConversationModal */
+
+.selectedConversationModal > button:first-of-type,
+.selectedConversationModal {
+  display: flex;
+}
+
+.selectedConversationModal > button:last-of-type {
+  padding: 2.5%;
+}
+
+.selectedConversationModal > div {
+  width: 2.2vw;
+  margin-right: 0.2em;
+  background-color: red;
+  border-radius: 50%;
+  overflow-x: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.selectedConversationModal {
+  /* height: 5vh; */
+  justify-content: space-around;
+  height: 35px;
+  /* max-height: 35px; */
+  padding: 3%;
+}
+
+.selectedConversationModal > button:first-of-type {
+  width: 30%;
+}
+
+.modal.moreConversations {
+  width: 12vw;
+  height: fit-content;
+  position: absolute;
+  border-radius: 0.5em;
+  top: 50%;
+  left: 50%;
+  z-index: 1000000;
+  transform: translate(-125%, -30%);
+  max-height: 190px;
+  overflow-y: scroll;
+  max-width: 173px;
+  min-width: 140px;
+}
+
+.selectedConversationModal > button:first-of-type > span:first-child {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.selectedConversationModal > button:first-of-type {
+  /* width: 100px; */
+  width: 70%;
+  /* text-align: center; */
+  padding: 5%;
+  /* padding-left: 5%; */
+  font-size: 0.8em;
+  display: flex;
+}
+
+.selectedConversationModal > button:hover {
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.selectedConversationModal > button:nth-of-type(2) svg {
+  font-size: 1.2em;
+}
+
+.selectedConversationModal > button {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5em;
+  align-items: center;
+}
+
+.showMoreChatsBtnContainer.messagesSideBarOn {
+  /* transform: translate(150%, -50%); */
+  /* transform: translate(105%, -50%); */
+  transform: translate(-27vw, -485%);
+}
+
+.showMoreChatsBtnContainer {
+  /* width: 5vw; */
+  /* height: 9vh; */
+  background-color: lightgray;
+  border-radius: 50%;
+  position: fixed;
+  right: 10%;
+  bottom: 20%;
+  /* transform: translate(150%, -450%); */
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  z-index: 10;
+  width: 75px;
+  height: 75px;
+  transform: translate(95%, -470%);
+  /* margin-bottom: 200px; */
+  /* z-index: 1; */
+}
+
+@media (max-width: 767px){
+  .showMoreChatsBtnContainer{
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .showMoreChatsBtnContainer {
+    width: 75px;
+    height: 75px;
+  }
+
+  .showMoreChatsBtnContainer.messagesSideBarOn {
+    /* transform: translate(70%, -50%); */
+  }
+
+  .modal.moreConversations {
+    width: 140px;
+    max-height: 250px;
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+  .modal.moreConversations {
+  }
+}
+
+@media (max-height: 600px) and (min-width: 768px) and (max-width: 1199px) {
+  .showMoreChatsBtnContainer {
+    transform: translate(95%, -150%);
+  }
+}

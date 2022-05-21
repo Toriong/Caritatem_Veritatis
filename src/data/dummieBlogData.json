@@ -1,0 +1,102 @@
+[
+    {
+        "authorIcon_": "https://img.icons8.com/fluent/48/000000/user-male-circle.png",
+        "authorIcon": "userIcons/user.png",
+        "authorIconAlt": "iconOfMatt",
+        "blogPostsImages":[ 
+            {
+                "main":"blogPostsImages/mattBlogImage.png",
+                "alt":"matt_blog_post_image_main"
+            } 
+        ],
+        "author": "Matt",
+        "title": "Lorem, ipsum dolor.",
+        "subTitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, aliquid?",
+        "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos consequatur expedita unde iste. Tempora obcaecati exercitationem animi perspiciatis dolorem voluptate iste ratione, eaque at nobis quia quod vitae hic, earum quas modi consectetur! Mollitia rem voluptate ex rerum quidem asperiores temporibus vitae. Fugiat a ex molestiae exercitationem saepe excepturi impedit, fugit expedita repudiandae? Qui nam dolor harum aliquid porro non blanditiis expedita itaque, quidem praesentium explicabo, amet quae, sit deserunt illum quisquam quas! Vel dicta labore eligendi aliquid alias eum sed recusandae repellat nulla officia rerum fugit nostrum quo culpa tempore, libero consequuntur sint. Voluptatum rerum cupiditate voluptatibus aut, sapiente odit nobis possimus aliquam molestias totam quos eum ad repellat dolore, aspernatur eaque ut corporis ratione nostrum. Numquam amet ipsa reprehenderit sapiente sequi molestias obcaecati ex praesentium commodi aliquid. Itaque, molestiae accusantium aliquid enim corporis adipisci doloribus atque deserunt esse error, reiciendis dolorem iusto facere corrupti optio neque vero culpa alias inventore maiores accusamus. Ab, nostrum explicabo. Aperiam error quidem consequatur minima. Porro tempora alias neque tenetur rem consectetur beatae, asperiores obcaecati nostrum ab soluta iure cum ratione eum animi laudantium. Vero minima, velit sit consectetur iusto cumque odit omnis, quasi modi facere assumenda delectus quod mollitia fugit nostrum nihil ad alias, porro ea ullam illum voluptate dicta! Ratione nihil accusantium consequatur adipisci pariatur cupiditate fugiat! Eveniet dolorem quam assumenda libero voluptatem inventore cum est id voluptatibus. Id natus porro consequatur. A reiciendis itaque officia modi magnam cupiditate, perspiciatis quae ea, autem illo pariatur! Sed reiciendis vero dolore cumque, distinctio dolorum quae non vel aspernatur minus, harum ullam similique laboriosam iste dolor ex dignissimos? Quaerat porro mollitia labore qui ducimus animi repudiandae recusandae, libero, veritatis doloribus quam magnam laboriosam dolores vero et vitae voluptates suscipit est deserunt fugiat quos saepe! Odit dignissimos magni aliquam sint natus hic culpa voluptatibus ipsum!",
+        "datePublished": "07/05/21",
+        "tags": {
+            "main":"Modernity",
+            "remaining": ["ethics", "metaphysics", "logic"]     
+        } 
+    }, 
+    {
+        "authorIcon_": "https://img.icons8.com/fluent/48/000000/user-male-circle.png",
+        "authorIcon": "userIcons/user.png",
+        "authorIconAlt": "iconOfBob",
+        "blogPostsImages":[
+            {
+                "main":"blogPostsImages/bobBlogImage.jpeg",
+                "alt":"bob_blog_image_main"
+            }
+        ],
+        "author": "Bob",
+        "title": "Lorem, ipsum dolor.",
+        "subTitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, aliquid?",
+        "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos consequatur expedita unde iste. Tempora obcaecati exercitationem animi perspiciatis dolorem voluptate iste ratione, eaque at nobis quia quod vitae hic, earum quas modi consectetur! Mollitia rem voluptate ex rerum quidem asperiores temporibus vitae. Fugiat a ex molestiae exercitationem saepe excepturi impedit, fugit expedita repudiandae? Qui nam dolor harum aliquid porro non blanditiis expedita itaque, quidem praesentium explicabo, amet quae, sit deserunt illum quisquam quas! Vel dicta labore eligendi aliquid alias eum sed recusandae repellat nulla officia rerum fugit nostrum quo culpa tempore, libero consequuntur sint. Voluptatum rerum cupiditate voluptatibus aut, sapiente odit nobis possimus aliquam molestias totam quos eum ad repellat dolore, aspernatur eaque ut corporis ratione nostrum. Numquam amet ipsa reprehenderit sapiente sequi molestias obcaecati ex praesentium commodi aliquid. Itaque, molestiae accusantium aliquid enim corporis adipisci doloribus atque deserunt esse error, reiciendis dolorem iusto facere corrupti optio neque vero culpa alias inventore maiores accusamus. Ab, nostrum explicabo. Aperiam error quidem consequatur minima. Porro tempora alias neque tenetur rem consectetur beatae, asperiores obcaecati nostrum ab soluta iure cum ratione eum animi laudantium. Vero minima, velit sit consectetur iusto cumque odit omnis, quasi modi facere assumenda delectus quod mollitia fugit nostrum nihil ad alias, porro ea ullam illum voluptate dicta! Ratione nihil accusantium consequatur adipisci pariatur cupiditate fugiat! Eveniet dolorem quam assumenda libero voluptatem inventore cum est id voluptatibus. Id natus porro consequatur. A reiciendis itaque officia modi magnam cupiditate, perspiciatis quae ea, autem illo pariatur! Sed reiciendis vero dolore cumque, distinctio dolorum quae non vel aspernatur minus, harum ullam similique laboriosam iste dolor ex dignissimos? Quaerat porro mollitia labore qui ducimus animi repudiandae recusandae, libero, veritatis doloribus quam magnam laboriosam dolores vero et vitae voluptates suscipit est deserunt fugiat quos saepe! Odit dignissimos magni aliquam sint natus hic culpa voluptatibus ipsum!",
+        "datePublished": "07/05/21",
+        "tags":{
+            "main": "Platonism",
+            "remaining": ["ethics", "metaphysics", "logic"]    
+        }
+    },
+    {
+        "authorIcon_": "https://img.icons8.com/fluent/48/000000/user-male-circle.png",
+        "authorIcon": "userIcons/user.png",
+        "authorIconAlt": "iconOfBill",
+        "blogPostsImages": [
+            {
+                "main":"blogPostsImages/blogImageBill.jpeg",
+                "alt":"bill_blog_image_main"
+            } 
+        ],
+        "author": "Bill",
+        "title": "Lorem, ipsum dolor.",
+        "subTitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, aliquid?",
+        "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos consequatur expedita unde iste. Tempora obcaecati exercitationem animi perspiciatis dolorem voluptate iste ratione, eaque at nobis quia quod vitae hic, earum quas modi consectetur! Mollitia rem voluptate ex rerum quidem asperiores temporibus vitae. Fugiat a ex molestiae exercitationem saepe excepturi impedit, fugit expedita repudiandae? Qui nam dolor harum aliquid porro non blanditiis expedita itaque, quidem praesentium explicabo, amet quae, sit deserunt illum quisquam quas! Vel dicta labore eligendi aliquid alias eum sed recusandae repellat nulla officia rerum fugit nostrum quo culpa tempore, libero consequuntur sint. Voluptatum rerum cupiditate voluptatibus aut, sapiente odit nobis possimus aliquam molestias totam quos eum ad repellat dolore, aspernatur eaque ut corporis ratione nostrum. Numquam amet ipsa reprehenderit sapiente sequi molestias obcaecati ex praesentium commodi aliquid. Itaque, molestiae accusantium aliquid enim corporis adipisci doloribus atque deserunt esse error, reiciendis dolorem iusto facere corrupti optio neque vero culpa alias inventore maiores accusamus. Ab, nostrum explicabo. Aperiam error quidem consequatur minima. Porro tempora alias neque tenetur rem consectetur beatae, asperiores obcaecati nostrum ab soluta iure cum ratione eum animi laudantium. Vero minima, velit sit consectetur iusto cumque odit omnis, quasi modi facere assumenda delectus quod mollitia fugit nostrum nihil ad alias, porro ea ullam illum voluptate dicta! Ratione nihil accusantium consequatur adipisci pariatur cupiditate fugiat! Eveniet dolorem quam assumenda libero voluptatem inventore cum est id voluptatibus. Id natus porro consequatur. A reiciendis itaque officia modi magnam cupiditate, perspiciatis quae ea, autem illo pariatur! Sed reiciendis vero dolore cumque, distinctio dolorum quae non vel aspernatur minus, harum ullam similique laboriosam iste dolor ex dignissimos? Quaerat porro mollitia labore qui ducimus animi repudiandae recusandae, libero, veritatis doloribus quam magnam laboriosam dolores vero et vitae voluptates suscipit est deserunt fugiat quos saepe! Odit dignissimos magni aliquam sint natus hic culpa voluptatibus ipsum!",
+        "datePublished": "07/05/21",
+        "tags":{
+            "main": "Philosophy",
+            "remaining": ["ethics", "metaphysics", "logic"]    
+        }
+    },
+    {
+        "authorIcon_": "https://img.icons8.com/fluent/48/000000/user-male-circle.png",
+        "authorIcon": "userIcons/user.png",
+        "authorIconAlt": "iconOfJames",
+        "blogPostsImages":[
+            {
+                "main":"blogPostsImages/blogPostImageJames.jpeg",
+                "alt":"james_blog_image_main"
+            }
+        ],
+        "author": "James",
+        "title": "Lorem, ipsum dolor.",
+        "subTitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, aliquid?",
+        "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos consequatur expedita unde iste. Tempora obcaecati exercitationem animi perspiciatis dolorem voluptate iste ratione, eaque at nobis quia quod vitae hic, earum quas modi consectetur! Mollitia rem voluptate ex rerum quidem asperiores temporibus vitae. Fugiat a ex molestiae exercitationem saepe excepturi impedit, fugit expedita repudiandae? Qui nam dolor harum aliquid porro non blanditiis expedita itaque, quidem praesentium explicabo, amet quae, sit deserunt illum quisquam quas! Vel dicta labore eligendi aliquid alias eum sed recusandae repellat nulla officia rerum fugit nostrum quo culpa tempore, libero consequuntur sint. Voluptatum rerum cupiditate voluptatibus aut, sapiente odit nobis possimus aliquam molestias totam quos eum ad repellat dolore, aspernatur eaque ut corporis ratione nostrum. Numquam amet ipsa reprehenderit sapiente sequi molestias obcaecati ex praesentium commodi aliquid. Itaque, molestiae accusantium aliquid enim corporis adipisci doloribus atque deserunt esse error, reiciendis dolorem iusto facere corrupti optio neque vero culpa alias inventore maiores accusamus. Ab, nostrum explicabo. Aperiam error quidem consequatur minima. Porro tempora alias neque tenetur rem consectetur beatae, asperiores obcaecati nostrum ab soluta iure cum ratione eum animi laudantium. Vero minima, velit sit consectetur iusto cumque odit omnis, quasi modi facere assumenda delectus quod mollitia fugit nostrum nihil ad alias, porro ea ullam illum voluptate dicta! Ratione nihil accusantium consequatur adipisci pariatur cupiditate fugiat! Eveniet dolorem quam assumenda libero voluptatem inventore cum est id voluptatibus. Id natus porro consequatur. A reiciendis itaque officia modi magnam cupiditate, perspiciatis quae ea, autem illo pariatur! Sed reiciendis vero dolore cumque, distinctio dolorum quae non vel aspernatur minus, harum ullam similique laboriosam iste dolor ex dignissimos? Quaerat porro mollitia labore qui ducimus animi repudiandae recusandae, libero, veritatis doloribus quam magnam laboriosam dolores vero et vitae voluptates suscipit est deserunt fugiat quos saepe! Odit dignissimos magni aliquam sint natus hic culpa voluptatibus ipsum!",
+        "datePublished": "07/05/21",
+        "tags":{
+            "main": "Philosophy",
+            "remaining": ["ethics", "metaphysics", "logic"]
+        }    
+    },
+    {
+        "authorIcon_": "https://img.icons8.com/fluent/48/000000/user-male-circle.png",
+        "authorIcon": "userIcons/user.png",
+        "authorIconAlt": "iconOfPeter",
+        "blogPostsImages":[
+            {
+                "main":"blogPostsImages/blogPostImagePeter.jpeg",
+                "alt":"peter_blog_image_main"
+            } 
+        ],
+        "author": "Peter",
+        "title": "Lorem, ipsum dolor.",
+        "subTitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, aliquid?",
+        "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos consequatur expedita unde iste. Tempora obcaecati exercitationem animi perspiciatis dolorem voluptate iste ratione, eaque at nobis quia quod vitae hic, earum quas modi consectetur! Mollitia rem voluptate ex rerum quidem asperiores temporibus vitae. Fugiat a ex molestiae exercitationem saepe excepturi impedit, fugit expedita repudiandae? Qui nam dolor harum aliquid porro non blanditiis expedita itaque, quidem praesentium explicabo, amet quae, sit deserunt illum quisquam quas! Vel dicta labore eligendi aliquid alias eum sed recusandae repellat nulla officia rerum fugit nostrum quo culpa tempore, libero consequuntur sint. Voluptatum rerum cupiditate voluptatibus aut, sapiente odit nobis possimus aliquam molestias totam quos eum ad repellat dolore, aspernatur eaque ut corporis ratione nostrum. Numquam amet ipsa reprehenderit sapiente sequi molestias obcaecati ex praesentium commodi aliquid. Itaque, molestiae accusantium aliquid enim corporis adipisci doloribus atque deserunt esse error, reiciendis dolorem iusto facere corrupti optio neque vero culpa alias inventore maiores accusamus. Ab, nostrum explicabo. Aperiam error quidem consequatur minima. Porro tempora alias neque tenetur rem consectetur beatae, asperiores obcaecati nostrum ab soluta iure cum ratione eum animi laudantium. Vero minima, velit sit consectetur iusto cumque odit omnis, quasi modi facere assumenda delectus quod mollitia fugit nostrum nihil ad alias, porro ea ullam illum voluptate dicta! Ratione nihil accusantium consequatur adipisci pariatur cupiditate fugiat! Eveniet dolorem quam assumenda libero voluptatem inventore cum est id voluptatibus. Id natus porro consequatur. A reiciendis itaque officia modi magnam cupiditate, perspiciatis quae ea, autem illo pariatur! Sed reiciendis vero dolore cumque, distinctio dolorum quae non vel aspernatur minus, harum ullam similique laboriosam iste dolor ex dignissimos? Quaerat porro mollitia labore qui ducimus animi repudiandae recusandae, libero, veritatis doloribus quam magnam laboriosam dolores vero et vitae voluptates suscipit est deserunt fugiat quos saepe! Odit dignissimos magni aliquam sint natus hic culpa voluptatibus ipsum!",
+        "datePublished": "07/05/21",
+        "tags":{
+            "main": "Philosophy",
+            "remaining": ["ethics", "metaphysics", "logic"]
+        }    
+    }
+]

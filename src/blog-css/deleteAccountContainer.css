@@ -1,0 +1,7 @@
+.deleteAccountContainer {
+  width: 100%;
+  position: fixed;
+  border: solid 2px pink;
+  height: 100vh;
+  background-color: pink;
+}

@@ -1,0 +1,17 @@
+
+.notificationBtnContainerOnMobile>div {
+    position: relative;
+}
+
+
+.notificationBtnContainerOnMobile>div>div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    border-radius: 50%;
+    background: #ff0000;
+    place-items: center;
+    font-size: 0.7em;
+    transform: translate(8px, -13px)
+}

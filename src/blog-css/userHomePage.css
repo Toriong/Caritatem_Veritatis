@@ -1,0 +1,307 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.userHomePage {
+  width: 100%;
+  /* padding-top: 1em; */
+  /* padding-bottom: 10em; */
+  overflow-x: hidden;
+  display: flex;
+  height: fit-content;
+  background-color: var(--backgroundColor);
+}
+
+.userHomePageSideBarWrapper {
+  width: 23%;
+  max-width: 311px;
+  height: 100vh;
+}
+
+.userNames div > span{
+  text-align: center;
+}
+
+/* start of userHomePageSideBar */
+.userHomePageSideBar {
+  width: 23%;
+  /* width: fit-content; */
+  max-width: 332px;
+  height: 100%;
+  /* padding: 3% 0px 0% 2em; */
+  padding: 43.1953px 0px 0px 32px;
+  background-color: var(--backgroundColor);
+  position: fixed;
+  left: 0;
+}
+
+.userHomePageSideBar section:first-child {
+  display: grid;
+  place-items: center;
+  /* height: fit-content; */
+  height: 172px;
+  
+}
+
+.userHomePageSideBar section:first-child img {
+  /* width: 20vw; */
+  width: 185px;
+  /* height: 25vh; */
+  height: 172px;
+  max-width: 185px;
+  max-height: 172px;
+  border-radius: 10px;
+}
+
+.userHomePageSideBar > section:last-child > div > span:first-child {
+  cursor: pointer;
+}
+
+.userNames {
+  display: grid;
+  place-items: center;
+  /* height: 8vh; */
+  height: 65px;
+  position: relative;
+}
+
+.userNames div {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* top: 2vh; */
+}
+
+.userHomePageSideBar section:nth-child(3) {
+  margin-bottom: 1em;
+}
+
+.userHomePageSideBar section:nth-child(4) {
+  display: grid;
+  place-items: center;
+}
+
+.userHomePageSideBar section:nth-child(4) div {
+  border: var(--userNavModalSecBorder);
+  width: 90%;
+}
+
+.userHomePageSideBar section:nth-child(5) {
+  width: 100%;
+  height: 50%;
+  height: 1715px;
+  /* border: solid; */
+  /* padding: 2vh 0vh 0vh 5vh; */
+  padding: 8px 28px 0 12px;
+}
+/* end of userHomePageSideBar */
+
+.followingAndFollowerContainer {
+  height: fit-content;
+  width: 100%;
+  /* height: 12vh; */
+  height: 130px;
+  /* border: solid pink; */
+  padding: 0.5em 0px 0em 0px;
+}
+
+.followingAndFollowerContainer img {
+  width: 4vw;
+  /* height: 4vh; */
+  max-width: 58px;
+  height: 37px;
+  border-radius: 20%;
+  margin-left: 0.3em;
+
+}
+
+.follower {
+  border-radius: 0.5vh;
+  color: black;
+  padding: 1vh;
+  display: inline-block;
+}
+
+.follower svg {
+  color: white;
+  font-size: 4vh;
+}
+
+.userHomePagePosts {
+  display: flex;
+  flex-direction: column;
+  margin: 0% 0px 0px 8%;
+  overflow-x: scroll;
+  width: 75%;
+  background-color: var(--backgroundColor);
+  color: white;
+  /* border: solid pink; */
+}
+
+.userHomePagePosts > div:first-child {
+  height: 100vh;
+  padding: 10em;
+
+}
+
+.yourPostContainer {
+  width: 100%;
+  /* height: 0.5%; */
+  height: 9px;
+  background-color: var(--backgroundColor);
+  /* border: solid pink; */
+}
+
+.yourPostContainer div {
+  width: 100%;
+  /* height: 5%; */
+  /* border: solid; */
+  height: 35px;
+  position: fixed;
+  /* border: solid pink; */
+  background-color: var(--backgroundColor);
+  padding-top: 0.3em;
+  font-size: 1.5em;
+  z-index: 5;
+}
+
+.yourPostContainer.feedPage div {
+  z-index: 0;
+  /* border: solid 2px pink; */
+  position: relative;
+  padding-left: 10em;
+}
+
+.postsContainer {
+  width: 70%;
+  height: fit-content;
+  font-size: 27px;
+  /* margin-top: 5rem; */
+  margin-top: 30px;
+  max-width: 710px;
+}
+
+.userHomePageWrapper {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  
+}
+
+#emptyPostsMessageContainer {
+  margin-top: 5vh;
+  height: 30vh;
+  display: grid;
+  place-items: center;
+  margin-bottom: 2em;
+}
+
+.viewAllPhilosophersContainer{
+  display: grid;
+  place-items: center;
+  height: 150px;
+}
+
+@media (max-width: 767px) {
+  .userHomePageSideBarWrapper.notOnMobile {
+    display: none;
+  }
+
+  .userHomePagePosts {
+    width: 100%;
+  }
+
+  .yourPostContainer div {
+    height: 40px;
+    min-width: 300px;
+  }
+
+  .postsContainer {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .userHomePagePosts {
+    width: 90%;
+  }
+
+  .postsContainer {
+    font-size: 24px;
+  }
+
+  .followingAndFollowerContainer img {
+    height: 38px;
+    max-width: 39.633px;
+  }
+
+  .followingAndFollowerContainer {
+    max-width: 155.93px;
+    min-height: 82.3125px;
+  }
+
+  
+
+  .userHomePageSideBar section:nth-child(5) div {
+    min-height: 132px;
+  }
+
+  .userHomePageSideBar section:first-child img {
+    height: 172px;
+  }
+
+  .userNames {
+    height: 55px;
+  }
+
+  .userNames div {
+    top: 13.72px;
+  }
+
+  .yourPostContainer {
+    height: 4px;
+  }
+
+  .yourPostContainer div {
+    height: 35px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+  .userHomePageSideBarWrapper{
+    width: 30%;
+  }
+  .postsContainer{
+    font-size: 22px;
+  }
+
+  /* .postBody p{
+    max-width: 500px;
+  } */
+}
+
+@media (min-width: 2560px){
+.userHomePagePosts{
+  /* padding-left: 70.195px; */
+  margin: 0px 0px 0px 154px;
+}
+}
+
+@media (max-height: 600px){
+  .userHomePageSideBar{
+    overflow-y: scroll;
+    min-height: 100vh;
+    max-height: 650px;
+  }
+}
+
+@media (max-height: 240px){
+  .yourPostContainer{
+    display: none;
+  }
+}
+
+

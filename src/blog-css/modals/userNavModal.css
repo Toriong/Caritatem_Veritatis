@@ -1,0 +1,841 @@
+/* fileName: userNavModal */
+
+.userNavModal {
+  position: fixed;
+  background-color: var(--backgroundColorModal);
+  color: var(--textColor);
+  box-shadow: var(--boxShadow);
+  width: 23%;
+  border-radius: 1em;
+  transform: translateX(-68%);
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  padding-top: 0.3em;
+  z-index: 100;
+  height: fit-content;
+  border: var(--borderColor)
+}
+
+
+.userNavModal.onWritePage {
+  transform: translate(-98%, 5%);
+}
+
+.userNavModal-userIcon {
+  padding: 1vh 1.6vh 0px 2vh;
+  border: none;
+  width: 100%;
+  height: 25%;
+  min-height: 160px;
+}
+
+.userNavModal-userIcon > section:last-child {
+  /* height: 60%; */
+  display: grid;
+  place-items: center;
+}
+
+.userNavModal-userIcon section:nth-child(1) {
+  padding: 2.5%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 100%;
+  border-radius: 0.5em;
+  white-space: nowrap;
+  margin: 0em 0em 0.8em 0em;
+}
+
+.userNavModal-userIcon
+  section:nth-child(1)
+  > div:last-child
+  > span:nth-child(2) {
+  font-size: 0.75em;
+}
+
+.userNavModal-userIcon section:nth-child(1):hover {
+  background-color: var(--backgroundColor);
+}
+
+.userNavModal-userIcon section:nth-child(1) img {
+  min-width: 40px;
+  min-height: 40px;
+  width: 7vw;
+  height: 7.5vh;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.userNavModal-userIcon section:nth-child(1) div:nth-child(1) {
+  width: 28%;
+  height: 100%;
+  position: relative;
+}
+
+.userNavModal-userIcon section:nth-child(1) div:nth-child(2) > div {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+}
+
+.userNavModal-userIcon section:nth-child(1) div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.userNavModal-userIcon section:nth-child(1) div:nth-child(2) span {
+  margin: 0px 0px 0.2em 0px;
+}
+
+
+.userNavModal-userIcon section:nth-child(1) div:nth-child(2) span:nth-child(2),
+.userNavModal-userIcon section:nth-child(1) div:nth-child(2) span:nth-child(1) {
+  color: whitesmoke;
+  font-size: 12px;
+  max-width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userNavModal-userIcon section:nth-child(1) div:nth-child(2) span:nth-child(3) {
+  padding-left: 0.25em;
+  width: fit-content;
+  font-size: 0.7em;
+}
+
+.userNavModal-userIcon section:first-child {
+  cursor: pointer;
+  min-height: 73px;
+  /* padding-top: 0.5em; */
+}
+
+/* borders */
+.userNavModal-userIcon section:nth-child(2),
+.userNavModal-userIcon section:nth-child(4),
+.userNavModal-userIcon section:nth-child(6) {
+  /* border: var(--userNavModalSecBorder); */
+}
+
+.userNavModalOptions {
+}
+
+
+.userNavModalIconContainer {
+  cursor: pointer;
+  max-height: 600px;
+  min-width: 241px;
+  min-height: 43px;
+  position: relative;
+  margin-top: 9px;
+  /* padding: 1.5vh 0vh 0vh 1vh; */
+  padding: 2% 10% 2% 10%;
+  display: flex;
+  flex-direction: row;
+  /* height: 8vh; */
+  border-radius: 1.5em;
+}
+
+.userNavModalIconContainer:hover {
+  background-color: var(--backgroundColor);
+  cursor: pointer;
+}
+
+.userNavModalIconContainer > div {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.userNavModalIconContainer > div:last-of-type svg {
+  color: white;
+}
+
+.userNavModalIconContainer > div:last-of-type {
+  position: absolute;
+  right: 1em;
+  bottom: 0em;
+  height: 100%;
+}
+.userNavModalIconContainer > div > div {
+  background: #808080;
+  width: 2.5vw;
+  height: 4.5vh;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.logOutSubContainer > div:first-child svg,
+.userNavModalIconContainer > div:first-child > div svg {
+  color: black;
+}
+
+.userNavModalIconContainer a {
+  display: grid;
+  place-items: center;
+  margin-left: 1em;
+}
+
+.userNavModalRightArrow {
+  /* position: absolute;
+  right: 1em;
+  top: 0.9em; */
+}
+
+.userNavModal-userIcon section:nth-child(4) {
+  margin-top: 1vh;
+}
+
+.logOutContainer {
+  /* margin-top: 1vh; */
+  min-height: 100px;
+  min-width: 255.4px;
+  /* margin: 2%; */
+  /* height: 14vh; */
+  display: grid;
+  place-items: center;
+}
+
+.closeBtnContainer {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  margin-top: 0.5em;
+  min-height: 86px;
+  min-width: 241px;
+}
+
+.closeBtnSubContainer div,
+.closeBtnSubContainer span {
+  display: grid;
+  place-items: center;
+}
+
+.closeBtnSubContainer span {
+  margin-right: 1.5em;
+}
+
+.closeBtnSubContainer {
+  width: 65%;
+  height: 65%;
+  min-width: 156.7px;
+  min-height: 56.2px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2vh;
+}
+
+.logOutSubContainer {
+  /* margin: 1vh 0px 1vh 0px; */
+  /* padding: 6% 0 0 5%; */
+  width: 65%;
+  height: 65%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2vh;
+}
+
+.logOutSubContainer:hover {
+  background-color: var(--backgroundColor);
+  cursor: pointer;
+}
+
+.logOutSubContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logOutSubContainer > div:nth-child(2) {
+  display: grid;
+  place-items: center;
+}
+
+.logOutSubContainer > div:first-child {
+  padding-left: 3%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.logOutSubContainer > div:first-child > div {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  place-items: center;
+  background: #808080;
+  border-radius: 50%;
+}
+
+.logOutSubContainer span {
+  /* position: absolute;
+  right: 6vh;
+  top: 3.3vh; */
+}
+
+.userNavModal-userIcon section:last-child div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  place-items: center;
+  margin-top: 20.9px;
+}
+
+.userNavModal-userIcon section:last-child div span {
+  display: grid;
+  place-items: center;
+  font-size: 1.8vh;
+  color: darkgray;
+}
+
+.userNavModal-userIcon section:last-child div span:first-child:hover,
+.userNavModal-userIcon section:last-child div span:nth-child(3):hover,
+.userNavModal-userIcon section:last-child div span:last-child:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.userNavModal.onMobile {
+  /* display: none; */
+  /* border: solid pink; */
+
+}
+
+.closeBtnContainer {
+  display: none;
+}
+
+.border.onNavModal.onMobile {
+  display: none;
+}
+
+.border.onNavModal div {
+  min-width: 230px;
+}
+
+.border.onNavModal {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.closeBtnContainer div svg {
+  color: black;
+}
+
+.searchMessageAndNotificationsOpts {
+  display: none;
+}
+
+/* HAVE THE WIDTH TO INCLUDE SAMSUNG GALAXY AND THE FOLD */
+
+/* have the height and the width of the user's icon be responsive as the user increases the width of the screen  */
+/* have the set of the image responsiveness be between 281 and 575, in that range have the user's icon be responsive */
+
+
+@media (min-width: 281px) and (max-width: 575px) {
+  .userNavModalIconContainer > div:last-of-type {
+    right: 2.5em;
+  }
+}
+
+@media (max-width: 767px){
+    .userNavModal.onMobile {
+      border-radius: 0%;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      overflow-y: scroll;
+      z-index: 10000000;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 576px) {
+  .userNavModalIconContainer > div:last-of-type svg {
+    font-size: 1em;
+  }
+
+  .closeBtnContainer {
+    display: flex;
+    height: 8vh;
+  }
+
+  .closeBtnContainer {
+    justify-content: space-around;
+    transform: translateX(5%);
+  }
+
+  .logOutSubContainer {
+    justify-content: space-evenly;
+  }
+
+  .closeBtnSubContainer > div {
+    height: 100%;
+  }
+
+  .closeBtnSubContainer > div > div svg {
+    font-size: 1.3em;
+  }
+
+  .closeBtnSubContainer span {
+    font-size: 1em;
+  }
+
+  .closeBtnSubContainer > div > div {
+    width: 40px;
+    height: 40px;
+    background: #808080;
+    border-radius: 100%;
+  }
+
+  .logOutSubContainer > div:first-child > div {
+    width: 40px;
+    height: 40px;
+    background: #808080;
+    border-radius: 100%;
+  }
+}
+
+@media (min-width: 281px) and (max-width: 575px) {
+}
+
+/* responsive css for mobiles */
+@media (min-width: 577px) and (max-width: 767px) {
+  .userNavModalProfileSubContainer section:first-child div:first-child img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .closeBtnContainer {
+    display: flex;
+    height: 8vh;
+  }
+
+  .border.onNavModal.onMobile {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+  }
+
+  .userNavModalIconContainer.userProfile:last-child {
+    margin-bottom: 9px;
+  }
+
+  .userNavModalProfileSubContainer section:last-child div {
+    padding-bottom: 1em;
+  }
+}
+
+/* responsive css for tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .userNavModalProfileSubContainer section:last-child div span {
+    font-size: 10px;
+  }
+
+  .userNavModalProfileSubContainer section:last-child div {
+  }
+
+  .userNavModal {
+    min-width: 300px;
+    width: 20%;
+    min-height: 470px;
+  }
+
+  .userNavModal-userIcon {
+    padding: 0.5em 1em 0em 1em;
+  }
+
+  .userNavModalIconContainer > div > div {
+    width: 30px;
+    height: 30px;
+  }
+
+  .userNavModal-userIcon section:nth-child(1) {
+    padding: 0;
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    > div:last-child
+    > span:nth-child(2) {
+    font-size: 0.9em;
+  }
+
+  .userNavModal-userIcon section:nth-child(1) div:nth-child(2) {
+    padding: 1em 0 0 0.8em;
+  }
+
+  .userNavModal-userIcon section:nth-child(1) img {
+    min-width: 62.2px;
+    min-height: 58.3px;
+    max-width: 62.2px;
+    max-height: 58.3px;
+
+    width: 8vw;
+    height: 8.5vh;
+    border-radius: 50%;
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    div:nth-child(2)
+    span:nth-child(1) {
+    font-size: calc(4px + 1.5vw);
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    div:nth-child(2)
+    span:nth-child(3) {
+    font-size: calc(2px + 1vw);
+  }
+
+  .userNavModal-userIcon section:nth-child(1) {
+    margin: 0;
+  }
+
+  .logOutContainer {
+    min-height: 100px;
+  }
+
+  .logOutSubContainer {
+    min-height: 50px;
+  }
+
+  .userNavModal-userIcon section:last-child div span {
+    font-size: 0.9em;
+  }
+
+  .userNavModal-userIcon > section:last-child,
+  .logOutContainer {
+    height: 0vh;
+  }
+}
+
+/* use 801px max height for the break points to count for the nest hub devices */
+
+/* large devices, desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .userNavModal {
+    min-width: 300px;
+    width: 20%;
+    min-height: 450px;
+    /* height: 40vh; */
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    div:nth-child(2)
+    span:nth-child(1) {
+    font-size: 20px;
+  }
+
+  .userNavModal-userIcon {
+    padding: 0.5px 10px 0em 10px;
+  }
+
+  .userNavModalIconContainer > div > div {
+    width: 30px;
+    height: 30px;
+  }
+
+  .userNavModal-userIcon section:first-child {
+    /* padding-top: 0.8em; */
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    > div:last-child
+    > span:nth-child(2) {
+    font-size: 0.9em;
+  }
+
+  .userNavModal-userIcon section:nth-child(1) div:nth-child(2) {
+    /* padding: 20px 0 0 20px; */
+  }
+
+  .userNavModal-userIcon section:nth-child(1) img {
+    min-width: 75.5px;
+    min-height: 58.3px;
+    max-width: 75.5px;
+    max-height: 58.3px;
+    width: 8vw;
+    height: 8.5vh;
+    border-radius: 50%;
+    transform: translate(-50px, -50%);
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    div:nth-child(2)
+    span:nth-child(3) {
+    /* font-size: calc(2px + 1vw); */
+  }
+
+  .userNavModal-userIcon section:nth-child(1) {
+    margin: 0;
+  }
+
+  .logOutContainer {
+    min-height: 100px;
+  }
+
+  .logOutSubContainer {
+    min-height: 50px;
+  }
+
+  .userNavModal-userIcon section:last-child div span {
+    font-size: 0.9em;
+  }
+
+  .userNavModal-userIcon > section:last-child,
+  .logOutContainer {
+    height: 0vh;
+  }
+}
+
+/* extra large desktops */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .userNavModal-userIcon section:last-child div {
+    margin-top: 8px;
+    min-height: 23px;
+  }
+
+  .userNavModal {
+    min-width: 300px;
+    width: 20%;
+    min-height: 510px;
+    /* height: 40vh; */
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    div:nth-child(2)
+    span:nth-child(1) {
+    font-size: 20px;
+  }
+
+  .userNavModal-userIcon {
+    padding: 0.5px 10px 0em 10px;
+  }
+
+  .userNavModalIconContainer > div > div {
+    width: 30px;
+    height: 30px;
+  }
+
+  .userNavModal-userIcon section:first-child {
+    padding-top: 0.8em;
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    > div:last-child
+    > span:nth-child(2) {
+    font-size: 0.9em;
+  }
+
+  .userNavModal-userIcon section:nth-child(1) div:nth-child(2) {
+    padding: 0px 0 0 20px;
+  }
+
+  .userNavModal-userIcon section:nth-child(1) img {
+    min-width: 70px;
+    min-height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    width: 7vw;
+    height: 7.5vh;
+    border-radius: 50%;
+  }
+
+  .userNavModal-userIcon section:nth-child(1) {
+    margin: 0;
+  }
+
+  .logOutContainer {
+    min-height: 100px;
+  }
+
+  .logOutSubContainer {
+    min-height: 50px;
+  }
+
+  .userNavModal-userIcon section:last-child div span {
+    font-size: 0.9em;
+  }
+
+  .userNavModal-userIcon > section:last-child,
+  .logOutContainer {
+    height: 0vh;
+  }
+}
+
+@media (min-width: 1920px) {
+  .userNavModal-userIcon section:last-child div {
+    margin-top: 8px;
+    min-height: 31px;
+  }
+
+  .userNavModal-userIcon section:nth-child(1) img {
+    min-width: 65px;
+    min-height: 65px;
+    width: 6.5vw;
+    height: 7vh;
+    border-radius: 50%;
+  }
+
+  .userNavModalIconContainer > div:last-of-type {
+    right: 1.75em;
+  }
+
+  /* .userNavModalIconContainer {
+    min-width: 365px;
+    padding: 9.5px 47.3px 9.5px 47.3px;
+    min-height: 75px;
+  } */
+
+  .userNavModal {
+    min-width: 433px;
+    width: 20%;
+    min-height: 670px;
+    max-height: 670px;
+    max-width: 433px;
+  }
+
+  .userNavModal-userIcon {
+    min-height: 160px;
+    padding: 0.5px 10px 0em 10px;
+  }
+
+  .userNavModal-userIcon section:first-child {
+    min-height: 139px;
+    max-height: 139px;
+  }
+
+  .userNavModal-userIcon section:nth-child(1) img {
+    min-width: 115px;
+    min-height: 115px;
+    max-width: 115px;
+    max-height: 115px;
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    div:nth-child(2)
+    span:nth-child(1) {
+    font-size: 1.4em;
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    > div:last-child
+    > span:nth-child(2) {
+    font-size: 1.05em;
+  }
+
+  .userNavModal-userIcon
+    section:nth-child(1)
+    > div:last-child
+    > span:nth-child(3) {
+    font-size: 1em;
+  }
+
+  .userNavModal-userIcon section:nth-child(1) > div:last-child {
+    margin-left: 0.7em;
+  }
+
+  .userNavModalIconContainer > div:first-child > div svg {
+    font-size: 1.4em;
+  }
+
+  .userNavModalIconContainer a {
+    font-size: 1.1em;
+  }
+
+  .logOutSubContainer span {
+    font-size: 1.1em;
+  }
+
+  .userNavModalIconContainer > div > div {
+    width: 50px;
+    height: 50px;
+  }
+
+  .userNavModal-userIcon section:last-child div span {
+    font-size: 18px;
+  }
+
+  .logOutSubContainer > div:first-child svg {
+    font-size: 22px;
+  }
+}
+
+@media (max-height: 600px) {
+  .userNavModal {
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 280px){
+.userNavModalProfileSubContainer section:first-child div:nth-child(2)>div {
+  font-size: 12px;
+}
+}
+
+@media (max-width: 240px){
+  /* .userNavModalIconContainer{
+    min-width: 220px;
+  }
+
+  .closeBtnSubContainer{
+    transform: translateX(-10px);
+  }
+
+  .logOutSubContainer{
+    transform: translate(-18px);
+  }
+
+  .userNavModalProfileSubContainer section:nth-child(1){
+    min-width: 220px !important;
+    max-width: 220px;
+  }
+
+  .userNavModalProfileSubContainer section:first-child div:nth-child(2)>div{
+    font-size: 12px;
+  }
+
+  .border.onNavModal div{
+    min-width: 210px;
+  }
+
+  .userNavModalProfileSubContainer section:last-child div *{
+    font-size: 12px;
+  } */
+}
+
+@media (max-width: 767px){
+  .userNavModal-userIcon section:nth-child(1):hover{
+    background-color: var(--backgroundColorModal);
+  }
+}
+
+@media (max-width: 280px){
+}
+
+@media (max-height: 600px){
+  .userNavModal > div{
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}

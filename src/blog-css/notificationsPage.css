@@ -1,0 +1,163 @@
+/* fileName: notificationsPage */
+
+.notificationsPage {
+  height: fit-content;
+  display: grid;
+  place-items: center;
+  /* padding-bottom: 7em; */
+  padding: 2em 0em 3em 0em;
+  overflow-x: auto;
+  max-width: 2560px;
+}
+
+/* find the section that holds all of the notifications, change the height to 'fit-content' */
+.notificationsPageContainer {
+  background-color: var(--backgroundColorModal);
+  width: 50vw;
+  /* width: 50vw; */
+  min-height: 100vh;
+  /* height: fit-content; */
+  border-radius: 0.4em;
+  padding: 0.7em;
+  min-width: 280px;
+}
+
+
+.notificationsHeader.onPage > section:first-child h1 {
+  font-size: 1.6em;
+}
+
+.notificationsHeader.onPage > section:first-child > button:first-of-type svg {
+  font-size: 1.3em;
+}
+
+.notificationsSubModal.onPage {
+  transform: translate(340px, 15%);
+  height: 100px;
+}
+
+.notificationsSubModal.onPage button {
+  font-size: 1em;
+  height: 50%;
+}
+
+.notificationsHeader.onPage > section:nth-child(2) button {
+  font-size: 0.9em;
+}
+
+.notificationsPageContainer > section:nth-child(2) {
+  margin: 1.3em 0em 1.3em 0em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notificationsPageContainer > section:nth-child(2) h4 {
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.notificationsPageContainer > section:nth-child(2) button {
+  border: none;
+  border-style: none;
+  background: none;
+  color: rgb(24, 118, 242);
+  font-size: 0.8em;
+  width: fit-content;
+  padding: 1%;
+}
+
+.notificationsPageContainer > section:nth-child(2) button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.4em;
+}
+
+.notification.onPage > section:nth-child(2) {
+  /* margin-left: 0.7em; */
+}
+
+.notification.onPage > section:nth-child(2) > p:last-child,
+.notification.onPage > section:nth-child(2) > p:first-child {
+  font-size: 0.9em;
+}
+
+.notification.onPage > div:last-of-type {
+  /* padding-bottom: 0.45em; */
+}
+
+.notificationsOpts.onPage button {
+  font-size: 1em;
+  z-index: -1;
+}
+
+.notificationsOpts.onPage {
+  transform: translate(-240px, 5px);
+}
+
+
+
+
+
+.notification.onPage>section:nth-child(2)>p:last-child,
+.notification.onPage>section:nth-child(2)>p:first-child{
+  /* padding: 2% 1% 1% 1%; */
+  /* padding: 4% 3% 3% 3%; */
+  /* padding: 5% 3% 3% 3%; */
+  min-width: 200px;
+  /* border: solid pink; */
+}
+
+.notification.onPage>section:nth-child(2)>p:first-child{
+  transform: translateY(10px);
+}
+
+.notification.onPage>section:first-child{
+  padding: 1.8% 1% 1% 1%;
+  /* border: solid pink; */
+  /* padding: 4.5%; */
+}
+
+
+
+
+@media(min-width: 1025px){
+  .notificationsPageContainer {
+    max-width: 580px;
+  }
+}
+
+
+
+
+@media (max-width: 1024px){
+  .notificationsSec.onPage {
+    /* padding-bottom: 70px; */
+  }
+
+  
+
+
+  .notificationsPageContainer{
+    padding-bottom: 48px;
+  }
+
+  .notificationsPage{
+    padding: 0px;
+  }
+
+  .notificationsPageContainer{
+    width: 100vw;
+    height: 100%;
+  }
+}
+
+.notification > section:nth-child(2) > p:last-child {
+  font-weight: 100;
+  /* color: rgb(128, 128, 128, .6) */
+  color: rgb(211, 211, 211, .4);
+}
+
+@media (max-width: 576px){
+  .notification.onPage > section:nth-child(2) > p{
+    font-size: 12px !important;
+  }
+}

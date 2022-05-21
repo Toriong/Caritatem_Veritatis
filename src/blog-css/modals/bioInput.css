@@ -1,0 +1,206 @@
+
+/* fileName: bioInput */
+
+:root {
+  --backgroundColorModal: #2d2e30;
+  --textColor: #000000;
+  --borderColor: 0.8px solid #c0c0c0;
+  --linkColor: #add8e6;
+  --textColor: #ffffff;
+}
+
+.bioSectionAndSocialMedia {
+  overflow-y: auto;
+  position: relative;
+  max-height: 80vh;
+  max-width: 595.594px;
+}
+
+.bioSectionAndSocialMedia,
+.bioSection {
+  margin: auto;
+}
+
+.bioSectionAndSocialMedia{
+  min-height: 578.398px;
+}
+
+
+.bioSectionAndSocialMedia > h1:first-of-type {
+  position: absolute;
+  top: 0;
+  /* margin-bottom: 3em; */
+}
+
+.bioSection h1 {
+  font-style: italic;
+}
+
+#bioInput {
+  margin-top: 5%;
+  padding: 0.5em 0.5em 0em 0.5em;
+  height: 197.25px;
+  max-width: 576px;
+}
+
+.bioSection textarea {
+  border-radius: 15px;
+  width: 40vw;
+  height: 25vh;
+  font-size: 1.1em;
+}
+
+.socialMediaContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* width: 120%; */
+  /* border: solid 2px pink; */
+  height: fit-content;
+  margin: 5% 0px 0px 0px;
+  padding: 8px;
+  min-width: 280px;
+}
+
+.socialMediaContainer h1 {
+  font-style: italic;
+}
+
+.socialMediaTable {
+  border-collapse: collapse;
+  
+}
+
+.bioSectionAndSocialMedia thead {
+  border-radius: 2vh;
+}
+
+.socialMediaHeader th {
+  text-align: left;
+}
+
+.socialMediaTable {
+  margin: 3% 0px 0px 0px;
+}
+
+.socialMediaTable thead {
+  border-bottom: var(--borderColor);
+}
+
+.socialMediaOptionsRow {
+  border: none;
+  /* border-bottom: var(--borderColor); */
+  border-bottom: solid grey .01px;
+  /* height: 6vh; */
+  height: 46.9766px;
+}
+
+#selectSocialMedia {
+  height: 20px;
+  width: 80%;
+}
+.socialMediaTable tbody {
+  margin-top: 3%;
+}
+
+.socialMediaTable select {
+  color: var(--textColor);
+  background: none;
+  border: none;
+  width: 100%;
+  margin: 0px 2% 0px 2%;
+  outline: none;
+}
+
+.socialMediaTable input {
+  height: 23.4844px;
+  width: 75%;
+  padding-left: 0.3em;
+  border-radius: 3px;
+border: var(--borderColor);
+  font-size: 0.9em;
+}
+
+.socialMediaTable td{
+  height: 46.9766px;
+}
+
+.socialMediaTable button {
+  margin: 10% 0px 5% 0px;
+  width: 100%;
+  height: 31.3125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 3.285px;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#addInputBtn {
+  margin-top: 5.85156px;
+}
+
+.bioSectionAndSocialMedia-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutYouTitleContainer {
+  width: 100%;
+  height: 43.375px;
+  display: flex;
+  justify-content: left;
+  place-items: center;
+  /* padding-left: 195px; */
+  padding-left: 100px;
+}
+
+.socialMediaHeader th{
+  padding-bottom: 5px;
+}
+
+.bioSection p{
+padding: 0px 5px 0px 5px 
+}
+
+
+@media (min-width: 1200px){
+
+}
+
+
+
+@media (max-width: 767px){
+  .aboutYouTitleContainer {
+    padding-left: 0px;
+    justify-content: center;
+  }
+
+  .bioSection{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    flex-direction: column;
+  }
+
+  #bioInput{
+    width: 90%;
+  }
+}
+
+@media (max-width: 425px){
+  .socialMediaTable select{
+    font-size: 10px;
+  }
+
+  .socialMediaHeader th{
+    font-size: 13px;
+  }
+}
+

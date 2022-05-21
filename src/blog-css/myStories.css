@@ -1,0 +1,494 @@
+/* GOAL: make the myStories page have 100vw width, have the width be responsive according to the viewPort*/
+
+
+.myStoriesContainer {
+  /* min-height: 120vh; */
+  height: fit-content;
+  width: 100vw;
+  background-color: var(--backgroundColor);
+  overflow: auto;
+  /* height: 100vh; */
+  min-height: 100vh;
+  padding-bottom: 300px;
+  /* padding: 10vh 0vh 5vh 20vh; */
+}
+
+
+.myStoriesContainer > div{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  width: 100vw;
+  /* height: 100vh;; */
+  padding-top: 50px;
+  min-width: 236px;
+  max-width: 2560px;
+}
+
+.myStoriesContainer section:nth-child(1) {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1224px;
+  /* border: solid 2px pink; */
+}
+
+.myStoriesContainer section:nth-child(1) div:nth-child(1) h1 {
+  color: var(--textColor);
+  font-size: 46.995px;
+}
+
+.myStoriesContainer section:nth-child(1) div:nth-child(2) {
+  display: grid;
+  place-items: center;
+  /* padding-top: 19.2px; */
+}
+
+.myStoriesContainer section:nth-child(1) div:nth-child(2) button {
+  border-style: none;
+  /* width: 15vh; */
+  width: 10.760069444444444vw;
+  height: 44.2422px;
+  border-radius: 96px;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
+  /* padding: 1vh; */ 
+  /* padding-top: 1.9vh; */
+  /* padding-bottom: 4vh; */
+  padding-top: 13.737px;
+  padding-right:7.23px; 
+  padding-left:7.23px; 
+  padding-bottom: 28.92px;
+  max-width: 155px;
+}
+
+/* the drafts and publish posts navbar */
+
+.draftAndPublishedOptionsSec {
+  /* display: flex; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 39.45px;
+  width: 85%;
+  max-width: 1224px;
+  /* height: 7vh; */
+  height: 58px;
+  border-bottom: rgb(230, 230, 230) solid 0.8px;
+  margin-bottom: 7.89px;
+}
+
+.draftAndPublishedOptions {
+  padding-top: 28.92px;
+}
+
+.draftAndPublishedOptions button {
+  bottom: 2.169px;
+}
+
+.option {
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+}
+
+.option.selected {
+  border-bottom-style: solid;
+  border-bottom: rgba(117, 117, 117, 1) solid 2px;
+  outline-color: rgba(0, 0, 0, 0.8);
+}
+
+#published {
+  margin-left: 72.3px;
+}
+
+.sortOptionsContainer {
+  border-style: none;
+  /* width: 8.21875vw; */
+  width: 10.760069444444444vw;
+  /* height: 5vh; */
+  height: 44.2422px;
+  /* height: px; */
+  border-radius: 39.45px;
+  background: var(--backgroundColor);
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  max-width: 155px;
+  /* padding: 1vh; */
+  /* padding-top: 1.9vh; */
+  /* padding-bottom: 4vh; */
+  /* border: solid 2px pink; */
+  /* padding: 19.627px 10.33px 41.32px 10.33px; */
+
+}
+
+.sortOptionsContainer > div{
+  position: relative;
+}
+
+.sortOptionsContainer button span,
+.sortOptionsContainer button {
+  display: flex;
+  color: #ffffff;
+}
+
+.sortOptionsContainer button span,
+.sortOptions button {
+  display: grid;
+  place-items: center;
+}
+
+.myStoriesContainer section:nth-child(1) div:nth-child(2) button, 
+.sortOptionsContainer{
+  min-width: 100.922px;
+}
+
+
+.sortOptions {
+  z-index: 1;
+  width: 10vw;
+  /* height: 20vh; */
+  height: 157.797px;
+  background: var(--backgroundColor);
+  border: var(--borderColor);
+  transform: translate(-50%, 5%);
+  box-shadow: var(--boxShadow);
+  position: absolute;
+  max-width: 144px;
+  min-width: 84.3984px;
+}
+
+.sortOptionsContainer > button > span:nth-child(2){
+  transform: translate(5px, 2px);
+}
+
+
+.sortOptions button:first-child {
+  border-bottom: var(--borderColor);
+}
+
+.sortOptions button {
+  width: 100%;
+  height: 50%;
+}
+
+.sortOptions button:hover {
+  cursor: pointer;
+  background: lightblue;
+}
+
+/* end of the drafts and publish posts navbar */
+
+/* the display of user's drafts */
+.roughDraftsListContainer {
+  width: 85%;
+  margin-top: 0;
+  position: relative;
+  height: fit-content;
+  max-width: 1224px;
+}
+
+.draftText {
+  margin-top: 10vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.roughDraftsContainer {
+  border-bottom: 0.8px solid rgba(191, 191, 191, 0.4);
+  /* height: 10vh; */
+  height: 103.297px;
+  padding: 10.33px 0px 0px 0px;
+  position: relative;;
+}
+
+.roughDraftsContainer h1 {
+  /* font-size: 2vh; */
+  /* white-space: nowrap; */
+  font-size: 20.66px;
+  color: white;
+  font-weight: bold;
+}
+
+.draftInfoContainer {
+  /* margin-top: 3.5vh; */
+  /* font-size: 1.7vh; */
+  /* margin-bottom: 1vh; */
+  font-size: 17.561px;
+  margin: 36.155px 0px 10.33px 0px;
+  width: fit-content;
+  display: flex;
+  position: absolute;
+  bottom: 2px;
+}
+
+.draftInfoContainer > *{
+  font-size: 17.561px;
+}
+
+.draftInfoContainer > div {
+  display: grid;
+  place-items: center;
+}
+
+.editDeleteOptionsContainer {
+
+}
+
+.roughDraftsContainer span div:last-child svg {
+  cursor: pointer;
+}
+
+/* have the modal be position without using 'position' */
+.editDeleteOptionsModal {
+  min-width: 102.5px;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: var(--boxShadow);
+  width: 10vw;
+  padding: 0.3em;
+  border-radius: 0.3em;
+  /* margin-top: 10em; */
+  transform: translate(0%, 52px);
+  z-index: 60;
+  max-width:144px;
+}
+
+.editDeleteOptionsModal button:last-child {
+  color: red;
+}
+
+.editDeleteOptionsModal button {
+  /* height: 100%; */
+  border-radius: 0.3em;
+  color: #757575;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border-style: none;
+  /* height: 5vh; */
+  height: 39.4453px;
+}
+
+.editDeleteOptionsModal button:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.editDeleteOptionsModal button:not(:last-child):hover {
+  color: white;
+}
+
+/* delete draft modal */
+
+.modal.delete{
+  height: 45.685931558935366vh;
+  max-height: 357px;
+  width: 55vw;
+  max-width: 656.5px;
+  overflow: auto;
+  border-radius: 8px;;
+}
+
+.modal.delete > div{
+
+}
+
+
+.modal.delete span {
+  color: #000000;
+}
+
+.modal.delete > div{
+/* max-height: 1000px; */
+/* min-height: 600px; */
+min-width: 201px;
+height: 100%;
+display: grid;
+place-items: center;
+/* height: fit-content; */
+/* border: solid pink; */
+}
+
+.modal.delete > div > div:nth-child(2) span:first-child {
+  font-size: 32px;
+}
+
+.modal.delete > div > div:nth-child(2) {
+  margin-bottom: 84.72px;
+  display: grid;
+  place-items: center;
+}
+
+.modal.delete > div > div:nth-child(2) span:last-child {
+  margin-top: 16px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.modal.delete > div > div:last-child {
+  /* position: absolute; */
+  /* width: 70vh; */
+  height: 60px;
+  /* width: 565px; */
+  /* border: solid pink; */
+  /* height: 80.3984px; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32.73px;
+  
+}
+
+.modal.delete > div > div:last-child > * {
+  margin-right: 12px
+}
+
+.modal.delete > div > div:last-child button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 15.78px;
+  /* height: 6vh; */
+  height: 48.2344px;
+  /* width: 10vh; */
+  /* width: 12vw; */
+  min-width: 78.3594px;
+  cursor: pointer;
+}
+
+.modal.delete > div > div:last-child button:first-child {
+  background: #ffffff;
+  border: rgba(0, 0, 0, 0.6) solid 0.8px;
+}
+
+.modal.delete > div > div:last-child button:first-child:hover {
+  border: rgba(0, 0, 0, 0.99) solid 0.8px;
+}
+
+.modal.delete > div > div:last-child button:last-child {
+  background-color: rgba(255, 0, 0, 0.7);
+  color: #ffffff;
+}
+
+.modal.delete > div > div:last-child button:last-child:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.modal.delete > div > div:first-child {
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+
+.modal.delete > div > div:first-child svg {
+  color: rgba(117, 117, 117, 1);
+  font-size: 23.67px;
+}
+
+.writeStoryAndSortOptionContainerOnMobile{
+  display: none !important;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+  .roughDraftsContainer h1{
+    font-size: medium;
+  }
+}
+
+@media (max-width: 767px){
+  .roughDraftsContainer h1{
+    font-size: small;
+    /* min-width: 285.594px; */
+  }
+
+  .draftInfoContainer > *{
+    font-size: x-small;
+  }
+
+  .draftInfoContainer{
+    margin: 30px 0px 10px 0px;
+    /* border: solid pink; */
+  }
+
+  .modal.delete{
+    border-radius: 0%;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    overflow-y: scroll;
+    z-index: 10000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal.delete > div{
+    /* min-width: 280px; */
+    max-height: 600px;
+  }
+
+  .modal.delete>div>div:first-child svg{
+    display: none;
+  }
+}
+
+@media (max-width: 576px){
+.sortOptionsContainer{
+  padding: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+  .sortOptionsMainContainer.notOnMobile,
+  .writeStoryBtnContainer{
+    display: none !important;
+  }
+
+  .writeStoryAndSortOptionContainerOnMobile{
+display: flex !important;
+margin-top: 15px;
+  }
+
+  .writeStoryAndSortOptionContainerOnMobile{
+    width: 85%;
+  }
+
+  .sortOptionsContainer{
+    width: 97.9141px;
+    height: 44.2422px;
+    margin-left: 10px;
+  }
+
+.writeStoryAndSortOptionContainerOnMobile > div:first-child button{
+border-style: none;
+width: 97.9141px;
+height: 44.2422px;
+border-radius: 39.45px;
+background: var(--backgroundColor);
+border: #c0c0c0 0.8px solid;
+color: #ffffff;
+}
+
+.draftAndPublishedOptionsSec{
+  margin-top: 3px;
+}
+}
+
+@media (max-width: 425px){
+  .draftInfoContainer > *{
+    font-size: x-small;
+  }
+}
+
+
+

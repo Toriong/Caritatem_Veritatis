@@ -1,0 +1,410 @@
+/* fileName: notification */
+
+.notification {
+  display: flex;
+  border-radius: 0.5em;
+  /* padding: 2%; */
+  position: relative;
+  min-height: 110px;
+  height: 12vh;
+  max-width: 548px;
+  min-height: 120px;
+  max-height: 140px;
+}
+
+.notification.onPage{
+  padding: 0%;
+}
+
+/* font-sizes for the display of the navbar */
+.notification.blogNavbar > section:nth-child(2) > p {
+  font-size: clamp(0.86em, 0.9em, 1.5em);
+}
+
+.notification > section:nth-child(2) > p {
+  font-weight: 330;
+  font-size: 0.7em;
+}
+
+.notification.isOnUserHomePage > section:nth-child(2) > p {
+  font-size: 0.9em;
+}
+
+.notification.isOnWritePostPage > section:nth-child(2) > p {
+  font-size: 0.9em;
+}
+
+/* end of font-sizes display */
+
+.notification:hover {
+  cursor: pointer;
+  background-color: rgb(32, 33, 36);
+}
+
+.notification:not(:first-child) {
+  margin-top: 0.8em;
+}
+
+.notification > section:first-child img {
+  width: 4vw;
+  height: 6vh;
+  min-width: 60px;
+  min-height: 60px;
+  max-height: 83px;
+  max-width: 65px;
+  border-radius: 50%;
+}
+
+.notification > section:nth-child(2) {
+  position: relative;
+  /* min-height: 9.3vh; */
+  padding-left: 2%;
+}
+
+.notification > section:nth-child(2) > p:first-child {
+  /* margin-top: 0.2em; */
+  /* padding-bottom: 1.8em; */
+}
+
+.notification > section:nth-child(2) > p:first-child > span {
+  font-weight: 90;
+}
+
+.notification > section:nth-child(2) > p:last-child {
+  margin-top: 0.5em;
+  /* margin-bottom: 0.8em; */
+}
+
+.notification > section:nth-child(2) > p:last-child {
+  position: absolute;
+  bottom: 0;
+}
+
+.notification > section:nth-child(2)>p:first-child{
+  /* padding: 2% 0 1% 3%;  */
+  padding: 2% 0 1%;
+   
+}
+
+.notification>section:nth-child(2)>p:last-child{
+  padding: 2% 0 1% 0%;
+}
+
+
+.notification.blogNavbar > section:nth-child(2) > p:first-child{
+  margin-left: 0.3em;
+}
+
+.notification > div:last-of-type svg {
+  font-size: 1.2em;
+}
+
+.notification > div:last-of-type {
+  color: rgb(24, 118, 242);
+  position: absolute;
+  right: 0em;
+  height: 100%;
+}
+
+.notification > div:last-of-type{
+display: flex;
+justify-content: center;
+place-items: center;
+}
+
+.notification.blogNavbar > div:last-of-type{
+  padding-top: 2px;
+}
+
+
+
+.notification.onPage > div:last-of-type{
+display: flex;
+justify-content: center;
+place-items: center;
+
+}
+
+
+.buttonNotifyContainer {
+  position: absolute;
+  right: 1em;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.buttonNotifyContainer.onPage{
+  padding-top: 0px;;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.buttonNotifyContainer.blogNavBar{
+  margin-right: 4px;
+}
+
+
+
+
+.buttonNotifyContainer > button svg {
+  font-size: 1.3em;
+}
+
+.buttonNotifyContainer > button {
+  border: none;
+  border-style: none;
+  height: 50.4px;
+  width: 50.4px;
+  border-radius: 50%;
+  /* z-index: 50000000; */
+  background-color: gray;
+}
+
+.buttonNotifyContainer.blogNavBar > button {
+  margin-top: 0.35em;
+}
+
+.buttonNotifyContainer > div {
+  position: relative;
+}
+
+/* on navbar on home page */
+.notificationsOpts {
+  background-color: white;
+  border-radius: 0.3em;
+  position: absolute;
+  /* width: 17vw; */
+  width: 220px;
+  /* width: fit-content; */
+  height: 100px;
+  /* height: 15vh; */
+  transform: translate(10px, -4.5px);
+  display: flex;
+  flex-direction: column;
+  padding: 0.2em;
+}
+
+.notificationsOpts button svg {
+  font-size: 1.3em;
+  transform: translateY(0.2em);
+}
+
+.notificationsOpts button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.notificationsOpts button:first-of-type {
+  padding-bottom: 0.3em;
+}
+
+.notificationsOpts button {
+  width: 100%;
+  height: 50%;
+  border-style: none;
+  background-color: white;
+  text-align: left;
+  font-size: 0.8em;
+  border-top-right-radius: 0.3em;
+  border-top-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+/* on blog navbar, onUserHomePage */
+.notificationsOpts.isOnWritePage button,
+.notificationsOpts.onUserHomePage button,
+.notificationsOpts.blogNavbar button {
+  font-size: 1em;
+}
+
+.notificationsOpts.isOnWritePage {
+  /* transform: translate(-14.3em, -1.7em); */
+  transform: translate(-210px, -40px);
+}
+
+.notificationsOpts{
+  transform: translate(-230px, 10px);
+}
+
+/* end of 'on blog navbar', 'onUserHomePage' */
+
+.buttonNotifyContainer.onPage > button{
+
+}
+
+.notification.onPage {
+  min-width: 267px;
+}
+
+.notification.isOnUserHomePage >section:first-child,
+.notification.blogNavbar > section:first-child{
+  /* padding: 1.3% 1% 1% 1%; */
+}
+
+.notification > section:first-child{
+  padding: 1.3% 1% 1% 1%;
+}
+
+.notification.blogNavbar>section:nth-child(2)>p{
+  /* padding: 1.3%; */
+}
+
+.buttonNotifyContainer.blogNavBar{
+  /* border: solid pink; */
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+
+@media(min-width: 1200px){
+
+}
+
+
+/* tablets and mobile devices */
+@media (max-width: 1024px){
+.notification.onPage{
+  max-width: 670px;
+  
+}
+
+.buttonNotifyContainer{
+  /* padding-top: 1em; */
+  /* display: grid; */
+  /* place-items: center; */
+  padding-top: 10.5px;
+}
+
+
+}
+
+@media (max-width: 576px){
+  .notification>section:nth-child(2)>p:first-child{
+    padding: 8px 4px 2px 0px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .notification {
+    max-height: 140px;
+  }
+
+  .notification > section:first-child img {
+    min-width: 50px;
+    min-height: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .notification.blogNavbar > section:nth-child(2) > p {
+    font-size: 1.25em;
+  }
+
+  .notification > section:nth-child(2) {
+    padding: 3.14px 3.14px 9.43px 9.43px;
+    border-radius: 0px;
+    max-height: 120px;
+  }
+
+  .notification.notOnPage:not(:last-child) {
+    border-bottom: solid 1px grey;
+    border-radius: 0px;
+  }
+}
+
+/* for large devices, desktops */
+@media (min-width: 992px) and (max-width: 1199px) and (min-height: 801px) {
+  .notification > section:first-child img {
+    width: 60px;
+    height: 64.8px;
+  }
+
+  .notification.blogNavbar > section:nth-child(2) > p {
+    font-size: 1.25em;
+  }
+
+  .notification > section:nth-child(2) {
+    padding: 1% 1% 7% 3%;
+    border-radius: 0px;
+  }
+
+  .notification.blogNavbar {
+    min-height: 150px;
+    max-height: 150px;
+  }
+
+  .notification > section:nth-child(2) > p:last-child {
+    bottom: 0.3em;
+  }
+
+  .buttonNotifyContainer > button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* for extra large devices */
+@media (min-width: 1200px) and (max-width: 1919px) and (min-height: 801px) {
+  .notification.blogNavbar > section:nth-child(2) > p {
+    font-size: 1.4em;
+  }
+
+  .notification img {
+    width: 73px;
+    height: 73px;
+  }
+
+  .notification.blogNavbar > section:nth-child(2) > p {
+    font-size: 1.4em;
+  }
+
+  .notification > section:nth-child(2) {
+    padding: 0% 1% 0% 3%;
+    padding-left: 3%;
+  }
+
+  .notification.notOnPage,
+  .notification.blogNavbar {
+    min-height: 150px;
+    pointer-events: none;
+  }
+
+  .notification > section:nth-child(2) > p:last-child {
+    bottom: 4px;
+  }
+}
+
+@media (min-width: 1920px) and (min-height: 801px) {
+  .notification img {
+    min-width: 73px;
+    min-height: 73px;
+  }
+
+  .notification.blogNavbar > section:nth-child(2) > p {
+    font-size: 1.4em;
+  }
+
+  .notification.blogNavbar > section:nth-child(2) {
+    padding: 0% 1% 0% 3%;
+    padding-left: 3%;
+  }
+
+  .notification {
+    min-height: 140px;
+  }
+
+  .notification > section:nth-child(2) > p:last-child {
+    bottom: 4px;
+  }
+}
+
+@media (min-width: 1920px) and (max-height: 800px) {
+  .notification.blogNavbar > section:nth-child(2) > p {
+    font-size: 1.15em;
+  }
+}

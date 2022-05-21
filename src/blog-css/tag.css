@@ -1,0 +1,181 @@
+.tag {
+  /* margin: 3% 0px 0px 0px; */
+  display: inline-block;
+  margin: 2% 2%;
+  color: var(--textColor);
+  border: var(--borderColor);
+  border-radius: 1em;
+  padding: 3%;
+  /* border: solid 2px pink; */
+  width: fit-content;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.tag:hover{
+  text-decoration: underline;
+}
+
+.tag.readingLists {
+  padding: 2.2%;
+}
+
+.tag.prevVersion {
+  padding: 1.5%;
+}
+
+.tag.aboutUser:hover {
+  text-decoration: underline;
+}
+
+.tag.selection h3 {
+  font-weight: 525;
+  margin-bottom: 0.3em;
+}
+
+.tag.selection {
+  /* display: block; */
+  margin-top: 2%;
+  margin-right: 0;
+  padding: 4%;
+  font-size: 1em;
+  width: 25vw;
+  font-weight: 200;
+  min-width: 252px;
+  max-width: 360px;
+}
+
+.tag.selection.selected {
+  background-color: #d3d3d3;
+}
+
+.tag.selection.selected div,
+.tag.selection.selected h3 {
+  color: black;
+}
+
+.tag.aboutUser {
+  padding: 3.5%;
+  font-size: 0.8em;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  /* max-height: 50px; */
+}
+
+.tag.mainFeed {
+  padding: 0.5em;
+  margin-top: 0.3em;
+  margin-bottom: 5em;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.tag.userProfile {
+  padding: 0.35em;
+  cursor: pointer;
+}
+
+.tag.post:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.tag.post {
+  /* padding: 2%; */
+  padding: 10.8828px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.tag.onUserProfilePage {
+  font-size: 0.6em;
+  padding: 3%;
+  margin: 0;
+}
+
+.tagPublishDraft > span:first-child:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+@media (min-width: 1200px){
+  .tag.aboutUser{
+    padding: 2%;
+  }
+}
+
+
+@media (max-width: 767px) {
+.tag.selection{
+  width: 90vw;
+  max-width: 567px;
+}
+
+
+
+.tag.selection > div{
+  text-align: center;
+}
+
+  .tag {
+    font-weight: 200;
+    min-width: 70px;
+  }
+
+  .tag.aboutUser{
+    min-width: fit-content;
+  }
+
+  .tag.post {
+    padding: 1.3%;
+    font-size: x-small;
+  }
+
+  .tag.onUserProfilePage {
+    /* padding: 2%; */
+  padding: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .tag.post{
+    font-size: smaller;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+  .tag.post {
+    font-size: x-small;
+  }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .tag.post {
+    /* padding: 3%; */
+    /* padding: 10.8828px; */
+  }
+}
+
+@media (max-width: 576px){
+  .tag.onUserProfilePage{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 280px){
+  .postTagOnMobile>li{
+    white-space: nowrap;
+    font-size: 9px;
+  }
+}
+
+

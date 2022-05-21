@@ -1,0 +1,16 @@
+:root {
+  --backgroundColor: rgb(32, 33, 36);
+  --backgroundColorModal: #2d2e30;
+  --textColor: #ffffff;
+  --borderColor: 0.8px solid #c0c0c0;
+  --linkColor: #0000ff;
+  --boxShadow: 2px 2px 5px #2d2e30;
+}
+
+.inputQuotation {
+  color: var(--textColor);
+  outline: none !important;
+  border-style: none;
+  background: none;
+  margin-left: 2.7%;
+}

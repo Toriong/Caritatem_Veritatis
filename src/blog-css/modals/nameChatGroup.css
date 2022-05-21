@@ -1,0 +1,106 @@
+/* fileName: nameChatGroup */
+
+.modal.generic.nameChatGroup > section {
+  width: 100%;
+  /* border: solid; */
+  height: 30%;
+  min-width: 252px;
+}
+
+.modal.generic.nameChatGroup>section{
+min-height: 97.6016px;
+}
+
+.modal.generic.nameChatGroup h1 {
+  font-size: x-large;
+}
+
+.modal.generic.nameChatGroup > form > section:first-child input {
+  border-bottom: solid 0.01px lightgrey;
+  /* width: 30vw; */
+  width: 361px;
+  font-size: 1.2em;
+  padding: 0 0 0.05em 0.1em;
+}
+
+.modal.generic.nameChatGroup > section,
+.modal.generic.nameChatGroup > form > section:not(:last-child) {
+  display: grid;
+  place-items: center;
+}
+
+.modal.generic.nameChatGroup > form {
+  height: 70%;
+  min-height: 227.734px;
+  min-width: 252px;
+  /* min-width: 382.5px; */
+  /* border: solid pink; */
+}
+
+.modal.generic.nameChatGroup > form > section {
+  width: 100%;
+  height: 50%;
+}
+
+.modal.generic.nameChatGroup > form > section:last-child {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.modal.generic.nameChatGroup > form > section:last-child button:first-child {
+  background-color: red;
+  margin-right: 0.5em;
+}
+
+.modal.generic.nameChatGroup > form > section:last-child button:last-child {
+  background-color: var(--backgroundColor);
+  margin-left: 0.5em;
+}
+
+.modal.generic.nameChatGroup > form > section:last-child button {
+  /* width: 10vw; */
+  width: 121px;
+  /* height: 5vh; */
+  height: 36px;
+  color: white;
+  font-weight: 250;
+  border-radius: 0.5em;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .modal.generic.nameChatGroup {
+    width: 500px;
+    /* height: 400px; */
+    height: 80vh;
+    max-height: 362px;
+  }
+
+  .modal.generic.nameChatGroup > form > section:last-child button {
+    width: 100px;
+    font-size: 0.7em;
+    height: 35px;
+  }
+}
+
+
+@media (max-width: 767px){
+  .modal.generic.nameChatGroup>form>section:first-child input{
+    width: 60vw;
+    min-width: 346.195px;
+    max-width: 373.797px;
+  }
+}
+
+
+@media (max-width: 425px){
+  .modal.generic.nameChatGroup>form>section:first-child input {
+    width: 60vw;
+    min-width: 230px;
+  }
+
+  .modal.generic.nameChatGroup>form>section:last-child button{
+    width: 85px;
+    font-size: x-small;
+  }
+}

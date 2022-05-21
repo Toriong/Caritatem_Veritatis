@@ -1,0 +1,924 @@
+/* fileName: editUserInfo */
+
+
+.modal.selectTags,
+.modal.socialMediaLinks,
+.modal.uploadPhoto,
+.modal.editUser {
+  background-color: var(--backgroundColorModal);
+  border-radius: 2%;
+  z-index: 100003;
+}
+
+.modal.uploadPhoto,
+.modal.editUser {
+  /* min-width: 60vw; */
+  width: fit-content;
+  height: 98vh;
+}
+
+.modal.selectTags,
+.modal.socialMediaLinks {
+  width: 63vw;
+}
+
+
+
+.modal.socialMediaLinks{
+  /* height: 50vh; */
+  height: 65vh;
+}
+
+
+.modal.editUser header{
+  width: 100%;
+  /* border: solid pink; */
+  border-bottom: solid grey 1px;
+  position: relative;
+  height: 35.5px;
+  min-width: 280px;
+}
+
+.modal.editUser h1{
+  white-space: nowrap;
+  position: absolute;
+  left: 40px;
+  top: 3px;
+  /* text-align: left; */
+  /* padding-left: 20px; */
+}
+
+
+.modal.socialMediaLinks > section:first-child{
+  position: relative;
+  height: 40px;
+  padding-top: 5px;
+}
+
+.modal.socialMediaLinks>section:first-child > h1{
+  position: absolute;
+  white-space: nowrap;
+  left: 15px;
+}
+
+
+.modal.socialMediaLinks section:nth-last-of-type(2) {
+  padding-top: 1em;
+  position: relative;
+  height: 50px;
+}
+
+.modal.socialMediaLinks section:nth-last-of-type(2) button{
+  position: absolute;
+  left: 5px;
+  bottom: 0px;
+}
+
+
+.modal.socialMediaLinks section:last-of-type button:first-child {
+  background: #ff0000;
+  border: none;
+}
+
+.modal.socialMediaLinks section:last-of-type button:last-of-type {
+  margin-left: 1em;
+  background: rgb(32, 33, 36, 0.2);
+}
+
+.modal.socialMediaLinks section:last-of-type div {
+  display: flex;
+}
+
+.modal.socialMediaLinks form{
+  padding: 1em 3em 1em 3em;
+  min-width: 280px;
+}
+
+.saveOrCancelChangesContainer {
+  padding-left: 3.5em;
+  /* position: absolute; */
+  z-index: 100;
+  margin-top: 10px;
+  width: 80%;
+  height: 10%;
+  display: grid;
+  place-items: center;
+}
+
+
+.socialMediaLink {
+  margin-top: 1.3em;
+  display: flex;
+}
+
+.modal.socialMediaLinks form > span {
+  margin-top: 1em;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.socialMediaLink{
+  display: flex;;
+  justify-content: space-around;
+  min-width: 214px;
+  max-width: 984px;
+}
+
+.socialMediaLink > div:nth-child(3) {
+  /* margin-left: 3.3em; */
+}
+
+.socialMediaLink > div:nth-child(2) {
+  /* margin-left: 2.5em; */
+}
+
+.socialMediaLink > div:nth-child(3) input {
+  width: 22vw;
+  max-width: 316.797px;
+}
+
+.socialMediaLink > div:nth-child(3),
+.socialMediaLink > div:nth-child(2) {
+  padding-top: 0.3em;
+}
+
+.socialMediaLink div:first-child option {
+  outline: none;
+}
+
+.socialMediaLink div:first-child select,
+.modal.socialMediaLinks input {
+  font-size: 1.1em;
+}
+
+.modal.socialMediaLinks input:first-of-type{
+  max-width: 195.297px
+}
+
+.modal.socialMediaLinks input:last-of-type{
+  max-width: 316.797px;
+
+}
+
+
+
+.socialMediaLink div:first-child select {
+  background: transparent;
+  width: 15vw;
+  border: none;
+  border-bottom: rgba(253, 253, 253, 0.15) 1px solid;
+  color: white;
+  font-weight: 200;
+  outline: none;
+  min-width: 113.914px;
+  max-width: 216px;
+}
+
+.socialMediaLink div:first-child {
+  /* width: 80%; */
+  background-position: 80% center;
+}
+
+.socialMediaLink div:last-child {
+  /* margin-left: 2em; */
+}
+
+.modal.uploadPhoto section {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  max-height: 800px;
+}
+
+.modal.uploadPhoto section h5 {
+  font-size: 1.2em;
+  width: 100%;
+  text-align: center;
+  min-height: 22.5px;
+}
+
+.modal.uploadPhoto section > div:first-of-type input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.modal.uploadPhoto section > div:first-of-type label {
+  margin-top: 2em;
+  font-size: 0.8em;
+  width: 100%;
+  text-align: center;
+}
+
+.modal.uploadPhoto section > div:first-of-type:hover {
+  border: dotted grey 1px;
+
+}
+
+.modal.uploadPhoto section > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 70%;
+  height: 18vh;
+  border: solid grey 1px;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  min-width: 267.5px;
+}
+
+.modal.uploadPhoto section > div:first-of-type > div:last-of-type {
+  height: 20%;
+  display: grid;
+  place-items: center;
+  padding-bottom: 3em;
+}
+
+.modal.uploadPhoto section > div:first-of-type > div:last-of-type {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.modal.uploadPhoto section > div:first-of-type img {
+  width: 23vw;
+  height: 302.398px;
+  min-width: 176.406px;
+  border-radius: 3%;
+  max-width: 276px;
+}
+
+.modal.uploadPhoto section > div:nth-child(2) {
+  height: 95%;
+  margin-top: 1em;
+  margin-bottom: 1.8em;
+  min-height: 465.867px;
+}
+
+.modal.uploadPhoto section > div:last-child {
+  max-height: 70%;
+  margin-bottom: 2em;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.modal.uploadPhoto section > div:last-child div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal.uploadPhoto section > div:last-child button:last-child {
+  margin-left: 0.5em;
+}
+
+.modal.editUser h3 {
+  font-weight: 550;
+  color: white;
+  font-size: 1.1em;
+}
+
+
+
+.modal.editUser form > section:nth-child(3) > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal.editUser form > section:nth-child(3) > div span {
+  margin-top: 0.3em;
+  margin-left: 0.4em;
+  font-size: 0.65em;
+}
+
+.modal.editUser form > section:nth-child(2) {
+  margin-top: 0.8em;
+}
+
+.modal.editUser form > section:not(:first-child, :last-child) {
+  padding: 0.4em 3em 0em 3em;
+  position: relative;
+  display: flex;
+}
+
+.modal.editUser form > section:not(:nth-child(-n + 3), :last-child) {
+  padding-bottom: 1em;
+}
+
+.modal.editUser form > section:not(:first-child) > div:nth-child(3) {
+  position: absolute;
+  right: 2em;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding-bottom: 0.7em;
+  display: flex;
+}
+
+.modal.editUser form > section:last-child {
+  display: grid;
+  place-items: center;
+  min-width: 280px;
+}
+
+.modal.editUser form{
+  /* padding-bottom: 16px; */
+}
+
+.modal.editUser form > section:last-child div {
+  display: flex;
+}
+
+.modal.editUser form > section:last-child {
+  /* border: solid pink; */
+}
+
+.modal.editUser form > section:last-child > div > button:last-child {
+  background: rgb(32, 33, 36, 0.2);
+}
+
+.modal.editUser form > section:last-child > div > button:first-child {
+  margin-right: 0.5em;
+}
+
+.modal.editUser form > section:last-child > div > button:last-child {
+  margin-left: 0.5em;
+}
+
+.modal.editUser form > section:last-child > div > button {
+  height: 5vh;
+}
+
+.modal.uploadPhoto
+  section
+  > div:last-child
+  > div:first-child
+  > button:last-child {
+  background: green;
+}
+
+.modal.socialMediaLinks section:nth-last-of-type(2) button{
+  white-space: nowrap;
+
+}
+
+.socialMediaLink div:last-child button,
+.modal.socialMediaLinks section:nth-last-of-type(2) button,
+.modal.socialMediaLinks section:last-of-type button,
+.modal.uploadPhoto section > div:last-child button,
+.modal.editUser form > section:not(:first-child) > div:nth-child(3) > button,
+.modal.editUser form > section:last-child > div > button {
+  width: 5vw;
+  border-radius: 0.8em;
+}
+
+.modal.selectTags section:nth-of-type(2) > div > button:last-child,
+.socialMediaLink div:last-child button,
+.modal.socialMediaLinks section:nth-last-of-type(2) button,
+.modal.socialMediaLinks section:last-of-type button,
+.modal.uploadPhoto section > div:last-child button,
+.modal.editUser form > section:not(:first-child) > div:nth-child(3) > button,
+.modal.editUser form > section:last-child > div > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border: #c0c0c0 0.8px solid;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.socialMediaLink div:last-child button,
+.modal.socialMediaLinks section:last-of-type button,
+.modal.uploadPhoto section > div:last-child button,
+.modal.editUser form > section:not(:first-child) > div:nth-child(3) > button {
+  height: 3vh;
+}
+
+.modal.socialMediaLinks section:nth-last-of-type(2) button{
+  height: 30.1484px;
+  max-width: 60px;
+}
+
+.modal.editUser form>section:not(:first-child)>div:nth-child(3)>button{
+  min-width: 36.6484px;
+}
+
+
+.modal.selectTags section:nth-of-type(2) > div > button:last-child,
+.modal.socialMediaLinks section:nth-last-of-type(2) button,
+.modal.socialMediaLinks section:last-of-type button,
+.modal.uploadPhoto section > div:last-child button,
+.modal.editUser
+  form
+  > section:not(:first-child)
+  > div:nth-child(3)
+  > button:last-child {
+  background: var(--backgroundColor);
+}
+
+.modal.socialMediaLinks section:last-of-type button {
+  height: 50.25px;
+  width: 8vw;
+  min-width: 55.1172px;
+  max-width: 96px;
+}
+
+.modal.selectTags section:nth-of-type(2) > div > button:first-child,
+.socialMediaLink div:last-child button,
+.modal.uploadPhoto
+  section
+  > div:nth-child(3)
+  > div:first-child
+  > button:first-child,
+.modal.editUser form > section:last-child > div > button:first-child {
+  color: #ffffff;
+  background: rgba(255, 0, 0);
+  border: none;
+}
+
+/* REFACTOR */
+.modal.selectTags section:nth-of-type(2) > div > button:first-child,
+.socialMediaLink div:last-child button,
+.modal.uploadPhoto
+  section
+  > div:nth-child(3)
+  > div:first-child
+  > button:first-child:hover,
+.modal.editUser form > section:last-child > div > button:first-child:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.modal.uploadPhoto section > div:last-child button {
+  width: 8vw;
+  /* height: 5vh; */
+  height: 50px;
+  margin-bottom: 2em;
+}
+
+.modal.editUser form > section:not(:first-child) h3 {
+  margin-bottom: 0.4em;
+}
+
+.modal.socialMediaLinks input,
+.modal.editUser form > section:not(:first-child) input {
+  outline: none;
+  all: unset;
+  border-bottom: rgba(253, 253, 253, 0.15) 1px solid;
+  font-weight: 200;
+  min-width: 154.555px;
+}
+
+.modal.editUser form > section:not(:first-child) textarea {
+  background: none;
+  color: white;
+  resize: none;
+  padding: 0.5em;
+  border: solid 0.5px rgba(211, 211, 211, 0.45);
+  min-width: 184px;
+  max-width: 567px;
+}
+
+.modal.editUser form > section:nth-child(3) > div > input:first-of-type {
+  /* height: 2.5vh; */
+  /* padding-left: 0.2em; */
+  /* padding-top: 0.1em; */
+  /* border: solid 2px pink; */
+}
+
+.modal.editUser form > section:not(:first-child) input {
+  padding-bottom: 0.2em;
+  margin-top: 0.5em;
+  width: 23vw;
+  max-width: 588px;
+}
+
+.modal.editUser form > section:nth-child(2) {
+  border-bottom: rgba(253, 253, 253, 0.15) 1px solid;
+  margin-bottom: 1em;
+}
+
+.modal.editUser form > section:nth-child(2) p {
+  width: 24vw;
+  max-width: 345.594px;
+}
+
+.modal.editUser form > section:nth-child(2) > div:nth-child(2) {
+  /* margin-left: 4em; */
+  margin-left: 64px;
+}
+
+.modal.editUser form > section:nth-child(2) > div:nth-child(3) {
+  padding-top: 1.4em;
+  display: block;
+  height: 75%;
+}
+
+.modal.editUser form > section:nth-child(2) > div:nth-child(3) > div div {
+  border-radius: 2%;
+}
+
+.modal.editUser
+  form
+  > section:nth-child(2)
+  > div:nth-child(3)
+  > div
+  div
+  button:hover {
+  background: rgba(191, 191, 191, 0.8);
+}
+
+.modal.editUser
+  form
+  > section:nth-child(2)
+  > div:nth-child(3)
+  > div
+  div
+  button {
+  background: rgba(191, 191, 191, 1);
+  height: 50%;
+  text-align: center;
+  width: 100%;
+  font-size: 0.7em;
+}
+
+.modal.editUser
+  form
+  > section:nth-child(2)
+  > div:nth-child(3)
+  > div
+  div
+  button:nth-child(2) {
+  border: none;
+}
+
+.modal.editUser
+  form
+  > section:nth-child(2)
+  > div:nth-child(3)
+  > div
+  div
+  button:last-child {
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
+
+.modal.editUser
+  form
+  > section:nth-child(2)
+  > div:nth-child(3)
+  > div
+  div
+  button:first-child {
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+.modal.editUser form > section:nth-child(2) > div:nth-child(3) > div div {
+  position: absolute;
+  /* height: 10vh; */
+  height: 108px;
+}
+
+.modal.editUser form > section:nth-child(2) > div:nth-child(3) > div {
+  position: relative;
+}
+
+.modal.editUser form > section:nth-child(2) img {
+  width: 10vw;
+  height: 129.594px;
+  max-width: 144px;
+  /* min-width: 57.5938px; */
+  min-width: 80px;
+  border-radius: 8%;
+}
+
+/* tags edit */
+.modal.selectTags {
+  height: 80vh;
+}
+
+.modal.selectTags h1,
+h3 {
+  color: #ffffff;
+}
+
+.modal.selectTags h1 {
+  width: 100%;
+  margin-bottom: 0.2em;
+  border-bottom: solid 0.5px rgba(211, 211, 211, 0.45);
+  padding: 0.5em 0em 0.5em 1em;
+  min-width: 280px;
+}
+
+.modal.selectTags section:first-of-type {
+  display: grid;
+  place-items: center;
+  min-height: 361.5px;
+  height: 50vh;
+  overflow-y: scroll;
+  min-width: 280px;
+  max-height: 1000px;
+}
+
+
+.modal.selectTags ul {
+  display: flex;
+  flex-direction: column;
+  min-width: 252px;
+}
+
+.modal.selectTags section:nth-of-type(2) {
+  display: grid;
+  place-items: center;
+  margin-top: 1em;
+  height: 150px;
+  min-width: 280px;
+  border-top: solid 0.5px rgba(211, 211, 211, 0.45);
+  padding-top: 1.3em;
+}
+
+.modal.selectTags section:nth-of-type(2) > div {
+  display: flex;
+}
+
+.modal.selectTags section:nth-of-type(2) > div > button:last-child {
+  margin-left: 0.5em;
+  background: rgb(32, 33, 36, 0.5);
+}
+
+.modal.selectTags section:nth-of-type(2) > div > button:first-child {
+  margin-right: 0.5em;
+}
+
+.modal.selectTags section:nth-of-type(2) > div > button {
+  width: 7vw;
+  height: 50.6094px;
+  border-radius: 1em;
+  max-width: 100.797px;
+}
+
+.modal.editUser form>section:not(:first-child)>div:nth-child(3)>button{
+  height: 30px;
+  min-width: 45px;
+  max-width: 128px;
+}
+
+.modal.editUser form>section:last-child>div>button{
+  height: 50px;
+  max-width: 128px;
+}
+
+.modal.editUser form>section:nth-child(2) p{
+  min-width: 180px;
+}
+
+.modal.editUser form>section:nth-child(2){
+  min-width: 305px
+}
+
+.modal.uploadPhoto p{
+  text-align: center;
+}
+
+
+.modal.socialMediaLinks > form > section:first-child{
+  width: 100%;
+}
+
+.socialMediaLink div:last-child button{
+  min-width: 37px;
+  height: 30px;
+  max-width: 60px;
+}
+
+.socialMediaLink>div:nth-child(3) input,
+.modal.socialMediaLinks input{
+  min-width: 195.297px;
+}
+
+.modal.selectedTags > form {
+  min-width: 280px;
+}
+
+
+@media (min-width: 1200px){
+  .modal.editUser form>section:last-child div{
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px){
+.modal.selectTags section:first-of-type{
+  max-height: 400px;
+}
+
+.modal.selectTags {
+  max-height: 640px;
+  max-width: 980px;
+}
+
+  .modal.editUser{
+    max-height: 779.875px;
+    max-width: 1296px;
+  }
+
+  .modal.uploadPhoto{
+    max-height: 750px;
+    max-width: 900px;
+  }
+
+  .modal.uploadPhoto section>div:last-child button{
+    width: 153.594px;
+  }
+
+  .modal.socialMediaLinks{
+    max-height: 552.5px;
+    max-width: 1080px;
+  }
+
+
+}
+
+@media(min-width: 768px) and (max-width: 1199px){
+.modal.socialMediaLinks section:nth-last-of-type(2) button{
+  width: 7vw;
+}
+
+.socialMediaLink div:last-child button{
+  /* padding: 10%; */
+  min-width: 45px;
+}
+
+.modal.socialMediaLinks{
+  height: 65vh;
+}
+
+.modal.uploadPhoto section>div:first-of-type img {
+  width: 253px;
+  height: 302.391px;
+}
+
+  .modal.editUser form>section:nth-child(2) img{
+    width: 119.898px;
+  }
+
+  .modal.editUser form > section:last-child > div > button{
+    min-width: 59.9453px;
+  }
+
+  .modal.editUser form{
+    padding-bottom: 16px;
+  }
+
+  .modal.selectTags h1{
+    text-align: center;
+  }
+
+  .modal.selectTags{
+    max-width: 747px;
+  }
+}
+
+
+@media (max-width: 767px){
+  .modal.selectTags h1 {
+    text-align: center;
+    padding: .5em 0px .5em 0px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 767px){
+  .socialMediaLink > *:not(:first-child){
+    margin-left: 8px;
+  }
+
+  .modal.socialMediaLinks form{
+    /* min-width: 692px; */
+  }
+}
+
+@media (max-width: 767px){
+.modal.editUser form > section:last-child{
+  padding-bottom: 10em;
+}
+
+  .modal.editUser h1 {
+    position: static;
+  }
+
+  .modal.editUser header{
+    display: grid;
+    place-items: center;
+  }
+
+
+  .modal.selectTags,
+  .modal.socialMediaLinks,
+  .modal.uploadPhoto,
+  .modal.editUser{
+        border-radius: 0%;
+        position: fixed;
+        width: 100vw !important;
+        height: 100vh;
+        overflow-y: scroll;
+        z-index: 10000000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+  }
+
+  .socialMediaLink div:last-child button{
+    width: 10vw;
+    font-size: clamp(10px, 2vw,13.3333px);
+  }
+
+  .modal.editUser form>section:last-child>div>button{
+    width: 20vw;
+    min-width: 69.5938px;
+  }
+
+  .modal.editUser form>section:not(:first-child) textarea{
+    width: 100%;
+  }
+
+
+  .modal.selectTags section:nth-of-type(2)>div>button{
+    width: 20vw;
+    min-width: 100px;
+  }
+  .modal.uploadPhoto section>div:last-child button{
+    width: 30vw;
+    min-width: 109.195px;
+  }
+
+  .modal.socialMediaLinks section:nth-last-of-type(2) button{
+    width: 10vw;
+    min-width: 60.6953px;
+  }
+}
+
+@media (max-width: 600px){
+  .modal.editUser form>section:nth-child(2){
+    flex-direction: column;
+  }
+
+  .socialMediaLink{
+    /* border: solid pink; */
+    border-bottom: solid grey .01px;
+    padding-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal.socialMediaLinks > form > section:nth-last-child(3){
+    border-bottom: none;
+  }
+
+  .socialMediaLink div:first-child{
+    width: 80%;
+  }
+
+  .socialMediaLink div:first-child select{
+    width: 40%;
+  }
+
+  .socialMediaLink>div:nth-child(3) input,
+  .modal.socialMediaLinks input{
+    width: 70%;
+  }
+
+  .socialMediaLink > *:not(:first-child){
+    margin-top: 8px;;
+  }
+
+
+  .modal.editUser form>section:nth-child(2) p{
+    font-size: 12px;
+    width: 60vw;
+  }
+
+  .modal.editUser form>section:nth-child(2)>div:nth-child(2){
+    margin-left: 0px;
+    margin: 8px 0px 8px 0px;
+    display: grid;
+    place-items: center;
+  }
+
+.modal.uploadPhoto section h5{
+  margin: 8px 0px 8px 0px;
+}
+}
+
+
+
