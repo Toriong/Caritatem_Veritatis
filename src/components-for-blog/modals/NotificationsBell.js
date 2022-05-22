@@ -16,7 +16,8 @@ const NotificationsBell = ({ isOnBlogNavbar, isOnUserHomePage, isOnWritePostPage
     const { _notifyUserAccountDeleted, _isUserOnSearchPage } = useContext(UserInfoContext);
     const { _isSortingAlertsDone } = useContext(BlogInfoContext);
     const { _isAllMessagesModalOn } = useContext(ModalInfoContext);
-    const { _isUserOnSettings } = useContext(UserLocationContext);
+    const { _isUserOnSettings, _isOnOwnProfile } = useContext(UserLocationContext);
+    const [isOnOwnProfile, setIsOnOwnProfile] = _isOnOwnProfile;
     const { notifyUserAccountDeleted, wasAccountDeleted, setWasAccountDeleted } = _notifyUserAccountDeleted;;
     const [isUserOnSearchPage, setIsUserOnSearchPage] = _isUserOnSearchPage;
     const [isUserOnSettings, setIsUserOnSettings] = _isUserOnSettings;
@@ -232,16 +233,16 @@ const NotificationsBell = ({ isOnBlogNavbar, isOnUserHomePage, isOnWritePostPage
     }, [notificationToDel]);
 
     useEffect(() => {
-        if (isSortingAlertsDone) {
-            console.log('notifications: ', notifications?.filter(({ notification }) => !notification.isMarkedRead))
+        return () => {
+            setIsNotificationsModalOn(false);
         }
-    });
+    }, []);
 
     let cssNotificationsNum;
     if (!isOnUserHomePage && !isOnBlogNavbar && !isOnWritePostPage && !isUserOnSearchPage) {
         cssNotificationsNum = 'notificationsNumContainer'
     } else if (isOnUserHomePage && !isOnBlogNavbar && !isOnWritePostPage && !isUserOnSearchPage) {
-        cssNotificationsNum = 'notificationsNumContainer isOnUserHomePage'
+        cssNotificationsNum = !isOnDiffUserHomePage ? 'notificationsNumContainer isOnUserHomePage notOnDiffUser' : 'notificationsNumContainer isOnUserHomePage onDiffUser'
     } else if (!isOnUserHomePage && isOnBlogNavbar && !isOnWritePostPage && !isUserOnSearchPage) {
         cssNotificationsNum = 'notificationsNumContainer blogNavBar'
     } else if (isUserOnSearchPage) {

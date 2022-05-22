@@ -6,6 +6,7 @@ import '../../blog-css/settings/userAccounts.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import ChangePasswordsInputs from '../forms/inputs/ChangePasswordsInputs'
+import ChangePasswordForm from '../forms/ChangePasswordForm'
 
 const UserAccount = ({ setIsDeleteAccountModalOn }) => {
     const { username } = JSON.parse(localStorage.getItem('user'));
@@ -56,9 +57,7 @@ const UserAccount = ({ setIsDeleteAccountModalOn }) => {
             </section>
             <section>
                 <h4>Change password</h4>
-                <form action="#" autocomplete="new-password" id='newPasswordForm'>
-                    <ChangePasswordsInputs />
-                </form>
+                <ChangePasswordForm />
             </section>
             <section>
                 <h4>Delete account</h4>

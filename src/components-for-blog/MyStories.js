@@ -11,6 +11,7 @@ import '../blog-css/myStories.css';
 import { UserLocationContext } from '../provider/UserLocationProvider';
 import { BlogInfoContext } from '../provider/BlogInfoProvider';
 import { useLayoutEffect } from 'react';
+import WriteButton from './buttons/WriteButton';
 
 
 
@@ -356,12 +357,12 @@ const MyStories = () => {
                         <h1>My stories</h1>
                     </div>
                     <div className='writeStoryBtnContainer'>
-                        <button>Write a story</button>
+                        <WriteButton isOnStoriesPage />
                     </div>
                 </section>
                 <section className='writeStoryAndSortOptionContainerOnMobile'>
                     <div>
-                        <button>Write a story</button>
+                        <WriteButton isOnStoriesPage />
                     </div>
                     <div className="sortOptionsMainContainer onMobile">
                         <div className="sortOptionsContainer">

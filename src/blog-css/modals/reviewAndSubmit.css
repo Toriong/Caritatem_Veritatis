@@ -5,6 +5,10 @@
   font-size: 1em;
 }
 
+.reviewAndSubmitTopics span{
+  color: white;
+}
+
 .titleSectionReviewAndSubmit h3,
 #reviewAndSubmitSec > span {
   color: var(--headingColor);

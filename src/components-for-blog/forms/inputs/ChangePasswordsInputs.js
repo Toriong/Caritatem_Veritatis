@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { BsCheckBox } from 'react-icons/bs';
 import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
 
-const ChangePasswordsInputs = () => {
+const ChangePasswordsInputs = ({ handleSubmitBtnClick }) => {
     const defaultPasswordVal = {
         old: "",
         newWord: "",
@@ -22,6 +22,7 @@ const ChangePasswordsInputs = () => {
     const [isOver8CharsNewPassword, setIsOver8CharsNewPassword] = useState(false);
     const [isNewSameAsOld, setIsNewSameAsOld] = useState(false);
     const [didFirstRender, setDidFirstRender] = useState(false);
+    const { _id: currentUserUserId } = JSON.parse(localStorage.getItem('user'));
 
 
     const handleShowBtnClick = (event, setFn) => {
@@ -35,35 +36,21 @@ const ChangePasswordsInputs = () => {
         setPassword(password => { return { ...password, [name]: value } })
     };
 
-    // BRAIN DUMP NOTES:
-    // check if the old password that the user sends to the server is the correct password (do this when the user presses the change password button)
-    // on the client check if the data that the user entered in for the new password field matches with the input that was inserted for the confirm password input field
 
-    // CASES:
-
-    // CASE #1: the new password is the same as the old the password
-    // if the new password is the same as the old password, then don't allow the user to send the form to the server
-
-    // CASE #2: the new confirm password is not the same as the input in new password
-    // if the confirm password is not the same as the data in new password, then don't allow the user to send the form to the server
-
-    // ERROR MESSAGES:
-    // the confirm new and the new password do not match
-    // the old password that was sent to the server is not the password that is saved into the database
-
-
-    // if both the new password and the confirm new matches with the old, then highlight all of the inputs
 
     useLayoutEffect(() => {
 
         if (!didFirstRender) {
             setDidFirstRender(true);
         } else {
-            if ((newWord && old && confirmNew) && ((newWord === old) || (confirmNew === old))) {
+            if ((newWord && (old || confirmNew)) && ((newWord === old) || (confirmNew === old))) {
                 setIsNewSameAsOld(true);
-            } else if ((newWord && old && confirmNew) && ((newWord !== old) || (confirmNew !== old))) {
+            } else if ((newWord && (old || confirmNew)) && ((newWord !== old) || (confirmNew !== old))) {
                 setIsNewSameAsOld(false);
             }
+
+            // if there no input in the new password and confirm new password, but there is input for the old password, then don't show the following error message: 
+            // 'the new password can't be the same as the old password 
 
             if (old || confirmNew) {
                 (old.length > 8) ? setIsOver8CharsOldPassword(true) : setIsOver8CharsOldPassword(false);
@@ -78,12 +65,17 @@ const ChangePasswordsInputs = () => {
             } else if (!newWord && !confirmNew) {
                 setIsInvalidNewPassword(false);
             }
+
+            if ((!newWord && !confirmNew && !old) || (!newWord && !confirmNew)) {
+                setIsNewSameAsOld(false);
+                setIsInvalidNewPassword(false);
+            }
+
         }
 
 
     }, [password])
 
-    // if there is no input in both the confirm and the new input fields or if the isInvalidNewPassword is true, then disable the submit button
 
     let isBtnDisabled = false;
 
@@ -115,6 +107,7 @@ const ChangePasswordsInputs = () => {
         console.log('isNewSameAsOld: ', isNewSameAsOld)
         console.log('isIncorrectOldPassword: ', isIncorrectOldPassword)
         console.log('isInvalidNewPassword: ', isInvalidNewPassword)
+        console.log('password: ', password)
     })
 
 
@@ -139,7 +132,11 @@ const ChangePasswordsInputs = () => {
                                 border: (isNewSameAsOld || isIncorrectOldPassword || (!isOver8CharsOldPassword && old)) && 'red solid .05px',
                                 color: (isNewSameAsOld || isIncorrectOldPassword || (!isOver8CharsOldPassword && old)) && 'red'
                             }}
-                            onChange={event => { handleOnChange(event) }}
+                            value={old}
+                            onChange={event => {
+                                isIncorrectOldPassword && setIsIncorrectOldPassword(false);
+                                handleOnChange(event);
+                            }}
                         />
                         <button
                             className='checkBoxBtn'
@@ -179,6 +176,7 @@ const ChangePasswordsInputs = () => {
                                 border: (isNewSameAsOld || isInvalidNewPassword || (!isOver8CharsNewPassword && confirmNew)) && 'red solid .05px',
                                 color: (isNewSameAsOld || isInvalidNewPassword || (!isOver8CharsNewPassword && confirmNew)) && 'red'
                             }}
+                            value={newWord}
                             onChange={event => { handleOnChange(event) }}
                         />
                         <button
@@ -209,6 +207,7 @@ const ChangePasswordsInputs = () => {
                                 border: (isNewSameAsOld || isInvalidNewPassword || (!isOver8CharsNewPassword && confirmNew)) && 'red solid .05px',
                                 color: (isNewSameAsOld || isInvalidNewPassword || (!isOver8CharsNewPassword && confirmNew)) && 'red'
                             }}
+                            value={confirmNew}
                             onChange={event => { handleOnChange(event) }}
                         />
                         <button
@@ -236,10 +235,23 @@ const ChangePasswordsInputs = () => {
                 </div>
             </div>
             <button
+                name='changePasswordBtn'
                 disabled={isBtnDisabled}
                 style={{
                     backgroundColor: !isBtnDisabled && 'green',
                     color: !isBtnDisabled ? 'white' : 'grey'
+                }}
+                onClick={event => {
+                    handleSubmitBtnClick(event, password).then(status => {
+                        console.log('status, bacon: ', status)
+                        if (status === 401) {
+                            setIsIncorrectOldPassword(true)
+                        } else if (status === 200) {
+                            console.log('will reset states: ');
+                            setPassword(defaultPasswordVal);
+                            setIsIncorrectOldPassword(false);
+                        }
+                    })
                 }}
             >
                 Change password

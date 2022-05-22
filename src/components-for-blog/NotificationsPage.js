@@ -11,12 +11,13 @@ import { useLayoutEffect } from 'react';
 import { BlogInfoContext } from '../provider/BlogInfoProvider';
 
 const NotificationsPage = () => {
-    const { _isLoadingUserInfoDone } = useContext(UserInfoContext);
+    const { _isLoadingUserInfoDone, _userProfile } = useContext(UserInfoContext);
     const { _isOnNotificationsPage } = useContext(UserLocationContext);
     const { _isLoadingUserDone } = useContext(BlogInfoContext);
     const [isOnNotificationsPage, setIsOnNotificationsPage] = _isOnNotificationsPage;
     const [isLoadingUserInfoDone, setIsLoadingUserInfoDone] = _isLoadingUserInfoDone;
     const [isLoadingUserInfoForNavbarDone, setIsLoadingUserInfoForNavbarDone] = _isLoadingUserDone;
+    const [userProfile, setUserProfile] = _userProfile;
     const [isReplyReqDone, setIsReplyReqDone] = useState(false);
     const [isPostLikeReqDone, setIsPostLikeReqDone] = useState(false);
     const [isReqReplyLikesDone, setIsReqReplyLikesDone] = useState(false);
@@ -96,7 +97,7 @@ const NotificationsPage = () => {
     }, []);
 
     useEffect(() => {
-        if (isReplyReqDone && isPostLikeReqDone && isReqReplyLikesDone && isReqCommLikesDone && isCommReqDone && isNewFollowerReqDone && isNewPostsReqDone && !isSortingAlertsDone && notifications.length) {
+        if (isReplyReqDone && isPostLikeReqDone && isReqReplyLikesDone && isReqCommLikesDone && isCommReqDone && isNewFollowerReqDone && isNewPostsReqDone && !isSortingAlertsDone) {
             // const _notificationsSorted = notificationsSorted.filter(({ isNewFollower }) => !!isNewFollower);
             setNotifications(sortNotifications(notifications));
             setIsSortingAlertsDone(true);
@@ -144,10 +145,13 @@ const NotificationsPage = () => {
         }
     }, [notificationToDel]);
 
+
+
     useLayoutEffect(() => {
         setIsLoadingUserInfoDone(true);
         setIsOnNotificationsPage(true);
         setIsLoadingUserInfoForNavbarDone(true);
+        setUserProfile(null);
     }, []);
 
     useEffect(() => {

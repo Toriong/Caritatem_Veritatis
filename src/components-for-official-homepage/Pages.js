@@ -58,13 +58,23 @@ import UserNavModalMobileParentComp from '../components-for-blog/ParentComponent
 const Pages = () => {
     const [isUserSignedIn, setIsUserSignedIn] = useState(false);
 
+    const handleStorageChange = () => {
+        if (localStorage.getItem('user') || !localStorage.getItem('user')) {
+            window.location.reload();
+        }
+    }
+
     useLayoutEffect(() => {
-        const _isUserSignedIn = localStorage.getItem('user');
+        const _isUserSignedIn = !!localStorage.getItem('user');
         if (_isUserSignedIn) {
             setIsUserSignedIn(true);
         } else {
             setIsUserSignedIn(false);
         }
+
+
+
+        window.addEventListener('storage', handleStorageChange)
     }, []);
 
 
@@ -118,8 +128,6 @@ const Pages = () => {
                                             <Route exact path="/:userName/followers" render={() => <Followers />} />
                                             <Route exact path="/:userName/following" render={() => <Followers />} />
                                             {/* <Route exact path="*" render={() => isUserSignedIn ? <NonExistentPage /> : <NonExistentPage />} /> */}
-
-
                                         </Switch>
                                         <BottomNavBar />
                                         <DeleteUserAndPostContainer />

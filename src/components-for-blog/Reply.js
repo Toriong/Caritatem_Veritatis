@@ -10,15 +10,9 @@ import { BlogInfoContext } from '../provider/BlogInfoProvider';
 import { checkActivityDelStatus } from './functions/checkActivityDelStatus';
 import { getDoesBlogPostExist } from './functions/blogPostFns/getDoesBlogPostExist';
 import { BsThreeDots } from 'react-icons/bs';
+import history from '../history/history';
 
-// GOAL: display the edit overlay over the target reply that is being edited by the user  
-// the edit overlay is being displayed over the targeted reply
-// within a useEffect, check if commentToEdit has a replyId. If it does, then set isEditingReply to true. Do this within the 'Comment' component
-// commentToEdit has a reply id and if the replyId is equal to the current reply id of this component, then display the edit overlay for the reply
-// if commentToEdit has a reply id and if the replyId is equal to the current reply id of the component, then display the edit overlay for the reply
-// the following is received from commentToEdit: the replyId 
 
-// have only 5 props MAX
 const Reply = ({ reply, values, fns }) => {
     const { id: postId } = useParams();
     const { users, commentId, postComment, isEditingReply, selectedReply, isDeleteReplyOverlayOn, viewReply } = values;
@@ -198,6 +192,8 @@ const Reply = ({ reply, values, fns }) => {
         }
     };
 
+    const goToUserHomePage = () => { history.push(`/${replyUsername}`); };
+
 
 
 
@@ -309,6 +305,7 @@ const Reply = ({ reply, values, fns }) => {
                         console.error('ERROR!')
                         event.target.src = "https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-user-interface-kiranshastry-gradient-kiranshastry-1.png"
                     }}
+                    onClick={goToUserHomePage}
                 />
             </div>
             <div
@@ -317,9 +314,9 @@ const Reply = ({ reply, values, fns }) => {
                 }}
             >
                 <span
+                    onClick={goToUserHomePage}
                 >
-                    {/* {replyUsername} */}
-                    ILoveProgrammingSimba1997
+                    {replyUsername}
                 </span>
                 <span
                 >
@@ -368,13 +365,15 @@ const Reply = ({ reply, values, fns }) => {
                         <div
                             className="updatedAtContainer"
                         >
-                            {`Edited: ${updatedAt.date == currentDate ? "Today" : updatedAt.date} at ${updatedAt.time}`}
+                            <span>Edited: </span>
+                            <span>{`${updatedAt.date == currentDate ? "Today" : updatedAt.date} at ${updatedAt.time}`}</span>
                         </div>
                     }
                     <div
                         className='postedAtContainer'
                     >
-                        {`Posted: ${datePosted || createdAt.date} at ${createdAt.time}`}
+                        <span>Posted: </span>
+                        <span>{`Posted: ${datePosted || createdAt.date} at ${createdAt.time}`}</span>
                     </div>
                 </div>
                 {isCommentInfoModalOn &&

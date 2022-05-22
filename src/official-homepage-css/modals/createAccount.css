@@ -1,3 +1,6 @@
+/* fileName: createAccount */
+
+
 :root {
   --backgroundColorModal: #2d2e30;
   --textColor: #000000;
@@ -76,11 +79,11 @@
   border: none;
   border-bottom: var(--borderColor);
   width: 100%;
-  height: 50%;
-  bottom: 0;
-  left: 0;
-  position: absolute;
+  /* height: 50%; */
+  height: 25px;
+  /* position: absolute; */
   min-width: 138.898px;
+  margin-top: 8px;
   /* border: solid 3px green; */
 }
 
@@ -92,14 +95,32 @@
   position: relative;
 }
 
+#pleaseCheckBoxTxt{
+  height: 11.5px;
+}
+
+#pleaseCheckBoxTxt,
+.sectionContainer span{
+  /* display: none; */
+  color: red;
+  font-size: 10px;;
+}
+
 .inputContainer {
   display: flex;
   flex-direction: column;
   /* height: 250%; */
-  height: 50px;
-  /* border: solid pink; */
+  height: 95px;
   position: relative;
   width: 30%;
+}
+
+.inputContainer > *:not(:first-child, :nth-child(2)){
+  margin-top: 8px;
+}
+
+.inputContainer  svg{
+  transform: translateY(1.3px);
 }
 
 .sectionContainer div:nth-child(2) {
@@ -137,6 +158,7 @@
   height: 25vh;
   max-height: 250px;
   font-size: 1.1em;
+  word-wrap: break-word;
 
   /* border-bottom: solid lightgrey .2px; */
   border-bottom: var(--borderColor)
@@ -165,6 +187,18 @@
 
 .createAccountModalHeader>h1 span:nth-child(2){
   font-size: 20px;
+}
+
+#reasonsForJoiningContainer{
+  height:242.359px;
+}
+
+#reasonsForJoiningContainer  span{
+margin-top: 8px;
+}
+
+.checkBoxBtn.onCreateAccount{
+  margin-left: 0px;
 }
 
 @media (max-width: 767px){

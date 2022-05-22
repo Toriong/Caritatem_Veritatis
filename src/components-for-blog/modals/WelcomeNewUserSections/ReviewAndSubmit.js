@@ -10,7 +10,7 @@ import { useLayoutEffect } from 'react';
 
 // TO-DO'S: MAKE THE MODAL BIGGER
 
-const ReviewAndSubmit = ({ data, iconSrc, setSectionIndex, setWasEditBtnClicked, readingTopics }) => {
+const ReviewAndSubmit = ({ data, iconSrc, setSectionIndex, setWasEditBtnClicked, readingTopics, setData }) => {
     const { _likedTopicIds } = useContext(UserInfoContext)
     const [likedTopicIds, setLikedTopicIds] = _likedTopicIds;
     const { username, _id: userId } = JSON.parse(localStorage.getItem("user"));
@@ -106,7 +106,6 @@ const ReviewAndSubmit = ({ data, iconSrc, setSectionIndex, setWasEditBtnClicked,
 
     useEffect(() => {
         setWasEditBtnClicked(false);
-
         if (userId) {
             getCurrentUserId().then(userId => {
                 if (userId) {
@@ -116,17 +115,33 @@ const ReviewAndSubmit = ({ data, iconSrc, setSectionIndex, setWasEditBtnClicked,
                     if (!alert('Sorry looks like an error has occurred. This page will refresh. Press ok to continue.')) { window.location.reload(); }
                 }
             })
-        }
-
-
+        };
     }, []);
 
+    useLayoutEffect(() => {
+        setData(data => {
+            if (data?.socialMedia?.length) {
+                const _socialMedia = data.socialMedia.map(socialMedia => {
+                    const { link, company } = socialMedia;
+                    if (link && !company) {
+                        return {
+                            ...socialMedia,
+                            company: 'other'
+                        }
+                    };
 
+                    return socialMedia
+                })
+                return {
+                    ...data,
+                    socialMedia: _socialMedia?.length ? _socialMedia.filter(({ link }) => !!link) : []
+                }
+            };
 
+            return data;
+        })
+    }, []);
 
-    useEffect(() => {
-        console.log('data: ', data)
-    })
 
     return (
         <section id="reviewAndSubmitSec">
@@ -165,7 +180,7 @@ const ReviewAndSubmit = ({ data, iconSrc, setSectionIndex, setWasEditBtnClicked,
                                 <AiOutlineEdit onClick={handleClickToEdit(1)} />
                             </div>
                         </div>
-                        <p>{data.bio}</p>
+                        <p>{data.bio ? data.bio : 'No bio available.'}</p>
                     </section>
                     <section className="reviewAndSubmitSocialMedia">
                         <div className="titleSectionReviewAndSubmit">
@@ -198,13 +213,16 @@ const ReviewAndSubmit = ({ data, iconSrc, setSectionIndex, setWasEditBtnClicked,
                         </div>
                         <ul>
                             {/* make topics mandatory */}
-                            {data.topics.map(topicId => {
-                                const _topic = readingTopics.find(({ _id }) => _id === topicId).topic
-                                return <li>
-                                    {_topic}
-                                </li>
+                            {data.topics.length ?
+                                data.topics.map(topicId => {
+                                    const _topic = readingTopics.find(({ _id }) => _id === topicId).topic
+                                    return <li>
+                                        {_topic}
+                                    </li>
+                                })
+                                :
+                                <span>You haven't chosen any reading topics.</span>
                             }
-                            )}
                         </ul>
                     </section>
                 </section>

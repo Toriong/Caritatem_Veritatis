@@ -22,7 +22,6 @@ const SearchPostResult = ({ post, setIsSearchResultsDisplayed }) => {
     const handlePostResultClick = () => {
         setIsUserViewingPost(true);
         setIsUserOnHomePage(false);
-        setIsOnProfile(false);
         setAreUsersReceived(false);
         setIsLoadingPostDone(false);
         setIsUserOnNewStoryPage(false);

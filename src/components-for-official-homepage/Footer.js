@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { UserInfoContext } from '../provider/UserInfoProvider'
 import { UserLocationContext } from '../provider/UserLocationProvider'
-import '../official-homepage-css/footer.css'
 import useIsOnMobile from '../components-for-blog/customHooks/useIsOnMobile'
+import '../official-homepage-css/footer.css'
+import history from '../history/history'
 
 const Footer = () => {
     const { _isUserOnHomePage, _isUserOnNewStoryPage, _isUserOnFeedPage, _blogPost } = useContext(UserInfoContext)
@@ -11,6 +12,11 @@ const Footer = () => {
     const [isOnMobile,] = _isOnMobile;
     const [isOnAboutPage,] = _isOnAboutPage;
     const [isUserOnNewStoryPage, setIsUserOnNewStoryPage] = _isUserOnNewStoryPage;
+    const underConstructionText = 'This page is under construction. Please come back later.'
+
+    const notifyUser = () => { alert(underConstructionText) }
+
+    const goToFeed = () => { history.push('/Feed') };
 
 
     useEffect(() => {
@@ -31,10 +37,10 @@ const Footer = () => {
                     <h1>CV</h1>
                 </section>
                 <section className="logo-container-footer">
-                    <span>About</span>
-                    <span>Contact</span>
-                    <span>Policy</span>
-                    <span>Blog</span>
+                    <span onClick={notifyUser}>About</span>
+                    <span onClick={notifyUser}>Contact</span>
+                    <span onClick={notifyUser}>Policy</span>
+                    <span onClick={goToFeed}>Blog</span>
                 </section>
             </div>
         </footer>

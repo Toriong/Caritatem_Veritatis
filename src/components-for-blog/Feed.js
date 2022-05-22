@@ -289,7 +289,6 @@ const Feed = () => {
                     setUsers(users);
                     setWillGetPosts(true);
                     setLikedTopicIds(tags);
-
                 }
             })
             // get all of the users and the reading lists by the current user
@@ -529,7 +528,8 @@ const Feed = () => {
                                                     />
                                                 )
                                                 :
-                                                <span>They are currently no posts that has your selected tags.</span>)
+                                                likedTopicIds?.length ? <span>They are currently no posts that has your selected tags.</span> : <span>You haven't selected any reading topics.</span>
+                                            )
                                             :
                                             <span>Loading posts...</span>)
                                     }

@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { useContext } from 'react';
 import { UserLocationContext } from '../../provider/UserLocationProvider';
 import { GiConsoleController } from 'react-icons/gi';
+import { AiOutlineConsoleSql } from 'react-icons/ai';
 
 
 
@@ -120,7 +121,10 @@ const Notifications = ({ userLocation, _notifications, fns, booleanVals }) => {
     }, []);
 
 
-
+    useEffect(() => {
+        console.log('isOnNotificationsPage: ', isOnNotificationsPage);
+        console.log('isNotificationsModalOn: ', isNotificationsModalOn)
+    })
 
     return (
         <div>

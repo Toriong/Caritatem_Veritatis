@@ -182,7 +182,12 @@ const UserNavModal = ({ _setIsNavModalOpen, isNotOnProfile, isOnOfficialHomePage
                                 </div>
                             }
                             <div
-                                onClick={() => { !isUserOnNewStoryPage && handleWriteBtnClick() }}
+                                onClick={() => {
+                                    if (!isUserOnNewStoryPage) {
+                                        console.log('hello there')
+                                        handleWriteBtnClick()
+                                    }
+                                }}
                                 className={isNotOnProfile ? "userNavModalIconContainer" : "userNavModalIconContainer userProfile"}
                             >
                                 <div>

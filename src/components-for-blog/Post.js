@@ -127,7 +127,7 @@ const Post = ({ post, isOnFeedPage, isOnUserHomePage, isOnSearchPage, isOnTagSea
                     } else {
                         const path = `/${username}/${title}/${postId}`;
                         resetPostInfoGet();
-                        isOnProfile && setIsOnProfile(false);
+                        // isOnProfile && setIsOnProfile(false);
                         history.push(path);
                     }
                 });

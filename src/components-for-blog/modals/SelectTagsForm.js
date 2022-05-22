@@ -1,18 +1,23 @@
 import axios from 'axios';
 import React from 'react';
+import { useLayoutEffect } from 'react';
 import TagSelections from './TagSelections';
 
-const SelectTagsForm = ({ closeModal, allTags }) => {
-    const { topics: likedTags, _id: signedInUserId } = JSON.parse(localStorage.getItem('user'));
-    let _allTags = allTags.map(tag => {
-        const isTagLiked = likedTags.includes(tag._id);
-        if (isTagLiked) {
-            console.log('tag was liked')
-            return {
-                ...tag,
-                isLiked: true
-            }
-        };
+const SelectTagsForm = ({ closeModal, allTags, userTags, setUserTags }) => {
+    const { _id: signedInUserId } = JSON.parse(localStorage.getItem('user'));
+
+
+    var _allTags = allTags.map(tag => {
+        if (userTags.length) {
+            const isTagLiked = userTags.includes(tag._id);
+            if (isTagLiked) {
+                console.log('tag was liked')
+                return {
+                    ...tag,
+                    isLiked: true
+                }
+            };
+        }
 
         return {
             ...tag,
@@ -26,10 +31,10 @@ const SelectTagsForm = ({ closeModal, allTags }) => {
         return topicA_.toLowerCase() === topicB_.toLowerCase() ? 0 : topicA_.toLowerCase() < topicB_.toLowerCase() ? -1 : 1;
     });
 
-    const handleSubmit = (event, setAllTags) => {
+    const handleSubmit = (event, allTags) => {
         event.preventDefault();
         const path = '/users/updateInfo';
-        const likedTagIds = setAllTags.filter(({ isLiked }) => isLiked).map(({ _id }) => _id);
+        const likedTagIds = allTags.filter(({ isLiked }) => isLiked).map(({ _id }) => _id);
         const package_ = {
             name: 'updateUserProfile',
             userId: signedInUserId,
@@ -41,12 +46,7 @@ const SelectTagsForm = ({ closeModal, allTags }) => {
                 const { status, data } = res;
                 if (status === 200) {
                     console.log('From server: ', data);
-                    let _user = JSON.parse(localStorage.getItem('user'));
-                    _user = {
-                        ..._user,
-                        topics: likedTagIds
-                    }
-                    localStorage.setItem('user', JSON.stringify(_user));
+                    setUserTags(likedTagIds);
                     closeModal();
                 }
             })
