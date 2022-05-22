@@ -1024,6 +1024,11 @@ max-width: 170px;
   text-decoration: underline;
 }
 
+.postedAtContainer > span,
+.updatedAtContainer > span{
+  font-size: 9px;;
+}
+
 /* .commentLiked div:last-child:hover {
   text-decoration: underline;
 } */
@@ -1498,6 +1503,19 @@ min-width: 280px;
   /* margin-left: 8px; */
 }
 
+.followersAndFollowingContainerOnPostViewer>span>span:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.followersAndFollowingContainerOnPostViewer>span>span:first-child{
+  margin-right: 4px;
+}
+
+.followersAndFollowingContainerOnPostViewer > span > span:last-child{
+  margin-left: 4px;
+}
+
 @media (max-width: 1199px) {
   .borderContainer {
     width: 100%;
@@ -1521,7 +1539,7 @@ max-width: 72px;
   }
 
   .replyInteractionContainer{
-    min-width: 23%;
+    /* min-width: 23%; */
   }
 
 .blogBody{
@@ -1752,7 +1770,7 @@ max-width: 72px;
     width: 5%;
   }
   .commentUserInteractionContainer{
-    padding-left: 0px;
+    padding-left: 16px;
     width: 118.141px;
   }
 }
@@ -1922,7 +1940,7 @@ padding-left: 5px;
 
 
 .commentUserInteractionContainer {
-  padding-left: 0px;
+  /* padding-left: 0px; */
   width: 23%;
   min-width: 137.328px;
 }
@@ -1967,8 +1985,8 @@ padding-left: 5px;
 }
 
 .commentsSecInput>div:first-child img{
-  width: clamp(25px, 8vw, 40px) !important;
-  height: clamp(25px, 8vw, 40px) !important;
+  width: clamp(15px, 7vw, 40px) !important;
+  height: clamp(15px, 7vw, 40px) !important;
 }
 
 

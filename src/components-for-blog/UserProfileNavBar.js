@@ -16,15 +16,17 @@ import { NavMenuMobileContext } from '../provider/NavMenuMobileProvider';
 import '../blog-css/userProfileNavBar.css'
 import { GiConsoleController } from 'react-icons/gi';
 import { ModalInfoContext } from '../provider/ModalInfoProvider';
+import WriteButton from './buttons/WriteButton';
 
 const UserProfileNavBar = isFeedOptShown => {
     const history = useHistory();
     const { _followers, _isNotOnMyStoriesPage, _isSortOptionsModalOpen, _userProfile, _isLoadingUserInfoDone, _readingLists, _isLoadingAboutUserInfoDone, _isOnProfile, _currentUserFollowers } = useContext(UserInfoContext);
     const { _searchResults, _searchInput, _isLoadingUserDone } = useContext(BlogInfoContext);
     const { _didErrorOccur } = useContext(ErrorPageContext);
-    const { _isOnOwnProfile, _isUserOnSettings, _isOnMyStoriesPage } = useContext(UserLocationContext);
+    const { _isOnOwnProfile, _isUserOnSettings, _isOnMyStoriesPage, _isOnPostViewerPage } = useContext(UserLocationContext);
     const { _isNavMenuOn } = useContext(NavMenuMobileContext);
     const { _isAllMessagesModalOn } = useContext(ModalInfoContext);
+    const [isPostViewerPage, setIsOnPostViewerPage] = _isOnPostViewerPage;
     const [isOnMyStoriesPage, setIsOnMyStoriesPage] = _isOnMyStoriesPage
     const [, setIsNavMenuOn] = _isNavMenuOn;
     const [isUserOnSettings, setIsUserOnSettings] = _isUserOnSettings;
@@ -127,12 +129,7 @@ const UserProfileNavBar = isFeedOptShown => {
 
     useEffect(() => {
         console.log('hello there')
-        console.log({
-            isLoadingAboutUserInfoDone,
-            isNotOnMyStoriesPage,
-            isOnHomeProfile,
-            currentUserFollowers
-        })
+        console.log('isNotificationsModalOn: ', isNotificationsModalOn)
     })
 
     const [isOnMobile, setIsOnMobile] = useState(false);
@@ -158,13 +155,6 @@ const UserProfileNavBar = isFeedOptShown => {
             window.removeEventListener('resize', handleResize);
         }
     }, []);
-
-    useEffect(() => {
-        console.log('isOnMessengerPage: ', isOnMessengerPage)
-        console.log('isLoadingUserInfoDone: ', isLoadingUserInfoDone)
-    })
-
-    console.log('isLoadingUserInfoDone, fuck you: ', isLoadingUserInfoDone)
 
     return (
         <>
@@ -217,7 +207,7 @@ const UserProfileNavBar = isFeedOptShown => {
                             _isSearchResultsDisplayed={_isSearchResultsDisplayed}
                             _isUserProfileNavModalOn={_isNavModalOn}
                         />}
-                        {(isOnProfile || didErrorOccur || isOnMessengerPage) &&
+                        {(isOnProfile || didErrorOccur || isOnMessengerPage || isPostViewerPage) &&
                             <div
                                 className="CVNavMenuAndUserIconContainer"
                                 id="userNavModalContainerProfile"
@@ -245,7 +235,7 @@ const UserProfileNavBar = isFeedOptShown => {
                                 className="CVNavMenuAndUserIconContainer"
                                 id="userProfileButtonContainer"
                             >
-                                <button>Write</button>
+                                <WriteButton />
                             </div>
                         }
                         <div

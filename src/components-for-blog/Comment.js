@@ -16,6 +16,7 @@ import { AiOutlineRetweet } from 'react-icons/ai';
 import { getDoesBlogPostExist } from './functions/blogPostFns/getDoesBlogPostExist';
 import { useLayoutEffect } from 'react';
 import { BsThreeDots } from 'react-icons/bs';
+import history from '../history/history'
 
 
 
@@ -410,6 +411,8 @@ const Comment = ({ comment, fns, values }) => {
             })
     };
 
+    const goToUserHomePage = () => { history.push(`/${commentUsername}`); };
+
     const sendCommentLikeNotifyInfoToServer = async bodyName => {
         const path = '/users/updateInfo';
         const body_ = {
@@ -675,6 +678,7 @@ const Comment = ({ comment, fns, values }) => {
                             event.target.src = "https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-user-interface-kiranshastry-gradient-kiranshastry-1.png"
 
                         }}
+                        onClick={goToUserHomePage}
                     />
                 </div>
                 <div
@@ -682,9 +686,8 @@ const Comment = ({ comment, fns, values }) => {
                         background: isHighlighted && '#bfbfbf'
                     }}
                 >
-                    <span>
+                    <span onClick={goToUserHomePage}>
                         {commentUsername}
-                        {/* ILoveProgrammingSimba1997 */}
                     </span>
                     <span>
                         {mainComment}

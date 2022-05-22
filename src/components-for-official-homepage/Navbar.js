@@ -24,7 +24,8 @@ import { ModalInfoContext } from '../provider/ModalInfoProvider';
 const Navbar = () => {
     const { _notifyUserAccountDeleted, _isNotOnMyStoriesPage, _isOnProfile, _isReviewOn, _isUserViewingPost, _isLoadingPostsDone, _activities, _blockedUsers, _isAModalOn } = useContext(UserInfoContext);
     const { _isNavMenuOn } = useContext(NavMenuMobileContext);
-    const { _isUserOnHomePage, _isUserOnNewStoryPage, _isOnNotificationsPage, _isOnMessengerPage, _isUserOnFeedPage, _isUserOnSettings } = useContext(UserLocationContext);
+    const { _isUserOnHomePage, _isUserOnNewStoryPage, _isOnNotificationsPage, _isOnMessengerPage, _isUserOnFeedPage, _isUserOnSettings, _isOnPostViewerPage } = useContext(UserLocationContext);
+    const [isOnPostViewerPage, setIsOnPostViewerPage] = _isOnPostViewerPage;
     const [isUserOnSettings, setIsUserOnSettings] = _isUserOnSettings;
     const [isOnMessengerPage, setIsOnMessengerPage] = _isOnMessengerPage;
     const { notifyUserAccountDeleted, wasAccountDeleted, setWasAccountDeleted } = _notifyUserAccountDeleted;
@@ -238,7 +239,7 @@ const Navbar = () => {
     //     }
     // }, []);
 
-    const _positionOffSet = isOnMobile ? {} : { x: '-68%', y: '13%' };
+    const _positionOffSet = isOnMobile ? {} : { x: '-78%', y: '13%' };
 
     useLayoutEffect(() => {
         if (isOnMobile) {
@@ -250,6 +251,7 @@ const Navbar = () => {
         console.log('isUserOnFeedPage: ', isUserOnFeedPage)
         console.log('isOnProfile: ', isOnProfile)
         console.log('isUserViewingPost: ', isUserViewingPost)
+        console.log('isOnPostViewerPage: ', isOnPostViewerPage)
     })
 
 
@@ -264,7 +266,7 @@ const Navbar = () => {
                     height: (isUserOnNewStoryPage && isOnMobile) && '100px'
                 }}
             >
-                {((isUserOnFeedPage || isUserViewingPost) && currentUser) &&
+                {(isUserOnFeedPage && currentUser) &&
                     <BlogNavBar
                         // why do I need the icon path and its function?
                         iconPath={iconPath}
@@ -277,7 +279,7 @@ const Navbar = () => {
                 {(isUserOnNewStoryPage && currentUser) &&
                     <UserNewStoryNavBar />
                 }
-                {((isOnProfile || isOnMessenger) && currentUser) &&
+                {((isOnProfile || isOnMessenger || isOnPostViewerPage) && currentUser) &&
                     <UserProfileNavBar />
                 }
                 {(isUserOnHomePage || !currentUser) &&

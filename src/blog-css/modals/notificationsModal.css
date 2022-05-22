@@ -113,7 +113,18 @@
 }
 
 
-.notificationsNumContainer.isOnUserHomePage > div,
+.notificationsNumContainer.isOnUserHomePage>div{
+  transform: translate(-3px, -52px);
+}
+
+@media(min-width: 768px) and (max-width: 1919px){
+  .notificationsNumContainer.isOnUserHomePage.notOnDiffUser > div{
+  transform: translate(-3px, -36.5px);
+}
+}
+
+
+
 .notificationsNumContainer.isOnWritePage>div {
   /* transform: translate(5%, -140%); */
   transform: translate(-3px, -36.5px);
@@ -298,6 +309,14 @@ height: 62vh;
   /* border: solid pink; */
 }
 
+.notificationsContainer.diffUser{
+  /* transform: translateY(-1px); */
+}
+
+.notificationsContainer.diffUser > svg{
+  margin-bottom: 20px;;
+}
+
 
 .notificationsContainer.diffUser,
 .notificationsContainer.onUserHomePage {
@@ -366,7 +385,9 @@ height: 62vh;
 
 /* for devices between tablets and large devices */
 @media (min-width: 768px)  and (max-width: 1199px){
-  .notificationsNumContainer.isOnUserHomePage > div,
+  .notificationsNumContainer.isOnUserHomePage > div{
+    
+  }
   .notificationsNumContainer.blogNavBar > div {
     width: 20px;
     height: 20px;
@@ -397,7 +418,11 @@ height: 62vh;
   .notificationsContainer {
   }
 
-  .notificationsNumContainer.isOnUserHomePage > div,
+  .notificationsNumContainer.isOnUserHomePage > div{
+    width: 30px;
+      height: 30px;
+    transform: translate(-5px, -60px);
+  }
   .notificationsNumContainer.isOnWritePage > div,
   .notificationsNumContainer.blogNavBar > div {
     width: 30px;

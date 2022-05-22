@@ -37,6 +37,11 @@
 .logo-container-footer > * {
   margin: 0px 3% 0px 3%;
   font-weight: 200;
+  cursor: pointer;
+}
+
+.logo-container-footer>*:hover{
+  text-decoration: underline;
 }
 
 .logo-container-footer span,

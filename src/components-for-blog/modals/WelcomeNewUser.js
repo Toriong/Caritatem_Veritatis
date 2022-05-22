@@ -15,15 +15,11 @@ import axios from 'axios';
 
 const WelcomeNewUser = () => {
     const currentUser = JSON.parse(localStorage.getItem('user'))
-    const { _user } = useContext(UserInfoContext);
-    const [user, setUser] = _user;
     const [data, setData] = useState({
         icon: "",
         bio: "",
         topics: [],
-        socialMedia: [{
-            id: uuidv4()
-        }]
+        socialMedia: []
     });
     const [iconSrc, setIconSrc] = useState("");
     const [icon, setIcon] = useState("")
@@ -38,38 +34,8 @@ const WelcomeNewUser = () => {
 
     // look up the documentation for the useDropzone to get a better understanding of it 
 
-    // create the drop logic for the user's icon
-    const { getRootProps, getInputProps } = useDropzone({
-        accept: "image/*",
-        multiple: false,
-        onDrop: acceptedFiles => {
-            // console.log('acceptedFiles: ', acceptedFiles[0]);
-            console.log(acceptedFiles)
-            const [img] = acceptedFiles;
-            const file = acceptedFiles.map(file =>
-                Object.assign(file, {
-                    icon: URL.createObjectURL(file)
-                })
-            );
-            console.log('file: ', file);
-            setData({
-                ...data,
-                icon: {
-                    name: img.path,
-                    src: file[0].icon
-                }
-            });
-        }
-    });
-
-    const [iconName, setIconName] = useState("");
-
     const handleIconInput = event => {
-        // event.preventDefault();
-        // event.stopPropagation();
-        // console.log(event.target.files[0]);
         const { files } = event.target;
-        console.log('files: ', files)
         for (let image of files) {
             let reader = new FileReader();
             reader.readAsDataURL(image);
@@ -81,7 +47,6 @@ const WelcomeNewUser = () => {
             ...data,
             icon: event.target.files[0]
         })
-        debugger
     };
 
 
@@ -117,19 +82,7 @@ const WelcomeNewUser = () => {
 
     const handleMouseLeave = () => {
         setIsHoveredOver(false);
-    }
-
-    const handleHighlight = (event) => {
-        console.log("drag enter")
-        event.preventDefault()
-        setIsDragOver(true);
-    }
-
-    const handleUnhighlight = (event) => {
-        console.log("drag exit")
-        event.preventDefault()
-        setIsDragOver(false);
-    }
+    };
 
     const deleteIcon = () => {
         // event.stopPropagation()

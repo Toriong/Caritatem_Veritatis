@@ -35,6 +35,9 @@ import { useLayoutEffect } from 'react';
 import { ErrorPageContext } from '../provider/ErrorPageProvider';
 import ErrorPage from './ErrorPage';
 import FollowAndMessageBtns from './FollowAndMessageBtns';
+import { UserLocationContext } from '../provider/UserLocationProvider';
+import history from '../history/history';
+import { getStatusOfUser } from './functions/userStatusCheck/getStatusOfUser';
 
 // GOAL: take the user to the input field of the reply with the old version of the reply in the input field
 // the user is taken to the input field of the reply 
@@ -50,10 +53,15 @@ import FollowAndMessageBtns from './FollowAndMessageBtns';
 
 const PostViewerPage = () => {
     const { id: postId, userName: authorUsername } = useParams();
-    const { _userProfile, _isCommentIconClicked, _readingLists, _isShiftHeld, _isUserViewingPost, _isLoadingUserInfoDone, _elementIds, _willGoToPostLikes, _areUsersReceived, _isLoadingPostDone, _following, _followers, _isAModalOn, _currentUserFollowers, _currentUserFollowing, _isUserOnNewStoryPage } = useContext(UserInfoContext);
+    const { _userProfile, _isCommentIconClicked, _readingLists, _isShiftHeld, _isUserViewingPost, _isLoadingUserInfoDone, _elementIds, _willGoToPostLikes, _areUsersReceived, _isLoadingPostDone, _following, _followers, _isAModalOn, _currentUserFollowers, _currentUserFollowing, _isUserOnNewStoryPage, _isLoadingAboutUserInfoDone, _isOnFollowingPage, _isOnFollowersPage } = useContext(UserInfoContext);
     const { _commentToEdit, _isLoadingUserDone } = useContext(BlogInfoContext);
-    const { _didErrorOccur, _isOnPost } = useContext(ErrorPageContext)
+    const { _isOnPostViewerPage, _isUserOnFeedPage } = useContext(UserLocationContext);
+    const { _didErrorOccur, _isOnPost } = useContext(ErrorPageContext);
+    const [isUserOnFeedPage, setIsUserOnFeedPage] = _isUserOnFeedPage;
+    const [isOnPostViewerPage, setIsOnPostViewerPage] = _isOnPostViewerPage;
     const [isUserOnNewStoryPage, setIsUserOnNewStoryPage] = _isUserOnNewStoryPage;
+    const [isOnFollowersPage, setIsOnFollowersPage] = _isOnFollowersPage;
+    const [isOnFollowingPage, setIsOnFollowingPage] = _isOnFollowingPage;
     // const [signedInUserActivities, setSignedInUserActivities] = _userActivities;
     const [currentUserFollowing, setCurrentUserFollowing] = _currentUserFollowing;
     const [currentUserFollowers, setCurrentUserFollowers] = _currentUserFollowers;
@@ -72,10 +80,11 @@ const PostViewerPage = () => {
     const [readingLists, setReadingLists] = _readingLists
     const [following, setFollowing] = _following;
     const [followers, setFollowers] = _followers;
-    const [, setUserProfile] = _userProfile;
+    const [, setUserProfileForNavbar] = _userProfile;
     const [, setDidErrorOccur] = _didErrorOccur;
     const [, setIsOnPost] = _isOnPost;
-    const [doesPostExist, setDoesPostExist] = useState(true)
+    const [isLoadingAboutUserInfoDone, setIsLoadingAboutUserInfoDone] = _isLoadingAboutUserInfoDone;
+    const [doesPostNotExist, setDoesPostNotExist] = useState(false)
     const [areCommentsOpen, setAreCommentsOpen] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
     const [commentInput, setCommentInput] = useState("");
@@ -98,6 +107,8 @@ const PostViewerPage = () => {
     const [isCommentInputDisabled, setIsCommentInputDisabled] = useState(false)
     const [moreFromAuthor, setMoreFromAuthor] = useState([]);
     const [likeIdsOfSelectedPost, setLikeIdsOfSelectedPost] = useState([]);
+    const [isEnterBtnDisabled, setIsEnterBtnDisabled] = useState(false);
+    const [doesUserNotExist, setDoesUserNotExist] = useState(false);
     const { userIdsOfLikes, setUserIdsOfLikes, userActs: userLikesPost } = useLikes(`${postId}/postLikes`)
     const { messages: comments, sendMessage: postComment, setMessages: setComments } = useChat(`${postId}/comments`);
     const { count: commentsRepliesTotal, setCount: setCommentsRepliesTotal, changeCount: changeCommentsRepliesTotal } = useCount(`${postId}/commentCount`)
@@ -125,8 +136,6 @@ const PostViewerPage = () => {
     const bookMarkClickFns = { setReadingLists, setIsBookMarkWhite, setSelectedPost, setIsAModalOn };
     const _userBeingViewed = { _id: author?._id, username: author?.username, iconPath: author?.iconPath, isFollowed: author?.isFollowed, numOfFollowers: author?.numOfFollowers, numOfFollowing: author?.numOfFollowing }
     const followAndMessageBtnsVals = { userBeingViewed: _userBeingViewed, isViewingPost: true, isMessageBtnOn: true }
-
-
 
     // GOAL: delete the post id from activities.likes if the user had deleted the targeted post from their activity/tracking log 
 
@@ -181,6 +190,22 @@ const PostViewerPage = () => {
         _setIsEditing(false);
         targetRef.current.value = "";
     };
+
+    const goToUserHomePage = () => { history.push(`/${authorUsername}`); };
+
+    const goToUserAboutPage = () => { history.push(`/${authorUsername}/about`); };
+
+    const goToFollowers = () => {
+        setIsOnFollowingPage(false);
+        setIsOnFollowersPage(true);
+        history.push(`/${authorUsername}/followers`);
+    };
+
+    const goToFollowing = () => {
+        setIsOnFollowingPage(true);
+        setIsOnFollowersPage(false);
+        history.push(`/${authorUsername}/following`);
+    }
 
 
     const sendCommentToServer = (packageName, comment) => {
@@ -341,6 +366,8 @@ const PostViewerPage = () => {
     };
 
 
+
+
     // make this into a custom hook
     const downHandler = ({ key }) => {
         if (key === 'Shift') {
@@ -388,7 +415,9 @@ const PostViewerPage = () => {
                 currentUserFollowing?.length && setCurrentUserFollowing(currentUserFollowing)
             }
         });
-        setIsLoadingUserDone(false)
+        setIsLoadingUserDone(false);
+        setIsOnPostViewerPage(true);
+        setIsUserOnFeedPage(false);
 
         return () => {
             window.removeEventListener('keydown', downHandler);
@@ -396,10 +425,12 @@ const PostViewerPage = () => {
             setIsLoadingPostDone(false);
             setUsers([]);
             setAreUsersReceived(false);
+            setIsOnPostViewerPage(false)
         };
     }, []);
 
     useLayoutEffect(() => {
+        // if the user goes to a different post when viewing a post, then get all of the data for the post in order to display it onto the dom 
         if (isLoadingPostDone) {
             commentInput && setCommentInput("");
             commentToEdit && setCommentToEdit("");
@@ -449,23 +480,32 @@ const PostViewerPage = () => {
                     const { status, data: users } = res;
                     if (status === 200) {
                         const { bio, activities, followers, firstName, lastName, _id, iconPath } = users.find(({ username }) => username === authorUsername) ?? {};
-                        const isFollowed = followers?.length && followers.find(({ userId }) => userId === signedInUserId) !== undefined
-                        let _author = { bio, firstName, lastName, isFollowed, _id, iconPath };
-                        if (activities?.following?.length) {
-                            _author = {
-                                ..._author,
-                                numOfFollowing: activities.following.length,
+                        if (_id) {
+                            const isFollowed = followers?.length && followers.find(({ userId }) => userId === signedInUserId) !== undefined
+                            let _author = { bio, firstName, lastName, isFollowed, _id, iconPath };
+                            if (activities?.following?.length) {
+                                _author = {
+                                    ..._author,
+                                    numOfFollowing: activities.following.length,
+                                }
                             }
-                        }
-                        if (followers) {
-                            _author =
-                            {
-                                ..._author,
-                                numOfFollowers: followers.length
-                            }
+                            if (followers) {
+                                _author =
+                                {
+                                    ..._author,
+                                    numOfFollowers: followers.length
+                                }
+                            };
+                            setUsers(users);
+                            setAuthor(_author);
+                            setUserProfileForNavbar({ username: authorUsername, _id, iconPath });
+                        } else {
+                            // this means the user doesn't exist 
+                            setDoesUserNotExist(true);
+                            setDidErrorOccur(true);
+                            setDoesPostNotExist(true);
                         };
-                        setUsers(users);
-                        setAuthor(_author);
+                        setIsLoadingUserDone(true);
                         setAreUsersReceived(true);
                     }
                 })
@@ -476,7 +516,11 @@ const PostViewerPage = () => {
     }, [areUsersReceived]);
 
     useLayoutEffect(() => {
+        console.log('users: ', users)
+        console.log('areUsersReceived: ', areUsersReceived)
+        console.log('isLoadingPostDone: ', isLoadingPostDone)
         if (!isLoadingPostDone && users.length && areUsersReceived) {
+            console.log('hey there')
             // DO ALL OF THIS IN THE BACKEND
             const postPackage = JSON.stringify({
                 name: "getPost",
@@ -487,6 +531,7 @@ const PostViewerPage = () => {
             const pathPost = `/blogPosts/${postPackage}`;
             axios.get(pathPost)
                 .then(res => {
+                    console.log('from server: ', res);
                     const { status, data } = res;
                     console.log('meat: ', res)
                     console.log('eat meat: ', data);
@@ -535,21 +580,22 @@ const PostViewerPage = () => {
                     } else if (status === 404) {
                         setIsOnPost(true);
                         setDidErrorOccur(true);
-                        setDoesPostExist(false);
+                        setDoesPostNotExist(true);
                         setIsLoadingPostDone(true);
-                        setUserProfile(null);
+                        setUserProfileForNavbar(null);
                         debugger
                     }
                 })
                 .catch(error => {
                     // console.log({ error });
+                    console.error('An error has occurred: ', error)
                     const { status } = error?.response ?? {};
                     if (status === 404) {
                         setIsOnPost(true);
                         setDidErrorOccur(true);
-                        setDoesPostExist(false);
+                        setDoesPostNotExist(true);
                         // setIsLoadingPostDone(true);
-                        setUserProfile(null)
+                        setUserProfileForNavbar(null)
                         debugger
                     } else if (error) {
                         console.error(`Error message in getting posts: `, error);
@@ -570,6 +616,7 @@ const PostViewerPage = () => {
             localStorage.setItem('isCommentIconClicked', JSON.stringify(false));
         }
     }, [isCommentIconClicked, isLoadingPostDone]);
+
 
     const getUsersToNotify = comments => {
         let userIdsOfComments = (comments && comments.length) && comments.map(({ userId }) => userId);
@@ -702,8 +749,6 @@ const PostViewerPage = () => {
         }
     }, [willCheckIfPostExist])
 
-
-
     useLayoutEffect(() => {
         if (readingLists) {
             const savedPosts = Object.values(readingLists).map(({ list }) => list).flat();
@@ -718,7 +763,7 @@ const PostViewerPage = () => {
         };
     }, [isBookMarkWhite, readingLists, authorUsername, postId]);
 
-    const [isEnterBtnDisabled, setIsEnterBtnDisabled] = useState(false);
+
 
     const handleEnterBtnClick = event => {
         event.preventDefault();
@@ -739,8 +784,11 @@ const PostViewerPage = () => {
         userBio = `${bioFirst50Words}...`
     }
 
+    // GOAL: using the username from the url, check if the user exist.
+    // if the user doesn't exist, then show the error page 
+
     return (
-        doesPostExist ?
+        (!doesPostNotExist && !doesUserNotExist) ?
             <>
                 <div
                     className="postViewerPage"
@@ -768,6 +816,7 @@ const PostViewerPage = () => {
                                         <section className="authorInfo">
                                             <div>
                                                 <img
+                                                    onClick={goToUserHomePage}
                                                     src={`http://localhost:3005/userIcons/${author.iconPath}`}
                                                     onError={event => {
                                                         console.log('ERROR!')
@@ -776,11 +825,11 @@ const PostViewerPage = () => {
                                                 />
                                             </div>
                                             <div>
-                                                <span>@{authorUsername}</span>
+                                                <span onClick={goToUserHomePage} >@{authorUsername}</span>
                                                 {/* <span>ILoveProgramming1997Simba</span> */}
                                             </div>
                                             <div>
-                                                <span>{`${author.firstName} ${author.lastName}`}</span>
+                                                <span onClick={goToUserHomePage}>{`${author.firstName} ${author.lastName}`}</span>
                                                 {/* <span>GabrielGabrielGabrielGabrielGab TorionTorionTorionTorionTorion</span> */}
                                             </div>
                                             {((author?._id !== signedInUserId)
@@ -790,12 +839,17 @@ const PostViewerPage = () => {
                                             }
                                             {(userBio || author.bio) &&
                                                 <div>
-                                                    <p>{userBio ?? author.bio}</p>
+                                                    <p onClick={goToUserAboutPage}>{userBio ?? author.bio}</p>
                                                 </div>
                                             }
                                             <div className='followersAndFollowingContainerOnPostViewer'>
                                                 <span>
-                                                    Followers {`(${author.numOfFollowers ?? "0"})`} &nbsp;Following {`(${author.numOfFollowing ?? "0"})`}
+                                                    <span onClick={goToFollowers}>
+                                                        Followers {`(${author.numOfFollowers ?? "0"})`}
+                                                    </span>
+                                                    <span onClick={goToFollowing}>
+                                                        Following {`(${author.numOfFollowing ?? "0"})`}
+                                                    </span>
                                                 </span>
                                             </div>
                                         </section>
@@ -842,7 +896,7 @@ const PostViewerPage = () => {
                                             />
                                         </div>
                                         <div>
-                                            <span>{(authorUsername === signedInUsername) ? "You" : authorUsername}</span>
+                                            <span onClick={goToUserHomePage}>{(authorUsername === signedInUsername) ? "You" : authorUsername}</span>
                                             {/* <span>ILoveProgramming1997Simba</span> */}
                                             <span>{post?.publicationDate?.date}</span>
                                         </div>
@@ -1132,7 +1186,7 @@ const PostViewerPage = () => {
                 <Footer />
             </>
             :
-            <ErrorPage />
+            <ErrorPage doesUserNotExist={doesUserNotExist} />
     )
 }
 

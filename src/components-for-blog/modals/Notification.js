@@ -104,7 +104,7 @@ const Notification = ({ notification, closeModal, setChangedNotification, setNot
             // if the user is on the post viewer page (if the user is viewing a post), then set willGetPostAuthor 
             // combine the first two conditionals
             if (postAuthorUN && !isNewFollower) {
-                // history.push(`/${postAuthorUN}/${title}/${postId}`);
+                history.push(`/${postAuthorUN}/${title}/${postId}`);
                 const isFollowed = !!currentUserFollowing?.length && currentUserFollowing.map(({ userId }) => userId).includes(userIdOfNotification)
                 setUserProfile(prevVal => { return { ...prevVal, username: postAuthorUN, isFollowed: isFollowed, _id: userIdOfNotification } });
                 debugger
@@ -117,7 +117,7 @@ const Notification = ({ notification, closeModal, setChangedNotification, setNot
                 setIsUserOnNewStoryPage(false);
                 !isOnNotificationsPage && closeModal();
             } else if (!isNewFollower) {
-                // history.push(`/${CUusername}/${title}/${postId}`);
+                history.push(`/${CUusername}/${title}/${postId}`);
                 setUserProfile({ username: CUusername });
                 setIsUserViewingPost(false);
                 isUserOnHomePage && setIsUserOnHomePage(false);
@@ -129,7 +129,7 @@ const Notification = ({ notification, closeModal, setChangedNotification, setNot
                 !isOnNotificationsPage && closeModal();
             } else {
                 // take user to the home page of the newFollower
-                // history.push(`/${usernameOfAlert}/`);
+                history.push(`/${usernameOfAlert}/`);
                 setIsLoadingUserDone(false)
                 setIsUserOnNewStoryPage(false);
                 !isOnNotificationsPage && closeModal();

@@ -12,6 +12,7 @@ export const UserLocationProvider = props => {
     const [isOnSelectedChat, setIsOnSelectedChat] = useState(false);
     const [isOnAboutPage, setIsOnAboutPage] = useState(false);
     const [isUserOnHomePage, setIsUserOnHomePage] = useState(false);
+    const [isOnPostViewerPage, setIsOnPostViewerPage] = useState(false);
     const [isUserOnNewStoryPage, setIsUserOnNewStoryPage] = useState(false);
     const [isUserOnFeedPage, setIsUserOnFeedPage] = useState(false);
     const [isUserOnSettings, setIsUserOnSettings] = useState(false);
@@ -34,7 +35,8 @@ export const UserLocationProvider = props => {
                 _isOnNotificationsPage: [isOnNotificationsPage, setIsOnNotificationsPage],
                 _isOnMessengerPage: [isOnMessengerPage, setIsOnMessengerPage],
                 _isUserOnFeedPage: [isUserOnFeedPage, setIsUserOnFeedPage],
-                _isOnMyStoriesPage: [isOnMyStoriesPage, setIsOnMyStoriesPage]
+                _isOnMyStoriesPage: [isOnMyStoriesPage, setIsOnMyStoriesPage],
+                _isOnPostViewerPage: [isOnPostViewerPage, setIsOnPostViewerPage]
             }}
         >
             {props.children}

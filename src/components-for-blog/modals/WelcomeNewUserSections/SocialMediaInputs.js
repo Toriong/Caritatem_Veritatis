@@ -30,7 +30,7 @@ const SocialMediaInputs = ({ socialMediaInputs, handleDelete, handleSocialMediaO
                     <>
                         <tr className="socialMediaOptionsRow" key={id}>
                             <td>
-                                {index !== 0 && <button onClick={event => handleDelete(event, id)}><CgMathMinus /></button>}
+                                <button onClick={event => handleDelete(event, id)}><CgMathMinus /></button>
                             </td>
                             <td />
                             <td >

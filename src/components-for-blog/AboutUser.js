@@ -28,7 +28,7 @@ import TagLi from './tag/TagLi';
 const AboutUser = () => {
     const history = useHistory();
     const { userName } = useParams();
-    const { _isOnFollowersPage, _isOnFollowingPage, _isUserViewingPost, _isReviewOn, _isOnProfile, _isNotOnMyStoriesPage, _isUserOnNewStoryPage, _isLoadingUserInfoDone, _following, _followers, _userProfile, _currentUserFollowing, _isUserOnFeedPage, _currentUserFollowers, _isLoadingAboutUserInfoDone } = useContext(UserInfoContext);
+    const { _isOnFollowersPage, _isOnFollowingPage, _isUserViewingPost, _isReviewOn, _isOnProfile, _isNotOnMyStoriesPage, _isUserOnNewStoryPage, _isLoadingUserInfoDone, _following, _followers, _userProfile, _currentUserFollowing, _isUserOnFeedPage, _currentUserFollowers, _isLoadingAboutUserInfoDone, } = useContext(UserInfoContext);
     const { _isLoadingUserDone } = useContext(BlogInfoContext);
     const { _isOnUserProfile, _didErrorOccur } = useContext(ErrorPageContext);
     const { _isOnOwnProfile, _isOnAboutPage } = useContext(UserLocationContext);
@@ -58,6 +58,8 @@ const AboutUser = () => {
     const [isTagsEditModalOpen, setIsTagsEditModalOpen] = useState(false);
     const [isAllTagsModalOn, setIsAllTagsModalOn] = useState(false);
     const [allTags, setAllTags] = useState([]);
+    const [userTags, setUserTags] = useState([]);
+    // const [userTags, setUserTags] = useState([]);
     const { _isOnMobile, _isOnSmallerMobile } = useIsOnMobile();
     const [isOnMobile] = _isOnMobile;
     const [isOnSmallerMobile] = _isOnSmallerMobile;
@@ -76,7 +78,7 @@ const AboutUser = () => {
     }
 
 
-    const { username: signedInUsername, firstName, lastName, bio, iconPath, _id: signedInUserId, socialMedia, topics: userTags } = JSON.parse(localStorage.getItem('user'));
+    const { username: signedInUsername, firstName, lastName, bio, iconPath, _id: signedInUserId, socialMedia } = JSON.parse(localStorage.getItem('user'));
     const isOnOwnProfileUrl = userName === signedInUsername;
     let _userTags = isOnOwnProfileUrl ? userTags : userProfile?.topics;
     let _socialMedia = isOnOwnProfileUrl ? socialMedia : userProfile?.socialMedia;
@@ -147,7 +149,8 @@ const AboutUser = () => {
                 getFollowersAndFollowing(signedInUserId)
                     .then(_data => {
                         const { status, data } = _data;
-                        const { following, followers, isEmpty } = data ?? {};
+                        console.log('data: ', data)
+                        const { following, followers, isEmpty, tags } = data ?? {};
                         if (!isEmpty && (status === 200)) {
                             if (!currentUserFollowers?.length) {
                                 followers?.length && setCurrentUserFollowers(followers);
@@ -155,7 +158,10 @@ const AboutUser = () => {
                             if (!currentUserFollowing?.length) {
                                 following?.length && setCurrentUserFollowing(following);
                             }
-
+                            if (tags?.length) {
+                                console.log('hello there meng: ', tags)
+                                setUserTags(tags);
+                            }
                         }
                     }).finally(() => {
                         setDoesUserExist(true);
@@ -464,7 +470,7 @@ const AboutUser = () => {
                                             })
                                             :
                                             <li>
-                                                {userProfile ? `${userProfile.username} has no social media links.` : 'You have no links.'}
+                                                {(userName !== signedInUsername) ? `${userProfile.username} has no social media links.` : 'You have no links.'}
                                             </li>
                                         }
                                     </ul>
@@ -492,6 +498,8 @@ const AboutUser = () => {
                         <SelectTagsForm
                             closeModal={toggleModal(setIsTagsEditModalOpen, isTagsEditModalOpen)}
                             allTags={allTags}
+                            userTags={userTags}
+                            setUserTags={setUserTags}
                         />
                     </>
                 }

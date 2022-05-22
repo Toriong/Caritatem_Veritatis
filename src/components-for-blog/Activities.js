@@ -15,6 +15,7 @@ import EditVersion from './modals/EditVersion';
 import LikesModal from './modals/LikesModal';
 import ReadingListNames from './modals/ReadingListNames';
 import '../blog-css/activitiesPage.css'
+import { useLayoutEffect } from 'react';
 
 // NOTES:
 // put the activities on the same page (in this component)
@@ -25,11 +26,12 @@ import '../blog-css/activitiesPage.css'
 // GOAL: make the onClick of the reading list to work when the user is on the activities page main
 const Activities = () => {
     const { type } = useParams();
-    const { _activities, _isLoadingUserInfoDone } = useContext(UserInfoContext);
+    const { _activities, _isLoadingUserInfoDone, _userProfile } = useContext(UserInfoContext);
     const { _commentToEdit, _isLoadingUserDone } = useContext(BlogInfoContext);
     const [commentToEdit, setCommentToEdit] = _commentToEdit;
     const [isLoadingUserInfoForNavbarDone, setIsLoadingUserInfoForNavbarDone] = _isLoadingUserDone;
     const [activities, setActivities] = _activities;
+    const [userProfile, setUserProfile] = _userProfile;
     const [selectedVersion, setSelectedVersion] = useState(null);
     const [isLoadingDone, setIsLoadingDone] = useState(false);
     const [isPreviousNamesModalOn, setIsPreviousNamesModalOn] = useState(false)
@@ -74,8 +76,12 @@ const Activities = () => {
     // WHY DO I HAVE THE FIRST FN EXECUTING?
     useEffect(() => {
         setCommentToEdit(null);
-        setIsLoadingUserInfoForNavbarDone(true)
-    }, [])
+        setIsLoadingUserInfoForNavbarDone(true);
+    }, []);
+
+    useLayoutEffect(() => {
+        setUserProfile(null);
+    }, []);
 
     useEffect(() => {
         console.log('activities: ', activities);

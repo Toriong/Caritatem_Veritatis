@@ -59,8 +59,7 @@ const SignIn = ({ setIsSignInModalOpen, setIsCreateAccountModalOpen, setIconPath
     }
 
 
-    const closeSignInModal = event => {
-        event.preventDefault();
+    const closeSignInModal = () => {
         setIsSignInModalOpen(false);
     };
 
