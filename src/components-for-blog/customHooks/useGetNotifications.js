@@ -22,8 +22,8 @@ const useGetNotifications = () => {
         // check if there is a user signed in
         if (currentUser) {
             getUserInfo('willGetReplies', 'getNotifications').then(data => {
-                const { replies, isEmpty } = data;
-                if (!isEmpty) {
+                const { replies, isEmpty } = data || {};
+                if (!isEmpty && replies) {
                     setNotifications(notifications => [...notifications, ...replies])
                 };
             }).finally(() => {
@@ -31,7 +31,7 @@ const useGetNotifications = () => {
             })
             getUserInfo('willGetReplyLikes', 'getNotifications').then(data => {
                 console.log('replyLikesNotifications: ', data);
-                const { isEmpty, replyLikes } = data;
+                const { isEmpty, replyLikes } = data || {};
                 if (!isEmpty) {
                     setNotifications(notifications => [...notifications, ...replyLikes])
                 };
@@ -40,7 +40,7 @@ const useGetNotifications = () => {
             })
             getUserInfo('willGetCommentLikes', 'getNotifications').then(data => {
                 console.log("commentLikesNotifications: ",);
-                const { isEmpty, commentLikes } = data;
+                const { isEmpty, commentLikes } = data || {};
                 if (!isEmpty) {
                     setNotifications(notifications => [...notifications, ...commentLikes]);
                 };
@@ -49,7 +49,7 @@ const useGetNotifications = () => {
             })
             getUserInfo('willGetComments', 'getNotifications').then(data => {
                 console.log('commentsNotifications: ', data);
-                const { isEmpty, comments: _comments } = data;
+                const { isEmpty, comments: _comments } = data || {};
                 console.log('_comments: ', _comments);
                 if (!isEmpty) {
                     setNotifications(notifications => [...notifications, ..._comments]);
@@ -59,7 +59,7 @@ const useGetNotifications = () => {
             })
             getUserInfo('willGetPostLikes', 'getNotifications').then(data => {
                 console.log('data: ', data);
-                const { isEmpty, postLikes } = data;
+                const { isEmpty, postLikes } = data || {};
                 if (!isEmpty) {
                     setNotifications(notifications => [...notifications, ...postLikes]);
                 };
@@ -67,7 +67,7 @@ const useGetNotifications = () => {
                 setIsPostLikeReqDone(true);
             })
             getUserInfo('willGetPostsFromFollowing', 'getNotifications').then(data => {
-                const { isEmpty, newPosts } = data;
+                const { isEmpty, newPosts } = data || {};
                 if (!isEmpty) {
                     setNotifications(notifications => [...notifications, ...newPosts]);
                 };
@@ -75,7 +75,7 @@ const useGetNotifications = () => {
                 setIsNewPostsReqDone(true);
             })
             getUserInfo('willGetNewFollowers', 'getNotifications').then(data => {
-                const { isEmpty, newFollowers } = data;
+                const { isEmpty, newFollowers } = data || {};
                 if (!isEmpty) {
                     setNotifications(notifications => [...notifications, ...newFollowers]);
                 }

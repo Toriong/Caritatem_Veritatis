@@ -77,7 +77,7 @@ const NotificationsBell = ({ isOnBlogNavbar, isOnUserHomePage, isOnWritePostPage
                 const { replies, isEmpty } = data || {};
 
                 if (!isEmpty) {
-                    setNotifications(notifications => [...notifications, ...replies])
+                    setNotifications(notifications => notifications?.length ? [...notifications, ...replies] : notifications)
                 };
                 setIsReplyReqDone(true);
             });
@@ -86,7 +86,7 @@ const NotificationsBell = ({ isOnBlogNavbar, isOnUserHomePage, isOnWritePostPage
                 const { isEmpty, replyLikes } = data || {};
 
                 if (!isEmpty) {
-                    setNotifications(notifications => [...notifications, ...replyLikes])
+                    setNotifications(notifications => notifications?.length ? [...notifications, ...replyLikes] : notifications)
                 };
                 setIsReqReplyLikesDone(true);
             })
@@ -95,16 +95,15 @@ const NotificationsBell = ({ isOnBlogNavbar, isOnUserHomePage, isOnWritePostPage
                 const { isEmpty, commentLikes } = data || {};
 
                 if (!isEmpty) {
-                    setNotifications(notifications => [...notifications, ...commentLikes]);
+                    setNotifications(notifications => notifications?.length ? [...notifications, ...commentLikes] : notifications);
                 };
                 setIsReqCommLikesDone(true);
             });
             getUserInfo('willGetComments', 'getNotifications').then(data => {
                 console.log('commentsNotifications: ', data);
-                const { isEmpty, comments: _comments } = data;
-                console.log('_comments: ', _comments);
+                const { isEmpty, comments: _comments } = data || {};
                 if (!isEmpty) {
-                    setNotifications(notifications => [...notifications, ..._comments]);
+                    setNotifications(notifications => notifications?.length ? [...notifications, ..._comments] : notifications);
                 }
                 setIsCommReqDone(true);
             })
@@ -113,7 +112,7 @@ const NotificationsBell = ({ isOnBlogNavbar, isOnUserHomePage, isOnWritePostPage
                 const { isEmpty, postLikes } = data || {};
 
                 if (!isEmpty) {
-                    setNotifications(notifications => [...notifications, ...postLikes]);
+                    setNotifications(notifications => notifications?.length ? [...notifications, ...postLikes] : notifications);
                 };
                 setIsPostLikeReqDone(true);
             })
@@ -121,7 +120,7 @@ const NotificationsBell = ({ isOnBlogNavbar, isOnUserHomePage, isOnWritePostPage
                 const { isEmpty, newPosts } = data || {};
 
                 if (!isEmpty) {
-                    setNotifications(notifications => [...notifications, ...newPosts]);
+                    setNotifications(notifications => notifications?.length ? [...notifications, ...newPosts] : notifications);
                 };
                 setIsNewPostsReqDone(true);
             })
@@ -130,7 +129,7 @@ const NotificationsBell = ({ isOnBlogNavbar, isOnUserHomePage, isOnWritePostPage
 
                 if (!isEmpty) {
                     console.log('newFollowers: ', newFollowers)
-                    setNotifications(notifications => [...notifications, ...newFollowers]);
+                    setNotifications(notifications => notifications?.length ? [...notifications, ...newFollowers] : notifications);
                 }
                 setIsNewFollowerReqDone(true);
             })

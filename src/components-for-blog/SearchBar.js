@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { UserInfoContext } from '../provider/UserInfoProvider';
-import { getSearchResults } from './functions/getSearchResults';
+import { getSearchResults } from '../components-for-blog/functions/getSearchResults';
 import { getTime } from './functions/getTime';
 import SearchResults from './modals/SearchResults';
 import history from '../history/history';

@@ -11,7 +11,7 @@ import LikesModal from './modals/LikesModal';
 import Bio from './modals/Bio';
 import '../blog-css/searchPage.css'
 import { useLayoutEffect } from 'react';
-import { getSearchResults } from './functions/getSearchResults';
+import { getSearchResults } from '../components-for-blog/functions/getSearchResults';
 import { useParams } from 'react-router';
 
 // NOTES:

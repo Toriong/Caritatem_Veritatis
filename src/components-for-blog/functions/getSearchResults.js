@@ -1,4 +1,4 @@
-import 'regenerator-runtime/runtime'
+import 'regenerator-runtime'
 
 
 const user = localStorage.getItem('user');
